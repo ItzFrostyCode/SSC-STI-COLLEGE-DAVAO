@@ -1,0 +1,9 @@
+# System files
+.DS_Store
+.VSCode
+
+# Dependencies
+node_modules/
+
+# Agentic artifacts
+.gemini/

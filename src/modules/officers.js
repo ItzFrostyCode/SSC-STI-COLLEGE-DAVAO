@@ -1,0 +1,165 @@
+// src/modules/officers.js
+import { fetchJSON } from '../lib/dataLoader.js';
+import { normalizeOfficers } from '../lib/normalize.js';
+import { escapeHtml } from '../lib/utils.js';
+
+// Configuration for the custom layout (Ported from legacy)
+const LAYOUT_CONFIG = [
+    { type: 'divider', label: 'Adviser' },
+    { type: 'row', names: ['Reinamie Dayrit'] },
+    { type: 'divider', label: 'OSA' },
+    { type: 'row', names: ['Upcoming'] }, // Explicit placeholder support
+    { type: 'divider', label: 'Executive Officers' },
+    { type: 'row', names: ['Chester Paul Villasencio'] },
+    { type: 'row', names: ['Chesilyn Dianne Tabigue', 'Cj Love Marie Astudillo'] },
+    { type: 'row', names: ['Jandoe Garay', 'John Romar Pardo', 'Joshua Arabejo', 'Cherry Jane Villasencio'] },
+    { type: 'divider', label: 'Senators' },
+    { type: 'row', names: ['Carol Dela Cerna', 'Rizza Joy Mendez', 'Rylle Manco'] },
+    { type: 'row', names: ['Grace Dhel Asoy', 'Reasylee Abella', 'Princess Rhian Tadem'] },
+    { type: 'divider', label: 'Staff' },
+    { type: 'row', names: ['Ivy Robles'] },
+    { type: 'row', names: ['Yhanzee Manuel Payot', 'Tryx-C Espino', 'Najem Diaregun'] },
+    { type: 'row', names: ['Samantha Pabuaya', 'Arnold Tajo', 'Shamyll Gelbolingo'] }
+];
+
+export async function init() {
+    console.log('Initializing Officers Module');
+    try {
+        const data = await fetchJSON('data/officers.json', {
+            cache: true,
+            ttl: 86400,
+            adapter: normalizeOfficers 
+        });
+
+        if (data) {
+            renderOfficers(data);
+        }
+    } catch (e) {
+        console.error('Officers load failed', e);
+    }
+}
+
+function renderOfficers(allOfficers) {
+    const listContainer = document.querySelector('#officers-list');
+    if (!listContainer) return;
+
+    listContainer.className = 'officers-wrapper'; // Ensure class is correct
+
+    // Map for easy lookup (lowercase keys)
+    const officerMap = new Map();
+    allOfficers.forEach(officer => {
+        if(officer && officer.name) {
+            officerMap.set(officer.name.toLowerCase().trim(), officer);
+        }
+    });
+
+    let html = '';
+
+    LAYOUT_CONFIG.forEach(item => {
+        if (item.type === 'divider') {
+            html += `
+                <div class="section-divider">
+                    <h2>${escapeHtml(item.label)}</h2>
+                </div>
+            `;
+        } else if (item.type === 'row') {
+            html += '<div class="officers-row">';
+            item.names.forEach(name => {
+                // Special handling for 'Upcoming' placeholder
+                if (name === 'Upcoming') {
+                     // Placeholder logic if needed, or just skip if no matching officer
+                     // If we want to show a generic "Upcoming" card:
+                     /* 
+                     html += createOfficerCard({
+                         name: 'OSA Representative',
+                         position: 'Coming Soon',
+                         department: '',
+                         image: ''
+                     });
+                     */
+                    // The legacy code treated 'Upcoming' as a name to search. If not in JSON, it warned.
+                    // But if the JSON has an officer named "Upcoming" (unlikely) or if we want to render nothing?
+                    // Let's check logic: if officer not found, legacy warned.
+                    // EXCEPT if there's a specific officer named "Upcoming" in JSON?
+                    // Assuming for now we just look for match.
+                }
+
+                let officer = officerMap.get(name.toLowerCase().trim());
+                
+                // Fuzzy search fallback
+                if (!officer) {
+                    for (let [key, val] of officerMap) {
+                        if (key.includes(name.toLowerCase().trim())) {
+                            officer = val;
+                            break;
+                        }
+                    }
+                }
+
+                if (officer) {
+                    html += createOfficerCard(officer);
+                } else if (name === 'Upcoming') {
+                    // Render placeholder for OSA if requested by layout
+                     html += `
+                        <div class="officer-card">
+                             <div class="officer-image-container">
+                                <div class="officer-image" style="background: #ccc; display:flex; align-items:center; justify-content:center;">
+                                    <span>?</span>
+                                </div>
+                             </div>
+                             <div class="officer-info">
+                                <h3>Upcoming</h3>
+                                <p class="officer-role">OSA Representative</p>
+                             </div>
+                        </div>
+                     `;
+                }
+            });
+            html += '</div>';
+        }
+    });
+
+    listContainer.innerHTML = html;
+}
+
+function createOfficerCard(officer) {
+    const constImageSrc = officer.image ? `assets/images/officers/${officer.image}` : '';
+    // Use UI Avatars as fallback
+    const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(officer.name)}&background=f59e0b&color=fff&size=200`;
+
+    // Special styling for Adviser
+    const isPremium = officer.name === 'Reinamie Dayrit';
+    const premiumClass = isPremium ? 'premium-card' : '';
+    
+    // Socials (if available in normalized data - currently normalizeOfficers only keeps name, pos, dept, image, order)
+    // We should probably update normalizeOfficers to keep email/socials if we want them!
+    // For now assuming basic info.
+
+    return `
+        <div class="officer-card ${premiumClass} fade-in">
+            <div class="officer-image-container">
+                <img src="${constImageSrc}" 
+                     alt="${escapeHtml(officer.name)}" 
+                     class="officer-image"
+                     loading="lazy"
+                     onerror="this.onerror=null; this.src='${fallbackImage}';">
+                
+                ${officer.email ? `
+                <div class="officer-socials">
+                    <a href="mailto:${officer.email}" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>` : ''}
+            </div>
+            
+            <div class="officer-info">
+                <h3>${escapeHtml(officer.name)}</h3>
+                <p class="officer-role">${escapeHtml(officer.position)}</p>
+                <p class="officer-dept">${escapeHtml(officer.department)}</p>
+            </div>
+        </div>
+    `;
+}

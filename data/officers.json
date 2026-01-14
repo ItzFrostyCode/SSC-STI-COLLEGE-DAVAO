@@ -1,0 +1,435 @@
+[
+  {
+    "id": "OFF-2026-000",
+    "name": "Reinamie Dayrit",
+    "position": "Adviser",
+    "department": "Faculty",
+    "email": "reinamie.dayrit@sti.edu",
+    "phone": "+63 900 000 0000",
+    "order": 0,
+    "isAuditor": false,
+    "responsibilities": [
+      "Guide and mentor SSC officers",
+      "Provide strategic direction and oversight",
+      "Ensure compliance with school policies",
+      "Support student leadership development"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "reinamie-dayrit.png"
+  },
+  {
+    "id": "OFF-2026-OSA",
+    "name": "Upcoming",
+    "position": "OSA Representative",
+    "department": "Office of Student Affairs",
+    "email": "osa@sti.edu",
+    "phone": "+63 900 000 0000",
+    "order": 0.5,
+    "isAuditor": false,
+    "responsibilities": [
+      "To be announced"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": ""
+  },
+  {
+    "id": "OFF-2026-001",
+    "name": "Chester Paul Villasencio",
+    "position": "President",
+    "department": "Tertiary",
+    "email": "chester.villasencio@sti.edu",
+    "phone": "+63 912 345 6789",
+    "order": 1,
+    "isAuditor": false,
+    "responsibilities": [
+      "Lead the Supreme Student Council",
+      "Represent student body in administrative meetings",
+      "Oversee all SSC activities and initiatives",
+      "Approve major decisions and budgets"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "chester-paul-villasencio.png"
+  },
+  {
+    "id": "OFF-2026-002",
+    "name": "Chesilyn Dianne Tabigue",
+    "position": "Vice President (Internal)",
+    "department": "Tertiary",
+    "email": "chesilyn.tabigue@sti.edu",
+    "phone": "+63 923 456 7890",
+    "order": 2,
+    "isAuditor": false,
+    "responsibilities": [
+      "Assist the President in internal matters",
+      "Manage internal operations and communications",
+      "Coordinate with department representatives",
+      "Chair meetings in President's absence"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "chesilyn-dianne-tabigue.png"
+  },
+  {
+    "id": "OFF-2026-003",
+    "name": "Cj Love Marie Astudillo",
+    "position": "Vice President (External)",
+    "department": "Tertiary",
+    "email": "cj.astudillo@sti.edu",
+    "phone": "+63 934 567 8901",
+    "order": 3,
+    "isAuditor": false,
+    "responsibilities": [
+      "Assist the President in external matters",
+      "Manage external relations and partnerships",
+      "Represent SSC in inter-school activities",
+      "Coordinate with external organizations"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "cj-love-marie-astudillo.png"
+  },
+  {
+    "id": "OFF-2026-004",
+    "name": "Jandoe Garay",
+    "position": "Secretary",
+    "department": "Tertiary",
+    "email": "jandoe.garay@sti.edu",
+    "phone": "+63 945 678 9012",
+    "order": 4,
+    "isAuditor": false,
+    "responsibilities": [
+      "Record and maintain meeting minutes",
+      "Handle official correspondence",
+      "Manage SSC documents and records",
+      "Prepare reports and announcements"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "jandoe-garay.png"
+  },
+  {
+    "id": "OFF-2026-005",
+    "name": "John Romar Pardo",
+    "position": "Treasurer",
+    "department": "Tertiary",
+    "email": "john.pardo@sti.edu",
+    "phone": "+63 956 789 0123",
+    "order": 5,
+    "isAuditor": false,
+    "responsibilities": [
+      "Manage SSC funds and budget",
+      "Process financial transactions",
+      "Prepare financial reports",
+      "Coordinate with Auditor for verification"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "john-romar-pardo.png"
+  },
+  {
+    "id": "OFF-2026-006",
+    "name": "Joshua Arabejo",
+    "position": "Auditor",
+    "department": "Tertiary",
+    "email": "joshua.arabejo@sti.edu",
+    "phone": "+63 967 890 1234",
+    "order": 6,
+    "isAuditor": true,
+    "responsibilities": [
+      "Audit all financial transactions and records",
+      "Verify accuracy of data and reports",
+      "Review and approve budget expenditures",
+      "Ensure compliance with SSC policies",
+      "Validate event results and official records",
+      "Maintain data integrity and version control"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "joshua-arabejo.png"
+  },
+  {
+    "id": "OFF-2026-007",
+    "name": "Cherry Jane Villasencio",
+    "position": "PIO",
+    "department": "Tertiary",
+    "email": "cherry.villasencio@sti.edu",
+    "phone": "+63 978 901 2345",
+    "order": 7,
+    "isAuditor": false,
+    "responsibilities": [
+      "Manage SSC social media accounts",
+      "Create promotional materials and graphics",
+      "Coordinate media coverage of events",
+      "Handle public communications and announcements"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "cherry-jane-villasencio.png"
+  },
+  {
+    "id": "OFF-2026-008",
+    "name": "Carol Dela Cerna",
+    "position": "Senator (Tertiary)",
+    "department": "Tertiary",
+    "email": "carol.delacerna@sti.edu",
+    "phone": "+63 989 012 3456",
+    "order": 8,
+    "isAuditor": false,
+    "responsibilities": [
+      "Represent tertiary students",
+      "Participate in policy discussions",
+      "Support SSC initiatives and programs",
+      "Coordinate with department students"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "carol-dela-cerna.png"
+  },
+  {
+    "id": "OFF-2026-009",
+    "name": "Rizza Joy Mendez",
+    "position": "Senator (Tertiary)",
+    "department": "Tertiary",
+    "email": "rizza.mendez@sti.edu",
+    "phone": "+63 991 123 4567",
+    "order": 9,
+    "isAuditor": false,
+    "responsibilities": [
+      "Represent tertiary students",
+      "Participate in policy discussions",
+      "Support SSC initiatives and programs",
+      "Coordinate with department students"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "rizza-joy-mendez.png"
+  },
+  {
+    "id": "OFF-2026-010",
+    "name": "Rylle Manco",
+    "position": "Senator (Tertiary)",
+    "department": "Tertiary",
+    "email": "rylle.manco@sti.edu",
+    "phone": "+63 992 234 5678",
+    "order": 10,
+    "isAuditor": false,
+    "responsibilities": [
+      "Represent tertiary students",
+      "Participate in policy discussions",
+      "Support SSC initiatives and programs",
+      "Coordinate with department students"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "rylle-manco.png"
+  },
+  {
+    "id": "OFF-2026-011",
+    "name": "Grace Dhel Asoy",
+    "position": "Senator (Tertiary)",
+    "department": "Tertiary",
+    "email": "grace.asoy@sti.edu",
+    "phone": "+63 993 345 6789",
+    "order": 11,
+    "isAuditor": false,
+    "responsibilities": [
+      "Represent tertiary students",
+      "Participate in policy discussions",
+      "Support SSC initiatives and programs",
+      "Coordinate with department students"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "grace-dhel-asoy.png"
+  },
+  {
+    "id": "OFF-2026-012",
+    "name": "Reasylee Abella",
+    "position": "Senator (SHS)",
+    "department": "Senior High School",
+    "email": "reasylee.abella@sti.edu",
+    "phone": "+63 994 456 7890",
+    "order": 12,
+    "isAuditor": false,
+    "responsibilities": [
+      "Represent SHS students",
+      "Participate in policy discussions",
+      "Support SSC initiatives and programs",
+      "Coordinate with SHS students"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "reasylee-abella.png"
+  },
+  {
+    "id": "OFF-2026-013",
+    "name": "Princess Rhian Tadem",
+    "position": "Senator (SHS)",
+    "department": "Senior High School",
+    "email": "princess.tadem@sti.edu",
+    "phone": "+63 995 567 8901",
+    "order": 13,
+    "isAuditor": false,
+    "responsibilities": [
+      "Represent SHS students",
+      "Participate in policy discussions",
+      "Support SSC initiatives and programs",
+      "Coordinate with SHS students"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "princess-rhian-tadem.png"
+  },
+  {
+    "id": "OFF-2026-014",
+    "name": "Ivy Robles",
+    "position": "Staff President",
+    "department": "Tertiary",
+    "email": "ivy.robles@sti.edu",
+    "phone": "+63 945 678 9012",
+    "order": 14,
+    "isAuditor": false,
+    "responsibilities": [
+      "Lead SSC staff team",
+      "Coordinate staff activities",
+      "Support SSC officers and initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "ivy-robles.png"
+  },
+  {
+    "id": "OFF-2026-015",
+    "name": "Yhanzee Manuel Payot",
+    "position": "Staff",
+    "department": "Tertiary",
+    "email": "yhanzee.payot@sti.edu",
+    "phone": "+63 956 789 0123",
+    "order": 15,
+    "isAuditor": false,
+    "responsibilities": [
+      "Support SSC activities and events",
+      "Assist in administrative tasks",
+      "Participate in SSC initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "yhanzee-manuele-payot.png"
+  },
+  {
+    "id": "OFF-2026-016",
+    "name": "Tryx-C Espino",
+    "position": "Staff",
+    "department": "Tertiary",
+    "email": "tryxc.espino@sti.edu",
+    "phone": "+63 967 890 1234",
+    "order": 16,
+    "isAuditor": false,
+    "responsibilities": [
+      "Support SSC activities and events",
+      "Assist in administrative tasks",
+      "Participate in SSC initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "tryx-c-espino.png"
+  },
+  {
+    "id": "OFF-2026-017",
+    "name": "Najem Diaregun",
+    "position": "Staff",
+    "department": "Senior High School",
+    "email": "najem.diaregun@sti.edu",
+    "phone": "+63 978 901 2345",
+    "order": 17,
+    "isAuditor": false,
+    "responsibilities": [
+      "Support SSC activities and events",
+      "Assist in administrative tasks",
+      "Participate in SSC initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "najem-diaregun.png"
+  },
+  {
+    "id": "OFF-2026-018",
+    "name": "Samantha Pabuaya",
+    "position": "Staff",
+    "department": "Senior High School",
+    "email": "samantha.pabuaya@sti.edu",
+    "phone": "+63 989 012 3456",
+    "order": 18,
+    "isAuditor": false,
+    "responsibilities": [
+      "Support SSC activities and events",
+      "Assist in administrative tasks",
+      "Participate in SSC initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "samantha-pabuaya.png"
+  },
+  {
+    "id": "OFF-2026-019",
+    "name": "Arnold Tajo",
+    "position": "Staff",
+    "department": "Tertiary",
+    "email": "arnold.tajo@sti.edu",
+    "phone": "+63 990 123 4567",
+    "order": 19,
+    "isAuditor": false,
+    "responsibilities": [
+      "Support SSC activities and events",
+      "Assist in administrative tasks",
+      "Participate in SSC initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "arnold-tajo.png"
+  },
+  {
+    "id": "OFF-2026-020",
+    "name": "Shamyll Gelbolingo",
+    "position": "Staff",
+    "department": "Tertiary",
+    "email": "shamyll.gelbolingo@sti.edu",
+    "phone": "+63 901 234 5678",
+    "order": 20,
+    "isAuditor": false,
+    "responsibilities": [
+      "Support SSC activities and events",
+      "Assist in administrative tasks",
+      "Participate in SSC initiatives"
+    ],
+    "termStart": "2025-09-25",
+    "termEnd": "2026-07-31",
+    "createdAt": "2025-09-25T19:55:00Z",
+    "image": "shamyll-gelbolingo.png"
+  }
+]
+

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "EVT-2026-001",
+    "title": "Teacher's Day Celebration",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-10-25",
+    "endDate": "2025-10-26",
+    "category": "Celebration",
+    "location": "STI Multipurpose Hall (Rooms 302–304)",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "links": {
+      "Event": "https://www.facebook.com/photo?fbid=786994690755514&set=pcb.786995767422073",
+      "Trailer": "https://www.facebook.com/reel/1897163177824918",
+      "Recognition": "https://www.facebook.com/photo?fbid=801212932667023&set=pcb.801215496000100"
+    },
+    "images": [
+      "assets/images/events/td-img.png",
+      "assets/images/events/teachers-day-1.jpg",
+      "assets/images/events/teachers-day-2.jpg",
+      "assets/images/events/teachers-day-3.jpg"
+    ],
+    "author": "Cherry Jane Villasencio - PIO",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-09-15T10:00:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  },
+  {
+    "id": "EVT-2026-002",
+    "title": "SpookTacular Halloween Party",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-10-29",
+    "endDate": "2025-10-30",
+    "category": "Social",
+    "location": "STI Multipurpose Hall (Rooms 302–304)",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "links": {
+      "Event": "https://www.facebook.com/photo?fbid=796316266490023&set=pcb.796317356489914",
+      "Trailer": "https://www.facebook.com/reel/3253636318134048",
+      "Showcase": "https://www.facebook.com/reel/814682451528048",
+      "Recognition": "https://www.facebook.com/photo?fbid=806375425484107&set=pcb.806377578817225"
+    },
+    "image": "assets/images/events/sp-img.png",
+    "author": "SSC Events Committee",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-10-10T14:30:00Z",
+    "lastEditedBy": "Joshua Arabejo",
+    "lastEditedAt": "2025-10-15T16:00:00Z",
+    "status": "published"
+  },
+  
+  {
+    "id": "EVT-2026-004",
+    "title": "STI TIGI-AY 2025: THE SPIRIT UNLEASHED!",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-11-18",
+    "endDate": "2025-11-22",
+    "category": "Intramurals",
+    "location": "STI College Davao Campus",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "links": {
+      "Event": "https://www.facebook.com/photo?fbid=812938014827848&set=a.131498399638483",
+      "Trailer": "https://www.facebook.com/reel/25413692548255349",
+      "Activities": "https://www.facebook.com/photo/?fbid=817836731004643&set=pcb.817838811004435",
+      "Opening": "https://www.facebook.com/photo?fbid=839788555476127&set=pcb.839792718809044"
+    },
+    "images": [
+      "assets/images/tigi-ay-logo.jpg",
+      "assets/images/tigi-ay-2025/basketball.jpg",
+      "assets/images/tigi-ay-2025/volleyball.jpg",
+      "assets/images/tigi-ay-2025/badminton.jpg",
+      "assets/images/tigi-ay-2025/table-tennis.jpg",
+      "assets/images/tigi-ay-2025/chess.jpg",
+      "assets/images/tigi-ay-2025/scrabble.jpg",
+      "assets/images/tigi-ay-2025/bowling.jpg",
+      "assets/images/tigi-ay-2025/dart.jpg",
+      "assets/images/tigi-ay-2025/mlbb.jpg",
+      "assets/images/tigi-ay-2025/codm.jpg",
+      "assets/images/tigi-ay-2025/dance-sport.jpg",
+      "assets/images/tigi-ay-2025/power-dance.jpg",
+      "assets/images/tigi-ay-2025/mtv-spoof.jpg",
+      "assets/images/tigi-ay-2025/larong-pinoy.jpg",
+      "assets/images/tigi-ay-2025/word-factory.jpg",
+      "assets/images/tigi-ay-2025/tshirt-design.jpg"
+    ],
+    "author": "Cherry Jane Villasencio - PIO",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-11-01T10:00:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  }
+]

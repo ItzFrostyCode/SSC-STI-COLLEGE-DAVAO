@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - SSC STI College Davao</title>
+    
+
+    <meta name="description" content="Discover upcoming and past events organized by the Supreme Student Council of STI College Davao. View event details, schedules, and galleries.">
+    <meta name="keywords" content="SSC Events, STI Davao Events, Student Council Events, College Events, School Activities">
+    <meta name="author" content="Supreme Student Council - STI College Davao">
+    
+
+    <meta property="og:title" content="Events - SSC STI College Davao">
+    <meta property="og:description" content="Discover upcoming and past events organized by the Supreme Student Council of STI College Davao.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/ssc-logo.jpg">
+    <meta property="og:url" content="https://ssc-sti-davao.edu/events.html">
+    
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Events - SSC STI College Davao">
+    <meta name="twitter:description" content="Discover upcoming and past events organized by the Supreme Student Council of STI College Davao.">
+    <meta name="twitter:image" content="assets/images/ssc-logo.jpg">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/images/ssc-logo-removebg.png" type="image/png">
+
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+</head>
+
+<body>
+
+
+    <header class="main-header glass">
+        <div class="container header-inner">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                     <img src="assets/images/ssc-logo.jpg" alt="SSC Logo">
+                    <div class="header-title">
+                        <h1><span class="d-text">SSC STI DAVAO</span><span class="m-text">SSC</span></h1>
+                        <span class="header-subtitle">Supreme Student Council</span>
+                    </div>
+                </a>
+            </div>
+
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="intramural.html">Intramurals</a></li>
+                    <li><a href="officers.html">Officers</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+
+                <div class="search-wrapper">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button class="search-toggle-btn" aria-label="Toggle Search">
+                            <svg class="icon-search" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                </div>
+
+
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+
+                <button class="hamburger" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
+
+
+    <main class="events-container">
+        <div class="container">
+
+            <div class="events-hero">
+                <h1 class="hero-title">Our Events</h1>
+                <p class="hero-subtitle">Celebrating moments, creating memories</p>
+            </div>
+
+
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">
+                        <span>All</span>
+                        <span class="count" id="count-all">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="1st">
+                        <span>1st Semester</span>
+                        <span class="count" id="count-1st">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="2nd">
+                        <span>2nd Semester</span>
+                        <span class="count" id="count-2nd">0</span>
+                    </button>
+                </div>
+                
+                <div class="sort-group">
+                    <button id="btn-sort-trigger" class="btn-control">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5h10M11 9h10M11 13h10M3 17l3 3 3-3M6 18V4"/></svg>
+                        <span id="sort-label">Newest</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="events-grid" class="events-grid">
+
+                <div class="loading-overlay" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading events...</p>
+                </div>
+            </div>
+
+
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <div class="empty-icon">📅</div>
+                <h3>No Events Found</h3>
+                <p>There are no events matching your criteria.</p>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="event-modal" class="modal">
+        <div class="modal-overlay" onclick="closeEventModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEventModal()" aria-label="Close">×</button>
+            <div class="modal-body" id="modal-body">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">×</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Previous">‹</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="Next">›</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+
+    <footer class="main-footer" id="footer">
+         <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>STI College Davao</p>
+                <p>Acacia, Davao City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="intramural.html">Intramurals</a></li>
+                    <li><a href="officers.html">Officers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/STIDavaoCollegeSSC" class="btn-facebook" target="_blank" rel="noopener noreferrer">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025-2026 Supreme Student Council - STI College Davao. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="src/main.js"></script>
+
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/header.js"></script>
+</body>
+</html>

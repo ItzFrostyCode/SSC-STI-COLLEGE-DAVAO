@@ -1,0 +1,2034 @@
+{
+  "event_name": "STI TIGI-AY 2025",
+  "organizer": "STI College Davao - Supreme Student Council",
+  "academicYear": "2025-2026",
+  "semester": "1st",
+  "teams": [
+    {
+      "code": "Team A",
+      "name": "Dragon Vanguard",
+      "department": "SHS",
+      "theme_color": "#D4AF37",
+      "participants": {
+        "major_activities": {
+          "basketball_men": [
+            "Gonzaga, Marc Louise N.",
+            "Palma, Carlos M.",
+            "Matugas, Patrick John C.",
+            "Compra, Ronyl D.",
+            "Bonhoc, Christian P.",
+            "Abayan, Kiko Fertuliano",
+            "Mirandilla, Ivan Clint",
+            "Guevarra, Razzel",
+            "Bacquial, Christian Magaway",
+            "Pareja, Brandon",
+            "Umal, Khaliq",
+            "Tacardon, Sean Sidrek",
+            "Araman, Joshua M",
+            "Enesario, Jay-R",
+            "Laraga, Charls P."
+          ],
+          "basketball_women": [
+            "Jasmine Claire T. Niere",
+            "Maria Camille Angeline C. Baddiri",
+            "Frecious Jewel P. Espinosa",
+            "Courtney Love R. Juncia",
+            "Scarlet M. Amarillo",
+            "Quesa Jane Diaz",
+            "Ashley Magpayo",
+            "Eian Cabiles",
+            "Raesylee Abella"
+          ],
+          "volleyball_men": [
+            "Zacchaeus Zean Xerseth S. Mendoza",
+            "Niño Anthony N. Zamora",
+            "Kiko Abayan",
+            "Nash Sigurigan",
+            "James Hofer",
+            "Rowen Jay Gonzales",
+            "Diaregun Najem"
+          ],
+          "volleyball_women": [
+            "Lorainne Agbas",
+            "Ashley Magpayo",
+            "Rhianna Nicole D. Acub",
+            "Princess Monica, Rico",
+            "Bianca, Navarro",
+            "Samantha Kate, Paubaya",
+            "Icey Bless, Jumawan",
+            "Marjorie Malinao Dablo"
+          ],
+          "hip_hop_dance": [
+            "AYUSTE, ASHLY NECOLE",
+            "BARSANALINA, BELLE LOREINZ",
+            "DESTREZA, IVERSON",
+            "MAGHARI, PRINCESS CAMILLE",
+            "PAGKALIWANGAN, SAHARAH",
+            "BELOY, DEBIE JOY",
+            "BERONGOY, JULIA",
+            "LUMANAS, KEZIAH FAITH",
+            "PANTANOSAS, NICOLE",
+            "RIGEDOR. JESSA MAE",
+            "SILVA, PRINCESS MARIA NIE",
+            "BACQUIAL, CHRISTIAN",
+            "GUEVARRA, RAZELL",
+            "NENE, MARGARETH",
+            "ASEJO, JADED",
+            "PRINCIPE, NAOMI"
+          ],
+          "badminton": {
+            "women_single": [
+              "Rhian Tadem"
+            ],
+            "men_single": [
+              "Rolly Bulan Jr."
+            ],
+            "mixed_doubles": [
+              "Jenwell Francis Basalo",
+              "Rianee Saren"
+            ]
+          },
+          "table_tennis": {
+            "women": [
+              "JULIA Q. BERONGOY"
+            ],
+            "men": [
+              "ORAL, MICKO ANGELO"
+            ],
+            "mixed_doubles": [
+              "Keizha Mates",
+              "Micko Angelo Oral"
+            ]
+          },
+          "bowling": {
+            "men": [
+              "Patrick Matugas"
+            ],
+            "women": []
+          },
+          "e_sports": {
+            "mobile_legends": [
+              "EDWARD BAHANDI",
+              "RHOD CHRYSLER GANOZA",
+              "FERTULIANO ABAYAN",
+              "CHRIS JULIEN CABIGAS",
+              "GILRIZZ GUNDINO",
+              "RHIANNA NICOLE ACUB",
+              "KERWIN BAR"
+            ],
+            "call_of_duty": [
+              "Jeff Ivan Vasquez",
+              "Sean Sedrik Tacardon",
+              "Rene Samonte",
+              "Charls Laraga",
+              "Levi Sevilla",
+              "Naomi Principe",
+              "Kurt Russel Eduyan"
+            ]
+          },
+          "special_events": {
+            "mtv_spoof": [
+              "BAHANDI, EDWARD",
+              "MIRANDILLA, ALEXEI EMMANUEL O.",
+              "FLOTIBLES, RAYMART B.",
+              "GENILLA, JAMES DANIEL",
+              "ABAYAN, FERTULIANO B.",
+              "GUNDINO, GILRIZZ C.",
+              "HANDUGAN, RIEMANN ANDREI",
+              "CABIGAS, CHRIS JULIEN D."
+            ],
+            "dancesports": [
+              "DANIELA KATE BATOON",
+              "NAJEM DIAREGUN"
+            ],
+            "queen_of_sti": [
+              "RICHARD RESNERA JR.",
+              "MICHEAL REY ONIN"
+            ]
+          }
+        },
+        "minor_activities": {
+          "chess": {
+            "male": [
+              "Eli John Zulueta"
+            ],
+            "female": [
+              "Andrhea Joanna B. Dayon"
+            ]
+          },
+          "scrabble": [
+            "Rizalene Mato",
+            "Czamyehl Achilles Varquez"
+          ],
+          "word_factory": [
+            "Lorainne Agbas",
+            "Niño Anthony Zamora"
+          ],
+          "tetris": [
+            "MJ Formilleza",
+            "Zac Angelo Mesias"
+          ],
+          "darts": {
+            "male": [
+              "Zandrie Jhon Chaves"
+            ],
+            "female": [
+              "Ayumi Togonon"
+            ],
+            "mixed": [
+              "Ayumi Togonon",
+              "Zandrie Jhon Chaves"
+            ]
+          },
+          "cultural_literary": {
+            "spoken_poetry": [
+              "Rowen Gonzales"
+            ],
+            "t_shirt_design": [
+              "Richard Resnera Jr.",
+              "Michael Rey Onin"
+            ],
+            "book_character": [
+              "Ashley Canete"
+            ],
+            "bookmark_making": [
+              "Shekinnah Kate P. Daluz",
+              "Heart Rizalent M. Bobilles"
+            ]
+          }
+        },
+        "larong_pinoy": {
+          "tug_of_war": [
+            "Patrick Matugas",
+            "Febelyn Abella",
+            "Precious Tagra",
+            "Angel Dela Cerna"
+          ],
+          "chinese_garter": [
+            "Ashlee Galis",
+            "Shekinnah Kate Daluz"
+          ],
+          "sack_race": [],
+          "limbo_rock": []
+        }
+      }
+    },
+    {
+      "code": "Team B",
+      "name": "Pegasus Fury",
+      "department": "THM",
+      "theme_color": "#C70000",
+      "participants": {
+        "major_activities": {
+          "basketball_men": [
+            "Las Marias, Shawn O.",
+            "Anicker, Denver G.",
+            "Abequibel, Cicily Jay",
+            "Laurico, Lawrence",
+            "Gasal, Aj",
+            "Pugahan, Kristian",
+            "Piamonte, Christian Y.",
+            "Canale, Jean Mikhail M.",
+            "Yu, Josef Ed Zachary",
+            "Galleto, Justin Blake",
+            "Maduyag, Joshua D.",
+            "Montero, Ulysses Micolob Jr.",
+            "Perez, Glyndale P."
+          ],
+          "basketball_women": [
+            "Manigos, Kimberly B.",
+            "Arcenas, Abigail R.",
+            "Geldore, Jinn Karylle",
+            "Gesulga, Edessa L.",
+            "Sison, Jeraldine P.",
+            "Jule, Jocelle Mae O.",
+            "Pabilona, Aira Mae",
+            "Mongo, Ginalyn C.",
+            "Pabalate, Angelica B.",
+            "Pame, Angeline B.",
+            "Castillo, Chessa",
+            "Briones, Janna Mae",
+            "Panibon, Arjay M.",
+            "Espino, Trixie",
+            "Asoy, Grace",
+            "Figueroa, Sheena"
+          ],
+          "volleyball_men": [
+            "Palma, Mel Dave",
+            "Albores, Julian",
+            "Suela, Carl Jhoeren E.",
+            "Sarucam, Christian",
+            "Sampulna, Rockman",
+            "Solis, Andrei Gimo",
+            "Verana, Wilson",
+            "Espinosa, Jacris",
+            "Lusat, Jhon Dave M",
+            "Payot, Yhanzee Manuel E."
+          ],
+          "volleyball_women": [
+            "Paña, Emma",
+            "Monsale, Mariel G.",
+            "Bermudez, Kheycie C.",
+            "Gelbolingo, Shamyll",
+            "Duma-an, Gwen Steffany B.",
+            "Montelijao, April",
+            "Morante, Riezl Mae R.",
+            "Alimes, Aleyah Marie",
+            "Ordonio, Shirla Mae R.",
+            "Rivera, Christhia",
+            "Robles, Ivy M.",
+            "Tabigue, Chesilyn Mae"
+          ],
+          "hip_hop_dance": [
+            "Sayman, Jhasaf Jean",
+            "Bueno, Dianne Rexelle A.",
+            "Albores, Julian",
+            "Bacor, Aljhon",
+            "Sumaliling, Chie",
+            "Flores, Kaira",
+            "Sobiaco, Loricka",
+            "Abear, Jhaera Jane",
+            "Diesto, Ella Louise",
+            "Tañara, Katherine"
+          ],
+          "badminton": {
+            "women_single": [
+              "Pame, Angeline B."
+            ],
+            "men_single": [
+              "Coquilla, John Ryan"
+            ],
+            "mixed_doubles": [
+              "Pabilona, Aira Mae",
+              "Arrojado, Vincent Coby"
+            ]
+          },
+          "table_tennis": {
+            "women": [
+              "Astudillo, Cj Love Marie R."
+            ],
+            "men": [
+              "Maduyag, Joshua D."
+            ],
+            "mixed_doubles": []
+          },
+          "bowling": {
+            "men": [
+              "Villasencio, Chester Paul"
+            ],
+            "women": [
+              "Mendez, Rizza Joy M."
+            ]
+          },
+          "e_sports": {
+            "mobile_legends": [
+              "Macangin, Essa",
+              "Curilan, Jumar P.",
+              "Zeinaldin, Yousef Abdulrahman A.",
+              "Alegado, Juan Pablo B.",
+              "Peñera, Prince James S.",
+              "Malik, AbdulBasit U."
+            ],
+            "call_of_duty": [
+              "Quiles, Alexa Shane",
+              "Alimes, Aleyah Marie",
+              "Infante, Shandy Ehlize",
+              "Salaysay, Vianca Jaen",
+              "Bagotsay, Katrise"
+            ]
+          },
+          "special_events": {
+            "mtv_spoof": [
+              "Macasling, Jev D.",
+              "Lastimosa, Lance C.",
+              "Sevilla, Lynard S.",
+              "Nieve, Jhon Cyril",
+              "Echavez, Kirk G.",
+              "Baybayanon, Roy M.",
+              "Tolin, Ashly M."
+            ],
+            "dancesports": [
+              "Bernados, Marc Jeremy A.",
+              "Lunay, Honey"
+            ],
+            "queen_of_sti": [
+              "Panibon, Valerie M.",
+              "Paclibar, Jastine M."
+            ]
+          }
+        },
+        "minor_activities": {
+          "chess": {
+            "male": [
+              "Suela, Carl Jhoeren"
+            ],
+            "female": [
+              "Mercado, Janna Gabrielle N."
+            ]
+          },
+          "scrabble": [
+            "Amarillento, Dannah",
+            "Atuel, Chris"
+          ],
+          "word_factory": [
+            "Tabigue, Chesilyn Dianne",
+            "Solis, Andrei Gizmo A."
+          ],
+          "tetris": [
+            "Tabigue, Ariane E.",
+            "Rifaco, Jerome C."
+          ],
+          "darts": {
+            "male": [
+              "Lastimosa, Lance C."
+            ],
+            "female": [
+              "Jule, Jocelle Mae O."
+            ],
+            "mixed": [
+              "Amoncio, John Joseph A.",
+              "Alfeche, Mekhaella B."
+            ]
+          },
+          "cultural_literary": {
+            "spoken_poetry": [
+              "Luy, Aira Lindsay",
+              "Garay, Jandoe R."
+            ],
+            "t_shirt_design": [
+              "Panibon, Valerie M.",
+              "Paclibar, Jastine M."
+            ],
+            "book_character": [
+              "Jev Dela Rita Macasling"
+            ],
+            "bookmark_making": [
+              "Firmeza, Andrianne June L.",
+              "Alfeche, Mekhaella B."
+            ]
+          }
+        },
+        "larong_pinoy": {
+          "tug_of_war": [
+            "Anicker, Denver John Donald G.",
+            "Piamonte, Christian Y.",
+            "Pugahan, Kristian Jayfol",
+            "Lastimosa, Lance C.",
+            "Cortez, Christian C.",
+            "Sison, Jeraldine",
+            "Diaz, Reena Elaizah",
+            "Yu, Josef Ed Zachary",
+            "Dalhog, Ryzalyn",
+            "Payot, Yhanzee Emmanuel E."
+          ],
+          "chinese_garter": [
+            "Macasling, Jev D.",
+            "Juanich, Angelie Mae",
+            "Caballida, Anne Mae",
+            "Dicon, Jenelyn",
+            "Iroy, Dweigne Nicole"
+          ],
+          "sack_race": [
+            "Alamida, Cindy Jean",
+            "Corpuz, Sheryn Mae F.",
+            "Aranches, Aleczandra",
+            "Vega, Fibie-an B.",
+            "Maduyag, Joshua D."
+          ],
+          "limbo_rock": [
+            "Paclibar, Jastine M.",
+            "Sayman, Jhasafjean L.",
+            "Bacoor, Aljhon Khim",
+            "Abequibel, Cicily Jay",
+            "Asoy, Grace Dhel B."
+          ]
+        }
+      }
+    },
+    {
+      "code": "Team C",
+      "name": "Phoenix Invictus",
+      "department": "ICT",
+      "theme_color": "#9333EA",
+      "participants": {
+        "major_activities": {
+          "basketball_men": [
+            "Noel Shin S. Nuyles",
+            "Aaron John Lumambas",
+            "Chester Ace Gumahad",
+            "Kenlhoyd D. Laojare",
+            "Zerk Clyde S Camporedondo",
+            "Raniel Josh S. Larrobis",
+            "Alexander Turingan",
+            "Yance Oliver M. Ermac",
+            "Edrianne james E. Bucog",
+            "John Carlo M. Miral",
+            "Julio Pajota",
+            "Angelo Coronado",
+            "Ram llanes",
+            "Vince Canale",
+            "Glymar Perez"
+          ],
+          "basketball_women": [
+            "MARINELLE KLYNE DEQUIÑA",
+            "Aubrey Amante",
+            "Carol Balista",
+            "Gwyn Barba",
+            "ARLALEJO EMELYN",
+            "Jill Seban",
+            "Hassanal Guibar",
+            "Jasmen Jade Alcano",
+            "Leilani How",
+            "Nash Hugo darantinao",
+            "Ruby Jan Arevalo",
+            "Stephen Jay Gabion",
+            "Trisha Morales",
+            "Rogi Soliva",
+            "Nicollete Libunao"
+          ],
+          "volleyball_men": [
+            "Anthony Francis Abe",
+            "Henric Caasi",
+            "Kenji Isuga",
+            "Marlouie Pasaporte",
+            "Julius Oro",
+            "Sean Dave Ragas",
+            "John Romar Pardo",
+            "Bryan Kylle Escala",
+            "Lieurd Zechariah Jamillarin",
+            "Francis Solomon",
+            "Mary Rose Tongcayadan",
+            "ivy Hope Alba"
+          ],
+          "volleyball_women": [
+            "Princess Fernando",
+            "Honey Flor Magno",
+            "Carol Claire Balista",
+            "Geraldine Cawayan",
+            "Emelyn Aralalejo",
+            "Cathrine Revil",
+            "Jade Alcano",
+            "Andrei Nagba",
+            "Mary Manacio",
+            "Maria Salem",
+            "Trisha Morales"
+          ],
+          "hip_hop_dance": [
+            "Benjamin S Cabrera II",
+            "Edcel Mac Serrano",
+            "Cristam Nanong",
+            "Daniela Muana",
+            "Dedrich Bryce Arce",
+            "Gwyn Parba"
+          ],
+          "badminton": {
+            "women_single": [
+              "Trisha Gabrielle Bolivar",
+              "Jaime Bansil",
+              "Richlynn Gonzalgo"
+            ],
+            "men_single": [
+              "ebrahim haisam",
+              "Calag Kenneth",
+              "Francis Jade Solomon",
+              "matt rivero",
+              "danila jayar"
+            ],
+            "mixed_doubles": [
+              "Regine Aguilon",
+              "James Carter Catahum",
+              "James Matthew Bohol",
+              "James Michael Gaña",
+              "Adrian Mesiona",
+              "Kenneth Monday",
+              "Noelle Nathaniel Migriño"
+            ]
+          },
+          "table_tennis": {
+            "women": [
+              "Anika Shane Enero"
+            ],
+            "men": [
+              "John Liegh Gasmen"
+            ],
+            "mixed_doubles": [
+              "Alfred Firmeza",
+              "Wilfred Agustin"
+            ]
+          },
+          "bowling": {
+            "women": [
+              "ivy Hope Alba"
+            ],
+            "men": [
+              "James De Castro"
+            ],
+            "teachers_category": [
+              "Jessiel Chris D Hilot"
+            ]
+          },
+          "e_sports": {
+            "mobile_legends": [
+              "Marlo Deang",
+              "Jaime Bansil",
+              "Richlynn Gonzalgo",
+              "Kurt Crystian Calda",
+              "Christian Cuesta",
+              "Noelle Nathaniel Migriño",
+              "Jerald Dasillo"
+            ],
+            "call_of_duty": [
+              "Jame Kurt Dimacali",
+              "James Matthew Bohol",
+              "James Michael Gaña",
+              "Adrian Mesiona",
+              "Kenneth Monday",
+              "Noelle Nathaniel Migriño"
+            ]
+          },
+          "special_events": {
+            "mtv_spoof": [
+              "Karem Mamale"
+            ],
+            "dancesports": [
+              "Bryan Kylle Escala",
+              "Mariz Esparago"
+            ],
+            "queen_of_sti": [
+              "Chester Ace Gumahad"
+            ]
+          }
+        },
+        "minor_activities": {
+          "chess": {
+            "male": [
+              "Joshua Arabejo"
+            ],
+            "female": [
+              "Aira Casuga Enderes"
+            ]
+          },
+          "t_shirt_design": [
+            "Zedrick Dullano",
+            "Yance Oliver Ermac"
+          ],
+          "word_factory": [
+            "Rochelle Castro",
+            "Jame Bucog"
+          ],
+          "scrabble": [
+            "Trasha Gutierrez Ondez",
+            "Robin Rafael Ragas"
+          ],
+          "tetris": [
+            "James De Castro",
+            "Nicole Berou"
+          ],
+          "darts": {
+            "female": [
+              "CALIPAYAN STEPHANIE"
+            ],
+            "male": [
+              "James De Castro",
+              "Faustino Madagmit"
+            ],
+            "mixed": [
+              "Anika Shane Enero",
+              "Rudy John Belec"
+            ]
+          },
+          "cultural_literary": {
+            "spoken_poetry": [
+              "Anika Shane Enero",
+              "Larr Antoine Baldecanas"
+            ],
+            "book_character": [
+              "James Carter Catahum"
+            ],
+            "bookmark_making": [
+              "SIRILAN,CRYSTAL AMOR BALIOS"
+            ]
+          }
+        },
+        "larong_pinoy": {
+          "tug_of_war": [
+            "RAGAS ROBIN RAFHAEL",
+            "Andrei Nagba",
+            "Carl Joseph Orence",
+            "jaspher Lloyd Tadlan",
+            "Benz Ehilla",
+            "MARINELLE KLYNE DEQUIÑA",
+            "Aubrey Amante",
+            "Carol Balista",
+            "Gwyn Barba",
+            "emelyn arlalejo"
+          ],
+          "chinese_garter": [
+            "Elena May Olaivar",
+            "Trisha Morales",
+            "Mariz Esparago",
+            "Carl Ivan Sampan",
+            "Charlie Lomotos"
+          ],
+          "sack_race": [
+            "MADAGMIT,FAUSTINO D.",
+            "SUMALINOG,JAY C.",
+            "CEBRIAN,JHON CARL",
+            "CATAHUM,JAMES C.",
+            "TANDO,AMEER JAD T."
+          ],
+          "limbo_rock": [
+            "Daniela Muaña",
+            "Anika Shane Enero"
+          ]
+        }
+      }
+    }
+  ],
+  "schedule": [
+    {
+      "day": "Day 1",
+      "date": "December 9, 2025",
+      "main_venue": "Ramon Magsaysay Park / STI College Davao",
+      "activities": [
+        {
+          "time": "7:00 AM - 8:00 AM",
+          "activity": "Assembly & Parade",
+          "details": "Route: NCCC Uyanguren to Ramon Magsaysay Park",
+          "venue": "NCCC Uyanguren to Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "8:00 AM",
+          "activity": "Opening Prayer",
+          "venue": "Ramon Magsaysay Park",
+          "details": "AVP",
+          "period": "AM"
+        },
+        {
+          "time": "8:05 AM",
+          "activity": "National Anthem",
+          "venue": "Magsaysay Park",
+          "details": "AVP",
+          "period": "AM"
+        },
+        {
+          "time": "8:10 AM",
+          "activity": "Opening Remarks / Oath of Sportsmanship",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "8:15 AM",
+          "activity": "Banner Parade",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "8:20 AM",
+          "activity": "Lighting of Torch",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "8:25 AM",
+          "activity": "Opening Salvo / Launch of Official Soundtrack",
+          "venue": "Magsaysay Park",
+          "details": "Performers: Merin or P.E. Teachers",
+          "period": "AM"
+        },
+        {
+          "time": "8:35 AM",
+          "activity": "Banner Raising",
+          "venue": "Magsaysay Park",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "8:40 AM",
+          "activity": "Festival 1 ()",
+          "venue": "Magsaysay Park",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "8:45 AM",
+          "activity": "Introduction of Judges",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "8:55 AM",
+          "activity": "Queen STI (Production Number) / T-Shirt Design Presentation",
+          "venue": "Magsaysay Park",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "9:00 AM",
+          "activity": "Festival 2 ()",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "9:10 AM",
+          "activity": "Queen STI (Sports Attire)",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "9:15 AM",
+          "activity": "Festival 3 ()",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "9:20 AM",
+          "activity": "Book Character Contest",
+          "venue": "Magsaysay Park",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "9:35 AM",
+          "activity": "Queen STI (Q & A)",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "9:45 AM",
+          "activity": "Awarding (Book Character)",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "9:50 AM",
+          "activity": "Awarding (Queen STI 2025)",
+          "venue": "Magsaysay Park",
+          "period": "AM"
+        },
+        {
+          "time": "11:00 AM",
+          "activity": "Larong Pinoy",
+          "venue": "Magsaysay Park",
+          "period": "AM",
+          "sub_events": [
+            {
+              "name": "Limbo Rock",
+              "officer_in_charge": "SSC OFFICER (TBA)"
+            },
+            {
+              "name": "Chinese Garter",
+              "officer_in_charge": "SSC OFFICER (TBA)"
+            },
+            {
+              "name": "Sack Race w/ a Twist",
+              "officer_in_charge": "SSC OFFICER (TBA)"
+            },
+            {
+              "name": "Tug of War",
+              "officer_in_charge": "SSC OFFICER (TBA)"
+            }
+          ]
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Call of Duty Mobile",
+          "venue": "Room Assigned: 401 (SHS), 403 (ICT), 404 (HTM)",
+          "details": "Livestream at Physics & Comlab. Only one officer per dept allowed in rooms.",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Mobile Legends Bang Bang",
+          "venue": "Room Assigned: 401 (SHS), 403 (ICT), 404 (HTM)",
+          "details": "Livestream at Physics & Comlab. Only one officer per dept allowed in rooms.",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Tetris",
+          "venue": "Room Assigned: 401 (SHS), 403 (ICT), 404 (HTM)",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Chess (Male)",
+          "venue": "Library",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Chess (Female)",
+          "venue": "Library",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Bookmark",
+          "venue": "Library",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Scrabble (Female)",
+          "venue": "Multipurpose Hall",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Scrabble (Male)",
+          "venue": "Multipurpose Hall",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Word Factory",
+          "venue": "Multipurpose Hall",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Dart (Female Single)",
+          "venue": "Room 101",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Dart (Male Single)",
+          "venue": "Room 101",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Spoken Poetry",
+          "venue": "Travel Office",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Book Character",
+          "venue": "Magsaysay Park",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        }
+      ]
+    },
+    {
+      "day": "Day 2",
+      "date": "December 10, 2025",
+      "activities": [
+        {
+          "time": "8:00 AM - 12:00 PM",
+          "activity": "Volleyball (Women & Men)",
+          "venue": "Brokenshire Hotel-Resort & Convention Center (BHRCC)",
+          "matches": [
+            "Game 1",
+            "Game 2",
+            "Game 3",
+            "Fighting for 3rd"
+          ],
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "12:00 PM - 5:00 PM",
+          "activity": "Basketball (Women 3x3 & Men)",
+          "venue": "Brokenshire Hotel-Resort & Convention Center (BHRCC)",
+          "details": "Women's category is 3x3",
+          "matches": [
+            "Game 1",
+            "Game 2",
+            "Game 3",
+            "Fighting for 3rd"
+          ],
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "8:00 AM - 12:00 PM",
+          "activity": "Badminton (Elimination & Championship)",
+          "venue": "Smashville",
+          "details": "2 courts/4 hrs. Categories: Single Men, Single Women, Mixed Double",
+          "matches": [
+            "Game 1: A vs. B",
+            "Game 2: B vs. C",
+            "Game 3: C vs. A",
+            "Fighting for 3rd",
+            "Championship Game"
+          ],
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "8:00 AM - 12:00 PM",
+          "activity": "Bowling",
+          "venue": "Dover Lanes",
+          "matches": [
+            "Game 1: A vs. B",
+            "Game 2: B vs. C",
+            "Game 3: C vs. A",
+            "Fighting for 3rd",
+            "Championship Game"
+          ],
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "1:00 PM - 5:00 PM",
+          "activity": "Table Tennis",
+          "venue": "STI Campus",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        }
+      ]
+    },
+    {
+      "day": "Day 3",
+      "date": "December 11, 2025",
+      "main_venue": "Almendras Gym",
+      "time_range": "7:00 AM – 4:00 PM",
+      "activities": [
+        {
+          "time": "7:00 AM",
+          "activity": "Volleyball Women (Championship)",
+          "venue": "Almendras Gym",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "8:30 AM",
+          "activity": "Volleyball Men (Championship)",
+          "venue": "Almendras Gym",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "10:00 AM",
+          "activity": "MTV Spoof",
+          "venue": "Almendras Gym",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "10:20 AM",
+          "activity": "Dance Sport",
+          "venue": "Almendras Gym",
+          "details": "Candidates #1, #2, #3",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "10:50 AM",
+          "activity": "Basketball Women (Championship 3x3)",
+          "venue": "Almendras Gym",
+          "details": "3x3 Format",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "11:30 AM",
+          "activity": "Basketball Men (Championship)",
+          "venue": "Almendras Gym",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "AM"
+        },
+        {
+          "time": "1:00 PM",
+          "activity": "Power Dance",
+          "venue": "Almendras Gym",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "1:30 PM",
+          "activity": "Alumni Vs. Selected Students w/ Teachers",
+          "venue": "Almendras Gym",
+          "officer_in_charge": "SSC OFFICER (TBA)",
+          "period": "PM"
+        },
+        {
+          "time": "2:30 PM",
+          "activity": "Awarding (All Events)",
+          "venue": "Almendras Gym",
+          "details": "Includes special recognition for Niño Anthony N. Zamora",
+          "period": "PM"
+        },
+        {
+          "time": "3:30 PM",
+          "activity": "SSC Recognition",
+          "venue": "Almendras Gym",
+          "period": "PM"
+        },
+        {
+          "time": "3:40 PM",
+          "activity": "Closing Remarks",
+          "venue": "Almendras Gym",
+          "period": "PM"
+        },
+        {
+          "time": "3:50 PM",
+          "activity": "STI Hymn",
+          "venue": "Almendras Gym",
+          "period": "PM"
+        }
+      ]
+    }
+  ],
+  "day1_results": {
+    "tournament_info": {
+      "event_name": "Intramurals Day 1",
+      "status": "Official Tally - Corrected",
+      "date_recorded": "December 9, 2025"
+    },
+    "overall_standings": [
+      {
+        "team_name": "Phoenix Invictus",
+        "abbreviation": "PI",
+        "total_points": 990,
+        "rank": 1
+      },
+      {
+        "team_name": "Dragon Vanguard",
+        "abbreviation": "DV",
+        "total_points": 950,
+        "rank": 2
+      },
+      {
+        "team_name": "Pegasus Fury",
+        "abbreviation": "PF",
+        "total_points": 900,
+        "rank": 3
+      }
+    ],
+    "event_results": [
+      {
+        "category": "Pageantry",
+        "event": "Queen STI",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1,
+            "winner": "Valerie Panibon"
+          },
+          {
+            "team": "DV",
+            "rank_label": "1st Runner Up",
+            "position": 2,
+            "winner": "Jastine Paclibar"
+          },
+          {
+            "team": "PI",
+            "rank_label": "2nd Runner Up",
+            "position": 3,
+            "winner": "Rich Resnera"
+          }
+        ],
+        "additional_winners": [
+          {
+            "name": "Michael Rey Onin",
+            "team": "DV",
+            "title": "Runner Up"
+          },
+          {
+            "name": "Chester Ace Gumahad",
+            "team": "PF",
+            "title": "Runner Up"
+          }
+        ]
+      },
+      {
+        "category": "Traditional Games",
+        "event": "Larong Pinoy",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "E-Sports",
+        "event": "Call of Duty Mobile",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "E-Sports",
+        "event": "Mobile Legends Bang Bang",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Literary & Arts",
+        "event": "Bookmark",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PI",
+            "rank_label": "Disqualified/No Participant",
+            "position": null
+          }
+        ]
+      },
+      {
+        "category": "Literary & Arts",
+        "event": "Book Character",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Literary & Arts",
+        "event": "Spoken Poetry",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PI",
+            "rank_label": "Disqualified/No Participant",
+            "position": null
+          }
+        ]
+      },
+      {
+        "category": "Academic/Board Games",
+        "event": "Word Factory (Male)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PI",
+            "rank_label": "Disqualified/No Participant",
+            "position": null
+          }
+        ]
+      },
+      {
+        "category": "Academic/Board Games",
+        "event": "Word Factory (Female)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports/Skill",
+        "event": "Dart (Mixed Double)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports/Skill",
+        "event": "Dart (Male Single)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports/Skill",
+        "event": "Dart (Female Single)",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Winner",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Academic/Board Games",
+        "event": "Scrabble (Female)",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Academic/Board Games",
+        "event": "Scrabble (Male)",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Academic/Board Games",
+        "event": "Chess (Female)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Academic/Board Games",
+        "event": "Chess (Male)",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports/Skill",
+        "event": "Table Tennis (Mixed Double)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Disqualified/No Participant",
+            "position": null
+          }
+        ]
+      },
+      {
+        "category": "Sports/Skill",
+        "event": "Table Tennis (Female)",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports/Skill",
+        "event": "Table Tennis (Male)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "E-Sports/Skill",
+        "event": "Tetris (Female)",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Disqualified/No Participant",
+            "position": null
+          },
+          {
+            "team": "PF",
+            "rank_label": "Disqualified/No Participant",
+            "position": null
+          }
+        ]
+      },
+      {
+        "category": "E-Sports/Skill",
+        "event": "Tetris (Male)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Group",
+        "event": "Banner Racing",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      }
+    ],
+    "analysis": {
+      "phoenix_invictus": {
+        "total_points": 990,
+        "rank": 1,
+        "strengths": "Dominance in E-Sports (CODM, MLBB) and key individual events (Chess Female, Word Factory Female, multiple Table Tennis victories)",
+        "weaknesses": "Forfeited 4 events (Bookmark, Spoken Poetry, Word Factory Male, Tetris Female)",
+        "championships": 10
+      },
+      "dragon_vanguard": {
+        "total_points": 950,
+        "rank": 2,
+        "strengths": "Control over board games (Chess Male, Scrabble Male & Female), most well-rounded team with fewest disqualifications, gained uncontested win in Tetris Female",
+        "weaknesses": "Need to convert more 2nd and 3rd place finishes into championships",
+        "championships": 6
+      },
+      "pegasus_fury": {
+        "total_points": 900,
+        "rank": 3,
+        "strengths": "Strong in Arts and Group events (Banner Racing, Queen STI, Larong Pinoy), consistent 2nd place finishes",
+        "weaknesses": "Need to convert silver medals into gold to catch PI, fewer overall championships",
+        "championships": 6
+      }
+    }
+  },
+  "day2_results": {
+    "tournament_info": {
+      "event_name": "Intramurals Day 2",
+      "status": "Official Tally",
+      "date_recorded": "December 10, 2025"
+    },
+    "overall_standings": [
+      {
+        "team_name": "Pegasus Fury",
+        "abbreviation": "PF",
+        "total_points": 1800,
+        "rank": 1
+      },
+      {
+        "team_name": "Phoenix Invictus",
+        "abbreviation": "PI",
+        "total_points": 1750,
+        "rank": 2
+      },
+      {
+        "team_name": "Dragon Vanguard",
+        "abbreviation": "DV",
+        "total_points": 1600,
+        "rank": 3
+      }
+    ],
+    "event_results": [
+      {
+        "category": "Sports",
+        "event": "Bowling (Male)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports",
+        "event": "Bowling (Female)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports",
+        "event": "Badminton (Male Single)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports",
+        "event": "Badminton (Female Single)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports",
+        "event": "Badminton (Mixed Doubles)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Basketball (Male)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Basketball (Female)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Volleyball (Female)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Volleyball (Male)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Fighting for Championship",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Sports",
+        "event": "Table Tennis (Men's Singles)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      }
+    ]
+  },
+  "day3_results": {
+    "tournament_info": {
+      "event_name": "Intramurals Day 3 - Championship Day",
+      "status": "Official Tally",
+      "date_recorded": "December 11, 2025"
+    },
+    "overall_standings": [
+      {
+        "team_name": "Pegasus Fury",
+        "abbreviation": "PF",
+        "total_points": 2100,
+        "rank": 1
+      },
+      {
+        "team_name": "Phoenix Invictus",
+        "abbreviation": "PI",
+        "total_points": 2050,
+        "rank": 2
+      },
+      {
+        "team_name": "Dragon Vanguard",
+        "abbreviation": "DV",
+        "total_points": 1900,
+        "rank": 3
+      }
+    ],
+    "event_results": [
+      {
+        "category": "Major Sports",
+        "event": "Volleyball Women (Championship)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Runner-up",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "3rd Place",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Volleyball Men (Championship)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Runner-up",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "3rd Place",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Minor Activities",
+        "event": "MTV Spoof",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Minor Activities",
+        "event": "Dance Sport",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Basketball Women (Championship 3x3)",
+        "results": [
+          {
+            "team": "PF",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Runner-up",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "3rd Place",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Major Sports",
+        "event": "Basketball Men (Championship)",
+        "results": [
+          {
+            "team": "PI",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PF",
+            "rank_label": "Runner-up",
+            "position": 2
+          },
+          {
+            "team": "DV",
+            "rank_label": "3rd Place",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "category": "Minor Activities",
+        "event": "Power Dance",
+        "results": [
+          {
+            "team": "DV",
+            "rank_label": "Champion",
+            "position": 1
+          },
+          {
+            "team": "PI",
+            "rank_label": "Rank 2",
+            "position": 2
+          },
+          {
+            "team": "PF",
+            "rank_label": "Rank 3",
+            "position": 3
+          }
+        ]
+      }
+    ]
+  }
+}
