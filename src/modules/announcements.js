@@ -73,8 +73,8 @@ function render() {
 
     // 2. Sort
     filtered.sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
+        const dateA = new Date(a.createdAt || a.date);
+        const dateB = new Date(b.createdAt || b.date);
         return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
     });
 
@@ -102,7 +102,7 @@ function render() {
                 <div class="card-meta">
                     <span class="card-category">${escapeHtml(item.category || 'General')}</span>
                     <span class="card-dot">•</span>
-                    <span class="card-date">${formatDate(item.date)}</span>
+                    <span class="card-date">${formatDate(item.createdAt || item.date)}</span>
                 </div>
                 <h3 class="card-title">${escapeHtml(item.title)}</h3>
                 <p class="card-excerpt">${escapeHtml(item.content)}</p>
