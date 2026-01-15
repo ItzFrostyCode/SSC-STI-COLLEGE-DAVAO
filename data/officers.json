@@ -19,23 +19,7 @@
     "createdAt": "2025-09-25T19:55:00Z",
     "image": "reinamie-dayrit.png"
   },
-  {
-    "id": "OFF-2026-OSA",
-    "name": "Upcoming",
-    "position": "OSA Representative",
-    "department": "Office of Student Affairs",
-    "email": "osa@sti.edu",
-    "phone": "+63 900 000 0000",
-    "order": 0.5,
-    "isAuditor": false,
-    "responsibilities": [
-      "To be announced"
-    ],
-    "termStart": "2025-09-25",
-    "termEnd": "2026-07-31",
-    "createdAt": "2025-09-25T19:55:00Z",
-    "image": ""
-  },
+ 
   {
     "id": "OFF-2026-001",
     "name": "Chester Paul Villasencio",

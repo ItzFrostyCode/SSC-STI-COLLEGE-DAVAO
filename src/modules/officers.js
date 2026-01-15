@@ -108,7 +108,7 @@ function renderOfficers(allOfficers) {
                                 </div>
                              </div>
                              <div class="officer-info">
-                                <h3>Upcoming</h3>
+                                <h3>-</h3>
                                 <p class="officer-role">OSA Representative</p>
                              </div>
                         </div>
