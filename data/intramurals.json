@@ -275,8 +275,8 @@
     "tournament_info": {"event_name": "Intramurals Day 1", "status": "Official Tally - Corrected", "date_recorded": "December 9, 2025"},
     "overall_standings": [
       {"team_name": "Phoenix Invictus", "abbreviation": "PI", "total_points": 990, "rank": 1},
-      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 950, "rank": 2},
-      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 900, "rank": 3}
+      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 950, "rank": 2},
+      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 900, "rank": 3}
     ],
     "event_results": [
       {"category": "Pageantry", "event": "Queen STI", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "1st Runner Up", "position": 2}, {"team": "Phoenix Invictus", "rank_label": "2nd Runner Up", "position": 3}]},
