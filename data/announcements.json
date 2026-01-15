@@ -685,5 +685,20 @@
     "lastEditedAt": null,
     "status": "published",
     "image": "assets/images/announcements/first-semester-recap.png"
+  },
+  {
+    "id": "ANN-2026-005",
+    "title": "Byaheng Isang Sem Na Lang",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-01-15",
+    "category": "General",
+    "content": "Byaheng isang sem na lang… another year na naman of pagod, puyat, at pangarap. Sa bawat late night, bawat breakdown, at bawat pagdududa sa sarili, pinili pa rin nating magpatuloy. Hindi man araw-araw strong, pero araw-araw lumalaban. Konti na lang, kakayanin pa — para sa mga pangarap na matagal na nating hinahawakan. 🤍✨",
+    "author": "SSC",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-01-15T11:23:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
   }
 ]
