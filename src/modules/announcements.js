@@ -189,7 +189,18 @@ function renderPagination(totalPages, container) {
 }
 
 function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+    const date = new Date(dateString);
+    const dateFormatted = date.toLocaleDateString(undefined, { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
+    const timeFormatted = date.toLocaleTimeString(undefined, { 
+        hour: 'numeric', 
+        minute: '2-digit',
+        hour12: true 
+    });
+    return `${dateFormatted} at ${timeFormatted}`;
 }
 
 function setupListeners() {
