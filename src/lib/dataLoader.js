@@ -39,7 +39,10 @@ export async function fetchJSON(url, { cache = true, ttl = 3600, adapter = null 
 
     // 3. Network Fetch
     try {
-        const response = await fetch(url);
+        // Add cache-busting timestamp to force fresh data
+        const cacheBuster = `?v=${Date.now()}`;
+        const fetchUrl = url.includes('?') ? `${url}&v=${Date.now()}` : `${url}${cacheBuster}`;
+        const response = await fetch(fetchUrl);
         if (!response.ok) throw new Error(`Failed to load ${url}: ${response.status}`);
         const rawData = await response.json();
 

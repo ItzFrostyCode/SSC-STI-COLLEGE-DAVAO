@@ -12,14 +12,16 @@ let currentLightboxIndex = 0;
 export async function init() {
     console.log('Initializing Events Module');
     try {
+        // DISABLE CACHE to force fresh load
         const data = await fetchJSON('data/events.json', {
-            cache: true,
-            ttl: 3600,
+            cache: false,
+            ttl: 0,
             adapter: normalizeEvents
         });
 
         if (data) {
             allEvents = data; 
+            console.log('Loaded events:', allEvents.length); // Debug log
             renderEvents();
             updateCounts();
             hideLoading();
@@ -193,11 +195,6 @@ function openEventModal(event) {
         </div>
     ` : '';
 
-    // Bind global event for the inline onclick above (hacky but works for string injection) - OR use event delegation below.
-    // Better: Render HTML then attach listeners?
-    // Let's stick to simple HTML injection for now but for gallery clicks we need global or delegated.
-    // We already have a lightbox, we can just attach listeners after innerHTML.
-
     body.innerHTML = `
         <img src="${heroImage}" class="modal-hero-image">
         <h1 class="modal-title">${escapeHtml(event.title)}</h1>
@@ -241,9 +238,7 @@ function openLightbox(index, images) {
     lightboxImages = images;
 
     let lightbox = document.getElementById('lightbox-modal');
-    // ... Existing lightbox creation logic ...
     if (!lightbox) {
-        // Create if missing
         lightbox = document.createElement('div');
         lightbox.id = 'lightbox-modal';
         lightbox.className = 'lightbox';
@@ -305,29 +300,24 @@ function setupListeners() {
     const mobileItems = document.querySelectorAll('.dropdown-item');
 
     if (mobileTrigger && mobileMenu) {
-        // Toggle menu - use direct reference instead of re-querying
         const newTrigger = mobileTrigger.cloneNode(true);
         mobileTrigger.parentNode.replaceChild(newTrigger, mobileTrigger);
         newTrigger.addEventListener('click', (e) => {
             e.stopPropagation();
-            // Use direct reference to mobileMenu instead of querying
             mobileMenu.classList.toggle('show');
         });
 
-        // Close when clicking outside
         document.addEventListener('click', (e) => {
             if (mobileMenu && newTrigger && !mobileMenu.contains(e.target) && !newTrigger.contains(e.target)) {
                 mobileMenu.classList.remove('show');
             }
         });
 
-        // Mobile items selection
         mobileItems.forEach(item => {
             const newItem = item.cloneNode(true);
             item.parentNode.replaceChild(newItem, item);
             newItem.addEventListener('click', () => {
                 const semester = newItem.dataset.filter;
-                // Sync with desktop buttons
                 document.querySelectorAll('.filter-btn').forEach(b => {
                     if(b.dataset.filter === semester) b.click();
                 });
@@ -344,7 +334,6 @@ function setupListeners() {
              newBtn.classList.add('active');
              currentFilter = newBtn.dataset.filter;
              
-             // Sync Mobile UI
              const mobileLabel = document.getElementById('mobile-filter-label');
              if (mobileLabel) {
                  mobileLabel.textContent = currentFilter === 'all' ? 'All Events' :
