@@ -3,6 +3,13 @@
 
 const path = window.location.pathname;
 
+// Global error handler for images to replace inline onerror
+document.addEventListener('error', function(e) {
+    if (e.target.tagName.toLowerCase() === 'img') {
+        e.target.style.display = 'none';
+    }
+}, true); // useCapture to catch error events which don't bubble
+
 async function boot() {
     console.log('App Booting...', path);
 

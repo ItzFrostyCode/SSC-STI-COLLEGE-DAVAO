@@ -1,1 +1,0 @@
-# SSC-STI-College-Davao
