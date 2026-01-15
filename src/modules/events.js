@@ -47,6 +47,11 @@ function updateCounts() {
     if(allEl) allEl.textContent = counts.all;
     if(document.getElementById('count-1st')) document.getElementById('count-1st').textContent = counts['1st'];
     if(document.getElementById('count-2nd')) document.getElementById('count-2nd').textContent = counts['2nd'];
+
+    // Mobile Counts
+    if(document.getElementById('count-all-mobile')) document.getElementById('count-all-mobile').textContent = counts.all;
+    if(document.getElementById('count-1st-mobile')) document.getElementById('count-1st-mobile').textContent = counts['1st'];
+    if(document.getElementById('count-2nd-mobile')) document.getElementById('count-2nd-mobile').textContent = counts['2nd'];
 }
 
 function renderEvents() {
@@ -294,13 +299,63 @@ function showError() {
 }
 
 function setupListeners() {
-    document.querySelectorAll('.filter-btn').forEach(btn => {
+    // Mobile Dropdown Logic
+    const mobileTrigger = document.getElementById('mobile-filter-trigger');
+    const mobileMenu = document.getElementById('mobile-filter-menu');
+    const mobileItems = document.querySelectorAll('.dropdown-item');
+
+    if (mobileTrigger && mobileMenu) {
+        // Toggle menu - use direct reference instead of re-querying
+        const newTrigger = mobileTrigger.cloneNode(true);
+        mobileTrigger.parentNode.replaceChild(newTrigger, mobileTrigger);
+        newTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Use direct reference to mobileMenu instead of querying
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu && newTrigger && !mobileMenu.contains(e.target) && !newTrigger.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        // Mobile items selection
+        mobileItems.forEach(item => {
+            const newItem = item.cloneNode(true);
+            item.parentNode.replaceChild(newItem, item);
+            newItem.addEventListener('click', () => {
+                const semester = newItem.dataset.filter;
+                // Sync with desktop buttons
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    if(b.dataset.filter === semester) b.click();
+                });
+                mobileMenu.classList.remove('show');
+            });
+        });
+    }
+
+    document.querySelectorAll('.desktop-only .filter-btn').forEach(btn => {
          const newBtn = btn.cloneNode(true);
          btn.parentNode.replaceChild(newBtn, btn);
          newBtn.addEventListener('click', () => {
-             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+             document.querySelectorAll('.desktop-only .filter-btn').forEach(b => b.classList.remove('active'));
              newBtn.classList.add('active');
              currentFilter = newBtn.dataset.filter;
+             
+             // Sync Mobile UI
+             const mobileLabel = document.getElementById('mobile-filter-label');
+             if (mobileLabel) {
+                 mobileLabel.textContent = currentFilter === 'all' ? 'All Events' :
+                                          currentFilter === '1st' ? '1st Semester' : 
+                                          currentFilter === '2nd' ? '2nd Semester' : 'All Events';
+             }
+             document.querySelectorAll('.dropdown-item').forEach(item => {
+                 if(item.dataset.filter === currentFilter) item.classList.add('active');
+                 else item.classList.remove('active');
+             });
+
              renderEvents();
          });
     });

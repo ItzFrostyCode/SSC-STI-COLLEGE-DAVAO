@@ -103,7 +103,29 @@
 
 
             <div class="filter-bar">
-                <div class="filter-group">
+                <!-- Mobile Dropdown -->
+                <div class="mobile-filter-dropdown">
+                    <button class="dropdown-trigger" id="mobile-filter-trigger">
+                         <span id="mobile-filter-label">All</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="dropdown-menu" id="mobile-filter-menu">
+                        <button class="dropdown-item active" data-filter="all">
+                            <span>All</span>
+                            <span class="count" id="count-all-mobile">0</span>
+                        </button>
+                        <button class="dropdown-item" data-filter="1st">
+                            <span>1st Semester</span>
+                            <span class="count" id="count-1st-mobile">0</span>
+                        </button>
+                         <button class="dropdown-item" data-filter="2nd">
+                            <span>2nd Semester</span>
+                            <span class="count" id="count-2nd-mobile">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filter-group desktop-only">
                     <button class="filter-btn active" data-filter="all">
                         <span>All</span>
                         <span class="count" id="count-all">0</span>

@@ -66,21 +66,25 @@ function calculateScoresForDay(dayLimit) {
              });
         }
     } 
+    else if (dayLimit === 'Day 2') {
+        // Read from day2_results which contains cumulative Day 1+2 totals
+        if (championData.day2_results && championData.day2_results.overall_standings) {
+             championData.day2_results.overall_standings.forEach(entry => {
+                 let code = '';
+                 if (entry.team_name === 'Phoenix Invictus') code = 'Team C';
+                 else if (entry.team_name === 'Dragon Vanguard') code = 'Team A';
+                 else if (entry.team_name === 'Pegasus Fury') code = 'Team B';
+                 
+                 if (code) scores[code] = entry.total_points;
+             });
+        }
+    }
     else if (dayLimit === 'Day 3' || dayLimit === 'Final') {
         if (championData.final_tally) {
             scores['Team A'] = championData.final_tally['SHS'] || 0;
             scores['Team B'] = championData.final_tally['THM'] || 0;
             scores['Team C'] = championData.final_tally['ICT'] || 0;
         }
-    }
-    else if (dayLimit === 'Day 2') {
-        // Simple interpolation as per original logic
-        const day1 = calculateScoresForDay('Day 1');
-        const day3 = calculateScoresForDay('Day 3');
-        
-        scores['Team A'] = Math.floor((day1['Team A'] + day3['Team A']) / 2);
-        scores['Team B'] = Math.floor((day1['Team B'] + day3['Team B']) / 2);
-        scores['Team C'] = Math.floor((day1['Team C'] + day3['Team C']) / 2);
     }
     
     return scores;
@@ -98,7 +102,13 @@ function buildPodium() {
         btn.parentNode.replaceChild(newBtn, btn);
         
         newBtn.addEventListener('click', (e) => {
-            updatePodium(e.target.textContent.trim());
+            const dayText = e.target.textContent.trim();
+            updatePodium(dayText);
+            
+            // Trigger confetti for Day 3
+            if (dayText === 'Day 3' && window.confettiCannon) {
+                window.confettiCannon.celebrate(e.target, 2000);
+            }
         });
     });
 }
@@ -158,9 +168,9 @@ function renderPodiumWithScores(scores) {
 
     container.innerHTML = html;
 
-    // Re-attach click listeners for "showRoster"
+    // Re-attach click listeners for score breakdown
     container.querySelectorAll('.podium-block').forEach(block => {
-        block.addEventListener('click', () => showRoster(block.dataset.team));
+        block.addEventListener('click', () => showScoreBreakdown(block.dataset.team));
     });
 }
 
@@ -448,6 +458,104 @@ function showRoster(teamCode) {
     // Add close listener to the new button
     content.querySelector('.modal-close').addEventListener('click', hideModal);
 
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Score breakdown modal
+function showScoreBreakdown(teamCode) {
+    if (!championData) return;
+    
+    const team = championData.teams.find(t => t.code === teamCode);
+    if (!team) return;
+
+    // Map team code to abbreviations
+    const abbrevMap = { 'Team A': 'DV', 'Team B': 'PF', 'Team C': 'PI' };
+    const deptMap = { 'Team A': 'SHS', 'Team B': 'THM', 'Team C': 'ICT' };
+    const teamAbbrev = abbrevMap[teamCode];
+    const deptCode = deptMap[teamCode];
+    
+    // Get Day 1 score
+    const day1Score = championData.day1_results.overall_standings.find(
+        s => s.abbreviation === teamAbbrev
+    )?.total_points || 0;
+    
+    // Get Day 2 cumulative and calculate standalone
+    const day2Cumulative = championData.day2_results.overall_standings.find(
+        s => s.abbreviation === teamAbbrev
+    )?.total_points || 0;
+    const day2Score = day2Cumulative - day1Score; // Standalone Day 2 points
+    
+    // Get Day 3 standalone (from day3_results)
+    const day3Score = championData.day3_results.overall_standings.find(
+        s => s.abbreviation === teamAbbrev
+    )?.total_points || 0;
+    
+    // Overall total
+    const overallScore = championData.final_tally[deptCode] || 0;
+    
+    const modal = document.getElementById('roster-modal');
+    const content = modal.querySelector('.modal-box');
+    
+    const logos = {
+        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.jpg',
+        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.jpg',
+        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.png'
+    };
+    
+    content.innerHTML = `
+        <button class="modal-close">&times;</button>
+        <div class="modal-team-header">
+            <img src="${logos[team.name]}" class="modal-team-logo" style="border-color: ${team.theme_color}; background: ${team.name === 'Phoenix Invictus' ? '#000' : 'var(--bg-surface)'}" loading="lazy">
+            <div>
+                <h2 class="modal-team-name" style="color: ${team.theme_color}">${escapeHtml(team.name)}</h2>
+                <p>${escapeHtml(team.department)} • Score Breakdown</p>
+            </div>
+        </div>
+        
+        <div class="score-breakdown-section">
+            <h3 style="margin-bottom: 1.5rem; color: var(--text-main); font-size: 1.5rem;">Points Breakdown</h3>
+            
+            <div class="score-item">
+                <div class="score-label">
+                    <span class="score-day">Day 1</span>
+                </div>
+                <div class="score-value" style="color: ${team.theme_color}">
+                    <span class="points-earned">${day1Score}</span>
+                    <span class="points-label">points</span>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-label">
+                    <span class="score-day">Day 2</span>
+                </div>
+                <div class="score-value" style="color: ${team.theme_color}">
+                    <span class="points-earned">${day2Score}</span>
+                    <span class="points-label">points</span>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-label">
+                    <span class="score-day">Day 3</span>
+                </div>
+                <div class="score-value" style="color: ${team.theme_color}">
+                    <span class="points-earned">${day3Score}</span>
+                    <span class="points-label">points</span>
+                </div>
+            </div>
+            
+            <div class="score-divider final">
+                <span>Overall Score</span>
+                <div class="total-badge" style="background: ${team.theme_color}; font-size: 1.5rem; padding: 0.75rem 1.5rem;">${overallScore} pts</div>
+            </div>
+        </div>
+    `;
+    
+    // Add close listener
+    content.querySelector('.modal-close').addEventListener('click', hideModal);
+    
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
 }

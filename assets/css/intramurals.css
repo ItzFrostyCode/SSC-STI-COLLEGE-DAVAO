@@ -474,7 +474,7 @@ html:not(.dark) .points-display {
 
 .position-1 .points-display {
     font-size: clamp(2.2rem, 5vh, 3.5rem);
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    
 }
 
 
@@ -1857,4 +1857,161 @@ html:not(.dark) .nav-item:hover {
 .winner .team-points {
     background: var(--winner-color);
     color: #000;
+}
+
+/* Score Breakdown Styles - Compact */
+.score-breakdown-section {
+    padding: 0.75rem 0;
+}
+
+.score-breakdown-section h3 {
+    margin-bottom: 0.75rem !important;
+    font-size: 1.1rem !important;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--bg-body);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+.score-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.score-day {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.score-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.score-value {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.points-earned {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.points-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+.score-divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    margin: 0.75rem 0;
+    border-top: 2px solid var(--border-light);
+}
+
+.score-divider.final {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-bottom: none;
+}
+
+.score-divider span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.total-badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-full);
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .score-breakdown-section h3 {
+        font-size: 1rem !important;
+    }
+    
+    .score-item {
+        padding: 0.6rem;
+    }
+    
+    .score-day {
+        font-size: 0.85rem;
+    }
+    
+    .points-earned {
+        font-size: 1.25rem;
+    }
+    
+    .total-badge {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.65rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    .score-breakdown-section {
+        padding: 0.5rem 0;
+    }
+    
+    .score-breakdown-section h3 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .score-item {
+        padding: 0.5rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .score-day {
+        font-size: 0.8rem;
+    }
+    
+    .points-earned {
+        font-size: 1.1rem;
+    }
+    
+    .points-label {
+        font-size: 0.65rem;
+    }
+    
+    .score-divider {
+        padding: 0.5rem 0;
+        margin: 0.5rem 0;
+    }
+    
+    .score-divider span {
+        font-size: 0.75rem;
+    }
+    
+    .total-badge {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.6rem;
+    }
 }

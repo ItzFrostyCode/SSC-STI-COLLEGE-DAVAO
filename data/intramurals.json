@@ -275,8 +275,8 @@
     "tournament_info": {"event_name": "Intramurals Day 1", "status": "Official Tally - Corrected", "date_recorded": "December 9, 2025"},
     "overall_standings": [
       {"team_name": "Phoenix Invictus", "abbreviation": "PI", "total_points": 990, "rank": 1},
-      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 950, "rank": 2},
-      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 900, "rank": 3}
+      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 950, "rank": 2},
+      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 900, "rank": 3}
     ],
     "event_results": [
       {"category": "Pageantry", "event": "Queen STI", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "1st Runner Up", "position": 2}, {"team": "Phoenix Invictus", "rank_label": "2nd Runner Up", "position": 3}]},
@@ -295,9 +295,6 @@
       {"category": "Academic/Board Games", "event": "Scrabble (Male)", "results": [{"team": "Dragon Vanguard", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Pegasus Fury", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Academic/Board Games", "event": "Chess (Female)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 2", "position": 2}, {"team": "Pegasus Fury", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Academic/Board Games", "event": "Chess (Male)", "results": [{"team": "Dragon Vanguard", "rank_label": "Champion", "position": 1}, {"team": "Pegasus Fury", "rank_label": "Rank 2", "position": 2}, {"team": "Phoenix Invictus", "rank_label": "Rank 3", "position": 3}]},
-      {"category": "Sports/Skill", "event": "Table Tennis (Mixed Double)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 2", "position": 2}, {"team": "Pegasus Fury", "rank_label": "Disqualified/No Participant", "position": null}]},
-      {"category": "Sports/Skill", "event": "Table Tennis (Female)", "results": [{"team": "Dragon Vanguard", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Pegasus Fury", "rank_label": "Rank 3", "position": 3}]},
-      {"category": "Sports/Skill", "event": "Table Tennis (Male)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Pegasus Fury", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "E-Sports/Skill", "event": "Tetris (Female)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "E-Sports/Skill", "event": "Tetris (Male)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Pegasus Fury", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Group", "event": "Banner Racing", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]}
@@ -306,13 +303,13 @@
   "day2_results": {
     "tournament_info": {"event_name": "Intramurals Day 2", "status": "Official Tally", "date_recorded": "December 10, 2025"},
     "overall_standings": [
-      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 1800, "rank": 1},
-      {"team_name": "Phoenix Invictus", "abbreviation": "PI", "total_points": 1750, "rank": 2},
-      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 1600, "rank": 3}
+      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 1300, "rank": 1},
+      {"team_name": "Phoenix Invictus", "abbreviation": "PI", "total_points": 1240, "rank": 2},
+      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 1160, "rank": 3}
     ],
     "event_results": [
-      {"category": "Sports", "event": "Bowling (Male)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
-      {"category": "Sports", "event": "Bowling (Female)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
+      {"category": "Sports", "event": "Duckpin Bowling (Male)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
+      {"category": "Sports", "event": "Duckpin Bowling (Female)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Sports", "event": "Badminton (Male Single)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Sports", "event": "Badminton (Female Single)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 2", "position": 2}, {"team": "Phoenix Invictus", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Sports", "event": "Badminton (Mixed Doubles)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
@@ -320,15 +317,17 @@
       {"category": "Major Sports", "event": "Basketball (Female)", "results": [{"team": "Pegasus Fury", "rank_label": "Fighting for Championship", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Fighting for Championship", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Major Sports", "event": "Volleyball (Female)", "results": [{"team": "Pegasus Fury", "rank_label": "Fighting for Championship", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Fighting for Championship", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
       {"category": "Major Sports", "event": "Volleyball (Male)", "results": [{"team": "Pegasus Fury", "rank_label": "Fighting for Championship", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Fighting for Championship", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
-      {"category": "Sports", "event": "Table Tennis (Men's Singles)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Pegasus Fury", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]}
+      {"category": "Sports/Skill", "event": "Table Tennis (Male)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Pegasus Fury", "rank_label": "Rank 2", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "Rank 3", "position": 3}]},
+      {"category": "Sports/Skill", "event": "Table Tennis (Female)", "results": [{"team": "Dragon Vanguard", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Rank 2", "position": 2}, {"team": "Pegasus Fury", "rank_label": "Rank 3", "position": 3}]},
+      {"category": "Sports/Skill", "event": "Table Tennis (Mixed Double)", "results": [{"team": "Phoenix Invictus", "rank_label": "Champion", "position": 1}, {"team": "Dragon Vanguard", "rank_label": "Rank 2", "position": 2}, {"team": "Pegasus Fury", "rank_label": "Disqualified/No Participant", "position": null}]}
     ]
   },
   "day3_results": {
     "tournament_info": {"event_name": "Intramurals Day 3 - Championship Day", "status": "Official Tally", "date_recorded": "December 11, 2025"},
     "overall_standings": [
-      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 2100, "rank": 1},
-      {"team_name": "Phoenix Invictus", "abbreviation": "PI", "total_points": 2050, "rank": 2},
-      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 1900, "rank": 3}
+      {"team_name": "Pegasus Fury", "abbreviation": "PF", "total_points": 640, "rank": 1},
+      {"team_name": "Phoenix Invictus", "abbreviation": "PI", "total_points": 630, "rank": 2},
+      {"team_name": "Dragon Vanguard", "abbreviation": "DV", "total_points": 470, "rank": 3}
     ],
     "event_results": [
       {"category": "Major Sports", "event": "Volleyball Women (Championship)", "results": [{"team": "Pegasus Fury", "rank_label": "Champion", "position": 1}, {"team": "Phoenix Invictus", "rank_label": "Runner-up", "position": 2}, {"team": "Dragon Vanguard", "rank_label": "3rd Place", "position": 3}]},
@@ -409,7 +408,7 @@
     }
   ],
   "final_tally": {
-    "SHS": 1620,
+    "SHS": 1630,
     "THM": 1940,
     "ICT": 1870
   }

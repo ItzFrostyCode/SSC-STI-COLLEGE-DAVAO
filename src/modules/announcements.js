@@ -44,6 +44,15 @@ function updateFilterCounts() {
     if (allBadge) allBadge.textContent = countAll;
     if (firstBadge) firstBadge.textContent = count1st;
     if (secondBadge) secondBadge.textContent = count2nd;
+
+    // Mobile Counts
+    const mAll = document.getElementById('count-all-mobile');
+    const m1st = document.getElementById('count-1st-mobile');
+    const m2nd = document.getElementById('count-2nd-mobile');
+    
+    if (mAll) mAll.textContent = countAll;
+    if (m1st) m1st.textContent = count1st;
+    if (m2nd) m2nd.textContent = count2nd;
 }
 
 function render() {
@@ -137,7 +146,33 @@ function renderPagination(totalPages, container) {
     prevBtn.onclick = () => { if(currentPage > 1) { currentPage--; render(); window.scrollTo({top: 0, behavior: 'smooth'}); }};
     container.appendChild(prevBtn);
 
-    for (let i = 1; i <= totalPages; i++) {
+    // Determine how many page numbers to show based on screen width
+    const maxButtons = window.innerWidth <= 480 ? 3 : window.innerWidth <= 768 ? 5 : 7;
+    
+    let startPage, endPage;
+    
+    if (totalPages <= maxButtons) {
+        // Show all pages if total is less than max
+        startPage = 1;
+        endPage = totalPages;
+    } else {
+        // Calculate which pages to show
+        const halfButtons = Math.floor(maxButtons / 2);
+        
+        if (currentPage <= halfButtons) {
+            startPage = 1;
+            endPage = maxButtons;
+        } else if (currentPage + halfButtons >= totalPages) {
+            startPage = totalPages - maxButtons + 1;
+            endPage = totalPages;
+        } else {
+            startPage = currentPage - halfButtons;
+            endPage = currentPage + halfButtons;
+        }
+    }
+    
+    // Add page number buttons
+    for (let i = startPage; i <= endPage; i++) {
         const btn = document.createElement('button');
         btn.className = `pagination-btn ${i === currentPage ? 'active' : ''}`;
         btn.textContent = i;
@@ -158,20 +193,47 @@ function formatDate(dateString) {
 }
 
 function setupListeners() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    // Filter buttons (Desktop)
+    const filterButtons = document.querySelectorAll('.desktop-only .filter-btn');
     filterButtons.forEach(btn => {
-        // Clone to remove old listeners
         const newBtn = btn.cloneNode(true);
         btn.parentNode.replaceChild(newBtn, btn);
-        
         newBtn.addEventListener('click', () => {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            newBtn.classList.add('active');
-            currentFilters.semester = newBtn.dataset.semester;
-            currentPage = 1;
-            render();
+            handleFilterChange(newBtn.dataset.semester);
         });
     });
+
+    // Mobile Dropdown Logic
+    const mobileTrigger = document.getElementById('mobile-filter-trigger');
+    const mobileMenu = document.getElementById('mobile-filter-menu');
+    const mobileItems = document.querySelectorAll('.dropdown-item');
+
+    if (mobileTrigger && mobileMenu) {
+        // Toggle menu - use direct reference
+        const newTrigger = mobileTrigger.cloneNode(true);
+        mobileTrigger.parentNode.replaceChild(newTrigger, mobileTrigger);
+        newTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu && newTrigger && !mobileMenu.contains(e.target) && !newTrigger.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        // Mobile items selection
+        mobileItems.forEach(item => {
+            const newItem = item.cloneNode(true);
+            item.parentNode.replaceChild(newItem, item);
+            newItem.addEventListener('click', () => {
+                handleFilterChange(newItem.dataset.semester);
+                mobileMenu.classList.remove('show');
+            });
+        });
+    }
 
     const sortBtn = document.getElementById('btn-sort-trigger');
     if(sortBtn) {
@@ -188,4 +250,29 @@ function setupListeners() {
              render();
         });
     }
+}
+
+function handleFilterChange(semester) {
+    currentFilters.semester = semester;
+    currentPage = 1;
+    
+    // Update Desktop UI
+    document.querySelectorAll('.desktop-only .filter-btn').forEach(b => {
+        if(b.dataset.semester === semester) b.classList.add('active');
+        else b.classList.remove('active');
+    });
+
+    // Update Mobile UI
+    document.querySelectorAll('.dropdown-item').forEach(b => {
+        if(b.dataset.semester === semester) b.classList.add('active');
+        else b.classList.remove('active');
+    });
+
+    const mobileLabel = document.getElementById('mobile-filter-label');
+    if (mobileLabel) {
+        mobileLabel.textContent = semester === '1st' ? '1st Semester' : 
+                                 semester === '2nd' ? '2nd Semester' : 'All Announcements';
+    }
+
+    render();
 }

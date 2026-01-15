@@ -71,17 +71,20 @@
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2.5rem;
-    padding: 1.25rem;
-    background: var(--bg-surface);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-light);
+    background: transparent;
+    border: none;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .filter-group {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
+}
+
+.desktop-only {
+    display: flex;
 }
 
 .filter-btn {
@@ -168,19 +171,123 @@
     color: var(--accent-blue);
 }
 
+
+/* Layout Tweaks */
+.filter-bar {
+    padding: 0;
+    gap: 0.75rem;
+}
+
+/* Dropdown Styles (Global) */
+.mobile-filter-dropdown {
+    display: block;
+    width: 250px;
+    position: relative;
+    z-index: 50;
+}
+
+.dropdown-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 1.25rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+
+.dropdown-trigger:active {
+    transform: scale(0.98);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.dropdown-item:hover {
+    background: var(--bg-body);
+    color: var(--text-main);
+}
+
+.dropdown-item.active {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.dropdown-item .count {
+    background: rgba(0, 0, 0, 0.05); /* Light mode default */
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.sort-group {
+    display: flex;
+    width: auto;
+    padding: 0;
+}
+    
+.btn-control {
+    width: auto;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .filter-bar {
-        flex-direction: column;
-        align-items: stretch;
+    .mobile-filter-dropdown {
+        width: 100%;
+        flex: 1;
+        min-width: 0;
     }
-    
-    .filter-group {
-        justify-content: center;
-    }
-    
-    .sort-group {
-        justify-content: center;
-    }
+}
+
+/* Hide desktop buttons globally as we use dropdown now */
+.desktop-only {
+    display: none !important;
 }
 
 

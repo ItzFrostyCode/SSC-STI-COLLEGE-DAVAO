@@ -93,5 +93,43 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published"
+  },
+  {
+    "id": "EVT-2026-005",
+    "title": "Duckpin Bowling",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-12-10",
+    "endDate": "2025-12-10",
+    "category": "Intramurals",
+    "location": "Dover Lanes",
+    "organizer": "SSC Sports Committee",
+    "links": {},
+    "image": "assets/images/tigi-ay-2025/bowling.jpg",
+    "author": "SSC Sports Committee",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-12-10T08:00:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  },
+  {
+    "id": "EVT-2026-006",
+    "title": "Table Tennis",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-12-10",
+    "endDate": "2025-12-10",
+    "category": "Intramurals",
+    "location": "STI Campus",
+    "organizer": "SSC Sports Committee",
+    "links": {},
+    "image": "assets/images/tigi-ay-2025/table-tennis.jpg",
+    "author": "SSC Sports Committee",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-12-10T13:00:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
   }
 ]
