@@ -6,6 +6,8 @@ class ConfettiCannon {
         this.ctx = null;
         this.particles = [];
         this.animationId = null;
+        this.isAnimating = false;
+        this.activeInterval = null;
         this.colors = ['#FFD700', '#007bff', '#ffc107', '#ff6b35', '#E0E0E0', '#CD7F32'];
     }
 
@@ -107,17 +109,33 @@ class ConfettiCannon {
     }
 
     cleanup() {
+        if (this.activeInterval) {
+            clearInterval(this.activeInterval);
+            this.activeInterval = null;
+        }
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+            this.animationId = null;
+        }
         if (this.canvas && this.canvas.parentNode) {
             this.canvas.parentNode.removeChild(this.canvas);
             this.canvas = null;
             this.ctx = null;
         }
+        this.particles = [];
+        this.isAnimating = false;
     }
 
 
     celebrate(element, duration = 3000) {
         if (!element) return;
         
+        // Prevent multiple simultaneous animations
+        if (this.isAnimating) {
+            return;
+        }
+        
+        this.isAnimating = true;
         this.init();
         
         const rect = element.getBoundingClientRect();
@@ -129,12 +147,13 @@ class ConfettiCannon {
         
 
         let elapsed = 0;
-        const interval = setInterval(() => {
+        this.activeInterval = setInterval(() => {
             this.burst(centerX, centerY, 30);
             elapsed += 300;
             
             if (elapsed >= duration) {
-                clearInterval(interval);
+                clearInterval(this.activeInterval);
+                this.activeInterval = null;
             }
         }, 300);
     }
