@@ -15,6 +15,8 @@ export function normalizeAnnouncements(raw) {
         category: item.category || 'General',
         semester: item.semester || '',
         author: item.author || 'SSC',
+        displayDate: item.displayDate || null,
+        createdAt: item.createdAt || null,
         showOnIndex: item.showOnIndex !== false // Default true unless false
     }));
 }
