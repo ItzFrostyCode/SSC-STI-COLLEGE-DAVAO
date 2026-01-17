@@ -700,5 +700,50 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published"
+  },
+  {
+    "id": "ANN-2026-006",
+    "title": "Countdown is REAL ⏳ Back to school in 3 days! Let's gooo!",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-01-16",
+    "category": "General",
+    "content": "Countdown is REAL ⏳ Back to school in 3 days! Let's gooo!",
+    "author": "SSC",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-01-16T12:21:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  },
+  {
+    "id": "ANN-2026-007",
+    "title": "SSC Website Now Open to All Students",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-01-17",
+    "category": "Announcement",
+    "content": "The SSC website is now open to all students. Access the list of SSC events, view the official Intramurals tally, and get to know the SSC officers. The website is accessible on Desktop, Tablet, and Mobile devices.",
+    "author": "SSC",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-01-16T23:14:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  },
+  {
+    "id": "ANN-2026-008",
+    "title": "2 Days Countdown - Back to School!",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-01-17",
+    "category": "General",
+    "content": "2 days na lang, STIers! 📖 Bakasyon is waving goodbye, syllabus is waving hello. Ready na ba?",
+    "author": "SSC",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-01-17T00:47:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
   }
 ]
