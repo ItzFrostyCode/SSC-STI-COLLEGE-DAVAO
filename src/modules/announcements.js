@@ -102,7 +102,7 @@ function render() {
                 <div class="card-meta">
                     <span class="card-category">${escapeHtml(item.category || 'General')}</span>
                     <span class="card-dot">•</span>
-                    <span class="card-date">${formatDate(item.createdAt || item.date)}</span>
+                    <span class="card-date">${item.displayDate || formatDate(item.createdAt || item.date)}</span>
                 </div>
                 <h3 class="card-title">${escapeHtml(item.title)}</h3>
                 <p class="card-excerpt">${escapeHtml(item.content)}</p>
@@ -190,17 +190,11 @@ function renderPagination(totalPages, container) {
 
 function formatDate(dateString) {
     const date = new Date(dateString);
-    const dateFormatted = date.toLocaleDateString(undefined, { 
+    return date.toLocaleDateString(undefined, { 
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
     });
-    const timeFormatted = date.toLocaleTimeString(undefined, { 
-        hour: 'numeric', 
-        minute: '2-digit',
-        hour12: true 
-    });
-    return `${dateFormatted} at ${timeFormatted}`;
 }
 
 function setupListeners() {
