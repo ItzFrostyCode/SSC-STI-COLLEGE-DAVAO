@@ -1,6 +1,26 @@
 [
   {
     "id": "EVT-2026-001",
+    "title": "Back to School 2026",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "startDate": "2026-01-19",
+    "endDate": "2026-01-19",
+    "category": "Welcome Event",
+    "location": "STI Multipurpose Hall",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "description": "Back to school just got better! Enjoy free ice cream, journals, ballpens, candies, and other school supplies. Join the games and get a chance to win exciting prizes! Limited stocks only.",
+    "time": "10:00 AM",
+    "image": "assets/images/events/Back2School.jpg",
+    "author": "Cherry Jane Villasencio - PIO",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-01-18T06:27:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  },
+  {
+    "id": "EVT-2026-002",
     "title": "Teacher's Day Celebration",
     "semester": "1st",
     "academicYear": "2025-2026",
