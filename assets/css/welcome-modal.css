@@ -1,0 +1,387 @@
+/* Welcome Modal Styles */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    max-height: 90vh;
+    overflow-y: auto;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal.active .modal-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-body);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--accent-red);
+    color: white;
+    border-color: var(--accent-red);
+    transform: rotate(90deg);
+}
+
+/* Welcome Modal Specific */
+.welcome-modal-content {
+    width: 90%;
+    max-width: 900px;
+    padding: 3rem;
+}
+
+.welcome-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-header h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.welcome-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .welcome-grid {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: stretch;
+    }
+    
+    .welcome-section-full {
+        grid-column: 1 / -1;
+    }
+}
+
+.welcome-section {
+    background: var(--bg-body);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.welcome-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-section-header svg {
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.welcome-section-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* Latest Announcement Preview */
+.welcome-preview {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    height: 321.5px;
+    overflow-y: auto;
+}
+
+.welcome-preview::-webkit-scrollbar {
+    width: 6px;
+}
+
+.welcome-preview::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.welcome-preview::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 3px;
+}
+
+.welcome-preview::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+.welcome-preview h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.welcome-preview p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.welcome-preview-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.welcome-preview-category {
+    color: var(--accent-blue);
+}
+
+/* Quick Stats */
+.welcome-stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+}
+
+.welcome-stat-item {
+    text-align: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem 0.75rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Quick Navigation */
+.welcome-quick-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .welcome-quick-nav {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.welcome-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-main);
+}
+
+.welcome-nav-item svg {
+    color: var(--accent-blue);
+    transition: all 0.3s;
+}
+
+.welcome-nav-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.welcome-nav-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(96, 165, 250, 0.05));
+}
+
+.welcome-nav-item:hover svg {
+    transform: scale(1.1);
+    color: var(--accent-yellow);
+}
+
+/* Welcome Footer */
+.welcome-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.welcome-footer .btn-primary {
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Loading State */
+.welcome-preview.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.welcome-preview.loading::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border-light);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .welcome-modal-content {
+        width: 95%;
+        padding: 2rem 1.5rem;
+        max-height: 85vh;
+    }
+
+    .welcome-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .welcome-header p {
+        font-size: 0.95rem;
+    }
+
+    .welcome-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-modal-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .welcome-header {
+        margin-bottom: 2rem;
+    }
+
+    .welcome-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-close {
+        top: 1rem;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
+    }
+
+    .welcome-section {
+        padding: 1rem;
+    }
+
+    .welcome-quick-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-footer .btn-primary {
+        width: 100%;
+        padding: 0.875rem 2rem;
+    }
+}

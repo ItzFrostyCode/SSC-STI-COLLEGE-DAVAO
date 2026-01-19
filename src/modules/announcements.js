@@ -98,6 +98,11 @@ function render() {
 
     grid.innerHTML = paginatedItems.map(item => `
         <article class="card announcement-card">
+            ${item.image ? `
+            <div class="card-image">
+                <img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+            </div>
+            ` : ''}
             <div class="card-content">
                 <div class="card-meta">
                     <span class="card-category">${escapeHtml(item.category || 'General')}</span>
@@ -105,7 +110,8 @@ function render() {
                     <span class="card-date">${item.displayDate || formatDate(item.createdAt || item.date)}</span>
                 </div>
                 <h3 class="card-title">${escapeHtml(item.title)}</h3>
-                <p class="card-excerpt">${escapeHtml(item.content)}</p>
+                <p class="card-excerpt">${escapeHtml(item.content.substring(0, 150))}...</p>
+                ${item.gallery && item.gallery.length > 1 ? `<div class="card-gallery-indicator"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> ${item.gallery.length} photos</div>` : ''}
                 
                 <div class="card-details">
                     <div class="detail-item">

@@ -17,10 +17,11 @@
     <link rel="icon" href="assets/images/ssc-logo-removebg.png" type="image/png">
 
 
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/intramurals.css">
-    <link rel="stylesheet" href="assets/css/intramurals-feature.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=2026">
+    <link rel="stylesheet" href="assets/css/index.css?v=2026">
+    <link rel="stylesheet" href="assets/css/intramurals.css?v=2026">
+    <link rel="stylesheet" href="assets/css/intramurals-feature.css?v=2026">
+    <link rel="stylesheet" href="assets/css/welcome-modal.css?v=2026">
 </head>
 
 <body>
@@ -125,28 +126,30 @@
                 <img src="assets/img/logo-bottom.png" alt="" class="hero-logo-bottom">
                 
 
-                <a href="#announcements-container" class="hero-cta">Get Started</a>
+                <button class="hero-cta" id="get-started-btn">Get Started</button>
             </div>
         </div>
     </section>
 
 
     <section id="stats-container">
-        <div class="stat-card">
-            <h3>800+</h3>
-            <p>Active Students</p>
-        </div>
-        <div class="stat-card">
-            <h3>20</h3>
-            <p>SSC Officers</p>
-        </div>
-        <div class="stat-card">
-            <h3>3</h3>
-            <p>Events This Year</p>
-        </div>
-        <div class="stat-card">
-            <h3>3</h3>
-            <p>Departments</p>
+        <div class="stats-inner homepage-stats-grid">
+            <div class="stat-card">
+                <h3>800+</h3>
+                <p>Active Students</p>
+            </div>
+            <div class="stat-card">
+                <h3>20</h3>
+                <p>SSC Officers</p>
+            </div>
+            <div class="stat-card">
+                <h3>3</h3>
+                <p>Events This Year</p>
+            </div>
+            <div class="stat-card">
+                <h3>3</h3>
+                <p>Departments</p>
+            </div>
         </div>
     </section>
 
@@ -297,6 +300,108 @@
         </div>
     </footer>
 
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content welcome-modal-content">
+            <button class="modal-close" id="welcome-modal-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="welcome-header">
+                <h2>Welcome to SSC STI Davao!</h2>
+                <p>Stay connected with the latest updates, events, and achievements.</p>
+            </div>
+
+            <div class="welcome-grid">
+                <!-- Latest Announcement Preview -->
+                <div class="welcome-section">
+                    <div class="welcome-section-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                        <h3>Latest Update</h3>
+                    </div>
+                    <div id="welcome-latest-announcement" class="welcome-preview">
+                        <!-- Dynamically loaded -->
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="welcome-section">
+                    <div class="welcome-section-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M21.92 6.62a1 1 0 0 0-.54-.54A1 1 0 0 0 21 6h-5a1 1 0 0 0 0 2h2.59L13 13.59l-3.29-3.3a1 1 0 0 0-1.42 0l-6 6a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0L9 12.41l3.29 3.3a1 1 0 0 0 1.42 0L20 9.41V12a1 1 0 0 0 2 0V7a1 1 0 0 0-.08-.38"/>
+                        </svg>
+                        <h3>Quick Stats</h3>
+                    </div>
+                    <div class="welcome-stats">
+                        <div class="welcome-stat-item">
+                            <div class="stat-number">800+</div>
+                            <div class="stat-label">Active Students</div>
+                        </div>
+                        <div class="welcome-stat-item">
+                            <div class="stat-number" id="welcome-events-count">3</div>
+                            <div class="stat-label">Events</div>
+                        </div>
+                        <div class="welcome-stat-item">
+                            <div class="stat-number">20</div>
+                            <div class="stat-label">SSC Officers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div class="welcome-section welcome-section-full">
+                    <div class="welcome-section-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <h3>Explore</h3>
+                    </div>
+                    <div class="welcome-quick-nav">
+                        <a href="announcements.html" class="welcome-nav-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            <span>Announcements</span>
+                        </a>
+                        <a href="events.html" class="welcome-nav-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Events</span>
+                        </a>
+                        <a href="intramural.html" class="welcome-nav-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            <span>Intramurals</span>
+                        </a>
+                        <a href="officers.html" class="welcome-nav-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>Officers</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
 
 
     <script type="module" src="src/main.js"></script>
