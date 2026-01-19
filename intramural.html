@@ -19,6 +19,18 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/intramurals.css">
+
+    <!-- Apply theme immediately to prevent flash -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            // Only apply dark mode if explicitly saved
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+            // Default is light mode, no action needed
+        })();
+    </script>
 </head>
 
 <body>
