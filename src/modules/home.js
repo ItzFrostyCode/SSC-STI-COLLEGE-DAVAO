@@ -34,20 +34,22 @@ async function loadStats() {
         const eventCount = events ? events.length : 3;
 
         const stats = [
-            { label: 'Active Students', value: '800+' },
+            { label: 'Total Students', value: '800+' },
             { label: 'SSC Officers', value: officerCount },
             { label: 'Events This Year', value: eventCount },
             { label: 'Departments', value: '3' }
         ];
 
+        // Clear skeletons and replace with real data
         container.innerHTML = stats.map(stat => `
-            <div class="stat-card">
+            <div class="stat-card fade-in">
                 <h3>${stat.value}</h3>
                 <p>${stat.label}</p>
             </div>
         `).join('');
     } catch (e) {
         console.error('Stats load failed', e);
+        // Keep skeletons on error
     }
 }
 
@@ -65,8 +67,9 @@ async function loadAnnouncements() {
         // Take top 3
         const latest = data.slice(0, 3);
         
+        // Replace skeletons with real content
         grid.innerHTML = latest.map(item => `
-            <article class="card announcement-card">
+            <article class="card announcement-card fade-in">
                 ${item.image ? `
                 <div class="card-image">
                     <img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.parentElement.style.display='none'">
@@ -93,7 +96,11 @@ async function loadAnnouncements() {
                 </div>
             </article>
         `).join('');
-    } catch(e) { console.error('Announcements load failed', e); }
+    } catch(e) { 
+        console.error('Announcements load failed', e);
+        // Clear skeletons even on error
+        grid.innerHTML = '<p>Failed to load announcements. Please refresh the page.</p>';
+    }
 }
 
 async function loadEvents() {

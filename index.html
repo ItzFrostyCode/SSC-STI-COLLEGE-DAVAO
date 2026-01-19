@@ -22,6 +22,19 @@
     <link rel="stylesheet" href="assets/css/intramurals.css?v=2026">
     <link rel="stylesheet" href="assets/css/intramurals-feature.css?v=2026">
     <link rel="stylesheet" href="assets/css/welcome-modal.css?v=2026">
+    <link rel="stylesheet" href="assets/css/skeleton.css?v=2026">
+    
+    <!-- Apply theme immediately to prevent flash -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            // Only apply dark mode if explicitly saved
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+            // Default is light mode, no action needed
+        })();
+    </script>
 </head>
 
 <body>
@@ -133,22 +146,23 @@
 
 
     <section id="stats-container">
-        <div class="stats-inner homepage-stats-grid">
-            <div class="stat-card">
-                <h3>800+</h3>
-                <p>Active Students</p>
+        <div class="homepage-stats-grid">
+            <!-- Skeleton Loaders for Stats -->
+            <div class="stat-card skeleton-stat">
+                <div class="skeleton skeleton-stat-number"></div>
+                <div class="skeleton skeleton-stat-label"></div>
             </div>
-            <div class="stat-card">
-                <h3>20</h3>
-                <p>SSC Officers</p>
+            <div class="stat-card skeleton-stat">
+                <div class="skeleton skeleton-stat-number"></div>
+                <div class="skeleton skeleton-stat-label"></div>
             </div>
-            <div class="stat-card">
-                <h3>3</h3>
-                <p>Events This Year</p>
+            <div class="stat-card skeleton-stat">
+                <div class="skeleton skeleton-stat-number"></div>
+                <div class="skeleton skeleton-stat-label"></div>
             </div>
-            <div class="stat-card">
-                <h3>3</h3>
-                <p>Departments</p>
+            <div class="stat-card skeleton-stat">
+                <div class="skeleton skeleton-stat-number"></div>
+                <div class="skeleton skeleton-stat-label"></div>
             </div>
         </div>
     </section>
@@ -164,7 +178,55 @@
                 <p>Stay updated with the latest news and updates from the SSC.</p>
             </div>
             <div class="grid-layout" id="announcements-grid">
-
+                <!-- Skeleton Loaders -->
+                <div class="skeleton-container">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-image"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-meta">
+                                <div class="skeleton skeleton-badge"></div>
+                                <div class="skeleton skeleton-badge" style="width: 100px;"></div>
+                            </div>
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skeleton-container">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-image"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-meta">
+                                <div class="skeleton skeleton-badge"></div>
+                                <div class="skeleton skeleton-badge" style="width: 100px;"></div>
+                            </div>
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skeleton-container">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-image"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-meta">
+                                <div class="skeleton skeleton-badge"></div>
+                                <div class="skeleton skeleton-badge" style="width: 100px;"></div>
+                            </div>
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="section-footer">
                 <a href="announcements.html" class="btn-primary">See All Announcements</a>
