@@ -7,16 +7,14 @@
 export function normalizeAnnouncements(raw) {
     if (!Array.isArray(raw)) return [];
     
-    // Sort by date desc
+    // Sort by date desc and preserve ALL fields
     return raw.sort((a, b) => new Date(b.date) - new Date(a.date)).map(item => ({
+        ...item, // Keep ALL original fields
         title: item.title || 'Untitled',
         content: item.content || '',
         date: item.date || new Date().toISOString(),
         category: item.category || 'General',
-        semester: item.semester || '',
         author: item.author || 'SSC',
-        displayDate: item.displayDate || null,
-        createdAt: item.createdAt || null,
         showOnIndex: item.showOnIndex !== false // Default true unless false
     }));
 }

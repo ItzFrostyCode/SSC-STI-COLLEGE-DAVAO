@@ -113,13 +113,13 @@ function getAvatarUrl(organizer) {
     const avatarMap = {
         'Cherry Jane Villasencio - PIO': 'assets/images/officers/cherry-jane-villasencio.png',
         'Cherry Jane Villasencio': 'assets/images/officers/cherry-jane-villasencio.png',
-        'SSC Events Committee': 'assets/images/ssc-logo-removebg.png'
+        'SSC Events Committee': 'assets/images/webp/ssc-logo-removebg.webp'
     };
-    return avatarMap[organizer] || 'assets/images/ssc-logo-removebg.png';
+    return avatarMap[organizer] || 'assets/images/webp/ssc-logo-removebg.webp';
 }
 
 function createEventCard(event) {
-    const firstImage = (event.images && event.images[0]) || event.image || 'assets/images/ssc-logo.jpg';
+    const firstImage = (event.images && event.images[0]) || event.image || 'assets/images/webp/ssc-logo.webp';
     const imageCount = event.images ? event.images.length : (event.image ? 1 : 0);
     const startDate = new Date(event.startDate);
     
@@ -159,7 +159,7 @@ function openEventModal(event) {
     const body = document.getElementById('modal-body');
     if(!modal || !body) return;
     
-    const images = event.images && event.images.length ? event.images : (event.image ? [event.image] : ['assets/images/ssc-logo.jpg']);
+    const images = event.images && event.images.length ? event.images : (event.image ? [event.image] : ['assets/images/webp/ssc-logo.webp']);
     const heroImage = images[0];
     
     const startDate = new Date(event.startDate);

@@ -11,12 +11,18 @@
     gap: 3rem;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(96, 165, 250, 0.05) 100%);
     border-radius: 24px;
-    padding: 3rem;
+    padding: 2.5rem;
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
+}
+
+#tigi-ay-container .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important; /* Ensure it can go full width if needed */
 }
 
 .intramurals-feature-card::before {
@@ -217,9 +223,18 @@ html.dark .feature-logo {
 
 
 @media (max-width: 767px) {
+    .intramurals-feature-section .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .intramurals-feature-card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem; /* Restoring slight padding for text safety if container is 0 */
         gap: 2rem;
+        border-radius: 0; /* Optional: if full width, radius might look weird, but let's keep radius unless asked, or maybe they want full bleed? If full bleed, radius should be 0 */
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
     }
     
     .feature-actions {

@@ -45,7 +45,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/exam-week-oct-2025.jpg"
+    "image": "assets/images/announcements/exam-week-oct-2025.jpg",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-003",
@@ -62,7 +63,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/lucky-coquettlog-exams.jpg"
+    "image": "assets/images/announcements/lucky-coquettlog-exams.jpg",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-004",
@@ -72,14 +74,15 @@
     "date": "2025-10-02",
     "category": "Community Service",
     "content": "STIers, let us extend our compassion and support. Recent fire incidents in various areas of Davao City have left several families, including some of our fellow STI College Davao students, with the total loss of their homes and belongings. The Supreme Student Council is spearheading a Donation Drive to provide aid to those affected. Donations may be dropped off at the lobby of STI College Davao. We are accepting: Clothes, Food, Hygiene Kits. Your generosity, no matter how small, will bring comfort and hope to our fellow STIers as they begin to rebuild their lives. Together, let us uphold the true spirit of bayanihan.",
-    "author": "Cherry Jane Villasencio & Chester Paul Villasencio",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "Chesilyn Dianne Tabigue",
     "createdAt": "2025-10-02T21:22:00Z",
     "displayDate": "Friday, October 3, 2025 at 5:22 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/davao-fire-victims-donation.jpg"
+    "image": "assets/images/announcements/davao-fire-victims-donation.jpg",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-005",
@@ -100,7 +103,8 @@
     "gallery": [
       "assets/images/announcements/mental-health-break-oct-2025-1.jpg",
       "assets/images/announcements/mental-health-break-oct-2025-2.jpg"
-    ]
+    ],
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-006",
@@ -131,7 +135,8 @@
       "assets/images/announcements/sti-cares-piapi-fire-victims-10.jpg",
       "assets/images/announcements/sti-cares-piapi-fire-victims-11.jpg",
       "assets/images/announcements/sti-cares-piapi-fire-victims-12.jpg"
-    ]
+    ],
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-007",
@@ -148,7 +153,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/teachers-month-oct-2025.png"
+    "image": "assets/images/announcements/teachers-month-oct-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-008",
@@ -158,14 +164,15 @@
     "date": "2025-10-12",
     "category": "Recruitment",
     "content": "WE'RE LOOKING FOR NEW SSC STAFF! Are you responsible, dedicated, and willing to take the initiative? The Supreme Student Council is looking for 10 passionate and reliable staff members to join our team! Be part of an organization that values teamwork, leadership, and service. This is your chance to grow, contribute, and make a difference within our STI community! Note: We will be prioritizing male applicants to help strengthen our manpower for upcoming events and activities. If you're ready to take on the challenge, send us a message or approach any SSC officer to apply!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-10-12T17:20:00Z",
     "displayDate": "Monday, October 13, 2025 at 1:20 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/ssc-staff-recruitment.png"
+    "image": "assets/images/announcements/ssc-staff-recruitment.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-009",
@@ -175,14 +182,15 @@
     "date": "2025-10-13",
     "category": "Competition",
     "content": "STIers, it's your time to shine! Get your gear on and show us your artistic interpretation of this school year's Tagisan ng Sining theme. SHUTTER'S BEST (Photography Competition) - THEME: BORROWED LIGHT. In what way does light transform an ordinary place into something special? Competition Date: October 15, 2025, Time: 1:00 PM - 3:00 PM, Venue: STI College Davao. You'll be using your own digital camera. This event is open to all Senior High School and Tertiary students. Registration is still open!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-10-13T11:44:00Z",
     "displayDate": "Monday, October 13, 2025 at 7:44 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/shutters-best-2025.png"
+    "image": "assets/images/announcements/shutters-best-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-010",
@@ -192,14 +200,15 @@
     "date": "2025-10-13",
     "category": "Academic",
     "content": "CLASS ADVISORY: Please be informed that all classes will be conducted through the Synchronous Learning Modality (Online) from October 14-17, 2025, via Microsoft Teams, following your regular class schedules. Students are advised to check their ELMS subject pages for the meeting links. Teachers may also send a direct invitation through MS Teams prior to the start of the class. Kindly ensure that you are logged in on time and ready for your sessions. Let's continue to stay engaged and make the most out of our online learning experience while ensuring everyone's safety and convenience.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-10-13T16:22:00Z",
     "displayDate": "Tuesday, October 14, 2025 at 12:22 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/online-classes-oct-14-17.png"
+    "image": "assets/images/announcements/online-classes-oct-14-17.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-011",
@@ -216,7 +225,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/spooktacular-2025.png"
+    "image": "assets/images/announcements/spooktacular-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-012",
@@ -226,14 +236,15 @@
     "date": "2025-10-23",
     "category": "Event",
     "content": "MEMORANDUM NOTICE - Heads up, STIers! Attendance for our Teacher's Day Celebration on October 24, 2025 (1:00 PM - 5:00 PM) at the STI Multipurpose Hall (Rooms 302-304) is MANDATORY for all students. Department Secretaries and Class Presidents will monitor attendance, so make sure to be present and on time. Let's all take part in honoring our amazing teachers and making this celebration a success!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-10-23T15:14:00Z",
     "displayDate": "Thursday, October 23, 2025 at 11:14 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/teachers-day-memo.png"
+    "image": "assets/images/announcements/teachers-day-memo.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-013",
@@ -243,14 +254,15 @@
     "date": "2025-10-23",
     "category": "Event",
     "content": "Dress Code Advisory for Teacher's Day Celebration on October 24, 2025. You are encouraged and authorized to wear any official STI-branded shirt or uniform top, such as your PE, NYC, or NSTP shirts. IMPORTANT EXCEPTION: Departmental shirts or any attire specifically tied to an individual program (e.g., IT, HTM, and SHS) are not permitted for this celebration. Please ensure you wear a general, non-departmental STI shirt or a standard uniform top to comply with the event dress code. Thank you for your cooperation in making this a unifying and successful tribute to our esteemed educators and staff!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-10-23T17:46:00Z",
     "displayDate": "Friday, October 24, 2025 at 1:46 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/teachers-day-dress-code.png"
+    "image": "assets/images/announcements/teachers-day-dress-code.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-014",
@@ -260,14 +272,15 @@
     "date": "2025-10-25",
     "category": "Competition",
     "content": "FRIGHT ICON 2025 REGISTRATION IS NOW OPEN! Are you ready to unleash your spooky side and claim the title of STI's Spooktacular Fright Icon 2025? Show off your most haunting, creative, and jaw-dropping costume this Halloween and own the stage! Date: October 29, 2025, Venue: STI MultiPurpose Hall (302-303). Register now by answering our official Google Form or message the SSC Facebook Page for inquiries. Dare to scare. Be iconic. Be legendary.",
-    "author": "Cherry Jane Villasencio & Chester Paul Villasencio",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "Chesilyn Dianne Tabigue",
     "createdAt": "2025-10-25T16:07:00Z",
     "displayDate": "Sunday, October 26, 2025 at 12:07 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/fright-icon-2025.png"
+    "image": "assets/images/announcements/fright-icon-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-015",
@@ -284,7 +297,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/spooktacular-room-assignments.png"
+    "image": "assets/images/announcements/spooktacular-room-assignments.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-016",
@@ -294,14 +308,15 @@
     "date": "2025-10-30",
     "category": "Holiday",
     "content": "Heads up, STIers! In accordance with Proclamation No. 727 issued by Malacañang, please be informed that there will be no classes and no office transactions on October 31, 2025, and November 1, 2025 (All Saints' Day) in observance of these special non-working holidays. Let us take this time to honor and remember our dearly departed. Regular classes and office operations will resume on Monday, November 3, 2025. Stay safe, cherish the break, and enjoy the long weekend!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-10-30T12:04:00Z",
     "displayDate": "Thursday, October 30, 2025 at 8:04 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/all-saints-day-2025.png"
+    "image": "assets/images/announcements/all-saints-day-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-017",
@@ -311,14 +326,15 @@
     "date": "2025-11-06",
     "category": "Safety",
     "content": "STIers united once again — this time for safety and preparedness! The 2025 Earthquake Drill brought the entire STI community together to strengthen our awareness, teamwork, and readiness in times of emergencies. The drill served as a vital reminder that disaster preparedness is not just a routine — it's a responsibility that can save lives. From the sound of the alarm to the execution of evacuation procedures, every student, faculty, and staff member showed discipline, cooperation, and a strong sense of unity. Through this activity, we continue to promote a culture of safety, awareness, and collective responsibility. Together, we stand strong, prepared, and united!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-06T12:10:00Z",
     "displayDate": "Thursday, November 6, 2025 at 8:10 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/earthquake-drill-2025.png"
+    "image": "assets/images/announcements/earthquake-drill-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-018",
@@ -328,14 +344,15 @@
     "date": "2025-11-07",
     "category": "Competition",
     "content": "The Search for the First-Ever Queen STI 2025 Begins! Are you ready to shine, slay, and own the spotlight? We're looking for confident, fierce, and fabulous contestants to compete for the crown of the first-ever Queen STI 2025 — exclusive only for transgender women and gay students! If you've got the beauty, brains, and charisma to rule the stage, this is your moment to make history! To register, you may approach any SSC Officer or visit the SSC Office. Who will be crowned the first-ever Queen STI 2025? It could be YOU!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-07T08:16:00Z",
     "displayDate": "Friday, November 7, 2025 at 4:16 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/queen-sti-2025.png"
+    "image": "assets/images/announcements/queen-sti-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-019",
@@ -345,14 +362,15 @@
     "date": "2025-11-08",
     "category": "Event",
     "content": "STI TIGI-AY 2025: THE SPIRIT UNLEASHED! The wait is finally over — it's time to reignite the flame of unity, talent, and school pride! This is where strength meets passion, and every STIer shines with excellence. From electrifying competitions to spectacular performances, TIGI-AY 2025 will bring out the best in every heart that beats for STI! The stage is set. The cheers are loud. The spirit is unstoppable. STI TIGI-AY season is coming — are you ready to rise?",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "Cherry Jane Villasencio",
     "createdAt": "2025-11-08T17:24:00Z",
     "displayDate": "Sunday, November 9, 2025 at 1:24 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-2025-announcement.png"
+    "image": "assets/images/announcements/tigi-ay-2025-announcement.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-020",
@@ -362,14 +380,15 @@
     "date": "2025-11-14",
     "category": "Event",
     "content": "Prepare to be amazed by a vibrant showcase of culture, creativity, and unity! We're excited to announce STI TIGI-AY 2025 with the theme 'Igniting Talents, Showcasing Excellence.' This year's celebration will shine a spotlight on the incredible talents and artistry of our STIers as we come together to celebrate culture, collaboration, and camaraderie. Expect breathtaking performances, colorful presentations, and unforgettable moments that embody true STI pride! Registration is now open! Contact your Department Officer or Coordinator to register. Inquiries are welcome; you may contact any SSC Officer or message us directly.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "Cherry Jane Villasencio",
     "createdAt": "2025-11-14T11:31:00Z",
     "displayDate": "Friday, November 14, 2025 at 7:31 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-2025-theme.png"
+    "image": "assets/images/announcements/tigi-ay-2025-theme.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-021",
@@ -379,14 +398,15 @@
     "date": "2025-11-17",
     "category": "Announcement",
     "content": "IMPORTANT ANNOUNCEMENT FROM SSC: Good day, STIers! For everyone's information, the Supreme Student Council (SSC) is NOT ALLOWED to collect any form of payment from students. Please be reminded that your respective departments and the SSC are separate working organizations. Any contributions, fees, or payments requested by your department are NOT connected to the SSC, and we are NOT INVOLVED in such collections. We kindly ask everyone to refrain from spreading false or unclear information that may negatively affect the council's name. Rest assured, we strictly follow all bylaws and regulations in everything we do. Thank you for your understanding and cooperation! Let's continue to uphold transparency and teamwork as we look forward to an exciting Intramurals!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-17T19:12:00Z",
     "displayDate": "Tuesday, November 18, 2025 at 3:12 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/ssc-no-payment-collection.png"
+    "image": "assets/images/announcements/ssc-no-payment-collection.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-022",
@@ -396,14 +416,15 @@
     "date": "2025-11-23",
     "category": "Event",
     "content": "Welcome Teams! We're beyond excited to kick off STI TIGI-AY 2025! A huge shoutout to the Dragon Vanguard from SHS Department—get ready to bring the heat, unleash your strength, and showcase your incredible skills! Wishing the Dragon Vanguard an unforgettable intramurals filled with teamwork, determination, and fiery competition. Good luck, warriors! Let the games begin!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-23T14:12:00Z",
     "displayDate": "Sunday, November 23, 2025 at 10:12 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/dragon-vanguard-welcome.png"
+    "image": "assets/images/announcements/dragon-vanguard-welcome.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-023",
@@ -413,14 +434,15 @@
     "date": "2025-11-23",
     "category": "Event",
     "content": "Welcome Teams! We're excited to have you all join us for STI TIGI-AY 2025! A big shoutout to Pegasus Fury from THM Department—get ready to soar to new heights, showcase your skills, and take the competition by storm! Wishing Pegasus Fury an incredible intramurals filled with teamwork, determination, and unforgettable moments. Good luck, warriors! Let the games begin!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-23T14:15:00Z",
     "displayDate": "Sunday, November 23, 2025 at 10:15 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/pegasus-fury-welcome.png"
+    "image": "assets/images/announcements/pegasus-fury-welcome.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-024",
@@ -430,14 +452,15 @@
     "date": "2025-11-23",
     "category": "Event",
     "content": "Welcome Teams! We're excited to have you all join us for STI TIGI-AY 2025! A huge shoutout to Phoenix Invictus from ICT Department—get ready to rise stronger from every challenge and set the arena ablaze with your fiery spirit! Wishing Phoenix Invictus an unforgettable intramurals filled with teamwork, determination, and intense competition. Good luck, warriors! Let the games begin!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-23T14:19:00Z",
     "displayDate": "Sunday, November 23, 2025 at 10:19 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/phoenix-invictus-welcome.png"
+    "image": "assets/images/announcements/phoenix-invictus-welcome.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-025",
@@ -454,7 +477,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/parol-making-contest-2025.png"
+    "image": "assets/images/announcements/parol-making-contest-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-026",
@@ -471,7 +495,8 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tiktok-dance-competition.png"
+    "image": "assets/images/announcements/tiktok-dance-competition.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-027",
@@ -481,14 +506,15 @@
     "date": "2025-11-30",
     "category": "Academic",
     "content": "Good luck STIers in your exams! No worries too much ha, your STI family is cheering for you. You worked hard all semester — now trust yourself, breathe, and answer with confidence. Kaya kayo nah! Best of luck, mga pasadong students!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-11-30T12:45:00Z",
     "displayDate": "Sunday, November 30, 2025 at 8:45 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/exam-good-luck-nov.png"
+    "image": "assets/images/announcements/exam-good-luck-nov.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-028",
@@ -498,14 +524,15 @@
     "date": "2025-12-02",
     "category": "Clearance",
     "content": "ANNOUNCEMENT FROM SSC - CLEARANCE SIGNING: Good day, STIers! Please be informed that SSC Clearance Signing will not start before December 11, which is also the last day of Intramurals. However, if you know that you have absences or were late in the following events (Talent Search, Spooktacular Event, Intramurals Day 1, Intramurals Day 3), you will be required to donate ₱50 worth of school supplies for each day you were absent or late. These school supplies will be used for our upcoming Outreach Programs. Required School Supplies per ₱50 Set: 1 Notebook, 1 Crayola (small pack), 1 Ballpen, 1 Pencil, 1 Sharpener, 1 Plastic Envelope. Reminder: If you missed two past events, you must provide two sets of the required supplies. Thank you for your cooperation and continued support for our community efforts!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-02T16:03:00Z",
     "displayDate": "Wednesday, December 3, 2025 at 12:03 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/clearance-signing-requirements.png"
+    "image": "assets/images/announcements/clearance-signing-requirements.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-029",
@@ -515,14 +542,15 @@
     "date": "2025-12-06",
     "category": "Event",
     "content": "Get ready, STIers—Intramurals Day 1 is on! The action begins on December 9 at 1PM at the STI Campus, and we'll be live-streaming all matches so you can follow the excitement wherever you are!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-06T12:37:00Z",
     "displayDate": "Saturday, December 6, 2025 at 8:37 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/intramurals-schedule.png"
+    "image": "assets/images/announcements/intramurals-schedule.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-030",
@@ -532,14 +560,15 @@
     "date": "2025-12-09",
     "category": "Event",
     "content": "Please be guided by the Do's and Don'ts of Magsaysay Park. Let's maintain cleanliness, safety, and order as we enjoy this public space. Thank you for your cooperation.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-09T00:34:00Z",
     "displayDate": "Tuesday, December 9, 2025 at 8:34 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/magsaysay-park-guidelines.png"
+    "image": "assets/images/announcements/magsaysay-park-guidelines.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-031",
@@ -549,14 +578,15 @@
     "date": "2025-12-09",
     "category": "Event",
     "content": "D-DAY is here! The wait is over. The cheers grow louder. The spirit burns brighter. Today, we rise, we compete, and we carry the pride of STI with every move. Give your all, play with heart—Tigi-Ay 2025 starts NOW!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-09T04:36:00Z",
     "displayDate": "Monday, December 9, 2025 at 12:36 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-day-1.png"
+    "image": "assets/images/announcements/tigi-ay-day-1.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-032",
@@ -566,14 +596,15 @@
     "date": "2025-12-10",
     "category": "Event",
     "content": "DAY 1 RESULTS ARE IN! Tigi-ayyyyy pa rin! Our athletes came in strong, fought hard, and delivered an explosive start to TIGI-AY 2025! From major activities like Queen STI, CODM, MLBB, and Cheer Dances, to minor activities such as Board Games, Mindgames, Larong Pinoy, and Creative Challenges—STIers showed unmatched energy and teamwork across every event! Swipe to see our Champion, 2nd Place, and 3rd Place teams who dominated today's games and proved what true STI spirit looks like!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-10T17:39:00Z",
     "displayDate": "Wednesday, December 11, 2025 at 1:39 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-day-1-results.png"
+    "image": "assets/images/announcements/tigi-ay-day-1-results.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-033",
@@ -583,14 +614,15 @@
     "date": "2025-12-10",
     "category": "Event",
     "content": "INITIAL TALLY IS OUT! Day 1 pa lang pero ramdam na ang init ng laban! Here's the current leaderboard based on today's game results — but anything can still change! Teams, keep the momentum. Supporters, keep the energy. TIGI-AY 2025 is just getting started!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-10T22:46:00Z",
     "displayDate": "Wednesday, December 11, 2025 at 6:46 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-initial-tally.png"
+    "image": "assets/images/announcements/tigi-ay-initial-tally.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-034",
@@ -600,14 +632,15 @@
     "date": "2025-12-11",
     "category": "Event",
     "content": "DAY 2 RESULTS ARE HERE! Tigi-ayyyy, STI! Day 2 came in hotter, louder, and more intense as our athletes pushed their limits and delivered another round of solid wins for TIGI-AY 2025! From high-energy court battles to strategic mind games and creative showcases, STIers proved once again that grit, passion, and teamwork run in our blood! Swipe to see today's Champion, 2nd Place, and 3rd Place teams who stood out, dominated their events, and showed the true meaning of STI excellence!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-11T06:33:00Z",
     "displayDate": "Wednesday, December 11, 2025 at 2:33 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-day-2-results.png"
+    "image": "assets/images/announcements/tigi-ay-day-2-results.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-035",
@@ -617,14 +650,15 @@
     "date": "2025-12-12",
     "category": "Event",
     "content": "FINAL TALLY — DAYS 1 TO 3: The results are in, STIers! After three days of intense competition, teamwork, and unstoppable energy, here are your official Intramurals Champions: OVERALL CHAMPION: Pegasus Fury (THM Department), 1ST RUNNER-UP: Phoenix Invictus (ICT Department), 2ND RUNNER-UP: Dragon Vanguard (SHS Department). Congratulations to all departments for giving your best and showing true Tigi-Ay spirit! Win or lose, every cheer, every play, and every moment made this intramurals unforgettable.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-12T17:46:00Z",
     "displayDate": "Friday, December 13, 2025 at 1:46 AM",
     "lastEditedBy": "Joshua Arabejo",
     "lastEditedAt": "2025-12-12T18:00:00Z",
     "status": "published",
-    "image": "assets/images/announcements/tigi-ay-final-tally.png"
+    "image": "assets/images/announcements/tigi-ay-final-tally.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-036",
@@ -634,14 +668,15 @@
     "date": "2025-12-12",
     "category": "Clearance",
     "content": "ANNOUNCEMENT: CLEARANCE SIGNING SCHEDULE - The SSC will officially start signing clearances on Monday to Wednesday — December 15 to 17, 2025, from 10:00 AM to 3:00 PM. Please prepare your requirements and have your forms ready to avoid delays. The next clearance signing will be scheduled on the second week of January. Have a good sem break, everyone! For any concerns, feel free to message the SSC page.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-12T17:53:00Z",
     "displayDate": "Friday, December 13, 2025 at 1:53 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/clearance-signing-dec-15-17.png"
+    "image": "assets/images/announcements/clearance-signing-dec-15-17.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2025-037",
@@ -651,14 +686,15 @@
     "date": "2025-12-26",
     "category": "Greeting",
     "content": "All wrapped up in Christmas cheer! From the SSC family to yours, may this season be filled with joy, laughter, and moments that matter.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2025-12-26T14:32:00Z",
     "displayDate": "Thursday, December 26, 2025 at 10:32 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/christmas-2025.png"
+    "image": "assets/images/announcements/christmas-2025.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-001",
@@ -668,14 +704,15 @@
     "date": "2026-01-01",
     "category": "Greeting",
     "content": "Happy New Year, STIers! Wishing you a year full of prosperity and happiness this year 2026 from SSC Fam.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-01T01:12:00Z",
     "displayDate": "Wednesday, January 1, 2026 at 9:12 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/new-year-2026.png"
+    "image": "assets/images/announcements/new-year-2026.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-002",
@@ -685,13 +722,14 @@
     "date": "2026-01-04",
     "category": "Clearance",
     "content": "ANNOUNCEMENT: Please be informed that the clearance signing will be conducted every Monday, Wednesday, and Friday, from 10:30 AM to 2:00 PM only. Kindly note that the room assignment will be announced later (TBA), as it will depend on room availability on the said dates. Further updates will be posted once the room has been finalized. We encourage everyone to follow the given schedule and wait for further announcements. Thank you for your cooperation.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-04T16:41:00Z",
     "displayDate": "Monday, January 5, 2026 at 12:41 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-003",
@@ -701,14 +739,15 @@
     "date": "2026-01-04",
     "category": "Enrollment",
     "content": "Heads Up STIers! Enrollment starts on Monday! For the Transferees and Old students, please be informed of the enrollment process for the 2nd Semester of AY 2025-2026. Schedules of Enrollment for Old students: SHS - January 5-17, 2026 (Grade 11 & 12), TERTIARY - January 5-10, 2026 (1st & 2nd Year), January 12-17, 2026 (3rd & 4th Year). Class starts on January 19, 2026.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-04T17:09:00Z",
     "displayDate": "Monday, January 5, 2026 at 1:09 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/enrollment-2nd-sem-2026.png"
+    "image": "assets/images/announcements/enrollment-2nd-sem-2026.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-004",
@@ -718,14 +757,15 @@
     "date": "2026-01-05",
     "category": "General",
     "content": "One semester. Countless memories. The first semester was a journey filled with learning, laughter, challenges, and victories—both inside and outside the classroom. From academic activities and campus programs to events that brought us together as one community, every moment reflected the passion, dedication, and teamwork of our students and organizers. Each event became an opportunity to grow, build confidence, and create lasting connections. As we look back on these highlights, we celebrate not just what we accomplished, but the memories we shared and the experiences that shaped us this semester. Here's a recap of the moments that made our first semester truly unforgettable!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-05T08:30:00Z",
     "displayDate": "Sunday, January 5, 2026 at 4:30 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "assets/images/announcements/first-semester-recap.png"
+    "image": "assets/images/announcements/first-semester-recap.png",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-005",
@@ -735,13 +775,14 @@
     "date": "2026-01-15",
     "category": "General",
     "content": "Byaheng isang sem na lang… another year na naman of pagod, puyat, at pangarap. Sa bawat late night, bawat breakdown, at bawat pagdududa sa sarili, pinili pa rin nating magpatuloy. Hindi man araw-araw strong, pero araw-araw lumalaban. Konti na lang, kakayanin pa — para sa mga pangarap na matagal na nating hinahawakan. 🤍✨",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-15T11:23:00Z",
     "displayDate": "Wednesday, January 15, 2026 at 7:23 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-006",
@@ -751,13 +792,14 @@
     "date": "2026-01-16",
     "category": "General",
     "content": "Countdown is REAL ⏳ Back to school in 3 days! Let's gooo!",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-16T12:21:00Z",
     "displayDate": "Friday, January 16, 2026 at 8:21 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-007",
@@ -767,13 +809,14 @@
     "date": "2026-01-17",
     "category": "Announcement",
     "content": "The SSC website is now open to all students. Access the list of SSC events, view the official Intramurals tally, and get to know the SSC officers. The website is accessible on Desktop, Tablet, and Mobile devices.",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-16T23:14:00Z",
     "displayDate": "Friday, January 17, 2026 at 7:14 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-008",
@@ -783,13 +826,14 @@
     "date": "2026-01-17",
     "category": "General",
     "content": "2 days na lang, STIers! 📖 Bakasyon is waving goodbye, syllabus is waving hello. Ready na ba?",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-17T00:47:00Z",
     "displayDate": "Friday, January 17, 2026 at 8:47 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-009",
@@ -799,13 +843,14 @@
     "date": "2026-01-18",
     "category": "General",
     "content": "1 Day Left!📚\nSTIers, it's almost time to head back to campus.\nNew semester, new goals, new chances to do better.\nSee you tomorrow!⏳ \n#BackToSchool  #NewSemester #SeeYouSTIers",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-18T02:41:00Z",
     "displayDate": "Sunday, January 18, 2026 at 10:41 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-010",
@@ -815,13 +860,14 @@
     "date": "2026-01-18",
     "category": "Event",
     "content": "Back to school just got better 🎒✨\nEnjoy free ice cream, journals, ballpens, candies, and other school supplies.\nJoin the games and get a chance to win exciting prizes!\nLimited stocks only—see you tomorrow at 10:00 AM at the Multipurpose Hall!\n#Back2School #STIFreebies #SweetStart",
-    "author": "SSC",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-18T06:27:00Z",
     "displayDate": "Sunday, January 18, 2026 at 2:27 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   },
   {
     "id": "ANN-2026-011",
@@ -830,13 +876,14 @@
     "academicYear": "2025-2026",
     "date": "2026-01-19",
     "category": "General",
-    "content": "✨Welcome back, STIers!\nThe countdown is officially over and the Second Semester begins today.\nAs we step back into our classrooms and routines, may this term be filled with focus, growth, and small wins that lead to bigger achievements.\nLet's show up, stay motivated, and make this semester one to remember.\n#WelcomeBackSTIers #BackToSchool #NewSemester #STICommunity",
-    "author": "SSC",
+    "content": "Welcome back, STIers!\nThe countdown is officially over and the Second Semester begins today.\nAs we step back into our classrooms and routines, may this term be filled with focus, growth, and small wins that lead to bigger achievements.\nLet's show up, stay motivated, and make this semester one to remember.\n#WelcomeBackSTIers #BackToSchool #NewSemester #STICommunity",
+    "author": "Cherry Jane Villasencio",
     "createdBy": "SSC Admin",
     "createdAt": "2026-01-18T23:00:00Z",
     "displayDate": "Monday, January 19, 2026 at 7:00 AM",
     "lastEditedBy": null,
     "lastEditedAt": null,
-    "status": "published"
+    "status": "published",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.png"
   }
 ]

@@ -1,484 +1,923 @@
+/* ================================= 
+   ANNOUNCEMENTS PAGE STYLES
+   Fully optimized for theme consistency and responsive layout
+   ================================= */
 
-
+/* ================================= 
+   ANNOUNCEMENTS PAGE VARIABLES
+   ================================= */
 :root {
-    --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    --announcement-card-radius: 12px;
+    --announcement-btn-radius: 24px;
+    --announcement-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+/* Main Container - Full width wrapper with inner container for alignment */
 .announcements-container {
-    padding-top: calc(var(--header-height) + 2rem);
+    width: 100%;
+    padding-top: calc(var(--header-height) + 2.5rem);
     min-height: 100vh;
     padding-bottom: 4rem;
 }
 
-
-.announcements-hero {
-    text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-    position: relative;
+/* ================================= 
+   1. ANNOUNCEMENT HEADER SECTION
+   Consistent sizing across all devices
+   ================================= */
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    gap: 1.5rem;
 }
 
-.announcements-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 300px;
-    background: var(--gradient-blue);
-    filter: blur(100px);
-    opacity: 0.2;
-    border-radius: 50%;
-    z-index: -1;
+.announcement-header .header-left {
+    flex: 1;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin: 0;
-    background: var(--gradient-blue);
+.announcement-header .header-left h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-yellow) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.02em;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
+html.dark .announcement-header .header-left h1 {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.announcement-header .header-subtitle {
     color: var(--text-muted);
-    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    margin: 0;
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-}
-
-
-.filter-bar {
+.announcement-header .header-right {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    background: transparent;
-    border: none;
-    flex-wrap: wrap;
-    padding: 0;
+    gap: 1rem;
+    flex-shrink: 0;
 }
 
-.filter-group {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
+/* Filter Dropdown (Facebook-style Date Filter) */
+.date-filter-dropdown {
+    position: relative;
 }
 
-.filter-btn {
+.filter-dropdown-trigger {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    background: var(--bg-body);
-    border: 2px solid var(--border-light);
+    padding: 0.65rem 1.15rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-full);
     color: var(--text-main);
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.filter-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-blue);
-    transition: left 0.3s;
-    z-index: 0;
-}
-
-.filter-btn span {
-    position: relative;
-    z-index: 1;
-}
-
-.filter-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.filter-btn.active {
-    background: var(--gradient-blue);
-    color: white;
-    border-color: transparent;
-    flex-shrink: 0;
-}
-
-.filter-btn .count {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    min-width: 24px;
-    text-align: center;
-}
-
-.filter-btn.active .count {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.d-sm { display: none; }
-.d-lg { display: inline; }
-
-/* Organizer Avatar Fix */
-.organizer-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.sort-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.btn-control {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-full);
-    background: var(--bg-surface);
-    color: var(--text-main);
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s;
-    cursor: pointer;
-}
-
-.btn-control:hover {
-    border-color: #3b82f6;
-    color: #3b82f6;
-}
-
-
-/* Layout Tweaks */
-.filter-bar {
-    padding: 0;
-    gap: 0.75rem;
-}
-
-/* Dropdown Styles (Global) */
-.mobile-filter-dropdown {
-    display: block;
-    width: 250px; /* Desktop width */
-    position: relative;
-    z-index: 50;
-}
-
-.dropdown-trigger {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.875rem 1.25rem;
-    background: var(--bg-surface);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    color: var(--text-main);
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.2s;
     box-shadow: var(--shadow-sm);
 }
 
-.dropdown-trigger:active {
-    transform: scale(0.98);
+.filter-dropdown-trigger:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-.dropdown-menu {
+.filter-dropdown-trigger.active {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.filter-dropdown-trigger svg:first-child {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.dropdown-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.filter-dropdown-trigger.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.filter-dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
-    width: 100%;
+    min-width: 320px;
     background: var(--bg-surface);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    padding: 0.5rem;
+    box-shadow: var(--shadow-xl);
+    padding: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
 }
 
-.dropdown-menu.show {
+.filter-dropdown-menu.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.dropdown-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    background: transparent;
-    border: none;
-    border-radius: var(--radius-md);
-    color: var(--text-muted);
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: left;
-}
-
-.dropdown-item:hover {
-    background: var(--bg-body);
+/* Calendar Picker Styles */
+.calendar-picker-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-light);
+    font-weight: 700;
+    font-size: 0.95rem;
     color: var(--text-main);
 }
 
-.dropdown-item.active {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
-    font-weight: 600;
-}
-
-.dropdown-item .count {
-    background: rgba(0, 0, 0, 0.05); /* Light mode default */
-    padding: 0.2rem 0.5rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-}
-
-/* Sort group alignment fix */
-.sort-group {
-    display: flex;
-    width: auto;
-    padding: 0;
-}
-
-.btn-control {
-    width: auto;
-    padding: 0.5rem 1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .mobile-filter-dropdown {
-        width: 100%;
-        flex: 1;
-        min-width: 0;
-    }
-}
-
-/* Hide desktop buttons globally as we use dropdown now */
-.desktop-only {
-    display: none !important;
-}
-
-
-.announcements-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    position: relative;
-    min-height: 400px;
-}
-
-
-.announcement-card {
-    background: var(--bg-surface);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--border-light);
-    transition: all 0.3s ease;
-    position: relative;
+.calendar-selectors {
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
-.announcement-card:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--border-light);
-    transform: translateY(-2px);
-}
-
-
-
-.card-content {
-    padding: 2rem;
+.selector-group {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.5rem;
 }
 
-.card-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+.selector-group label {
     font-size: 0.85rem;
-}
-
-.card-category {
-    font-weight: 700;
-    color: #3b82f6;
+    font-weight: 600;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.card-dot {
-    opacity: 0.3;
+.date-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--bg-body);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
 }
 
-.card-date {
+.date-select:hover {
+    border-color: var(--accent-blue);
+}
+
+.date-select:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.date-select option {
+    padding: 0.5rem;
+}
+
+.calendar-actions {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.calendar-btn {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+}
+
+.clear-btn {
+    background: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+}
+
+.clear-btn:hover {
+    background: var(--bg-surface);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.apply-btn {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-yellow) 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.apply-btn:active {
+    transform: translateY(0);
+}
+
+/* Sort Wrapper - Matching Events Page */
+.sort-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.btn-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.15rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    background: var(--bg-surface);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-control:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-control svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* ================================= 
+   2. ANNOUNCEMENT BOARD LAYOUT
+   Compact 3-column grid
+   ================================= */
+.pinned-toggle-btn {
+    display: none;
+}
+
+.announcement-board {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* ================================= 
+   3. LEFT SIDEBAR - CATEGORIES
+   Scrollable independent section
+   ================================= */
+.announcement-categories {
+    position: sticky;
+    top: calc(var(--header-height) + 2.5rem);
+    max-height: calc(100vh - var(--header-height) - 5rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--announcement-card-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Custom scrollbar for categories */
+.announcement-categories::-webkit-scrollbar {
+    width: 6px;
+}
+
+.announcement-categories::-webkit-scrollbar-track {
+    background: var(--bg-body);
+    border-radius: 3px;
+}
+
+.announcement-categories::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 3px;
+}
+
+.announcement-categories::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+.categories-header h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.category-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.category-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--announcement-transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-btn:hover {
+    background: var(--bg-body);
+    border-color: var(--border-light);
+}
+
+.category-btn.active {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.category-btn .count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--bg-body);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.category-btn.active .count {
+    background: var(--accent-blue);
+    color: white;
+}
+
+/* ================================= 
+   4. ANNOUNCEMENT FEED CARDS
+   Consistent sizing across all devices
+   ================================= */
+#announcements-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.announcements-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.announcement-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--announcement-card-radius);
+    overflow: hidden;
+    transition: var(--announcement-transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+    padding: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.card-author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-light);
+    flex-shrink: 0;
+}
+
+.card-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+}
+
+.card-author {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.card-time {
+    font-size: 0.8rem;
     color: var(--text-muted);
     font-weight: 500;
 }
 
+.card-body {
+    padding: 1.25rem;
+    padding-top: 0;
+}
+
 .card-title {
-    font-size: 1.75rem;
-    font-weight: 800;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--text-main);
-    margin: 0;
-    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
 }
 
 .card-excerpt {
-    font-size: 1.05rem;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
     white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
+.card-image {
+    margin: 1.5rem 0;
+    border-radius: var(--announcement-btn-radius);
+    overflow: hidden;
+}
 
-.card-details {
-    margin-top: 1rem;
-    padding-top: 1.5rem;
+.card-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-tags {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--border-light);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.detail-item {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.6rem;
+    flex-wrap: wrap;
 }
 
-.detail-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    font-weight: 700;
-}
-
-.detail-value {
-    font-size: 0.95rem;
+.tag {
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
     font-weight: 600;
-    color: var(--text-main);
 }
 
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 4rem;
-    padding: 0 1.5rem;
-}
-
-.pagination-btn {
-    min-width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
     background: var(--bg-surface);
-    border: 2px solid var(--border-light);
-    border-radius: var(--radius-md);
+    border: 2px dashed var(--border-light);
+    border-radius: var(--announcement-card-radius);
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
     color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* ================================= 
+   5. RIGHT SIDEBAR - PINNED
+   Simplified clean design
+   ================================= */
+.announcement-pinned {
+    position: sticky;
+    top: calc(var(--header-height) + 2.5rem);
+}
+
+.pinned-header {
+    margin-bottom: 1.25rem;
+}
+
+.pinned-header h2 {
+    font-size: 1rem;
     font-weight: 700;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    padding: 0 0.5rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
-.pagination-btn:hover:not(:disabled) {
-    border-color: #3b82f6;
-    color: #3b82f6;
-    transform: scale(1.05);
+.pinned-content {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--announcement-card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
 }
 
-.pagination-btn.active {
-    background: var(--gradient-blue);
-    color: white;
-    border-color: transparent;
+.pinned-card {
+    padding: 1.25rem;
 }
 
-.pagination-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+.pinned-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
-/* Responsive pagination padding */
-@media (max-width: 480px) {
-    .pagination {
-        padding: 0 0.75rem;
-        gap: 0.4rem;
+.pinned-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.pinned-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.pinned-card .btn-text {
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--announcement-transition);
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.pinned-card .btn-text:hover {
+    color: var(--accent-yellow);
+}
+
+/* ================================= 
+   6. PAGINATION - REMOVED
+   Pagination has been disabled for full scrollable feed
+   ================================= */
+.pagination {
+    display: none;
+}
+
+/* ================================= 
+   7. RESPONSIVE DESIGN
+   Mobile-first approach with proper breakpoints
+   ================================= */
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+    .announcements-container {
+        padding-top: calc(var(--header-height) + 1.5rem);
     }
     
-    .pagination-btn {
-        min-width: 40px;
-        height: 40px;
-        font-size: 0.9rem;
+    .announcement-board {
+        /* Switch to 2 columns: Feed | Pinned */
+        grid-template-columns: 1fr 300px;
+        gap: 1.25rem;
+    }
+    
+    /* Reveal Pinned Section */
+    .announcement-pinned {
+        display: block;
+        /* Ensure it behaves nicely in the grid */
+    }
+    
+    /* Move Categories to Top (Horizontal Scroll) */
+    .announcement-categories {
+        grid-column: 1 / -1; /* Span full width at top */
+        position: static;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        margin-bottom: 1rem;
+        overflow-x: auto;
+        max-height: none;
+        -webkit-overflow-scrolling: touch;
+        top: auto;
+        border-radius: 0; /* Removing radius as requested */
+        
+        /* Hide scrollbar but allow scrolling */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+    
+    .announcement-categories::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .categories-header {
+        display: none;
+    }
+    
+    .category-menu {
+        display: flex; /* Ensure it is flex */
+        flex-direction: row;
+        flex-wrap: nowrap; /* CRITICAL: Prevent wrapping */
+        gap: 0.75rem;
+        padding-bottom: 0.75rem;
+        width: max-content; /* Ensure container grows to fit items, triggering scroll on parent */
+        padding-right: 1.5rem; /* Add some breathing room at the end */
+    }
+
+    .category-btn {
+        white-space: nowrap;
+        padding: 0.65rem 1.15rem;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-light);
+        flex-shrink: 0;
+    }
+    
+    .category-btn:hover {
+        transform: none;
+    }
+    
+    .category-btn.active {
+        border-color: var(--accent-blue);
     }
 }
 
-/* Extra small screens */
-@media (max-width: 360px) {
-    .pagination {
-        padding: 0 0.5rem;
-        gap: 0.3rem;
+/* Mobile devices */
+@media (max-width: 768px) {
+    /* Match .container responsive padding from styles.css */
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .announcements-container {
+        padding-top: calc(var(--header-height) + 1.25rem);
+    }
+
+    .announcement-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .announcement-header .header-right {
+        width: 100%;
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+    
+    .date-filter-dropdown {
+        flex: 1;
+    }
+    
+    .filter-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    /* Prevent text wrapping */
+    .filter-dropdown-trigger span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .filter-dropdown-menu {
+        left: 0; 
+        right: auto; /* Allow it to find its own width */
+        min-width: 280px; /* Force a minimum readable width */
+        max-width: 90vw; /* Prevent overflow on very small screens */
+        z-index: 100;
+    }
+    
+    .sort-wrapper {
+        width: 100%;
+    }
+    
+    .btn-control {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .announcement-board {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Stacking Order: Categories -> Pinned -> Feed */
+    .announcement-categories {
+        order: 1;
+        width: 100%;
+        min-width: 0; /* CRITICAL: Allows flex item to shrink below content size to trigger scroll */
+        overflow-x: auto; /* Ensure scroll is enabled */
+        margin-bottom: 0.5rem;
+        /* Re-apply scrollbar hiding if needed or inherit */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .announcement-categories::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Optimize sizing for mobile */
+    .category-menu {
+        gap: 0.5rem; /* Reduce gap */
+        padding-bottom: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.5rem 0.9rem; /* Smaller padding */
+        font-size: 0.85rem;
+    }
+    
+    /* Pinned Toggle Button (Mobile Only) */
+    .pinned-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-md);
+        color: var(--text-main);
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        order: 2; /* Place between categories and pinned/feed */
+    }
+
+    .pinned-toggle-btn.active {
+        border-color: var(--accent-blue);
+        color: var(--accent-blue);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .pinned-toggle-btn svg {
+        transition: transform 0.3s;
+    }
+
+    .pinned-toggle-btn.active svg {
+        transform: rotate(180deg);
+    }
+    
+    .announcement-pinned {
+        order: 3;
+        display: none; /* Hide by default on mobile */
+        position: static;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .announcement-pinned.show {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    .pinned-content {
+         /* Make it look good full width */
+         border-radius: var(--announcement-card-radius);
+         /* If toggled open, maybe remove top radius to merge with button? Optional. */
+    }
+    
+    .pinned-toggle-btn.active + .announcement-pinned .pinned-content {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+    }
+    
+    .announcement-feed-container {
+        order: 4;
+    }
+    
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .card-author-avatar {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .card-image img {
+        height: 240px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    /* Match .container responsive padding from styles.css */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .announcements-container {
+        padding-top: calc(60px + 1rem); /* 60px is mobile header height */
+    }
+    
+    .filter-dropdown-trigger {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.85rem;
+    }
+    
+    .btn-control {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .card-author-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .card-image img {
+        height: 200px;
     }
     
     .pagination-btn {
         min-width: 36px;
         height: 36px;
         font-size: 0.85rem;
-        padding: 0 0.35rem;
     }
 }
 
-.end-message {
-    text-align: center;
-    padding: 3rem 0;
-    color: var(--text-muted);
-    font-weight: 600;
-    font-size: 1.1rem;
+/* Extra small mobile devices (320px) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .announcements-container {
+        padding-top: calc(60px + 0.75rem);
+    }
+    
+    .announcement-header .header-left h1 {
+        font-size: 1.5rem;
+    }
+    
+    .filter-dropdown-trigger,
+    .btn-control {
+        padding: 0.45rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .card-author-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
 }

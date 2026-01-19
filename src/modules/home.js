@@ -121,28 +121,18 @@ async function loadEvents() {
             const month = dateObj.toLocaleDateString(undefined, { month: 'short' });
             const day = dateObj.toLocaleDateString(undefined, { day: 'numeric' });
 
+            // Use the first image from the array, or the 'image' field, or a fallback
+            const imageSrc = (item.images && item.images.length > 0) ? item.images[0] : (item.image || 'assets/images/webp/ssc-logo.webp');
+
             return `
-            <article class="card event-card">
-                <div class="event-date-badge">
-                    <span class="event-month">${month}</span>
-                    <span class="event-day">${day}</span>
+            <a href="events.html" class="event-poster-card fade-in" title="${escapeHtml(item.title)} - Click to view details">
+                <img src="${imageSrc}" alt="${escapeHtml(item.title)}" class="poster-image" loading="lazy">
+                
+                <div class="poster-date-badge">
+                    <span class="poster-date-month">${month}</span>
+                    <span class="poster-date-day">${day}</span>
                 </div>
-                <div class="card-content">
-                    <span class="card-category text-accent-yellow">${escapeHtml(item.category)}</span>
-                    <h3 class="card-title">${escapeHtml(item.title)}</h3>
-                    <p class="card-excerpt">${escapeHtml(item.summary)}...</p>
-                    
-                    <div class="card-footer event-footer">
-                        <div class="event-location">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <span>${escapeHtml(item.location)}</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            </a>
             `;
         }).join('');
     } catch(e) { console.error('Events load failed', e); }
@@ -228,7 +218,7 @@ async function loadTigiAySection() {
                         </div>
                         <div class="tigi-ay-visual">
                                <div class="logo-container">
-                                   <img src="assets/images/tigi-ay-logo-opt.jpg" alt="Tigi-Ay Logo" class="tigi-ay-logo" loading="lazy">
+                                   <img src="assets/images/webp/tigi-ay-logo-opt.webp" alt="Tigi-Ay Logo" class="tigi-ay-logo" loading="lazy">
                                </div>
                                <div class="glow-circle"></div>
                         </div>
