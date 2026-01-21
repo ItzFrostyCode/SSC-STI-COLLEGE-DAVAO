@@ -203,7 +203,7 @@ function renderFeed() {
     feed.innerHTML = filtered.map(item => `
         <article class="announcement-card" data-announcement-id="${item.id}">
             <div class="card-header">
-                <img src="${item.authorAvatar || 'assets/images/webp/ssc-logo.webp'}" alt="Author" class="card-author-avatar">
+                <img src="${item.authorAvatar || 'assets/images/homepage/ssc-logo.webp'}" alt="Author" class="card-author-avatar">
                 <div class="card-meta">
                     <span class="card-author">${escapeHtml(item.author || 'SSC Admin')}</span>
                     <span class="card-time">${item.displayDate || formatDate(item.date)}</span>
@@ -214,7 +214,7 @@ function renderFeed() {
                 <h3 class="card-title">${escapeHtml(item.title)}</h3>
                 <p class="card-excerpt">${escapeHtml(item.content)}</p>
                 
-                ${item.image ? `
+                ${item.image && item.image !== '#' ? `
                 <div class="card-image">
                     <img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy">
                 </div>
@@ -240,6 +240,9 @@ function formatDate(dateString) {
     });
 }
 
+/* ================================= 
+   4. Event Listeners
+   ================================= */
 function setupListeners() {
     // Category Buttons
     document.getElementById('category-list')?.addEventListener('click', (e) => {
@@ -330,11 +333,15 @@ function setupListeners() {
     }
 
     // Sort Toggle Button
-    const sortBtn = document.getElementById('sort-select-btn');
+    const sortBtn = document.getElementById('btn-sort-trigger'); // Updated ID from HTML
     const sortLabel = document.getElementById('sort-label');
     
     if (sortBtn && sortLabel) {
-        sortBtn.addEventListener('click', () => {
+        // Replace to avoid dupes
+        const newSort = sortBtn.cloneNode(true);
+        sortBtn.parentNode.replaceChild(newSort, sortBtn);
+        
+        newSort.addEventListener('click', () => {
             sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
             sortLabel.textContent = sortOrder === 'desc' ? 'Newest' : 'Oldest';
             renderFeed();

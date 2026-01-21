@@ -28,7 +28,7 @@ export function normalizeEvents(raw) {
     
     return raw.map(item => ({
         title: item.title || 'Untitled Event',
-        summary: item.summary || item.content?.substring(0, 100) || '',
+        summary: item.summary || item.description || item.content || '',
         startDate: item.startDate || item.date || new Date().toISOString(),
         endDate: item.endDate || null,
         location: item.location || 'TBA',

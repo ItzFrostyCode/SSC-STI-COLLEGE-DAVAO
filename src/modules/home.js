@@ -70,11 +70,6 @@ async function loadAnnouncements() {
         // Replace skeletons with real content
         grid.innerHTML = latest.map(item => `
             <article class="card announcement-card fade-in">
-                ${item.image ? `
-                <div class="card-image">
-                    <img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.parentElement.style.display='none'">
-                </div>
-                ` : ''}
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-category text-accent-yellow">${escapeHtml(item.category)}</span>
@@ -122,7 +117,7 @@ async function loadEvents() {
             const day = dateObj.toLocaleDateString(undefined, { day: 'numeric' });
 
             // Use the first image from the array, or the 'image' field, or a fallback
-            const imageSrc = (item.images && item.images.length > 0) ? item.images[0] : (item.image || 'assets/images/webp/ssc-logo.webp');
+            const imageSrc = (item.images && item.images.length > 0) ? item.images[0] : (item.image || 'assets/images/homepage/ssc-logo.webp');
 
             return `
             <a href="events.html" class="event-poster-card fade-in" title="${escapeHtml(item.title)} - Click to view details">
@@ -218,7 +213,7 @@ async function loadTigiAySection() {
                         </div>
                         <div class="tigi-ay-visual">
                                <div class="logo-container">
-                                   <img src="assets/images/webp/tigi-ay-logo-opt.webp" alt="Tigi-Ay Logo" class="tigi-ay-logo" loading="lazy">
+                                   <img src="assets/images/homepage/tigi-ay-logo-opt.webp" alt="Tigi-Ay Logo" class="tigi-ay-logo" loading="lazy">
                                </div>
                                <div class="glow-circle"></div>
                         </div>
