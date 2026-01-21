@@ -132,11 +132,7 @@ function createOfficerCard(officer) {
     const isPremium = officer.name === 'Reinamie Dayrit';
     const premiumClass = isPremium ? 'premium-card' : '';
     
-    // Socials (if available in normalized data - currently normalizeOfficers only keeps name, pos, dept, image, order)
-    // We should probably update normalizeOfficers to keep email/socials if we want them!
-    // For now assuming basic info.
 
-    return `
     const cardHTML = `
         <div class="officer-card ${premiumClass} fade-in">
             <div class="officer-image-container skeleton">
@@ -193,4 +189,4 @@ export function attachImageListeners() {
         }
     });
 }
-}
+
