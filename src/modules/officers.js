@@ -103,8 +103,8 @@ function renderOfficers(allOfficers) {
                      html += `
                         <div class="officer-card">
                              <div class="officer-image-container">
-                                <div class="officer-image" style="background: #ccc; display:flex; align-items:center; justify-content:center;">
-                                    <span>?</span>
+                                <div class="officer-image" style="background: #e2e8f0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                                    <img src="assets/images/default-avatar.svg" alt="Placeholder" style="width:100%; height:100%; object-fit:cover; opacity:0.5;">
                                 </div>
                              </div>
                              <div class="officer-info">
@@ -142,7 +142,7 @@ function createOfficerCard(officer) {
                      alt="${escapeHtml(officer.name)}" 
                      class="officer-image"
                      loading="lazy"
-                     onerror="this.onerror=null; this.src='${fallbackImage}';">
+                     onerror="this.onerror=null; this.src='assets/images/default-avatar.svg';">
                 
                 ${officer.email ? `
                 <div class="officer-socials">

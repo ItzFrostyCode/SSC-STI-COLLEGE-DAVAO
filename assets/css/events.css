@@ -853,6 +853,31 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
+
+    /* Switch to Mobile Filter Layout on Tablet */
+    .desktop-only {
+        display: none !important;
+    }
+    
+    .mobile-filter-dropdown {
+        display: block;
+        order: 2;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .sort-group {
+        order: 1;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .filter-bar {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+    }
     
     .event-card {
         min-height: 350px !important;
@@ -911,11 +936,12 @@
         order: 0;
     }
 
-    /* Hide Navigation Arrows on Mobile/Tablet */
+    /* Navigation Arrows Invisible but Clickable on Mobile/Tablet */
     .modal-nav-btn,
     .lightbox-prev,
     .lightbox-next {
-        display: none !important;
+        display: flex !important;
+        opacity: 0 !important;
     }
 
     /* Full Screen Lightbox Image on Mobile */
@@ -986,10 +1012,11 @@
     
     /* Mobile Filter */
     .filter-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
+        flex-direction: row; /* Keep on one line */
+        align-items: center;
+        gap: 0.75rem;
         padding: 1rem 0;
+        flex-wrap: nowrap;
     }
     
     .desktop-only {
@@ -998,6 +1025,15 @@
     
     .mobile-filter-dropdown {
         display: block;
+        order: 2; /* Right side */
+        flex: 1; /* Take available width */
+        min-width: 0;
+    }
+
+    .sort-group {
+        order: 1; /* Left side */
+        width: auto;
+        flex-shrink: 0;
     }
     
     /* Single column grid on mobile */

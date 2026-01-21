@@ -78,7 +78,7 @@ async function loadAnnouncements() {
                     </div>
                     <h3 class="card-title">${escapeHtml(item.title)}</h3>
                     <p class="card-excerpt">${escapeHtml(item.content.substring(0, 120))}...</p>
-                    ${item.gallery && item.gallery.length > 1 ? `<div class="card-gallery-indicator"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> ${item.gallery.length} photos</div>` : ''}
+
                     <div class="card-footer">
                         <a href="announcements.html" class="btn-read-more">
                             Read More 
@@ -151,11 +151,11 @@ async function loadOfficers() {
         grid.innerHTML = studentOfficers.map(item => `
             <div class="officer-card">
                 <div class="officer-image-container">
-                    <img src="${item.image ? 'assets/images/officers/' + item.image : 'assets/images/default-avatar.png'}" 
+                    <img src="${item.image ? 'assets/images/officers/' + item.image : 'assets/images/default-avatar.svg'}" 
                          alt="${item.name}" 
                          class="officer-image"
                          loading="lazy"
-                         onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=random&size=128'">
+                         onerror="this.onerror=null; this.src='assets/images/default-avatar.svg'">
                 </div>
                 <div class="officer-info">
                     <h3>${escapeHtml(item.name)}</h3>

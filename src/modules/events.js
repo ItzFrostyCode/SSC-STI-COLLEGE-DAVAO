@@ -461,4 +461,28 @@ function setupListeners() {
     if (modalOverlay) {
         modalOverlay.addEventListener('click', closeEventModal);
     }
+
+    // Global Keyboard Navigation (Arrows & Escape)
+    document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('lightbox-modal');
+        const eventModal = document.getElementById('event-modal');
+
+        // Lightbox takes precedence
+        if (lightbox && lightbox.style.display === 'block') {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'Escape') closeLightbox();
+            return;
+        }
+
+        // Event Modal
+        if (eventModal && eventModal.classList.contains('active')) {
+            // Only navigate if we have multiple images
+            if (currentModalImages.length > 1) {
+                if (e.key === 'ArrowLeft') changeModalSlide(-1);
+                if (e.key === 'ArrowRight') changeModalSlide(1);
+            }
+            if (e.key === 'Escape') closeEventModal();
+        }
+    });
 }
