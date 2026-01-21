@@ -193,15 +193,15 @@ async function loadOfficers() {
         // But for many officers, parallel waiting might slow down the UI. 
         // Best approach: Render content, but put a skeleton BEHIND the image or as a placeholder that hides when image loads.
 
+        // Render logic with robust image loading
+        // We render the skeleton structure, then update the image once loaded
         grid.innerHTML = studentOfficers.map(item => `
             <div class="officer-card fade-in">
                 <div class="officer-image-container skeleton">
                     <img src="${item.image ? 'assets/images/officers/' + item.image : 'assets/images/default-avatar.svg'}" 
                          alt="${item.name}" 
                          class="officer-image"
-                         loading="lazy"
-                         onload="this.parentElement.classList.remove('skeleton')"
-                         onerror="this.onerror=null; this.src='assets/images/default-avatar.svg'; this.parentElement.classList.remove('skeleton')">
+                         loading="lazy">
                 </div>
                 <div class="officer-info">
                     <h3>${escapeHtml(item.name)}</h3>
@@ -210,6 +210,32 @@ async function loadOfficers() {
                 </div>
             </div>
         `).join('');
+
+        // Attach listeners after render to ensure we catch cached images
+        const images = grid.querySelectorAll('.officer-image');
+        images.forEach(img => {
+            const handleLoad = () => {
+                img.parentElement.classList.remove('skeleton');
+            };
+            const handleError = () => {
+                img.src = 'assets/images/default-avatar.svg';
+                img.parentElement.classList.remove('skeleton');
+            };
+
+            if (img.complete) {
+                if (img.naturalWidth > 0) {
+                    handleLoad();
+                } else {
+                    // Check if it failed (naturalWidth 0 means broken or not loaded)
+                    // But for cached broken images, it might be 0.
+                    // Safer to stick with onload/onerror but check complete first.
+                    handleLoad(); 
+                }
+            } else {
+                img.onload = handleLoad;
+                img.onerror = handleError;
+            }
+        });
         
     } catch(e) { console.error('Officers load failed', e); }
 }

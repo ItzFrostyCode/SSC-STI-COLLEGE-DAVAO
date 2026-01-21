@@ -120,6 +120,7 @@ function renderOfficers(allOfficers) {
     });
 
     listContainer.innerHTML = html;
+    attachImageListeners();
 }
 
 function createOfficerCard(officer) {
@@ -136,14 +137,13 @@ function createOfficerCard(officer) {
     // For now assuming basic info.
 
     return `
+    const cardHTML = `
         <div class="officer-card ${premiumClass} fade-in">
             <div class="officer-image-container skeleton">
                 <img src="${constImageSrc}" 
                      alt="${escapeHtml(officer.name)}" 
                      class="officer-image"
-                     loading="lazy"
-                     onload="this.parentElement.classList.remove('skeleton')"
-                     onerror="this.onerror=null; this.src='assets/images/default-avatar.svg'; this.parentElement.classList.remove('skeleton')">
+                     loading="lazy">
                 
                 ${officer.email ? `
                 <div class="officer-socials">
@@ -163,4 +163,34 @@ function createOfficerCard(officer) {
             </div>
         </div>
     `;
+    return cardHTML;
+}
+
+// Add a helper to attach listeners after rendering
+export function attachImageListeners() {
+    const images = document.querySelectorAll('.officer-image');
+    images.forEach(img => {
+        // Skip if already processed or fallback
+        if (img.dataset.loaded === 'true') return;
+
+        const handleLoad = () => {
+             const container = img.closest('.officer-image-container');
+             if(container) container.classList.remove('skeleton');
+             img.dataset.loaded = 'true';
+        };
+        
+        const handleError = () => {
+             const container = img.closest('.officer-image-container');
+             if(container) container.classList.remove('skeleton');
+             img.src = 'assets/images/default-avatar.svg';
+        };
+
+        if (img.complete && img.naturalWidth > 0) {
+            handleLoad();
+        } else {
+            img.onload = handleLoad;
+            img.onerror = handleError;
+        }
+    });
+}
 }
