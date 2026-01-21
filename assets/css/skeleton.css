@@ -12,6 +12,35 @@
     border-radius: var(--radius-sm);
 }
 
+/* Ensure skeleton background is visible even if container has its own background */
+.skeleton, .skeleton-card {
+    background: linear-gradient(
+        90deg,
+        var(--bg-surface) 0%,
+        var(--border-light) 50%,
+        var(--bg-surface) 100%
+    ) !important; /* Force override of other backgrounds */
+    background-size: 200% 100% !important;
+    animation: shimmer 1.5s infinite !important;
+}
+
+/* Hide images inside a skeleton container until loaded using JS removal of class */
+.skeleton img, 
+.skeleton-card img {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Specific fix for officer image container */
+.officer-image-container.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--bg-surface) 0%,
+        var(--border-light) 50%,
+        var(--bg-surface) 100%
+    ) !important;
+}
+
 @keyframes shimmer {
     0% {
         background-position: 200% 0;

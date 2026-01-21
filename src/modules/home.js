@@ -102,6 +102,13 @@ async function loadEvents() {
     const grid = document.querySelector('#events-grid');
     if (!grid) return;
 
+    // Show Skeletons immediately
+    grid.innerHTML = Array(3).fill(0).map(() => `
+        <div class="event-poster-card skeleton-card">
+            <div class="skeleton-image"></div>
+        </div>
+    `).join('');
+
     try {
         const data = await fetchJSON('data/events.json', {
             cache: true,
@@ -111,17 +118,30 @@ async function loadEvents() {
 
         const latest = data.slice(0, 3);
 
-        grid.innerHTML = latest.map(item => {
+        // Preload images before rendering
+        const promises = latest.map(async (item) => {
             const dateObj = new Date(item.startDate);
             const month = dateObj.toLocaleDateString(undefined, { month: 'short' });
             const day = dateObj.toLocaleDateString(undefined, { day: 'numeric' });
-
-            // Use the first image from the array, or the 'image' field, or a fallback
-            const imageSrc = (item.images && item.images.length > 0) ? item.images[0] : (item.image || 'assets/images/homepage/ssc-logo.webp');
+            
+            // Image Fallback Logic
+            let imageSrc = (item.images && item.images.length > 0) ? item.images[0] : (item.image || 'assets/images/homepage/ssc-logo.webp');
+            
+            // Check if image loads, if not use fallback
+            try {
+                await new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.src = imageSrc;
+                    img.onload = resolve;
+                    img.onerror = reject;
+                });
+            } catch (err) {
+                imageSrc = 'assets/images/homepage/ssc-logo.webp'; // Fallback
+            }
 
             return `
             <a href="events.html" class="event-poster-card fade-in" title="${escapeHtml(item.title)} - Click to view details">
-                <img src="${imageSrc}" alt="${escapeHtml(item.title)}" class="poster-image" loading="lazy">
+                <img src="${imageSrc}" alt="${escapeHtml(item.title)}" class="poster-image">
                 
                 <div class="poster-date-badge">
                     <span class="poster-date-month">${month}</span>
@@ -129,13 +149,31 @@ async function loadEvents() {
                 </div>
             </a>
             `;
-        }).join('');
-    } catch(e) { console.error('Events load failed', e); }
+        });
+
+        const renderedItems = await Promise.all(promises);
+        grid.innerHTML = renderedItems.join('');
+
+    } catch(e) { 
+        console.error('Events load failed', e);
+        grid.innerHTML = '<p class="error-msg">Failed to load events.</p>';
+    }
 }
 
 async function loadOfficers() {
     const grid = document.querySelector('#officers-grid');
     if (!grid) return;
+
+    // Show Skeletons
+    grid.innerHTML = Array(4).fill(0).map(() => `
+        <div class="officer-card skeleton-card">
+            <div class="skeleton-image" style="height: 280px;"></div>
+            <div class="officer-info">
+                <div class="skeleton-text" style="width: 70%;"></div>
+                <div class="skeleton-text" style="width: 50%;"></div>
+            </div>
+        </div>
+    `).join('');
 
     try {
         const data = await fetchJSON('data/officers.json', {
@@ -148,14 +186,22 @@ async function loadOfficers() {
             .filter(o => o.position !== 'Adviser' && o.position !== 'OSA Representative')
             .sort((a, b) => a.order - b.order);
 
+        // Render immediately but use lazy loading for images via browser attribute
+        // The skeleton effect implies waiting for data fetch. 
+        // For images themselves, we can use a small script to remove a 'loading' class or just let them load.
+        // Given the user wants "skeleton for all that has images", we should technically wait for image load or show a placeholder.
+        // But for many officers, parallel waiting might slow down the UI. 
+        // Best approach: Render content, but put a skeleton BEHIND the image or as a placeholder that hides when image loads.
+
         grid.innerHTML = studentOfficers.map(item => `
-            <div class="officer-card">
-                <div class="officer-image-container">
+            <div class="officer-card fade-in">
+                <div class="officer-image-container skeleton">
                     <img src="${item.image ? 'assets/images/officers/' + item.image : 'assets/images/default-avatar.svg'}" 
                          alt="${item.name}" 
                          class="officer-image"
                          loading="lazy"
-                         onerror="this.onerror=null; this.src='assets/images/default-avatar.svg'">
+                         onload="this.parentElement.classList.remove('skeleton')"
+                         onerror="this.onerror=null; this.src='assets/images/default-avatar.svg'; this.parentElement.classList.remove('skeleton')">
                 </div>
                 <div class="officer-info">
                     <h3>${escapeHtml(item.name)}</h3>
@@ -164,10 +210,6 @@ async function loadOfficers() {
                 </div>
             </div>
         `).join('');
-        
-        // Setup Carousel scripts if needed (assuming carousel.js is still used or we port logic)
-        // For now, if carousel.js is globally loaded, it might attach itself. 
-        // Ideally we should import carousel logic here too.
         
     } catch(e) { console.error('Officers load failed', e); }
 }

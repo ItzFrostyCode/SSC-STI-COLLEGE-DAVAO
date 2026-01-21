@@ -246,7 +246,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.65rem 1.25rem;
+    padding: 0.85rem 1.25rem;
     border: 1px solid var(--border-light);
     border-radius: var(--radius-md);
     background: transparent;
@@ -841,7 +841,7 @@
     }
     
     .btn-control {
-        padding: 0.55rem 0.95rem;
+        padding: 0.55rem 0.95rem; /* Matches .filter-btn */
         font-size: 0.85rem;
     }
 }
@@ -879,6 +879,17 @@
         flex-wrap: nowrap;
     }
     
+    /* Ensure Dropdown Trigger has implicit correct padding if not overridden, 
+       but we need to make sure btn-control matches it. 
+       Mobile Dropdown Trigger default padding is 0.85rem 1.25rem.
+       We should adjust btn-control to match.
+    */
+    
+    .btn-control {
+        padding: 0.85rem 1.25rem !important; /* Force match with dropdown trigger */
+        font-size: 0.9rem !important; /* Keep font size consistent */
+    }
+
     .event-card {
         min-height: 350px !important;
     }
@@ -962,25 +973,8 @@
         gap: 0.6rem;
     }
     
-    .filter-btn {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
-        gap: 0.4rem;
-    }
-    
-    .filter-btn .count {
-        font-size: 0.68rem;
-        height: 17px;
-        min-width: 17px;
-        padding: 0 4px;
-    }
-    
-    .btn-control {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.78rem;
-        gap: 0.35rem;
-    }
-    
+    /* Removed .filter-btn overrides here since we switched to mobile dropdown layout */
+
     .btn-control svg {
         width: 18px;
         height: 18px;
@@ -993,14 +987,14 @@
         gap: 0.5rem;
     }
     
-    .filter-btn {
-        padding: 0.45rem 0.65rem;
-        font-size: 0.75rem;
-    }
+    /* If we are using mobile dropdown layout at this size (inherited from <1024), 
+       we should ensure sizing stays consistent. 
+       Removing shrinking overrides for btn-control to maintain height match 
+    */
     
     .btn-control {
-        padding: 0.45rem 0.65rem;
-        font-size: 0.73rem;
+        padding: 0.85rem 1.25rem !important;
+        font-size: 0.9rem !important;
     }
 }
 

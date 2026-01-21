@@ -137,12 +137,13 @@ function createOfficerCard(officer) {
 
     return `
         <div class="officer-card ${premiumClass} fade-in">
-            <div class="officer-image-container">
+            <div class="officer-image-container skeleton">
                 <img src="${constImageSrc}" 
                      alt="${escapeHtml(officer.name)}" 
                      class="officer-image"
                      loading="lazy"
-                     onerror="this.onerror=null; this.src='assets/images/default-avatar.svg';">
+                     onload="this.parentElement.classList.remove('skeleton')"
+                     onerror="this.onerror=null; this.src='assets/images/default-avatar.svg'; this.parentElement.classList.remove('skeleton')">
                 
                 ${officer.email ? `
                 <div class="officer-socials">
