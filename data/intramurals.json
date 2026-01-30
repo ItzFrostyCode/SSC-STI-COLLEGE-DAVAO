@@ -277,9 +277,22 @@
         },
         "larong_pinoy": {
           "tug_of_war": ["Anicker, Denver John Donald G.","Piamonte, Christian Y.","Pugahan, Kristian Jayfol","Lastimosa, Lance C.","Cortez, Christian C.","Sison, Jeraldine","Diaz, Reena Elaizah","Yu, Josef Ed Zachary","Dalhog, Ryzalyn","Payot, Yhanzee Emmanuel E."],
-          "chinese_garter": [],
-          "sack_race": [],
-          "limbo_rock": []
+          "chinese_garter": ["Macasling, Jev D.",
+"Juanich, Angelie Mae",
+"Caballida, Anne Mae",
+"Dicon, Jenelyn",
+"Iroy, Dweigne Nicole"
+],
+          "sack_race": ["Alamida, Cindy Jean",
+"Corpuz, Sheryn Mae F.",
+"Aranches, Aleczandra",
+"Vega, Fibie-an B.",
+"Maduyag, Joshua D."],
+          "limbo_rock": ["Paclibar, Jastine M.",
+"Sayman, Jhasafjean L.",
+"Bacoor, Aljhon Khim",
+"Abequibel, Cicily Jay",
+"Asoy, Grace Dhel B."]
         }
       }
     },
