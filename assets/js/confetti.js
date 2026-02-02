@@ -130,7 +130,7 @@ class ConfettiCannon {
     celebrate(element, duration = 3000) {
         if (!element) return;
         
-        // Prevent multiple simultaneous animations
+        
         if (this.isAnimating) {
             return;
         }

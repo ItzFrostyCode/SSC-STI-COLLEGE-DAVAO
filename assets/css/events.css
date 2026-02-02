@@ -1,7 +1,4 @@
-/* ===================================
-   EVENTS PAGE - MAGAZINE STYLE LAYOUT
-   Visual-First Asymmetric Grid Design
-   =================================== */
+
 
 :root {
     --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -15,9 +12,7 @@
     --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
-/* ===================================
-   CONTAINER & LAYOUT
-   =================================== */
+
 
 .events-container {
     padding-top: calc(var(--header-height) + 2rem);
@@ -25,9 +20,7 @@
     padding-bottom: 5rem;
 }
 
-/* ===================================
-   HERO SECTION - Minimal
-   =================================== */
+
 
 .events-hero {
     text-align: center;
@@ -51,9 +44,7 @@
     font-weight: 500;
 }
 
-/* ===================================
-   FILTER BAR - Clean Tabs
-   =================================== */
+
 
 .filter-bar {
     display: flex;
@@ -63,10 +54,10 @@
     margin-bottom: 3rem;
     padding: 0.75rem 0;
     border-bottom: 2px solid var(--border-light);
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap; 
 }
 
-/* Desktop Filter Group */
+
 .filter-group {
     display: flex;
     gap: 0.5rem;
@@ -128,7 +119,7 @@
     color: var(--bg-body);
 }
 
-/* Mobile Filter Dropdown */
+
 .mobile-filter-dropdown {
     display: none;
     position: relative;
@@ -235,7 +226,7 @@
     color: var(--bg-body);
 }
 
-/* Sort Group */
+
 .sort-group {
     display: flex;
     align-items: center;
@@ -265,10 +256,7 @@
     transition: transform 0.3s;
 }
 
-/* ===================================
-   MAGAZINE-STYLE GRID LAYOUT
-   Asymmetric widths for visual interest
-   =================================== */
+
 
 .events-grid {
     display: grid;
@@ -277,12 +265,12 @@
     padding-bottom: 2rem;
 }
 
-/* Ensure consistent card heights */
+
 .event-card {
     min-height: 380px;
 }
 
-/* Desktop - Magazine asymmetric layout */
+
 @media (min-width: 769px) {
     .events-grid {
         display: grid;
@@ -290,37 +278,37 @@
         gap: 1.5rem;
     }
     
-    /* 1st card - Full width hero */
+    
     .event-card:nth-child(1) {
         grid-column: span 3 !important;
         min-height: 500px;
     }
     
-    /* 2nd card - 2 columns (wider on left) */
+    
     .event-card:nth-child(2) {
         grid-column: span 2 !important;
         min-height: 420px;
     }
     
-    /* 3rd card - 1 column (smaller on right) */
+    
     .event-card:nth-child(3) {
         grid-column: span 1 !important;
         min-height: 420px;
     }
     
-    /* 4th card - 1 column (smaller on left) */
+    
     .event-card:nth-child(4) {
         grid-column: span 1 !important;
         min-height: 400px;
     }
     
-    /* 5th card - 2 columns (wider on right) */
+    
     .event-card:nth-child(5) {
         grid-column: span 2 !important;
         min-height: 400px;
     }
     
-    /* 6th card onwards - alternating pattern */
+    
     .event-card:nth-child(6) {
         grid-column: span 2 !important;
         min-height: 380px;
@@ -343,9 +331,7 @@
 }
 
 
-/* ===================================
-   EVENT CARD - Image Overlay Style
-   =================================== */
+
 
 .event-card {
     position: relative;
@@ -361,7 +347,7 @@
     box-shadow: var(--card-shadow-hover);
 }
 
-/* Card Image - Full Background */
+
 .card-image {
     position: absolute;
     inset: 0;
@@ -381,7 +367,7 @@
     transform: scale(1.05);
 }
 
-/* Dark Overlay for Text Contrast */
+
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -394,7 +380,7 @@
     background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
 }
 
-/* Date Badge - Top Right */
+
 .card-date-badge {
     position: absolute;
     top: 1.5rem;
@@ -432,7 +418,7 @@
     color: var(--text-main);
 }
 
-/* Content - Overlay on Bottom */
+
 .card-content {
     position: absolute;
     bottom: 0;
@@ -445,7 +431,7 @@
     gap: 0.75rem;
 }
 
-/* Category Pill */
+
 .event-category-pill {
     align-self: flex-start;
     font-size: 0.75rem;
@@ -460,7 +446,7 @@
     border-radius: 100px;
 }
 
-/* Event Title - Large White Text */
+
 .event-title {
     font-size: 1.75rem;
     font-weight: 800;
@@ -473,13 +459,13 @@
     overflow: hidden;
 }
 
-/* Featured card has larger title */
+
 .event-card:first-child .event-title {
     font-size: 2.5rem;
     -webkit-line-clamp: 3;
 }
 
-/* Event Description */
+
 .event-desc-short {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.9);
@@ -490,17 +476,17 @@
     overflow: hidden;
 }
 
-/* Featured card shows description */
+
 .event-card:first-child .event-desc-short {
     display: -webkit-box;
 }
 
-/* Hide description on smaller cards */
+
 .event-card:not(:first-child) .event-desc-short {
     display: none;
 }
 
-/* Event Meta */
+
 .event-meta {
     display: flex;
     align-items: center;
@@ -520,14 +506,12 @@
     height: 16px;
 }
 
-/* Card Footer - Hidden, will show in modal */
+
 .card-footer {
     display: none;
 }
 
-/* ===================================
-   MODAL - Full Screen Split View
-   =================================== */
+
 
 .modal {
     position: fixed;
@@ -565,7 +549,7 @@
     grid-template-columns: 1fr 450px;
 }
 
-/* Left - Image Gallery */
+
 .modal-visuals {
     background: #000;
     position: relative;
@@ -584,7 +568,7 @@
     cursor: zoom-in;
 }
 
-/* Navigation Buttons */
+
 .modal-nav-btn {
     position: absolute;
     top: 50%;
@@ -612,7 +596,7 @@
 .modal-prev { left: 2rem; }
 .modal-next { right: 2rem; }
 
-/* Right - Event Details */
+
 .modal-info {
     padding: 3rem;
     overflow-y: auto;
@@ -623,7 +607,7 @@
     gap: 1.5rem;
 }
 
-/* Close Button */
+
 .modal-close,
 .modal-close-new {
     position: absolute;
@@ -651,7 +635,7 @@
     transform: rotate(90deg);
 }
 
-/* Modal Content */
+
 .modal-category {
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -700,7 +684,7 @@
     white-space: pre-line;
 }
 
-/* Thumbnails */
+
 .modal-thumbs {
     margin-top: auto;
     padding-top: 2rem;
@@ -735,9 +719,7 @@
     object-fit: cover;
 }
 
-/* ===================================
-   LIGHTBOX
-   =================================== */
+
 
 .lightbox {
     display: none;
@@ -795,9 +777,7 @@
     left: 0;
 }
 
-/* ===================================
-   LOADING & EMPTY STATES
-   =================================== */
+
 
 .loading-overlay {
     grid-column: 1/-1;
@@ -825,11 +805,9 @@
     padding: 6rem 1rem;
 }
 
-/* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
 
-/* Large screens - Slight compression */
+
+
 @media (max-width: 1200px) {
     .filter-bar {
         gap: 0.85rem;
@@ -841,20 +819,20 @@
     }
     
     .btn-control {
-        padding: 0.55rem 0.95rem; /* Matches .filter-btn */
+        padding: 0.55rem 0.95rem; 
         font-size: 0.85rem;
     }
 }
 
-/* Tablet - Aggressive compression to keep on one row */
+
 @media (max-width: 1024px) {
-    /* Tablet - 2 column grid */
+    
     .events-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
 
-    /* Switch to Mobile Filter Layout on Tablet */
+    
     .desktop-only {
         display: none !important;
     }
@@ -879,52 +857,48 @@
         flex-wrap: nowrap;
     }
     
-    /* Ensure Dropdown Trigger has implicit correct padding if not overridden, 
-       but we need to make sure btn-control matches it. 
-       Mobile Dropdown Trigger default padding is 0.85rem 1.25rem.
-       We should adjust btn-control to match.
-    */
+    
     
     .btn-control {
-        padding: 0.85rem 1.25rem !important; /* Force match with dropdown trigger */
-        font-size: 0.9rem !important; /* Keep font size consistent */
+        padding: 0.85rem 1.25rem !important; 
+        font-size: 0.9rem !important; 
     }
 
     .event-card {
         min-height: 350px !important;
     }
     
-    /* First card still featured, spans both columns */
+    
     .event-card:first-child {
         grid-column: span 2;
         min-height: 450px !important;
     }
     
-    /* Modal - Stacked Layout for Tablet/Mobile */
+    
     .modal-content {
         display: flex;
         flex-direction: column;
         height: 100%;
-        overflow-y: auto; /* Enable vertical scrolling for the whole modal */
+        overflow-y: auto; 
         -webkit-overflow-scrolling: touch;
     }
 
     .modal-visuals {
         height: auto;
-        min-height: 40vh; /* Give image section proper height */
+        min-height: 40vh; 
         max-height: 60vh;
         width: 100%;
         flex-shrink: 0;
     }
     
     .modal-info {
-        height: auto; /* Allow content to expand */
-        overflow: visible; /* Let parent scroll */
-        padding: 1.5rem 1.5rem 6rem; /* Add bottom padding for better spacing */
-        gap: 1.25rem; /* Ensure consistent vertical rhythm */
+        height: auto; 
+        overflow: visible; 
+        padding: 1.5rem 1.5rem 6rem; 
+        gap: 1.25rem; 
     }
 
-    /* Adjust Close Button for Mobile Stacked View */
+    
     .modal-close-new {
         position: absolute;
         top: 1rem;
@@ -935,9 +909,9 @@
         z-index: 50;
     }
     
-    /* Move Thumbs to Top on Mobile/Tablet */
+    
     .modal-thumbs {
-        order: -10 !important; /* Force to top */
+        order: -10 !important; 
         margin-top: 0;
         margin-bottom: 1.5rem;
         padding-top: 0;
@@ -947,7 +921,7 @@
         order: 0;
     }
 
-    /* Navigation Arrows Invisible but Clickable on Mobile/Tablet */
+    
     .modal-nav-btn,
     .lightbox-prev,
     .lightbox-next {
@@ -955,7 +929,7 @@
         opacity: 0 !important;
     }
 
-    /* Full Screen Lightbox Image on Mobile */
+    
     .lightbox-content {
         max-width: 100% !important;
         max-height: 100vh !important;
@@ -963,17 +937,17 @@
         width: 100% !important;
     }
     
-    /* Ensure no padding in wrapper */
+    
     .lightbox-content-wrapper {
         padding: 0;
     }
     
-    /* Compress filter bar to fit on one row */
+    
     .filter-bar {
         gap: 0.6rem;
     }
     
-    /* Removed .filter-btn overrides here since we switched to mobile dropdown layout */
+    
 
     .btn-control svg {
         width: 18px;
@@ -981,16 +955,13 @@
     }
 }
 
-/* Smaller tablet - Even more compression */
+
 @media (max-width: 900px) {
     .filter-bar {
         gap: 0.5rem;
     }
     
-    /* If we are using mobile dropdown layout at this size (inherited from <1024), 
-       we should ensure sizing stays consistent. 
-       Removing shrinking overrides for btn-control to maintain height match 
-    */
+    
     
     .btn-control {
         padding: 0.85rem 1.25rem !important;
@@ -1004,9 +975,9 @@
         font-size: 2.25rem;
     }
     
-    /* Mobile Filter */
+    
     .filter-bar {
-        flex-direction: row; /* Keep on one line */
+        flex-direction: row; 
         align-items: center;
         gap: 0.75rem;
         padding: 1rem 0;
@@ -1019,18 +990,18 @@
     
     .mobile-filter-dropdown {
         display: block;
-        order: 2; /* Right side */
-        flex: 1; /* Take available width */
+        order: 2; 
+        flex: 1; 
         min-width: 0;
     }
 
     .sort-group {
-        order: 1; /* Left side */
+        order: 1; 
         width: auto;
         flex-shrink: 0;
     }
     
-    /* Single column grid on mobile */
+    
     .events-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
@@ -1053,7 +1024,7 @@
         font-size: 2rem;
     }
     
-    /* Mobile Modal */
+    
     .modal-content {
         grid-template-columns: 1fr;
         grid-template-rows: 45vh 1fr;
@@ -1119,7 +1090,7 @@
     }
 }
 
-/* Ultra-small screens (320px) */
+
 @media (max-width: 360px) {
     .events-container {
         padding-top: calc(var(--header-height) + 1rem);

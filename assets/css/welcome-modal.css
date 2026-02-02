@@ -1,4 +1,4 @@
-/* Welcome Modal Styles */
+
 
 .modal {
     position: fixed;
@@ -67,7 +67,7 @@
     transform: rotate(90deg);
 }
 
-/* Welcome Modal Specific */
+
 .welcome-modal-content {
     width: 90%;
     max-width: 900px;
@@ -139,7 +139,7 @@
     color: var(--text-main);
 }
 
-/* Latest Announcement Preview */
+
 .welcome-preview {
     background: var(--bg-surface);
     border: 1px solid var(--border-light);
@@ -196,7 +196,7 @@
     color: var(--accent-blue);
 }
 
-/* Quick Stats */
+
 .welcome-stats {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -230,7 +230,7 @@
     letter-spacing: 0.5px;
 }
 
-/* Quick Navigation */
+
 .welcome-quick-nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -279,7 +279,7 @@
     color: var(--accent-yellow);
 }
 
-/* Welcome Footer */
+
 .welcome-footer {
     text-align: center;
     padding-top: 2rem;
@@ -293,7 +293,7 @@
     border: none;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -303,7 +303,7 @@
     }
 }
 
-/* Loading State */
+
 .welcome-preview.loading {
     display: flex;
     align-items: center;
@@ -327,7 +327,7 @@
     }
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
     .welcome-modal-content {
         width: 95%;

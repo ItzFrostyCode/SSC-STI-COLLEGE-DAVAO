@@ -138,7 +138,7 @@
 }
 
 
-/* ====================== LATEST ANNOUNCEMENTS ====================== */
+
 #announcements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -247,7 +247,7 @@
     color: var(--accent-yellow);
 }
 
-/* ====================== EVENTS POSTER GRID ====================== */
+
 #events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -257,20 +257,20 @@
 }
 
 .event-poster-card {
-    display: block; /* Make anchor tag behave like a block */
+    display: block; 
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    aspect-ratio: 4 / 5; /* Typical poster ratio */
+    aspect-ratio: 4 / 5; 
     box-shadow: var(--shadow-md);
     transition: filter 0.2s ease, transform 0.2s ease;
     text-decoration: none;
-    background-color: var(--bg-surface); /* Fallback */
+    background-color: var(--bg-surface); 
 }
 
 .event-poster-card:hover {
     filter: brightness(1.05);
-    transform: translateY(-2px); /* Very subtle lift for feedback */
+    transform: translateY(-2px); 
 }
 
 .poster-image {
@@ -283,8 +283,8 @@
 .poster-date-badge {
     position: absolute;
     top: 1rem;
-    right: 1rem; /* Right side often feels cleaner for badges */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark bg */
+    right: 1rem; 
+    background: rgba(0, 0, 0, 0.6); 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #ffffff;
@@ -315,10 +315,10 @@
     line-height: 1;
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 640px) {
     #events-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Smaller min-width on mobile */
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
         gap: 1rem;
     }
 }
@@ -357,7 +357,7 @@
   border-right: none !important;
 }
 
-/* Mobile - Stack Vertically */
+
 @media (max-width: 639px) {
   .homepage-stats-grid {
     flex-direction: column !important;

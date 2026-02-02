@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; media-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'; base-uri 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>Announcements - SSC STI College Davao</title>
@@ -17,24 +17,22 @@
     <link rel="icon" href="assets/images/homepage/ssc-logo-removebg.webp" type="image/webp">
 
 
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260121_cache">
-    <link rel="stylesheet" href="assets/css/announcements.css?v=20260121_cache">
-    <link rel="stylesheet" href="assets/css/skeleton.css?v=20260121_cache">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260203_cleanup">
+    <link rel="stylesheet" href="assets/css/announcements.css?v=20260203_cleanup">
+    <link rel="stylesheet" href="assets/css/skeleton.css?v=20260203_cleanup">
 
 
 
     <script defer src="/_vercel/speed-insights/script.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
 
-    <!-- Apply theme immediately to prevent flash -->
+    
     <script>
         (function() {
             const savedTheme = localStorage.getItem('theme');
-            // Only apply dark mode if explicitly saved
             if (savedTheme === 'dark') {
                 document.documentElement.classList.add('dark');
             }
-            // Default is light mode, no action needed
         })();
     </script>
 </head>
@@ -135,7 +133,7 @@
                                 <label>Year</label>
                                 <select id="year-select" class="date-select">
                                     <option value="">All</option>
-                                    <!-- Years will be populated by JS -->
+                                    
                                 </select>
                             </div>
                             <div class="selector-group">
@@ -160,7 +158,7 @@
                                 <label>Day</label>
                                 <select id="day-select" class="date-select">
                                     <option value="">All</option>
-                                    <!-- Days 1-31 will be populated by JS -->
+                                    
                                 </select>
                             </div>
                         </div>
@@ -181,27 +179,27 @@
         </header>
           
         <div class="announcement-board">
-            <!-- LEFT: Categories -->
+            
             <aside class="announcement-categories">
                 <div class="categories-header">
                     <h2>Categories</h2>
                 </div>
                 <ul id="category-list" class="category-menu">
                     <li><button class="category-btn active" data-category="all">All Updates</button></li>
-                    <!-- Categories will be populated by JS -->
+                    
                 </ul>
             </aside>
           
-            <!-- MIDDLE: Cards -->
+            
             <section class="announcement-feed-container">
                 <div id="announcements-feed" class="announcement-feed">
-                    <!-- Cards rendered from JS -->
+                    
                 </div>
                 <div id="pagination-controls" class="pagination"></div>
             </section>
           
-            <!-- RIGHT: Pinned -->
-            <!-- Mobile Toggle for Pinned -->
+            
+            
             <button id="pinned-toggle-btn" class="pinned-toggle-btn">
                 <span>📌 View Pinned Updates</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -214,12 +212,22 @@
                     <h2>Pinned</h2>
                 </div>
                 <div id="pinned-container" class="pinned-content">
-                    <!-- Pinned post rendered from JS -->
+                    
                 </div>
             </aside>
         </div>
-            </div> <!-- Close inner container -->
-        </div> <!-- Close announcements-container -->
+            </div> 
+        </div> 
+        
+        
+        <div id="announcement-lightbox">
+            <button class="lightbox-close-btn" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-nav-btn lightbox-prev" aria-label="Previous image">&#10094;</button>
+            <button class="lightbox-nav-btn lightbox-next" aria-label="Next image">&#10095;</button>
+            <div class="lightbox-content-wrapper">
+                <img id="lightbox-img" src="" alt="Gallery Image">
+            </div>
+        </div>
     </main>
 
 
@@ -248,7 +256,7 @@
                             Facebook
                         </a>
                     </li>
-                </ul>
+                </ul>   
             </div>
         </div>
         <div class="footer-bottom">
@@ -258,9 +266,9 @@
 
 
 
-    <script type="module" src="src/main.js?v=20260121_cache"></script>
+    <script type="module" src="src/main.js?v=20260203_cleanup"></script>
 
-    <script src="assets/js/search.js?v=20260121_cache"></script>
-    <script src="assets/js/header.js?v=20260121_cache"></script>
+    <script src="assets/js/search.js?v=20260203_cleanup"></script>
+    <script src="assets/js/header.js?v=20260203_cleanup"></script>
 </body>
 </html>

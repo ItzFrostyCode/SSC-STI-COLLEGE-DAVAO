@@ -13,14 +13,14 @@
   --accent-yellow: #60a5fa; 
   --accent-red: #ef4444;
 
-  --primary-color: #3b82f6; /* For announcements */
+  --primary-color: #3b82f6; 
 
   --bg-body: #fafafa; 
   --bg-surface: #ffffff;
   --bg-glass: rgba(255, 255, 255, 0.9);
 
   --text-main: #18181b;
-  --text-secondary: #3f3f46; /* Secondary text color */
+  --text-secondary: #3f3f46; 
   --text-muted: #71717a; 
   --text-inverted: #ffffff;
 
@@ -48,14 +48,14 @@ html.dark {
   --primary: #f4f4f5;
   --secondary: #09090b; 
 
-  --primary-color: #60a5fa; /* For announcements in dark mode */
+  --primary-color: #60a5fa; 
 
   --bg-body: #09090b;
   --bg-surface: #18181b;
   --bg-glass: rgba(24, 24, 27, 0.85);
 
   --text-main: #f4f4f5;
-  --text-secondary: #d4d4d8; /* Secondary text color in dark mode */
+  --text-secondary: #d4d4d8; 
   --text-muted: #a1a1aa;
   --text-inverted: #09090b;
 
@@ -134,7 +134,7 @@ h6 {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem; /* Desktop: 1.5rem sides */
+  padding: 0 1.5rem; 
 }
 
 
@@ -545,9 +545,9 @@ html.dark .search-result-item:hover {
 
 
 @media (max-width: 1024px) {
-  /* Responsive container - Tablet */
+  
   .container {
-    padding: 0 1.25rem; /* Tablet: 1.25rem sides */
+    padding: 0 1.25rem; 
   }
   
   .main-nav {
@@ -677,9 +677,9 @@ html.dark .search-result-item:hover {
 
   
 @media (max-width: 480px) {
-  /* Responsive container - Mobile */
+  
   .container {
-    padding: 0 1rem; /* Mobile: 1rem sides */
+    padding: 0 1rem; 
   }
   
   html {
@@ -806,9 +806,9 @@ html.dark .search-result-item:hover {
 
 
 @media (max-width: 350px) {
-    /* Responsive container - Extra Small */
+    
     .container {
-        padding: 0 0.75rem; /* Extra small: 0.75rem sides */
+        padding: 0 0.75rem; 
     }
     
     .d-text { display: none !important; }
@@ -1534,21 +1534,21 @@ html.dark .search-result-item:hover {
         display: none !important;
     }
 
-    /* Reset Wrapper: Respect parent container padding (Align with Header) */
+    
     .officers-carousel-wrapper {
         margin: 0 !important;
         padding: 0 !important; 
         width: 100% !important;
     }
 
-    /* Reset Grid: Remove inner padding causing double-indentation */
+    
     #officers-container .grid-layout {
         padding-left: 0 !important;
         padding-right: 0 !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         width: 100% !important;
-        /* Gap handles spacing between items */
+        
     }
     
     .officers-carousel {
@@ -1558,7 +1558,7 @@ html.dark .search-result-item:hover {
 }
 
 @media (max-width: 768px) {
-    /* ... previous 768px styles overridden or simplified by 1024px rules above ... */
+    
     
     #officers-container .officer-card {
         flex: 0 0 260px;
@@ -1567,7 +1567,7 @@ html.dark .search-result-item:hover {
 }
 
 @media (max-width: 480px) {
-    /* Ensure no negative margins on mobile either */
+    
     .officers-carousel-wrapper {
         margin: 0 !important;
         width: 100% !important;
@@ -1583,9 +1583,7 @@ html.dark .search-result-item:hover {
     }
 }
 
-/* =========================================
-   Mobile Navigation & Header (Global)
-   ========================================= */
+
 .hamburger {
   display: none;
   width: 40px;

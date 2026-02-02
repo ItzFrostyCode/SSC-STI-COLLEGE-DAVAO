@@ -1,18 +1,13 @@
-/* ================================= 
-   ANNOUNCEMENTS PAGE STYLES
-   Fully optimized for theme consistency and responsive layout
-   ================================= */
 
-/* ================================= 
-   ANNOUNCEMENTS PAGE VARIABLES
-   ================================= */
+
+
 :root {
     --announcement-card-radius: 12px;
     --announcement-btn-radius: 24px;
     --announcement-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Main Container - Full width wrapper with inner container for alignment */
+
 .announcements-container {
     width: 100%;
     padding-top: calc(var(--header-height) + 2.5rem);
@@ -20,10 +15,7 @@
     padding-bottom: 4rem;
 }
 
-/* ================================= 
-   1. ANNOUNCEMENT HEADER SECTION
-   Consistent sizing across all devices
-   ================================= */
+
 .announcement-header {
     display: flex;
     justify-content: space-between;
@@ -61,7 +53,7 @@
     flex-shrink: 0;
 }
 
-/* Filter Dropdown (Facebook-style Date Filter) */
+
 .date-filter-dropdown {
     position: relative;
 }
@@ -134,7 +126,7 @@
     transform: translateY(0);
 }
 
-/* Calendar Picker Styles */
+
 .calendar-picker-header {
     padding: 1rem 1.25rem;
     border-bottom: 1px solid var(--border-light);
@@ -236,7 +228,7 @@
     transform: translateY(0);
 }
 
-/* Sort Wrapper - Matching Events Page */
+
 .sort-wrapper {
     display: flex;
     align-items: center;
@@ -271,10 +263,7 @@
     flex-shrink: 0;
 }
 
-/* ================================= 
-   2. ANNOUNCEMENT BOARD LAYOUT
-   Compact 3-column grid
-   ================================= */
+
 .pinned-toggle-btn {
     display: none;
 }
@@ -284,12 +273,10 @@
     grid-template-columns: 250px 1fr 300px;
     gap: 1.5rem;
     align-items: start;
+    text-align: left;
 }
 
-/* ================================= 
-   3. LEFT SIDEBAR - CATEGORIES
-   Scrollable independent section
-   ================================= */
+
 .announcement-categories {
     position: sticky;
     top: calc(var(--header-height) + 2.5rem);
@@ -303,7 +290,7 @@
     box-shadow: var(--shadow-sm);
 }
 
-/* Custom scrollbar for categories */
+
 .announcement-categories::-webkit-scrollbar {
     width: 6px;
 }
@@ -384,105 +371,223 @@
     color: white;
 }
 
-/* ================================= 
-   4. ANNOUNCEMENT FEED CARDS
-   Consistent sizing across all devices
-   ================================= */
+
 #announcements-feed {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .announcements-feed {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .announcement-card {
     background: var(--bg-surface);
     border: 1px solid var(--border-light);
-    border-radius: var(--announcement-card-radius);
+    border-radius: 8px;
     overflow: hidden;
-    transition: var(--announcement-transition);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
+
 .card-header {
-    padding: 1.25rem;
+    padding: 12px 16px;
     display: flex;
-    gap: 0.75rem;
     align-items: center;
+    gap: 10px;
 }
 
 .card-author-avatar {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--border-light);
     flex-shrink: 0;
+    background-color: var(--bg-body);
 }
 
 .card-meta {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 2px;
     align-items: flex-start;
 }
 
 .card-author {
-    font-weight: 700;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 15px;
     color: var(--text-main);
+    line-height: 1.2;
 }
 
 .card-time {
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
 }
 
+
 .card-body {
-    padding: 1.25rem;
-    padding-top: 0;
+    padding: 4px 16px 16px;
 }
 
 .card-title {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--text-main);
-    margin-bottom: 0.75rem;
+    margin-bottom: 8px;
     line-height: 1.4;
 }
 
 .card-excerpt {
+    font-size: 15px;
+    color: var(--text-main);
+    line-height: 1.5;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+.card-excerpt.large-text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding: 8px 0 4px;
+}
+
+
+.see-more-btn {
+    cursor: pointer;
+    font-weight: 600;
     color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    display: inline;
+    margin-left: 4px;
+    user-select: none;
 }
 
-.card-image {
-    margin: 1.5rem 0;
-    border-radius: var(--announcement-btn-radius);
-    overflow: hidden;
+.see-more-btn:hover {
+    text-decoration: underline;
 }
 
-.card-image img {
+
+.image-grid {
     width: 100%;
-    height: auto;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--bg-body);
+    display: grid;
+    gap: 2px;
+    margin-top: 16px;
+}
+
+.img-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-body);
+    width: 100%;
+    height: 100%;
+}
+
+.img-item img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.2s;
 }
 
+.img-item:hover img {
+    opacity: 0.96;
+}
+
+
+.grid-1 {
+    display: block;
+    height: auto;
+    max-height: 650px;
+}
+
+.grid-1 .img-item img {
+    height: auto;
+    max-height: 650px;
+}
+
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 3 / 2;
+}
+
+.grid-3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    aspect-ratio: 4 / 3;
+}
+
+.grid-3 .img-item:nth-child(1) {
+    grid-row: 1 / 3;
+}
+
+.grid-4 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    aspect-ratio: 4 / 3;
+}
+
+.grid-5-plus {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60% 40%;
+    aspect-ratio: 1 / 1;
+}
+
+.grid-5-plus .img-item:nth-child(1) {
+    grid-column: span 3;
+    grid-row: 1;
+}
+
+.grid-5-plus .img-item:nth-child(2) {
+    grid-column: span 3;
+    grid-row: 1;
+}
+
+.grid-5-plus .img-item:nth-child(3) {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.grid-5-plus .img-item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.grid-5-plus .img-item:nth-child(5) {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.more-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .card-tags {
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid var(--border-light);
     display: flex;
     gap: 0.6rem;
@@ -498,7 +603,141 @@
     font-weight: 600;
 }
 
-/* Empty State */
+
+#announcement-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content-wrapper {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#lightbox-img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+} 
+
+
+
+.video-item {
+    position: relative;
+}
+
+.media-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.video-item:hover .video-play-overlay {
+    opacity: 1;
+}
+
+
+#lightbox-video {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-media {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+.lightbox-content-wrapper {
+    transition: opacity 0.3s;
+}
+
+.lightbox-close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 100001;
+    border: none;
+    transition: background 0.2s;
+}
+
+.lightbox-close-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-nav-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    background: transparent;
+    z-index: 100000;
+    border: none;
+    transition: background 0.2s;
+}
+
+.lightbox-nav-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-prev {
+    left: 0;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.lightbox-next {
+    right: 0;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+
 .empty-state {
     text-align: center;
     padding: 4rem 2rem;
@@ -518,11 +757,7 @@
     font-size: 1rem;
 }
 
-/* ================================= 
-/* ================================= 
-   5. RIGHT SIDEBAR - PINNED
-   Simplified clean design
-   ================================= */
+
 .announcement-pinned {
     position: sticky;
     top: calc(var(--header-height) + 2.5rem);
@@ -587,55 +822,61 @@
     color: var(--accent-yellow);
 }
 
-/* ================================= 
-   6. PAGINATION - REMOVED
-   Pagination has been disabled for full scrollable feed
-   ================================= */
+
 .pagination {
     display: none;
 }
 
-/* ================================= 
-   7. RESPONSIVE DESIGN
-   Mobile-first approach with proper breakpoints
-   ================================= */
 
-/* Tablet devices */
+
+
 @media (max-width: 1024px) {
     .announcements-container {
         padding-top: calc(var(--header-height) + 1.5rem);
     }
+
+    
+    .container {
+        padding: 0 2rem;
+    }
     
     .announcement-board {
-        /* Switch to 2 columns: Feed | Pinned */
+        
         grid-template-columns: 1fr 300px;
         gap: 1.25rem;
     }
     
-    /* Reveal Pinned Section */
+    
     .announcement-pinned {
         display: block;
-        /* Ensure it behaves nicely in the grid */
+        
     }
     
-    /* Move Categories to Top (Horizontal Scroll) */
+    
     .announcement-categories {
-        grid-column: 1 / -1; /* Span full width at top */
-        position: static;
-        padding: 0;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        margin-bottom: 1rem;
-        overflow-x: auto;
-        max-height: none;
-        -webkit-overflow-scrolling: touch;
-        top: auto;
-        border-radius: 0; /* Removing radius as requested */
+        grid-column: 1 / -1; 
+        position: sticky;
+        top: var(--header-height); 
+        z-index: 50;
+        background: var(--bg-body); 
+        border-bottom: 0.5px solid var(--border-light);
         
-        /* Hide scrollbar but allow scrolling */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
+        
+        width: calc(100% + 4rem); 
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding-left: 2rem; 
+        padding-right: 2rem;
+        
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        
+        
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     
     .announcement-categories::-webkit-scrollbar {
@@ -647,13 +888,13 @@
     }
     
     .category-menu {
-        display: flex; /* Ensure it is flex */
+        display: flex; 
         flex-direction: row;
-        flex-wrap: nowrap; /* CRITICAL: Prevent wrapping */
+        flex-wrap: nowrap; 
         gap: 0.75rem;
         padding-bottom: 0.75rem;
-        width: max-content; /* Ensure container grows to fit items, triggering scroll on parent */
-        padding-right: 1.5rem; /* Add some breathing room at the end */
+        width: max-content; 
+        padding-right: 1.5rem; 
     }
 
     .category-btn {
@@ -673,9 +914,9 @@
     }
 }
 
-/* Mobile devices */
+
 @media (max-width: 768px) {
-    /* Match .container responsive padding from styles.css */
+    
     .container {
         padding: 0 1.25rem;
     }
@@ -707,7 +948,7 @@
         justify-content: space-between;
     }
     
-    /* Prevent text wrapping */
+    
     .filter-dropdown-trigger span {
         white-space: nowrap;
         overflow: hidden;
@@ -716,9 +957,9 @@
     
     .filter-dropdown-menu {
         left: 0; 
-        right: auto; /* Allow it to find its own width */
-        min-width: 280px; /* Force a minimum readable width */
-        max-width: 90vw; /* Prevent overflow on very small screens */
+        right: auto; 
+        min-width: 280px; 
+        max-width: 90vw; 
         z-index: 100;
     }
     
@@ -738,14 +979,31 @@
         flex-direction: column;
     }
 
-    /* Stacking Order: Categories -> Pinned -> Feed */
+    
     .announcement-categories {
         order: 1;
-        width: 100%;
-        min-width: 0; /* CRITICAL: Allows flex item to shrink below content size to trigger scroll */
-        overflow-x: auto; /* Ensure scroll is enabled */
-        margin-bottom: 0.5rem;
-        /* Re-apply scrollbar hiding if needed or inherit */
+        position: sticky;
+        top: 60px; 
+        z-index: 50;
+        background: var(--bg-body);
+        border-bottom: 0.5px solid var(--border-light);
+        
+        
+        width: calc(100% + 2.5rem); 
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        left: 0; 
+        
+        padding-left: 1.25rem; 
+        padding-right: 1.25rem;
+        
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        
+        
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
@@ -754,18 +1012,18 @@
         display: none;
     }
     
-    /* Optimize sizing for mobile */
+    
     .category-menu {
-        gap: 0.5rem; /* Reduce gap */
+        gap: 0.5rem; 
         padding-bottom: 0.5rem;
     }
 
     .category-btn {
-        padding: 0.5rem 0.9rem; /* Smaller padding */
+        padding: 0.5rem 0.9rem; 
         font-size: 0.85rem;
     }
     
-    /* Pinned Toggle Button (Mobile Only) */
+    
     .pinned-toggle-btn {
         display: flex;
         align-items: center;
@@ -781,7 +1039,7 @@
         margin-bottom: 0.5rem;
         cursor: pointer;
         transition: all 0.2s;
-        order: 2; /* Place between categories and pinned/feed */
+        order: 2; 
     }
 
     .pinned-toggle-btn.active {
@@ -803,7 +1061,7 @@
     
     .announcement-pinned {
         order: 3;
-        display: none; /* Hide by default on mobile */
+        display: none; 
         position: static;
         width: 100%;
         margin-bottom: 1.5rem;
@@ -815,9 +1073,9 @@
     }
     
     .pinned-content {
-         /* Make it look good full width */
+         
          border-radius: var(--announcement-card-radius);
-         /* If toggled open, maybe remove top radius to merge with button? Optional. */
+         
     }
     
     .pinned-toggle-btn.active + .announcement-pinned .pinned-content {
@@ -836,24 +1094,36 @@
     }
     
     .card-author-avatar {
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
     }
     
-    .card-image img {
-        height: 240px;
+    .card-excerpt.large-text {
+        font-size: 19px;
+    }
+    
+    .grid-2 {
+        aspect-ratio: 4 / 3;
+    }
+    
+    .grid-3 {
+        aspect-ratio: 1 / 1;
+    }
+    
+    .grid-5-plus {
+        aspect-ratio: 4 / 5;
     }
 }
 
-/* Small mobile devices */
+
 @media (max-width: 480px) {
-    /* Match .container responsive padding from styles.css */
+    
     .container {
         padding: 0 1rem;
     }
     
     .announcements-container {
-        padding-top: calc(60px + 1rem); /* 60px is mobile header height */
+        padding-top: calc(60px + 1rem); 
     }
     
     .filter-dropdown-trigger {
@@ -866,9 +1136,48 @@
         font-size: 0.85rem;
     }
     
+    
+    .announcement-card {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    
+    
+    .card-header {
+        padding: 10px 12px;
+    }
+    
+    .card-body {
+        padding: 4px 12px 12px;
+    }
+    
+    
+    .card-author {
+        font-size: 13px;
+    }
+    
+    .card-time {
+        font-size: 11px;
+    }
+    
+    .card-title {
+        font-size: 13px;
+    }
+    
+    .card-excerpt {
+        font-size: 13px;
+    }
+    
+    .card-excerpt.large-text {
+        font-size: 18px;
+    }
+    
     .card-author-avatar {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
     
     .card-image img {
@@ -880,9 +1189,15 @@
         height: 36px;
         font-size: 0.85rem;
     }
+    
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
 }
 
-/* Extra small mobile devices (320px) */
+
 @media (max-width: 320px) {
     .container {
         padding: 0 0.75rem;
@@ -910,4 +1225,49 @@
     .card-title {
         font-size: 1.1rem;
     }
+}
+
+
+.video-item {
+    position: relative;
+}
+
+.media-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.video-item:hover .video-play-overlay {
+    opacity: 1;
+}
+
+
+#lightbox-video {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-media {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+.lightbox-content-wrapper {
+    transition: opacity 0.3s;
 }

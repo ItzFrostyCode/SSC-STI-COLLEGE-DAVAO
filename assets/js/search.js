@@ -46,8 +46,8 @@ class GlobalSearch {
     
     async loadAllData() {
         try {
-            // Since all HTML files (index.html, events.html, etc.) are in the root directory
-            // and the data folder is also in the root, we can always use 'data/'
+            
+            
             const basePath = 'data/';
             
             const announcementsRes = await fetch(basePath + 'announcements.json');
@@ -99,7 +99,7 @@ class GlobalSearch {
         const lowerQuery = query.toLowerCase();
         const results = [];
         
-        // Since all pages are in the root directory, we don't need relative path adjustment
+        
         const urlPrefix = ''; 
 
         this.allData.announcements.forEach(item => {

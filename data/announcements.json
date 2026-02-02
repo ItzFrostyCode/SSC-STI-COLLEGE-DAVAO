@@ -6,7 +6,7 @@
     "academicYear": "2025-2026",
     "date": "2025-09-25",
     "category": "Election",
-    "content": "Congratulations to our 𝐍𝐞𝐰𝐥𝐲 𝐄𝐥𝐞𝐜𝐭𝐞𝐝 𝐒𝐒𝐂 𝐎𝐟𝐟𝐢𝐜𝐞𝐫𝐬 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐭𝐞𝐫𝐦 𝟐𝟎𝟐𝟓 – 𝟐𝟎𝟐𝟔! 🎉\n\nWe are proud to present the newly elected leaders who will serve and represent the student body with dedication and passion:\n\n𝐏𝐫𝐞𝐬𝐢𝐝𝐞𝐧𝐭: Chester Paul Villasencio\n𝐕𝐢𝐜𝐞 𝐏𝐫𝐞𝐬𝐢𝐝𝐞𝐧𝐭 (𝐈𝐧𝐭𝐞𝐫𝐧𝐚𝐥): Chesilyn Dianne Tabigue\n𝐕𝐢𝐜𝐞 𝐏𝐫𝐞𝐬𝐢𝐝𝐞𝐧𝐭 (𝐄𝐱𝐭𝐞𝐫𝐧𝐚𝐥): Cj Love Marie Astudillo\n𝐄𝐱𝐞𝐜𝐮𝐭𝐢𝐯𝐞 𝐒𝐞𝐜𝐫𝐞𝐭𝐚𝐫𝐲: Jandoe Garay\n𝐓𝐫𝐞𝐚𝐬𝐮𝐫𝐞𝐫: John Romar Pardo\n𝐀𝐮𝐝𝐢𝐭𝐨𝐫: Joshua Arabejo\n𝐏𝐈𝐎: Cherry Jane Villasencio\n\n𝐒𝐞𝐧𝐚𝐭𝐨𝐫𝐬 (𝐓𝐞𝐫𝐭𝐢𝐚𝐫𝐲)\nCarol Dela Cerna\nRizza Joy Mendez\nRylle Manco\nGrace Dhel Asoy\n\n𝐒𝐞𝐧𝐚𝐭𝐨𝐫𝐬 (𝐒𝐇𝐒)\nReasylee Abella\nPrincess Rhian Tadem\n\nYour leadership marks the beginning of a new chapter filled with opportunities, growth, and unity. Together, let us support our 𝐒𝐒𝐂 𝐎𝐟𝐟𝐢𝐜𝐞𝐫𝐬 as they embark on their journey of service for the student community. 💙✨",
+    "content": "Congratulations to our Newly Elected SSC Officers for the term 2025 – 2026! 🎉\n\nWe are proud to present the newly elected leaders who will serve and represent the student body with dedication and passion:\n\n President: Chester Paul Villasencio\nVice President (Internal): Chesilyn Dianne Tabigue\nVice President (External): Cj Love Marie Astudillo\nExecutive Secretary: Jandoe Garay\nTreasurer: John Romar Pardo\nAuditor: Joshua Arabejo\nPIO: Cherry Jane Villasencio\n\nSenators (Tertiary)\nCarol Dela Cerna\nRizza Joy Mendez\nRylle Manco\nGrace Dhel Asoy\n\nSenators (SHS)\nReasylee Abella\nPrincess Rhian Tadem\n\nYour leadership marks the beginning of a new chapter filled with opportunities, growth, and unity. Together, let us support our SSC Officers as they embark on their journey of service for the student community. 💙✨",
     "author": "SSC Admin",
     "createdBy": "SSC Admin",
     "createdAt": "2025-09-25T19:55:00Z",
@@ -16,18 +16,26 @@
     "status": "published",
     "image": "#",
     "gallery": [
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#"
+      "assets/images/officers/chester-paul-villasencio.webp",
+      "assets/images/officers/chesilyn-dianne-tabigue.webp",
+      "assets/images/officers/cj-love-marie-astudillo.webp",
+      "assets/images/officers/jandoe-garay.webp",
+      "assets/images/officers/john-romar-pardo.webp",
+      "assets/images/officers/joshua-arabejo.webp",
+      "assets/images/officers/cherry-jane-villasencio.webp",
+      "assets/images/officers/carol-dela-cerna.webp",
+      "assets/images/officers/rizza-joy-mendez.webp",
+      "assets/images/officers/rylle-manco.webp",
+      "assets/images/officers/grace-dhel-asoy.webp",
+      "assets/images/officers/reasylee-abella.webp",
+      "assets/images/officers/princess-rhian-tadem.webp",
+      "assets/images/officers/ivy-robles.webp",
+      "assets/images/officers/yhanzee-manuele-payot.webp",
+      "assets/images/officers/tryx-c-espino.webp",
+      "assets/images/officers/najem-diaregun.webp",
+      "assets/images/officers/samantha-pabuaya.webp",
+      "assets/images/officers/arnold-tajo.webp",
+      "assets/images/officers/shamyll-gelbolingo.webp"
     ]
   },
   {
@@ -45,7 +53,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Exam Week is Here - October 1-4, 2025.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -63,7 +71,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Share this Lucky Coquettlog for Exams.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -81,7 +89,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Donation Drive for Davao Fire Victims.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -91,18 +99,18 @@
     "academicYear": "2025-2026",
     "date": "2025-10-03",
     "category": "Academic",
-    "content": "Dawg, brain is officially on Airplane Mode this week — it's Mental Health Break! It's not just the body that gets tired — the mind and heart need rest too. That's why we're putting school on pause to recharge, reset, and breathe. Take this week to: Catch up on sleep, Stay hydrated, Mute the stress and toxic vibes. See you Oct 13! Still tired, pero at least well-rested tired.",
+    "content": "𝐃𝐚𝐰𝐠, 𝐛𝐫𝐚𝐢𝐧 𝐢𝐬 𝐨𝐟𝐟𝐢𝐜𝐢𝐚𝐥𝐥𝐲 𝐨𝐧 𝐀𝐢𝐫𝐩𝐥𝐚𝐧𝐞 𝐌𝐨𝐝𝐞 𝐭𝐡𝐢𝐬 𝐰𝐞𝐞𝐤 — 𝐢𝐭'𝐬 𝐌𝐞𝐧𝐭𝐚𝐥 𝐇𝐞𝐚𝐥𝐭𝐡 𝐁𝐫𝐞𝐚𝐤!\nIt's not just the body that gets tired — the mind and heart need rest too. That's why we're putting school on pause to recharge, reset, and breathe. 🧘♀️✨\nSo take this week to:\n💤 Catch up on sleep\n💧 Stay hydrated\n🚫 Mute the stress and toxic vibes\n𝗦𝗲𝗲 𝘆𝗼𝘂 𝗢𝗰𝘁 𝟭𝟯! ✨ 𝗦𝘁𝗶𝗹𝗹 𝘁𝗶𝗿𝗲𝗱, 𝗽𝗲𝗿𝗼 𝗮𝘁 𝗹𝗲𝗮𝘀𝘁 𝘄𝗲𝗹𝗹-𝗿𝗲𝘀𝘁𝗲𝗱 𝘁𝗶𝗿𝗲𝗱. 🤣❤️\n👩🏻💻: 𝐂𝐡𝐞𝐫𝐫𝐲 𝐉𝐚𝐧𝐞 𝐕𝐢𝐥𝐥𝐚𝐬𝐞𝐧𝐜𝐢𝐨\n✍🏻: 𝐑𝐢𝐳𝐳𝐚 𝐉𝐨𝐲 𝐌𝐞𝐧𝐝𝐞𝐳\n#MentalHealthBreak #NoClasses #Bemorebesti #STICollegeDavao #stisupremestudentcouncil",
     "author": "Cherry Jane Villasencio",
     "createdBy": "Rizza Joy Mendez",
     "createdAt": "2025-10-03T20:45:00Z",
-    "displayDate": "Saturday, October 4, 2025 at 4:45 AM",
+    "displayDate": "Friday, October 3, 2025 at 8:45 PM",
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
     "image": "#",
     "gallery": [
-      "#",
-      "#"
+      "assets/images/annoucements/𝐃𝐚𝐰𝐠, 𝐛𝐫𝐚𝐢𝐧 𝐢𝐬 𝐨𝐟𝐟𝐢𝐜𝐢𝐚𝐥𝐥𝐲 𝐨𝐧 𝐀𝐢𝐫𝐩𝐥𝐚𝐧𝐞 𝐌𝐨𝐝𝐞 𝐭𝐡𝐢𝐬 𝐰𝐞𝐞𝐤_1.webp",
+      "assets/images/annoucements/𝐃𝐚𝐰𝐠, 𝐛𝐫𝐚𝐢𝐧 𝐢𝐬 𝐨𝐟𝐟𝐢𝐜𝐢𝐚𝐥𝐥𝐲 𝐨𝐧 𝐀𝐢𝐫𝐩𝐥𝐚𝐧𝐞 𝐌𝐨𝐝𝐞 𝐭𝐡𝐢𝐬 𝐰𝐞𝐞𝐤_2.webp"
     ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
@@ -123,18 +131,18 @@
     "status": "published",
     "image": "#",
     "gallery": [
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#"
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _1.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _2.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _3.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _4.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _5.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _6.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _7.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _8.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _9.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _10.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _11.webp",
+      "assets/images/annoucements/STI Cares- Brgy. 21-C Piapi Fire Victims Outreach _12.webp"
     ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
@@ -153,7 +161,39 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/National Teacher's Month Celebration_1.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_2.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_3.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_4.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_5.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_6.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_7.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_8.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_9.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_10.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_11.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_12.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_13.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_14.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_15.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_16.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_17.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_18.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_19.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_20.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_21.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_22.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_23.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_24.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_25.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_26.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_27.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_28.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_29.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_30.webp",
+      "assets/images/annoucements/National Teacher's Month Celebration_31.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -171,7 +211,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/SSC Staff Recruitment - 10 Positions Available_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -189,7 +229,12 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/Tagisan ng Sining- Shutter's Best Photography Competition_1.webp",
+      "assets/images/annoucements/Tagisan ng Sining- Shutter's Best Photography Competition_2.webp",
+      "assets/images/annoucements/Tagisan ng Sining- Shutter's Best Photography Competition_3.webp",
+      "assets/images/annoucements/Tagisan ng Sining- Shutter's Best Photography Competition_4.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -207,7 +252,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Class Advisory_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -225,7 +270,12 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/STI's First-Ever Spooktacular Halloween Event 2025_1.webp",
+      "assets/images/annoucements/STI's First-Ever Spooktacular Halloween Event 2025_2.webp",
+      "assets/images/annoucements/STI's First-Ever Spooktacular Halloween Event 2025_3.webp",
+      "assets/images/annoucements/STI's First-Ever Spooktacular Halloween Event 2025_4.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -243,7 +293,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Teacher's Day Celebration - Mandatory Attendance_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -261,7 +311,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Teacher's Day Dress Code Advisory_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -279,7 +329,12 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/Fright Icon 2025 Registration Now Open_1.webp",
+      "assets/images/annoucements/Fright Icon 2025 Registration Now Open_2.webp",
+      "assets/images/annoucements/Fright Icon 2025 Registration Now Open_3.webp",
+      "assets/images/annoucements/Fright Icon 2025 Registration Now Open_4.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -297,7 +352,12 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/Spooktacular Event Room Assignments & Reminders_1.webp",
+      "assets/images/annoucements/Spooktacular Event Room Assignments & Reminders_2.webp",
+      "assets/images/annoucements/Spooktacular Event Room Assignments & Reminders_3.webp",
+      "assets/images/annoucements/Spooktacular Event Room Assignments & Reminders_4.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -315,7 +375,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/No Classes- October 31 & November 1 (All Saints' Day)_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -333,7 +393,21 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_1.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_2.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_3.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_4.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_5.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_6.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_7.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_8.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_9.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_10.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_11.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness13.webp",
+      "assets/images/annoucements/2025 Earthquake Drill - Safety & Preparedness_14.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -351,7 +425,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Search for Queen STI 2025 - Registration Open.mp4",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -369,7 +443,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/STI TIGI-AY 2025 is Coming!_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -387,11 +461,48 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_1.mp4",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_2.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_3.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_4.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_5.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_6.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_7.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_8.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_9.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_10.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_11.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_12.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_13.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_14.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_15.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_16.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Theme- Igniting Talents, Showcasing Excellence_17.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
     "id": "ANN-2025-021",
+    "title": "Congratulations Maria Ahtisa Manalo - Miss Universe 3rd Runner-Up!",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "date": "2025-11-21",
+    "category": "Celebration",
+    "content": "Congratulations, Maria Ahtisa Manalo, Miss Universe 3rd Runner-Up 2025! 👑🇵🇭\nThe Supreme Student Council of STI College (SSC–STI Davao) and the entire STI community proudly join the nation in celebrating your historic and inspiring victory on the universe stage! 💙💛\nYour elegance, confidence, and pride as a Filipina representative moved millions, proving that true beauty shines from within and carries the heart and hopes of an entire country.\nFrom the STI College Davao Supreme Student Council! ✨\n#CongratsAhtisa\n#OneSTI\n#STISSC",
+    "author": "Cherry Jane Villasencio",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-11-21T04:03:00Z",
+    "displayDate": "Friday, November 21, 2025 at 12:03 PM",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published",
+    "image": "assets/images/annoucements/Congratulations Maria Ahtisa Manalo - Miss Universe 3rd Runner-Up! _1.webp",
+    "hashtags": ["#CongratsAhtisa", "#OneSTI", "#STISSC"],
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
+  },
+  {
+    "id": "ANN-2025-022",
     "title": "Important: SSC Does Not Collect Student Payments",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -405,11 +516,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Important- SSC Does Not Collect Student Payments_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-022",
+    "id": "ANN-2025-023",
     "title": "Welcome Teams: Dragon Vanguard (SHS)",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -423,11 +534,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Welcome Teams- Dragon Vanguard (SHS).mp4",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-023",
+    "id": "ANN-2025-024",
     "title": "Welcome Teams: Pegasus Fury (THM)",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -441,11 +552,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Welcome Teams- Pegasus Fury (THM).mp4",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-024",
+    "id": "ANN-2025-025",
     "title": "Welcome Teams: Phoenix Invictus (ICT)",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -459,11 +570,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Welcome Teams- Phoenix Invictus (ICT).mp4",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-025",
+    "id": "ANN-2025-026",
     "title": "Parol Making Contest 2025 - Recycled Materials",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -477,11 +588,18 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/events/parol-making-event/parol-contest-1.webp",
+      "assets/images/events/parol-making-event/parol-contest-2.webp",
+      "assets/images/events/parol-making-event/parol-contest-3.webp",
+      "assets/images/events/parol-making-event/parol-contest-4.webp",
+      "assets/images/events/parol-making-event/parol-contest-5.webp",
+      "assets/images/events/parol-making-event/parol-contest-6.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-026",
+    "id": "ANN-2025-027",
     "title": "TikTok Dance Competition - STI Tigi-ay Music",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -495,11 +613,19 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_1.webp",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_2.webp",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_3.webp",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_4.webp",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_5.webp",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_6.webp",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_8.jpg"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-027",
+    "id": "ANN-2025-028",
     "title": "Good Luck STIers in Your Exams!",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -513,11 +639,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Good Luck STIers in Your Exams!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-028",
+    "id": "ANN-2025-029",
     "title": "SSC Clearance Signing Requirements & Schedule",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -531,11 +657,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/SSC Clearance Signing Requirements & Schedule.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-029",
+    "id": "ANN-2025-030",
     "title": "Intramurals Schedule & Guidelines",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -550,10 +676,22 @@
     "lastEditedAt": null,
     "status": "published",
     "image": "#",
+    "gallery": [
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_1.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_2.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_3.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_4.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_5.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_6.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_7.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_8.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_9.webp",
+      "assets/images/annoucements/Intramurals Schedule & Guidelines_10.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-030",
+    "id": "ANN-2025-031",
     "title": "Magsaysay Park Do's and Don'ts",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -567,11 +705,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Magsaysay Park Do's and Don'ts .webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-031",
+    "id": "ANN-2025-032",
     "title": "TIGI-AY 2025 Day 1 - D-Day is Here!",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -585,11 +723,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/TIGI-AY 2025 Day 1 - D-Day is Here!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-032",
+    "id": "ANN-2025-033",
     "title": "TIGI-AY 2025 Day 1 Results",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -604,10 +742,34 @@
     "lastEditedAt": null,
     "status": "published",
     "image": "#",
+    "gallery": [
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_1.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_2.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_3.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_4.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_5.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_6.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_7.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_8.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_9.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_10.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_11.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_12.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_13.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_14.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_15.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_16.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_17.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_18.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_19.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_20.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_21.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 1 Results_22.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-033",
+    "id": "ANN-2025-034",
     "title": "TIGI-AY 2025 Initial Tally After Day 1",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -621,11 +783,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/TIGI-AY 2025 Initial Tally After Day 1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-034",
+    "id": "ANN-2025-035",
     "title": "TIGI-AY 2025 Day 2 Results",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -639,11 +801,20 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_1.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_2.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_3.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_5.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_6.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_7.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_8.webp",
+      "assets/images/annoucements/TIGI-AY 2025 Day 2 Results_9.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-035",
+    "id": "ANN-2025-036",
     "title": "TIGI-AY 2025 Final Tally - Overall Champions",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -657,11 +828,11 @@
     "lastEditedBy": "Joshua Arabejo",
     "lastEditedAt": "2025-12-12T18:00:00Z",
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/TIGI-AY 2025 Final Tally - Overall Champions.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-036",
+    "id": "ANN-2025-037",
     "title": "Clearance Signing Schedule: Dec 15-17, 2025",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -675,11 +846,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Clearance Signing Schedule- Dec 15-17, 2025.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-037",
+    "id": "ANN-2025-038",
     "title": "Merry Christmas from SSC!",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -693,11 +864,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Merry Christmas from SSC!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-038",
+    "id": "ANN-2025-039",
     "title": "Happy 22nd Birthday to our SSC Senator!",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -711,10 +882,11 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Happy 22nd Birthday to our SSC Senator!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
-    "id": "ANN-2025-039",
+    "id": "ANN-2025-040",
     "title": "Happy Birthday SSC Senate President!",
     "semester": "1st",
     "academicYear": "2025-2026",
@@ -728,6 +900,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Happy Birthday SSC Senate President!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -745,7 +918,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/Happy New Year 2026 from SSC!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -763,6 +936,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Clearance Signing- Mon_Wed_Fri 10-30 AM - 2-00 PM.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -781,6 +955,12 @@
     "lastEditedAt": null,
     "status": "published",
     "image": "#",
+    "gallery": [
+      "assets/images/annoucements/2nd Semester Enrollment Starts January 5, 2026_1.webp",
+      "assets/images/annoucements/2nd Semester Enrollment Starts January 5, 2026_2.webp",
+      "assets/images/annoucements/2nd Semester Enrollment Starts January 5, 2026_3.webp",
+      "assets/images/annoucements/2nd Semester Enrollment Starts January 5, 2026_4.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -799,6 +979,12 @@
     "lastEditedAt": null,
     "status": "published",
     "image": "#",
+    "gallery": [
+        "assets/images/annoucements/First Semester Recap - Countless Memories_1.webp",
+        "assets/images/annoucements/First Semester Recap - Countless Memories_2.webp",
+        "assets/images/annoucements/First Semester Recap - Countless Memories_3.webp",
+        "assets/images/annoucements/First Semester Recap - Countless Memories_4.webp"
+    ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -816,6 +1002,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Happy Birthday SSC Secretary!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -833,7 +1020,14 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
+    "gallery": [
+        "assets/images/annoucements/Byaheng Isang Sem Na Lang.webp",
+        "assets/images/annoucements/Byaheng Isang Sem Na Lang_2.webp",
+        "assets/images/annoucements/Byaheng Isang Sem Na Lang_3.webp",
+        "assets/images/annoucements/Byaheng Isang Sem Na Lang_4.webp",
+        "assets/images/annoucements/Byaheng Isang Sem Na Lang_5.webp"
+    ]
   },
   {
     "id": "ANN-2026-006",
@@ -850,6 +1044,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Countdown is REAL ⏳ Back to school in 3 days! Let's gooo!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -867,6 +1062,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/SSC Website Now Open to All Students.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -884,6 +1080,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/2 Days Countdown - Back to School!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -901,6 +1098,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/1 Day Left! - Back to School Tomorrow.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -918,6 +1116,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Back to School - Freebies & Games.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -935,55 +1134,10 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "image": "assets/images/annoucements/✨Welcome back, STIers!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
-  {
-    "id": "ANN-2026-012",
-    "title": "Back to School just got sweeter! 🍦🎉",
-    "semester": "2nd",
-    "academicYear": "2025-2026",
-    "date": "2026-01-21",
-    "category": "General",
-    "content": "From free ice cream and candies to school supplies and exciting games, STIers enjoyed a fun-filled welcome as the new semester officially began. Thank you to everyone who joined and made the day extra special. Let’s make this school year amazing! #BackToSchoolEra #freeicecream #CampusFun #goodvibesonly #STIers #schoollife",
-    "author": "Cherry Jane Villasencio",
-    "createdBy": "SSC Admin",
-    "createdAt": "2026-01-21T03:05:00Z",
-    "displayDate": "Wednesday, January 21, 2026 at 11:05 AM",
-    "lastEditedBy": null,
-    "lastEditedAt": null,
-    "status": "published",
-    "image": "#",
-    "gallery": [
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#"
-    ],
-    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
-  },
+  
   {
     "id": "ANN-2026-016",
     "title": "Happy 18th Birthday to our SSC PIO!",
@@ -999,6 +1153,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Happy 18th Birthday to our SSC PIO!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -1016,6 +1171,7 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
+    "image": "assets/images/annoucements/Happy Birthday, Sir Kenz!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -1033,7 +1189,30 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published",
-    "image": "#",
+    "gallery": [
+      "assets/images/annoucements/ValentaSTIc 2026_1.webp",
+      "assets/images/annoucements/ValentaSTIc 2026_2.webp",
+      "assets/images/annoucements/ValentaSTIc 2026_3.webp",
+      "assets/images/annoucements/ValentaSTIc 2026_4.webp",
+      "assets/images/annoucements/ValentaSTIc 2026_5.webp"
+    ]
+  },
+  {
+    "id": "ANN-2026-018",
+    "title": "Working Student 🌟",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-01-30",
+    "category": "General",
+    "content": "This is truly inspiring! 🌟 Your journey as a working student and leader reminds us that challenges are just stepping stones to success. We’re proud to have you leading and representing STI College Davao. 💙",
+    "author": "Cherry Jane Villasencio",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-01-30T07:09:00Z",
+    "displayDate": "Friday, January 30, 2026 at 3:09 PM",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published",
+    "image": "assets/images/annoucements/This is truly inspiring.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   }
 ]

@@ -1,9 +1,9 @@
-// src/modules/officers.js
+
 import { fetchJSON } from '../lib/dataLoader.js';
 import { normalizeOfficers } from '../lib/normalize.js';
 import { escapeHtml } from '../lib/utils.js';
 
-// Configuration for the custom layout (Ported from legacy)
+
 const LAYOUT_CONFIG = [
     { type: 'divider', label: 'Adviser' },
     { type: 'row', names: ['Reinamie Dayrit'] },
@@ -43,9 +43,9 @@ function renderOfficers(allOfficers) {
     const listContainer = document.querySelector('#officers-list');
     if (!listContainer) return;
 
-    listContainer.className = 'officers-wrapper'; // Ensure class is correct
+    listContainer.className = 'officers-wrapper'; 
 
-    // Map for easy lookup (lowercase keys)
+    
     const officerMap = new Map();
     allOfficers.forEach(officer => {
         if(officer && officer.name) {
@@ -65,28 +65,21 @@ function renderOfficers(allOfficers) {
         } else if (item.type === 'row') {
             html += '<div class="officers-row">';
             item.names.forEach(name => {
-                // Special handling for 'Upcoming' placeholder
+                
                 if (name === 'Upcoming') {
-                     // Placeholder logic if needed, or just skip if no matching officer
-                     // If we want to show a generic "Upcoming" card:
-                     /* 
-                     html += createOfficerCard({
-                         name: 'OSA Representative',
-                         position: 'Coming Soon',
-                         department: '',
-                         image: ''
-                     });
-                     */
-                    // The legacy code treated 'Upcoming' as a name to search. If not in JSON, it warned.
-                    // But if the JSON has an officer named "Upcoming" (unlikely) or if we want to render nothing?
-                    // Let's check logic: if officer not found, legacy warned.
-                    // EXCEPT if there's a specific officer named "Upcoming" in JSON?
-                    // Assuming for now we just look for match.
+                     
+                     
+                     
+                    
+                    
+                    
+                    
+                    
                 }
 
                 let officer = officerMap.get(name.toLowerCase().trim());
                 
-                // Fuzzy search fallback
+                
                 if (!officer) {
                     for (let [key, val] of officerMap) {
                         if (key.includes(name.toLowerCase().trim())) {
@@ -99,7 +92,7 @@ function renderOfficers(allOfficers) {
                 if (officer) {
                     html += createOfficerCard(officer);
                 } else if (name === 'Upcoming') {
-                    // Render placeholder for OSA if requested by layout
+                    
                      html += `
                         <div class="officer-card">
                              <div class="officer-image-container">
@@ -124,11 +117,8 @@ function renderOfficers(allOfficers) {
 }
 
 function createOfficerCard(officer) {
-    const constImageSrc = officer.image ? `assets/images/officers/${officer.image}` : '';
-    // Use UI Avatars as fallback
-    const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(officer.name)}&background=f59e0b&color=fff&size=200`;
-
-    // Special styling for Adviser
+    const constImageSrc = officer.image ? `assets/images/officers/${officer.image}` : 'assets/images/default-avatar.svg';
+    
     const isPremium = officer.name === 'Reinamie Dayrit';
     const premiumClass = isPremium ? 'premium-card' : '';
     
@@ -162,11 +152,10 @@ function createOfficerCard(officer) {
     return cardHTML;
 }
 
-// Add a helper to attach listeners after rendering
 export function attachImageListeners() {
     const images = document.querySelectorAll('.officer-image');
     images.forEach(img => {
-        // Skip if already processed or fallback
+        
         if (img.dataset.loaded === 'true') return;
 
         const handleLoad = () => {
@@ -189,4 +178,3 @@ export function attachImageListeners() {
         }
     });
 }
-

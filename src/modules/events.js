@@ -1,4 +1,3 @@
-// src/modules/events.js
 import { fetchJSON } from '../lib/dataLoader.js';
 import { normalizeEvents } from '../lib/normalize.js';
 import { escapeHtml } from '../lib/utils.js';
@@ -20,7 +19,7 @@ export async function init() {
 
         if (data) {
             allEvents = data; 
-            console.log('Loaded events:', allEvents.length); // Debug log
+            console.log('Loaded events:', allEvents.length); 
             renderEvents();
             updateCounts();
             hideLoading();
@@ -49,7 +48,7 @@ function updateCounts() {
     if(document.getElementById('count-1st')) document.getElementById('count-1st').textContent = counts['1st'];
     if(document.getElementById('count-2nd')) document.getElementById('count-2nd').textContent = counts['2nd'];
 
-    // Mobile Counts
+    
     if(document.getElementById('count-all-mobile')) document.getElementById('count-all-mobile').textContent = counts.all;
     if(document.getElementById('count-1st-mobile')) document.getElementById('count-1st-mobile').textContent = counts['1st'];
     if(document.getElementById('count-2nd-mobile')) document.getElementById('count-2nd-mobile').textContent = counts['2nd'];
@@ -84,8 +83,6 @@ function renderEvents() {
     if(emptyState) emptyState.style.display = 'none';
 
     grid.innerHTML = filtered.map(event => createEventCard(event)).join('');
-    
-    // Listeners for view details (now card click or button click)
     grid.querySelectorAll('.event-card').forEach(card => {
         card.addEventListener('click', (e) => {
             const title = card.querySelector('.event-title').textContent;
@@ -151,17 +148,13 @@ function createEventCard(event) {
     `;
 }
 
-// Initialized per modal open
+
 let currentModalImages = [];
 let currentModalImageIndex = 0;
 
 function openEventModal(event) {
     const modal = document.getElementById('event-modal');
-    // We recreate modal content structure because we changed from plain body to specific structure
-    // Ideally, we should just inject into the right places, but for this redesign, we are replacing the innerHTML of .modal-content
     
-    // Note: The HTML structure in events.html has a .modal-content with a .modal-close and .modal-body.
-    // For this redesign, we will replace the ENTIRE content of .modal-content to match the split view.
     const modalContent = modal.querySelector('.modal-content');
     if(!modalContent) return;
 
@@ -174,7 +167,7 @@ function openEventModal(event) {
         ? `${startDate.toLocaleDateString(undefined, {weekday:'short', month:'short', day:'numeric'})} - ${endDate.toLocaleDateString(undefined, {month:'short', day:'numeric'})}`
         : startDate.toLocaleDateString(undefined, {weekday:'long', year:'numeric', month:'long', day:'numeric'});
 
-    // Generate Thumbnails
+    
     const thumbsHtml = currentModalImages.length > 1 ? `
         <div class="modal-thumbs">
             ${currentModalImages.map((img, idx) => `
@@ -185,7 +178,7 @@ function openEventModal(event) {
         </div>
     ` : '';
 
-    // Generate Split Layout HTML
+    
     modalContent.innerHTML = `
         <button class="modal-close-new" aria-label="Close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -204,7 +197,6 @@ function openEventModal(event) {
         </div>
         
         <div class="modal-info">
-            
             <div class="modal-category">${escapeHtml(event.category)}</div>
             <h1 class="modal-headline">${escapeHtml(event.title)}</h1>
             
@@ -243,29 +235,25 @@ function openEventModal(event) {
         </div>
     `;
 
-    // Attach Listeners
+    
     modalContent.querySelector('.modal-close-new').addEventListener('click', closeEventModal);
 
     if(currentModalImages.length > 1) {
-        // Nav Buttons
         modalContent.querySelector('.modal-prev').addEventListener('click', () => changeModalSlide(-1));
         modalContent.querySelector('.modal-next').addEventListener('click', () => changeModalSlide(1));
 
-        // Thumbnail Clicks
+        
         modalContent.querySelectorAll('.modal-thumb').forEach(thumb => {
             thumb.addEventListener('click', () => {
                 const idx = parseInt(thumb.dataset.index);
                 setModalSlide(idx);
             });
         });
-        
-        // Fullscreen the main image on click (Lightbox)
         modalContent.querySelector('#modal-main-img').style.cursor = 'zoom-in';
         modalContent.querySelector('#modal-main-img').addEventListener('click', () => {
              openLightbox(currentModalImageIndex, currentModalImages);
         });
     } else {
-        // Single image lightbox also supported
         modalContent.querySelector('#modal-main-img').style.cursor = 'zoom-in';
         modalContent.querySelector('#modal-main-img').addEventListener('click', () => {
              openLightbox(0, currentModalImages);
@@ -287,7 +275,6 @@ function setModalSlide(index) {
     currentModalImageIndex = index;
     const imgElement = document.getElementById('modal-main-img');
     if(imgElement) {
-        // Fade effect
         imgElement.style.opacity = 0;
         setTimeout(() => {
             imgElement.src = currentModalImages[index];
@@ -295,13 +282,13 @@ function setModalSlide(index) {
         }, 150);
     }
     
-    // Update active thumb
+    
     document.querySelectorAll('.modal-thumb').forEach(thumb => {
         if(parseInt(thumb.dataset.index) === index) thumb.classList.add('active');
         else thumb.classList.remove('active');
         
 
-        // Scroll thumb into view (Horizontal only to prevent page jump)
+        
         if(thumb.classList.contains('active')) {
             const container = thumb.parentNode;
             const scrollLeft = thumb.offsetLeft - (container.clientWidth / 2) + (thumb.clientWidth / 2);
@@ -329,7 +316,7 @@ function openLightbox(index, images) {
         lightbox = document.createElement('div');
         lightbox.id = 'lightbox-modal';
         lightbox.className = 'lightbox';
-        // Reuse existing CSS for lightbox (global styles)
+        
         lightbox.innerHTML = `
             <span class="lightbox-close">&times;</span>
             <div class="lightbox-content-wrapper" style="position:relative; width:100%; height:100%; display:flex; justify-content:center; align-items:center;">
@@ -349,14 +336,14 @@ function openLightbox(index, images) {
     updateLightboxImage();
     lightbox.style.display = 'block';
     
-    // Ensure z-index is higher than modal
+    
     lightbox.style.zIndex = '10000';
 }
 
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox-modal');
     if (lightbox) lightbox.style.display = 'none';
-    // If event modal is NOT active, restore overflow. If it IS active, leave overflow hidden.
+    
     if (!document.getElementById('event-modal')?.classList.contains('active')) {
          document.body.style.overflow = '';
     }
@@ -387,7 +374,6 @@ function showError() {
 }
 
 function setupListeners() {
-    // Mobile Dropdown Logic
     const mobileTrigger = document.getElementById('mobile-filter-trigger');
     const mobileMenu = document.getElementById('mobile-filter-menu');
     const mobileItems = document.querySelectorAll('.dropdown-item');
@@ -456,18 +442,18 @@ function setupListeners() {
         });
     }
 
-    // Modal Overlay Close Listener
+
     const modalOverlay = document.querySelector('.modal-overlay');
     if (modalOverlay) {
         modalOverlay.addEventListener('click', closeEventModal);
     }
 
-    // Global Keyboard Navigation (Arrows & Escape)
+
     document.addEventListener('keydown', (e) => {
         const lightbox = document.getElementById('lightbox-modal');
         const eventModal = document.getElementById('event-modal');
 
-        // Lightbox takes precedence
+        
         if (lightbox && lightbox.style.display === 'block') {
             if (e.key === 'ArrowLeft') changeSlide(-1);
             if (e.key === 'ArrowRight') changeSlide(1);
@@ -475,9 +461,8 @@ function setupListeners() {
             return;
         }
 
-        // Event Modal
+        
         if (eventModal && eventModal.classList.contains('active')) {
-            // Only navigate if we have multiple images
             if (currentModalImages.length > 1) {
                 if (e.key === 'ArrowLeft') changeModalSlide(-1);
                 if (e.key === 'ArrowRight') changeModalSlide(1);

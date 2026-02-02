@@ -1,11 +1,11 @@
-// src/modules/intramurals.js
+
 import { fetchJSON } from '../lib/dataLoader.js';
 import { normalizeIntramurals } from '../lib/normalize.js';
 import { escapeHtml } from '../lib/utils.js';
 
 let championData = null;
 
-// State needed for filters
+
 let activeScheduleDay = 'Day 1';
 let activeResultsFilter = 'all';
 
@@ -30,13 +30,13 @@ function renderAll() {
     buildTimeline();
     buildScoreboard();
     setupSectionTabs();
-    setupModalListeners(); // Initialize modal events
+    setupModalListeners(); 
 }
 
 function getRankings() {
     if (!championData) return [];
     
-    // Consistent mapping
+    
     const teamMap = { 'Team A': 'SHS', 'Team B': 'THM', 'Team C': 'ICT' };
     
     return championData.teams.map(t => ({
@@ -67,7 +67,7 @@ function calculateScoresForDay(dayLimit) {
         }
     } 
     else if (dayLimit === 'Day 2') {
-        // Read from day2_results which contains cumulative Day 1+2 totals
+        
         if (championData.day2_results && championData.day2_results.overall_standings) {
              championData.day2_results.overall_standings.forEach(entry => {
                  let code = '';
@@ -90,14 +90,14 @@ function calculateScoresForDay(dayLimit) {
     return scores;
 }
 
-// Dom Builders
+
 
 function buildPodium() {
-    updatePodium('Day 1'); // Default start
+    updatePodium('Day 1'); 
     
-    // Attach event listeners for podium buttons
+    
     document.querySelectorAll('.podium-btn').forEach(btn => {
-        // Clone to remove old listeners if any
+        
         const newBtn = btn.cloneNode(true);
         btn.parentNode.replaceChild(newBtn, btn);
         
@@ -105,7 +105,7 @@ function buildPodium() {
             const dayText = e.target.textContent.trim();
             updatePodium(dayText);
             
-            // Trigger confetti for Day 3
+            
             if (dayText === 'Day 3' && window.confettiCannon) {
                 window.confettiCannon.celebrate(e.target, 2000);
             }
@@ -126,7 +126,7 @@ function renderPodiumWithScores(scores) {
     const container = document.getElementById('tri-podium');
     if (!container || !championData) return;
     
-    // Map scores to teams and sort
+    
     const ranks = championData.teams.map(t => ({
         ...t,
         score: scores[t.code] || 0
@@ -168,7 +168,7 @@ function renderPodiumWithScores(scores) {
 
     container.innerHTML = html;
 
-    // Re-attach click listeners for score breakdown
+    
     container.querySelectorAll('.podium-block').forEach(block => {
         block.addEventListener('click', () => showScoreBreakdown(block.dataset.team));
     });
@@ -191,7 +191,7 @@ function buildStats() {
         </div>
     `).join('');
     
-    // Animation
+    
     setTimeout(() => {
         container.querySelectorAll('.stat-fill').forEach(bar => {
             bar.style.width = bar.dataset.percent + '%';
@@ -221,10 +221,10 @@ function buildTeams() {
         </div>
     `).join('');
 
-    // Event delegation or direct attachment
+    
     container.querySelectorAll('.team-card').forEach(card => {
         card.addEventListener('click', (e) => {
-             // Stop propagation handled naturally by specific listeners unless strictly required
+             
              showRoster(card.dataset.team);
         });
         card.querySelector('.roster-btn').addEventListener('click', (e) => {
@@ -263,14 +263,14 @@ function buildScoreboard() {
     const container = document.getElementById('results-container');
     if (!container || !championData) return;
 
-    // Team Mapping: Code -> Full Name
+    
     const codeToName = {
         'SHS': 'Dragon Vanguard',
         'THM': 'Pegasus Fury',
         'ICT': 'Phoenix Invictus'
     };
     
-    // Process Categories (Similar logic to original but ensuring safety)
+    
     let allEvents = [];
     if (Array.isArray(championData.categories)) {
         championData.categories.forEach(cat => {
@@ -304,7 +304,7 @@ function buildScoreboard() {
         });
     }
 
-    // Filter Logic
+    
     let events = allEvents;
     if (activeResultsFilter !== 'all') {
         const filter = activeResultsFilter.toLowerCase();
@@ -324,7 +324,7 @@ function buildScoreboard() {
         return;
     }
     
-    // Safe DOM creation using HTML string
+    
     container.innerHTML = events.map((evt) => {
         const winner = evt.results.find(r => r.position === 1);
         const winnerColor = winner && getTeamColor(winner.team) || 'var(--text-muted)';
@@ -363,7 +363,7 @@ function getTeamColor(teamName) {
 }
 
 function setupSectionTabs() {
-    // Schedule Tabs
+    
     const scheduleTabs = document.getElementById('schedule-tabs');
     if (scheduleTabs) {
         scheduleTabs.querySelectorAll('.tab-btn').forEach(btn => {
@@ -376,7 +376,7 @@ function setupSectionTabs() {
         });
     }
 
-    // Results Tabs
+    
     const catFilters = document.getElementById('category-filters');
     if (catFilters) {
          catFilters.querySelectorAll('.tab-btn').forEach(btn => {
@@ -390,9 +390,9 @@ function setupSectionTabs() {
     }
 }
 
-// Modal Logic
+
 function setupModalListeners() {
-    // Global listener for modal close on background click
+    
     const modal = document.getElementById('roster-modal');
     if (modal) {
         modal.addEventListener('click', e => {
@@ -425,7 +425,7 @@ function showRoster(teamCode) {
         </div>
     `;
     
-    // Roster generation logic (Simplified for clarity, ported from original)
+    
     const renderCategory = (title, data) => {
        if(!data) return '';
        let section = `<div class="roster-category"><h3 class="category-title">${title}</h3><div class="roster-grid">`;
@@ -455,43 +455,43 @@ function showRoster(teamCode) {
 
     content.innerHTML = html;
     
-    // Add close listener to the new button
+    
     content.querySelector('.modal-close').addEventListener('click', hideModal);
 
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
 }
 
-// Score breakdown modal
+
 function showScoreBreakdown(teamCode) {
     if (!championData) return;
     
     const team = championData.teams.find(t => t.code === teamCode);
     if (!team) return;
 
-    // Map team code to abbreviations
+    
     const abbrevMap = { 'Team A': 'DV', 'Team B': 'PF', 'Team C': 'PI' };
     const deptMap = { 'Team A': 'SHS', 'Team B': 'THM', 'Team C': 'ICT' };
     const teamAbbrev = abbrevMap[teamCode];
     const deptCode = deptMap[teamCode];
     
-    // Get Day 1 score
+    
     const day1Score = championData.day1_results.overall_standings.find(
         s => s.abbreviation === teamAbbrev
     )?.total_points || 0;
     
-    // Get Day 2 cumulative and calculate standalone
+    
     const day2Cumulative = championData.day2_results.overall_standings.find(
         s => s.abbreviation === teamAbbrev
     )?.total_points || 0;
-    const day2Score = day2Cumulative - day1Score; // Standalone Day 2 points
+    const day2Score = day2Cumulative - day1Score; 
     
-    // Get Day 3 standalone (from day3_results)
+    
     const day3Score = championData.day3_results.overall_standings.find(
         s => s.abbreviation === teamAbbrev
     )?.total_points || 0;
     
-    // Overall total
+    
     const overallScore = championData.final_tally[deptCode] || 0;
     
     const modal = document.getElementById('roster-modal');
@@ -553,7 +553,7 @@ function showScoreBreakdown(teamCode) {
         </div>
     `;
     
-    // Add close listener
+    
     content.querySelector('.modal-close').addEventListener('click', hideModal);
     
     modal.classList.add('show');

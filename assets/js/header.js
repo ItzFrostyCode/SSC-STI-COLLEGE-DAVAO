@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isExpanded) {
                 if (searchInput.value.trim() !== '') {
                     console.log("Searching for:", searchInput.value);
-                    // Implement actual search logic here or redirect
+                    
                 } else {
                     searchInput.blur();
                     searchBar.classList.remove('expanded');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         setTheme(savedTheme);
     }
-    // Default to light mode if no saved preference
+    
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {

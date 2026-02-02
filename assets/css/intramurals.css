@@ -1837,7 +1837,7 @@ html:not(.dark) .nav-item:hover {
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         gap: 0.5rem;
-        padding-inline: 0.75rem; /* Match header padding */
+        padding-inline: 0.75rem; 
     }
     
     .unique-tabs::-webkit-scrollbar {
@@ -1859,7 +1859,7 @@ html:not(.dark) .nav-item:hover {
     color: #000;
 }
 
-/* Score Breakdown Styles - Compact */
+
 .score-breakdown-section {
     padding: 0.75rem 0;
 }
@@ -1949,7 +1949,7 @@ html:not(.dark) .nav-item:hover {
     white-space: nowrap;
 }
 
-/* Mobile optimizations */
+
 @media (max-width: 640px) {
     .score-breakdown-section h3 {
         font-size: 1rem !important;
@@ -1973,7 +1973,7 @@ html:not(.dark) .nav-item:hover {
     }
 }
 
-/* Extra small screens */
+
 @media (max-width: 400px) {
     .score-breakdown-section {
         padding: 0.5rem 0;

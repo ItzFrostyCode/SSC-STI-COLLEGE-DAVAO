@@ -1,4 +1,4 @@
-// src/modules/announcements.js
+
 import { fetchJSON } from '../lib/dataLoader.js';
 import { normalizeAnnouncements } from '../lib/normalize.js';
 import { escapeHtml } from '../lib/utils.js';
@@ -10,7 +10,7 @@ let currentFilters = {
 };
 let sortOrder = 'desc';
 
-// Config: ID of the announcement to pin. If null/empty, defaults to latest.
+
 const PINNED_ANNOUNCEMENT_ID = "ANN-2026-002";
 
 export async function init() {
@@ -18,7 +18,7 @@ export async function init() {
     try {
         const data = await fetchJSON('data/announcements.json', {
             cache: true,
-            ttl: 300, // Cache for 5 minutes to prevent lag on reload
+            ttl: 300, 
             adapter: normalizeAnnouncements
         });
         
@@ -39,11 +39,9 @@ function setupUI() {
     setupListeners();
 }
 
-/* ================================= 
-   Date Picker Initialization
-   ================================= */
+
 function initializeDatePicker() {
-    // Populate years (only 2025-2026 academic year)
+    
     const yearSelect = document.getElementById('year-select');
     if (yearSelect) {
         const years = [2026, 2025];
@@ -55,7 +53,7 @@ function initializeDatePicker() {
         });
     }
     
-    // Populate days (1-31)
+    
     const daySelect = document.getElementById('day-select');
     if (daySelect) {
         for (let day = 1; day <= 31; day++) {
@@ -67,9 +65,7 @@ function initializeDatePicker() {
     }
 }
 
-/* ================================= 
-   1. Categories Sidebar logic
-   ================================= */
+
 function renderCategories() {
     const categoryList = document.getElementById('category-list');
     if (!categoryList) return;
@@ -102,9 +98,7 @@ function countByCategory(category) {
     return allAnnouncements.filter(item => item.category === category).length;
 }
 
-/* ================================= 
-   2. Pinned Post Logic
-   ================================= */
+
 function renderPinned() {
     const container = document.getElementById('pinned-container');
     if (!container) return;
@@ -131,7 +125,7 @@ function renderPinned() {
         </article>
     `;
     
-    // Add View Post functionality
+    
     const viewPostBtn = container.querySelector('.view-post-btn');
     if (viewPostBtn) {
         viewPostBtn.addEventListener('click', (e) => {
@@ -141,15 +135,13 @@ function renderPinned() {
     }
 }
 
-/* ================================= 
-   Scroll to Post Helper
-   ================================= */
+
 function scrollToPost(postId) {
     const postCard = document.querySelector(`[data-announcement-id="${postId}"]`);
     if (postCard) {
         postCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
         
-        // Add highlight effect
+        
         postCard.style.transition = 'all 0.3s ease';
         postCard.style.boxShadow = '0 0 0 3px var(--accent-blue)';
         setTimeout(() => {
@@ -158,21 +150,19 @@ function scrollToPost(postId) {
     }
 }
 
-/* ================================= 
-   3. Main Feed Logic
-   ================================= */
+
 function renderFeed() {
     const feed = document.getElementById('announcements-feed');
     const paginationContainer = document.getElementById('pagination-controls');
     if (!feed) return;
 
-    // Filter by category
+    
     let filtered = allAnnouncements.filter(item => {
         if (currentFilters.category !== 'all' && item.category !== currentFilters.category) return false;
         return true;
     });
 
-    // Filter by date (year, month, day)
+    
     const { year, month, day } = currentFilters.dateFilter;
     if (year || month || day) {
         filtered = filtered.filter(item => {
@@ -186,7 +176,7 @@ function renderFeed() {
         });
     }
 
-    // Sort
+    
     filtered.sort((a, b) => {
         const dateA = new Date(a.createdAt || a.date);
         const dateB = new Date(b.createdAt || b.date);
@@ -200,34 +190,266 @@ function renderFeed() {
         return;
     }
 
-    feed.innerHTML = filtered.map(item => `
-        <article class="announcement-card" data-announcement-id="${item.id}">
-            <div class="card-header">
-                <img src="${item.authorAvatar || 'assets/images/homepage/ssc-logo.webp'}" alt="Author" class="card-author-avatar">
-                <div class="card-meta">
-                    <span class="card-author">${escapeHtml(item.author || 'SSC Admin')}</span>
-                    <span class="card-time">${item.displayDate || formatDate(item.date)}</span>
-                </div>
-            </div>
-            
-            <div class="card-body">
-                <h3 class="card-title">${escapeHtml(item.title)}</h3>
-                <p class="card-excerpt">${escapeHtml(item.content)}</p>
-                
-                ${item.image && item.image !== '#' ? `
-                <div class="card-image">
-                    <img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy">
-                </div>
-                ` : ''}
+    
+    feed.innerHTML = '';
+    filtered.forEach((item, index) => {
+        const card = createFacebookCard(item, index);
+        feed.appendChild(card);
+    });
+    
+    
+    setupToggleButtons();
+    setupLightbox();
+}
 
-                ${item.hashtags ? `
-                <div class="card-tags">
-                    ${item.hashtags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
-                </div>
-                ` : ''}
+
+function createFacebookCard(post, postIndex) {
+    const card = document.createElement('article');
+    card.className = 'announcement-card';
+    card.dataset.announcementId = post.id;
+    
+    
+    const media = getMediaForPost(post);
+    const mediaCount = media.length;
+    const content = post.content || '';
+    const title = post.title || '';
+    
+    
+    const charLimit = 250;
+    
+    
+    let descriptionHtml = '';
+    
+    
+    if (title) {
+        descriptionHtml += `<h3 class="card-title">${escapeHtml(title)}</h3>`;
+    }
+    
+    
+    const shouldUseLargeText = mediaCount === 0 && content.length < 80;
+    
+    if (shouldUseLargeText) {
+        descriptionHtml += `<p class="card-excerpt large-text">${formatContent(content)}</p>`;
+    } else if (content.length > charLimit) {
+        
+        const toggleId = `toggle-${post.id}`;
+        const visibleText = content.substring(0, charLimit);
+        const hiddenText = content.substring(charLimit);
+        
+        descriptionHtml += `
+            <p class="card-excerpt">
+                <span>${formatContent(visibleText)}</span><span class="dots-${toggleId}">...</span><span class="more-${toggleId}" style="display:none;">${formatContent(hiddenText)}</span>
+                <span class="see-more-btn" data-toggle-id="${toggleId}">See more</span>
+            </p>
+        `;
+    } else if (content) {
+        descriptionHtml += `<p class="card-excerpt">${formatContent(content)}</p>`;
+    }
+    
+    
+    let gridHtml = '';
+    if (mediaCount > 0) {
+        gridHtml = createMediaGrid(media, postIndex);
+    }
+    
+    
+    let hashtagsHtml = '';
+    if (post.hashtags && post.hashtags.length > 0) {
+        hashtagsHtml = `
+            <div class="card-tags">
+                ${post.hashtags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
             </div>
-        </article>
-    `).join('');
+        `;
+    }
+    
+    
+    card.innerHTML = `
+        <div class="card-header">
+            <img src="${post.authorAvatar || 'assets/images/homepage/ssc-logo-opt.webp'}" alt="${escapeHtml(post.author || 'SSC Admin')}" class="card-author-avatar">
+            <div class="card-meta">
+                <span class="card-author">${escapeHtml(post.author || 'SSC Admin')}</span>
+                <span class="card-time">${post.displayDate || formatDate(post.date)}</span>
+            </div>
+        </div>
+        <div class="card-body">
+            ${descriptionHtml}
+            ${hashtagsHtml}
+        </div>
+        ${gridHtml}
+    `;
+    
+    return card;
+}
+
+
+function getMediaForPost(post) {
+    let mediaItems = [];
+    
+    
+    if (post.media && Array.isArray(post.media)) {
+        mediaItems = post.media;
+    }
+    
+    else if (post.gallery && Array.isArray(post.gallery)) {
+        mediaItems = post.gallery.map(item => {
+            if (typeof item === 'string') {
+                return { type: detectMediaType(item), url: item };
+            }
+            return item;
+        });
+    }
+    
+    else if (post.images && Array.isArray(post.images)) {
+        mediaItems = post.images.map(url => ({ type: 'image', url }));
+    }
+    
+    else if (post.videos && Array.isArray(post.videos)) {
+        mediaItems = post.videos.map(url => ({ type: 'video', url }));
+    }
+    
+    else if (post.image && post.image !== "#") {
+        mediaItems = [{ type: 'image', url: post.image }];
+    }
+    
+    else if (post.video && post.video !== "#") {
+        mediaItems = [{ type: 'video', url: post.video }];
+    }
+    
+    
+    return mediaItems.filter(item => {
+        const url = typeof item === 'string' ? item : item.url;
+        return url && url.length > 2 && url !== "#";
+    }).map(item => {
+        
+        if (typeof item === 'string') {
+            return { type: detectMediaType(item), url: item };
+        }
+        return item;
+    });
+}
+
+
+function detectMediaType(url) {
+    const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv'];
+    const urlLower = url.toLowerCase();
+    
+    for (const ext of videoExtensions) {
+        if (urlLower.endsWith(ext)) {
+            return 'video';
+        }
+    }
+    
+    return 'image';
+}
+
+
+function isVideo(mediaItem) {
+    return mediaItem.type === 'video';
+}
+
+
+function createMediaGrid(mediaItems, postIndex) {
+    const count = mediaItems.length;
+    let gridClass = '';
+    let visible = (count >= 5) ? 5 : count;
+    
+    
+    if (count === 1) gridClass = 'grid-1';
+    else if (count === 2) gridClass = 'grid-2';
+    else if (count === 3) gridClass = 'grid-3';
+    else if (count === 4) gridClass = 'grid-4';
+    else if (count >= 5) gridClass = 'grid-5-plus';
+    
+    
+    const items = mediaItems.slice(0, visible).map((mediaItem, idx) => {
+        const moreOverlay = (count > 5 && idx === 4) 
+            ? `<div class="more-overlay">+${count - 5}</div>` 
+            : '';
+        
+        const mediaUrl = mediaItem.url;
+        const isVideoItem = isVideo(mediaItem);
+        
+        let mediaElement;
+        if (isVideoItem) {
+            
+            mediaElement = `
+                <video preload="metadata" playsinline class="media-video">
+                    <source src="${mediaUrl}" type="video/${getVideoType(mediaUrl)}">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-play-overlay">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                        <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.6)"/>
+                        <polygon points="23,15 23,45 45,30" fill="white"/>
+                    </svg>
+                </div>
+            `;
+        } else {
+            
+            mediaElement = `<img src="${mediaUrl}" alt="Announcement media ${idx + 1}" loading="lazy">`;
+        }
+        
+        return `
+            <div class="img-item ${isVideoItem ? 'video-item' : ''}" data-post-index="${postIndex}" data-media-index="${idx}">
+                ${moreOverlay}
+                ${mediaElement}
+            </div>
+        `;
+    }).join('');
+    
+    return `<div class="image-grid ${gridClass}">${items}</div>`;
+}
+
+
+function getVideoType(url) {
+    if (url.endsWith('.mp4')) return 'mp4';
+    if (url.endsWith('.webm')) return 'webm';
+    if (url.endsWith('.ogg')) return 'ogg';
+    return 'mp4'; 
+}
+
+
+function setupToggleButtons() {
+    
+    const feed = document.getElementById('announcements-feed');
+    if (!feed) return;
+    
+    
+    const newFeed = feed.cloneNode(true);
+    feed.parentNode.replaceChild(newFeed, feed);
+    
+    
+    newFeed.addEventListener('click', (e) => {
+        if (e.target.classList.contains('see-more-btn')) {
+            const toggleId = e.target.dataset.toggleId;
+            if (!toggleId) return;
+            
+            const dots = newFeed.querySelector(`.dots-${toggleId}`);
+            const more = newFeed.querySelector(`.more-${toggleId}`);
+            const btn = e.target;
+            
+            if (!dots || !more) return;
+            
+            if (dots.style.display === 'none') {
+                dots.style.display = 'inline';
+                more.style.display = 'none';
+                btn.textContent = 'See more';
+            } else {
+                dots.style.display = 'none';
+                more.style.display = 'inline';
+                btn.textContent = 'See less';
+            }
+        }
+    });
+}
+
+
+function formatContent(text) {
+    if (!text) return '';
+    
+    const escaped = escapeHtml(text);
+    
+    return escaped.replace(/\n/g, '<br>');
 }
 
 function formatDate(dateString) {
@@ -240,11 +462,9 @@ function formatDate(dateString) {
     });
 }
 
-/* ================================= 
-   4. Event Listeners
-   ================================= */
+
 function setupListeners() {
-    // Category Buttons
+    
     document.getElementById('category-list')?.addEventListener('click', (e) => {
         const btn = e.target.closest('.category-btn');
         if (btn) {
@@ -255,7 +475,7 @@ function setupListeners() {
         }
     });
 
-    // Pinned Section Toggle (Mobile)
+    
     const pinnedToggleBtn = document.getElementById('pinned-toggle-btn');
     const pinnedSection = document.querySelector('.announcement-pinned');
 
@@ -266,7 +486,7 @@ function setupListeners() {
         });
     }
 
-    // Date Filter Dropdown
+    
     const dateFilterTrigger = document.getElementById('date-filter-trigger');
     const dateFilterMenu = document.getElementById('date-filter-menu');
     const dateFilterLabel = document.getElementById('date-filter-label');
@@ -277,14 +497,14 @@ function setupListeners() {
     const applyBtn = document.getElementById('apply-date-btn');
     
     if (dateFilterTrigger && dateFilterMenu) {
-        // Toggle dropdown
+        
         dateFilterTrigger.addEventListener('click', (e) => {
             e.stopPropagation();
             dateFilterTrigger.classList.toggle('active');
             dateFilterMenu.classList.toggle('show');
         });
         
-        // Clear button
+        
         if (clearBtn) {
             clearBtn.addEventListener('click', () => {
                 yearSelect.value = '';
@@ -293,7 +513,7 @@ function setupListeners() {
             });
         }
         
-        // Apply button
+        
         if (applyBtn) {
             applyBtn.addEventListener('click', () => {
                 currentFilters.dateFilter = {
@@ -302,7 +522,7 @@ function setupListeners() {
                     day: daySelect.value
                 };
                 
-                // Update label
+                
                 const parts = [];
                 if (daySelect.value) parts.push(daySelect.value);
                 if (monthSelect.value) {
@@ -313,17 +533,17 @@ function setupListeners() {
                 
                 dateFilterLabel.textContent = parts.length > 0 ? parts.join(' ') : 'Select Date';
                 
-                // Close dropdown
+                
                 dateFilterTrigger.classList.remove('active');
                 dateFilterMenu.classList.remove('show');
                 
-                // Render and scroll
+                
                 renderFeed();
                 window.scrollTo({top: 0, behavior: 'smooth'});
             });
         }
         
-        // Close dropdown when clicking outside
+        
         document.addEventListener('click', (e) => {
             if (!dateFilterTrigger.contains(e.target) && !dateFilterMenu.contains(e.target)) {
                 dateFilterTrigger.classList.remove('active');
@@ -332,12 +552,12 @@ function setupListeners() {
         });
     }
 
-    // Sort Toggle Button
-    const sortBtn = document.getElementById('btn-sort-trigger'); // Updated ID from HTML
+    
+    const sortBtn = document.getElementById('sort-select-btn');
     const sortLabel = document.getElementById('sort-label');
     
     if (sortBtn && sortLabel) {
-        // Replace to avoid dupes
+        
         const newSort = sortBtn.cloneNode(true);
         sortBtn.parentNode.replaceChild(newSort, sortBtn);
         
@@ -346,5 +566,172 @@ function setupListeners() {
             sortLabel.textContent = sortOrder === 'desc' ? 'Newest' : 'Oldest';
             renderFeed();
         });
+    }
+}
+
+
+let currentLightboxImages = [];
+let currentLightboxIndex = 0;
+
+function setupLightbox() {
+    
+    const mediaItems = document.querySelectorAll('.img-item');
+    
+    mediaItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const postIndex = parseInt(this.dataset.postIndex);
+            const mediaIndex = parseInt(this.dataset.mediaIndex);
+            openLightbox(postIndex, mediaIndex);
+        });
+    });
+    
+    
+    const lightbox = document.getElementById('announcement-lightbox');
+    const closeBtn = document.querySelector('.lightbox-close-btn');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeLightbox);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => changeImage(-1));
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => changeImage(1));
+    }
+    
+    
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target.id === 'announcement-lightbox') {
+                closeLightbox();
+            }
+        });
+    }
+    
+    
+    document.addEventListener('keydown', handleLightboxKeyboard);
+}
+
+function openLightbox(postIndex, mediaIndex) {
+    
+    let filtered = allAnnouncements.filter(item => {
+        if (currentFilters.category !== 'all' && item.category !== currentFilters.category) return false;
+        return true;
+    });
+    
+    const { year, month, day } = currentFilters.dateFilter;
+    if (year || month || day) {
+        filtered = filtered.filter(item => {
+            const itemDate = new Date(item.createdAt || item.date);
+            if (year && itemDate.getFullYear() !== parseInt(year)) return false;
+            if (month && itemDate.getMonth() + 1 !== parseInt(month)) return false;
+            if (day && itemDate.getDate() !== parseInt(day)) return false;
+            return true;
+        });
+    }
+    
+    filtered.sort((a, b) => {
+        const dateA = new Date(a.createdAt || a.date);
+        const dateB = new Date(b.createdAt || b.date);
+        return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
+    });
+    
+    
+    const post = filtered[postIndex];
+    if (!post) return;
+    
+    currentLightboxImages = getMediaForPost(post);
+    currentLightboxIndex = mediaIndex;
+    
+    if (currentLightboxImages.length === 0) return;
+    
+    showLightboxMedia(currentLightboxIndex);
+    
+    const lightbox = document.getElementById('announcement-lightbox');
+    if (lightbox) {
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    
+    const lightboxVideo = document.getElementById('lightbox-video');
+    if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.currentTime = 0;
+    }
+    
+    const lightbox = document.getElementById('announcement-lightbox');
+    if (lightbox) {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function changeImage(step) {
+    
+    const lightboxVideo = document.getElementById('lightbox-video');
+    if (lightboxVideo) {
+        lightboxVideo.pause();
+    }
+    
+    currentLightboxIndex += step;
+    
+    
+    if (currentLightboxIndex >= currentLightboxImages.length) {
+        currentLightboxIndex = 0;
+    } else if (currentLightboxIndex < 0) {
+        currentLightboxIndex = currentLightboxImages.length - 1;
+    }
+    
+    showLightboxMedia(currentLightboxIndex);
+}
+
+function showLightboxMedia(index) {
+    const mediaItem = currentLightboxImages[index];
+    if (!mediaItem) return;
+    
+    const wrapper = document.querySelector('.lightbox-content-wrapper');
+    if (!wrapper) return;
+    
+    const isVideoItem = isVideo(mediaItem);
+    
+    
+    wrapper.style.opacity = '0.5';
+    
+    setTimeout(() => {
+        if (isVideoItem) {
+            
+            wrapper.innerHTML = `
+                <video id="lightbox-video" controls autoplay class="lightbox-media">
+                    <source src="${mediaItem.url}" type="video/${getVideoType(mediaItem.url)}">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        } else {
+            
+            wrapper.innerHTML = `<img id="lightbox-img" src="${mediaItem.url}" alt="Gallery Media" class="lightbox-media">`;
+        }
+        
+        
+        wrapper.style.opacity = '1';
+    }, 100);
+}
+
+function handleLightboxKeyboard(e) {
+    const lightbox = document.getElementById('announcement-lightbox');
+    if (!lightbox || lightbox.style.display !== 'flex') return;
+    
+    if (e.key === 'ArrowLeft') {
+        changeImage(-1);
+    } else if (e.key === 'ArrowRight') {
+        changeImage(1);
+    } else if (e.key === 'Escape') {
+        closeLightbox();
     }
 }
