@@ -7,8 +7,8 @@ import { escapeHtml } from '../lib/utils.js';
 const LAYOUT_CONFIG = [
     { type: 'divider', label: 'Adviser' },
     { type: 'row', names: ['Reinamie Dayrit'] },
-    { type: 'divider', label: 'OSA' },
-    { type: 'row', names: ['Upcoming'] }, // Explicit placeholder support
+    { type: 'divider', label: 'SAO' },
+    { type: 'row', names: ['Diether Kenz Cabrestante Vallejo'] },
     { type: 'divider', label: 'Executive Officers' },
     { type: 'row', names: ['Chester Paul Villasencio'] },
     { type: 'row', names: ['Chesilyn Dianne Tabigue', 'Cj Love Marie Astudillo'] },
@@ -109,7 +109,7 @@ function renderOfficers(allOfficers) {
                              </div>
                              <div class="officer-info">
                                 <h3>-</h3>
-                                <p class="officer-role">OSA Representative</p>
+                                <p class="officer-role">SAO Representative</p>
                              </div>
                         </div>
                      `;

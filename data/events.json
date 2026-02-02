@@ -213,5 +213,61 @@
     "lastEditedBy": null,
     "lastEditedAt": null,
     "status": "published"
+  },
+  {
+    "id": "EVT-2026-005",
+    "title": "TikTok Dance Competition",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-11-29",
+    "endDate": "2025-11-29",
+    "category": "Competition",
+    "location": "STI College Davao",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "description": "Our TikTok Dance Competition featuring the catchy STI Tigi-ay music is officially ON! \n\nBring your energy, creativity, and school spirit as you vibe to the beat and showcase your best dance moves. Let’s make this challenge loud, fun, and unforgettable! \n\nWho will own the spotlight? Let the rhythm decide!",
+    "links": {
+      "Music": "https://drive.google.com/drive/folders/1MHRCW0u6... (Contact SSC Page for full link)"
+    },
+    "images": [
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_1.jpg",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_2.jpg",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_3.jpg",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_4.jpg",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_5.jpg",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_6.jpg",
+      "assets/images/events/tiktok-event/𝐓𝐢𝐤𝐓𝐨𝐤_𝐃𝐚𝐧𝐜𝐞_𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧_8.jpg"
+    ],
+    "author": "Cherry Jane Villasencio - PIO",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-11-29T23:45:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
+  },
+  {
+    "id": "EVT-2026-006",
+    "title": "Parol Making Contest",
+    "semester": "1st",
+    "academicYear": "2025-2026",
+    "startDate": "2025-11-29",
+    "endDate": "2025-11-29",
+    "category": "Competition",
+    "location": "STI College Davao",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "description": "Christmas has arrived at STI!\n\nOur three departments are once again showcasing their unity, creativity, and holiday spirit through this year’s Parol Making Contest. Each parol is proudly crafted using recycled and reusable materials—proving that imagination shines even brighter when paired with sustainability.\nLet’s support our participants as they transform simple, discarded items into meaningful symbols of light and hope. \n\nWhich department will illuminate the season with the brightest and most innovative parol? Stay tuned and let the holiday glow begin!",
+    "images": [
+      "assets/images/events/parol-making-event/parol-contest-1.jpg",
+      "assets/images/events/parol-making-event/parol-contest-2.jpg",
+      "assets/images/events/parol-making-event/parol-contest-3.jpg",
+      "assets/images/events/parol-making-event/parol-contest-4.jpg",
+      "assets/images/events/parol-making-event/parol-contest-5.jpg",
+      "assets/images/events/parol-making-event/parol-contest-6.jpg"
+    ],
+    "author": "Cherry Jane Villasencio - PIO",
+    "createdBy": "SSC Admin",
+    "createdAt": "2025-11-29T16:11:00Z",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published"
   }
 ]
