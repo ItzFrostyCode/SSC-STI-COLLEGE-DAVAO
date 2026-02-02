@@ -32,7 +32,14 @@ class SoundManager {
 
     attachDelegatedListeners() {
         const selector = 'a, button, .card, .officer-card, .stat-card, .btn-primary, .btn-outline, .btn-audio, .search-toggle-btn, .hamburger, .theme-toggle, input[type="submit"], input[type="button"], [role="button"]';
+        let lastTime = 0;
+        const throttleLimit = 100;
+
         document.body.addEventListener('mouseover', (e) => {
+            const now = Date.now();
+            if (now - lastTime < throttleLimit) return;
+            lastTime = now;
+
             const target = e.target.closest(selector);
             if (target) {
                 if (this.lastHovered !== target) {

@@ -113,5 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateHeaderText();
-    window.addEventListener('resize', updateHeaderText);
+    
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateHeaderText, 100);
+    });
 });

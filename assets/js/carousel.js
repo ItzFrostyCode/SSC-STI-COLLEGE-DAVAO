@@ -46,13 +46,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 
-    carousel.addEventListener('scroll', updateButtonStates);
+    let ticking = false;
+    carousel.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateButtonStates();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
     
 
     updateButtonStates();
     
-
-    window.addEventListener('resize', updateButtonStates);
+    // Simple debounce for resize
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateButtonStates, 100);
+    });
     
 
     let isDown = false;
