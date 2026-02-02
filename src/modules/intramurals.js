@@ -133,9 +133,9 @@ function renderPodiumWithScores(scores) {
     })).sort((a, b) => b.score - a.score);
     
     const logos = {
-        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.jpg',
-        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.jpg',
-        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.png'
+        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.webp',
+        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.webp',
+        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.webp'
     };
     
     const medals = ['🥇', '🥈', '🥉'];
@@ -205,9 +205,9 @@ function buildTeams() {
     if (!container) return;
     
     const logos = {
-        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.jpg',
-        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.jpg',
-        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.png'
+        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.webp',
+        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.webp',
+        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.webp'
     };
     
     container.innerHTML = ranks.map(team => `
@@ -409,9 +409,9 @@ function showRoster(teamCode) {
     const content = modal.querySelector('.modal-box');
     
     const logos = {
-        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.jpg',
-        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.jpg',
-        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.png'
+        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.webp',
+        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.webp',
+        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.webp'
     };
     
     let html = `
@@ -498,9 +498,9 @@ function showScoreBreakdown(teamCode) {
     const content = modal.querySelector('.modal-box');
     
     const logos = {
-        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.jpg',
-        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.jpg',
-        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.png'
+        'Dragon Vanguard': 'assets/images/team-logo/Dragon-Vanguard.webp',
+        'Pegasus Fury': 'assets/images/team-logo/Pegasus-Fury.webp',
+        'Phoenix Invictus': 'assets/images/team-logo/Pheonix-Invictus.webp'
     };
     
     content.innerHTML = `

@@ -29,7 +29,7 @@ async function loadStats() {
             fetchJSON('data/events.json', { cache: true, ttl: 3600 })
         ]);
 
-        const studentOfficers = officers ? officers.filter(o => o.position !== 'Adviser' && o.position !== 'SAO Representative') : [];
+        const studentOfficers = officers ? officers.filter(o => o.position !== 'Adviser') : [];
         const officerCount = studentOfficers.length || 20;
         const eventCount = events ? events.length : 3;
 
@@ -183,7 +183,7 @@ async function loadOfficers() {
         });
 
         const studentOfficers = data
-            .filter(o => o.position !== 'Adviser' && o.position !== 'SAO Representative')
+            .filter(o => o.position !== 'Adviser')
             .sort((a, b) => a.order - b.order);
 
         // Render immediately but use lazy loading for images via browser attribute

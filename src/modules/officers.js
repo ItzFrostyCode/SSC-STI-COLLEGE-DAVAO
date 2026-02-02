@@ -27,7 +27,7 @@ export async function init() {
     try {
         const data = await fetchJSON('data/officers.json', {
             cache: true,
-            ttl: 86400,
+            ttl: 300,
             adapter: normalizeOfficers 
         });
 
