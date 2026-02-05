@@ -1214,5 +1214,45 @@
     "status": "published",
     "image": "assets/images/annoucements/This is truly inspiring.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
+  },
+  {
+  "id": "ANN-2026-019",
+  "title": "ValentaSTIc Cinema Booth",
+  "semester": "2nd",
+  "academicYear": "2025-2026",
+  "date": "2026-02-13",
+  "category": "Event",
+  "content": "Make your Valentastic Day extra special with a movie break 💕🍿\nJoin us this February 13 at our Cinema Booth in Rooms 101–104 and enjoy a relaxing space to unwind, laugh, and create memories with your fellow STIers.\nBecause some moments are better shared on the big screen.\n#ValentasticDay #STIers #CinemaBooth #STICampusLife",
+  "author": "Cherry Jane Villasencio",
+  "createdBy": "SSC Admin",
+  "createdAt": "2026-02-13T09:00:00Z",
+  "displayDate": "Tuesday, February 3, 2026 at 2:05 PM",
+  "lastEditedBy": null,
+  "lastEditedAt": null,
+  "status": "published",
+  "gallery": [
+    "assets/images/annoucements/ValentaSTIc Cinema Booth_1.webp",
+    "assets/images/annoucements/ValentaSTIc Cinema Booth_2.webp",
+    "assets/images/annoucements/ValentaSTIc Cinema Booth_3.webp",
+    "assets/images/annoucements/ValentaSTIc Cinema Booth_4.webp"
+    ]
+  },
+  {
+    "id": "ANN-2026-020",
+    "title": "Class Suspension - Feb 5-6, 2026",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-02-05",
+    "category": "Announcement",
+    "content": "📢 ANNOUNCEMENT\nSTI College Davao follows the City Government’s announcement on the suspension of classes at all levels from February 5–6, 2026.\nStudents who are already on campus are advised to go home immediately.\n📌 Online synchronous classes will be conducted on February 5 and 6, 2026 via MS Teams, following the regular class schedules.\nPlease check your eLMS or wait for your teacher’s MS Teams invite.\nStay safe, STIers!",
+    "author": "Cherry Jane Villasencio",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-02-05T09:13:00Z",
+    "displayDate": "Thursday, February 5, 2026 at 9:13 AM",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published",
+    "image": "assets/images/annoucements/ClassSuspended_1.webp",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   }
 ]
