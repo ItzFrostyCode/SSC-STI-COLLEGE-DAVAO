@@ -16,7 +16,7 @@ const PINNED_ANNOUNCEMENT_ID = "ANN-2026-002";
 export async function init() {
     console.log('Initializing Announcements Dashboard');
     try {
-        const data = await fetchJSON('data/announcements.json?v=force_update_2', {
+        const data = await fetchJSON('data/announcements.json?v=force_update_3', {
             cache: true,
             ttl: 300, 
             adapter: normalizeAnnouncements
