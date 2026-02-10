@@ -862,9 +862,9 @@
         border-bottom: 0.5px solid var(--border-light);
         
         
-        width: calc(100% + 4rem); 
-        margin-left: -2rem;
-        margin-right: -2rem;
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 2rem; 
         padding-right: 2rem;
         
@@ -989,9 +989,9 @@
         border-bottom: 0.5px solid var(--border-light);
         
         
-        width: calc(100% + 2.5rem); 
-        margin-left: -1.25rem;
-        margin-right: -1.25rem;
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0;
         left: 0; 
         
         padding-left: 1.25rem; 

@@ -843,7 +843,7 @@ function showLightboxMedia(index) {
         if (isVideoItem) {
             
             wrapper.innerHTML = `
-                <video id="lightbox-video" controls autoplay class="lightbox-media">
+                <video id="lightbox-video" controls class="lightbox-media">
                     <source src="${mediaItem.url}" type="video/${getVideoType(mediaItem.url)}">
                     Your browser does not support the video tag.
                 </video>
