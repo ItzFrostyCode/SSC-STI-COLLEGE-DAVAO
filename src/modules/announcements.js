@@ -10,20 +10,40 @@ let currentFilters = {
 };
 let sortOrder = 'desc';
 
+// Lazy loading state
+let postsPerLoad = 3;
+let currentlyDisplayed = 0;
+let filteredAnnouncements = [];
+let isLoading = false;
+
+// Search state
+let searchQuery = '';
+let fuseInstance = null;
+
 
 const PINNED_ANNOUNCEMENT_ID = "ANN-2026-002";
 
 export async function init() {
     console.log('Initializing Announcements Dashboard');
     try {
-        const data = await fetchJSON('data/announcements.json?v=force_update_3', {
-            cache: true,
-            ttl: 300, 
+        // Use timestamp to prevent caching and always get fresh data
+        const timestamp = new Date().getTime();
+        const data = await fetchJSON(`data/announcements.json?t=${timestamp}`, {
+            cache: false,  // Disable caching
             adapter: normalizeAnnouncements
         });
         
         if (data) {
             allAnnouncements = data;
+            
+            // Initialize Fuse.js for search
+            fuseInstance = new Fuse(allAnnouncements, {
+                keys: ['title', 'content', 'category', 'author'],
+                threshold: 0.3,  // 0 = exact match, 1 = very fuzzy
+                includeScore: true,
+                minMatchCharLength: 2
+            });
+            
             setupUI();
         }
     } catch (e) {
@@ -156,13 +176,23 @@ function renderFeed() {
     const paginationContainer = document.getElementById('pagination-controls');
     if (!feed) return;
 
+    // Start with all announcements or search results
+    let filtered;
+    if (searchQuery && fuseInstance) {
+        // Use Fuse.js search
+        const searchResults = fuseInstance.search(searchQuery);
+        filtered = searchResults.map(result => result.item);
+    } else {
+        filtered = allAnnouncements;
+    }
     
-    let filtered = allAnnouncements.filter(item => {
+    // Apply category filter
+    filtered = filtered.filter(item => {
         if (currentFilters.category !== 'all' && item.category !== currentFilters.category) return false;
         return true;
     });
 
-    
+    // Apply date filter
     const { year, month, day } = currentFilters.dateFilter;
     if (year || month || day) {
         filtered = filtered.filter(item => {
@@ -176,7 +206,7 @@ function renderFeed() {
         });
     }
 
-    
+    // Sort
     filtered.sort((a, b) => {
         const dateA = new Date(a.createdAt || a.date);
         const dateB = new Date(b.createdAt || b.date);
@@ -186,21 +216,103 @@ function renderFeed() {
     if (paginationContainer) paginationContainer.innerHTML = '';
 
     if (filtered.length === 0) {
-        feed.innerHTML = '<div class="empty-state"><h3>No announcements found</h3><p>Try changing your filters.</p></div>';
+        const emptyMessage = searchQuery 
+            ? `<div class="empty-state"><h3>No results found</h3><p>Try a different search term.</p></div>`
+            : '<div class="empty-state"><h3>No announcements found</h3><p>Try changing your filters.</p></div>';
+        feed.innerHTML = emptyMessage;
         return;
     }
 
+    // Store filtered announcements and reset display counter
+    filteredAnnouncements = filtered;
+    currentlyDisplayed = 0;
     
+    // Clear feed and load initial posts
     feed.innerHTML = '';
-    filtered.forEach((item, index) => {
-        const card = createFacebookCard(item, index);
-        feed.appendChild(card);
-    });
-    
-    
-    setupToggleButtons();
-    setupLightbox();
+    loadMorePosts();
 }
+
+
+function loadMorePosts() {
+    if (isLoading) return;
+    
+    const feed = document.getElementById('announcements-feed');
+    if (!feed) return;
+    
+    // Check if there are more posts to load
+    if (currentlyDisplayed >= filteredAnnouncements.length) {
+        return;
+    }
+    
+    isLoading = true;
+    
+    // Calculate which posts to load
+    const endIndex = Math.min(currentlyDisplayed + postsPerLoad, filteredAnnouncements.length);
+    const postsToLoad = filteredAnnouncements.slice(currentlyDisplayed, endIndex);
+    
+    // Preload all media for posts before displaying them
+    const preloadPromises = postsToLoad.map(post => preloadPostMedia(post));
+    
+    Promise.all(preloadPromises).then(() => {
+        // All media loaded, now render the posts
+        postsToLoad.forEach((item, batchIndex) => {
+            const overallIndex = currentlyDisplayed + batchIndex;
+            const card = createFacebookCard(item, overallIndex);
+            feed.appendChild(card);
+        });
+        
+        currentlyDisplayed = endIndex;
+        isLoading = false;
+        
+        // Setup interactions for newly added posts
+        setupToggleButtons();
+        setupLightbox();
+    }).catch(() => {
+        // Even if some media fails to load, still show the posts
+        postsToLoad.forEach((item, batchIndex) => {
+            const overallIndex = currentlyDisplayed + batchIndex;
+            const card = createFacebookCard(item, overallIndex);
+            feed.appendChild(card);
+        });
+        
+        currentlyDisplayed = endIndex;
+        isLoading = false;
+        
+        setupToggleButtons();
+        setupLightbox();
+    });
+}
+
+
+function preloadPostMedia(post) {
+    return new Promise((resolve) => {
+        const mediaItems = getMediaForPost(post);
+        
+        if (mediaItems.length === 0) {
+            resolve();
+            return;
+        }
+        
+        const loadPromises = mediaItems.map(media => {
+            return new Promise((mediaResolve) => {
+                if (media.type === 'video') {
+                    // For videos, just resolve immediately (they'll load when played)
+                    mediaResolve();
+                } else {
+                    // For images, preload them
+                    const img = new Image();
+                    img.onload = () => mediaResolve();
+                    img.onerror = () => mediaResolve(); // Resolve even on error
+                    img.src = media.url;
+                }
+            });
+        });
+        
+        // Wait for all media in this post to load
+        Promise.all(loadPromises).then(resolve);
+    });
+}
+
 
 
 function createFacebookCard(post, postIndex) {
@@ -308,7 +420,7 @@ function getMediaForPost(post) {
     }
     
     else if (post.image && post.image !== "#") {
-        mediaItems = [{ type: 'image', url: post.image }];
+        mediaItems = [{ type: detectMediaType(post.image), url: post.image }];
     }
     
     else if (post.video && post.video !== "#") {
@@ -567,6 +679,52 @@ function setupListeners() {
             renderFeed();
         });
     }
+    
+    // Search input listener with debounce
+    const searchInput = document.getElementById('announcement-search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    
+    if (searchInput) {
+        let searchTimeout;
+        
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            
+            // Show/hide clear button
+            if (clearSearchBtn) {
+                clearSearchBtn.style.display = query ? 'block' : 'none';
+            }
+            
+            // Debounce search (wait 300ms after user stops typing)
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                searchQuery = query;
+                renderFeed();
+            }, 300);
+        });
+    }
+    
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+            if (searchInput) {
+                searchInput.value = '';
+                searchQuery = '';
+                clearSearchBtn.style.display = 'none';
+                renderFeed();
+            }
+        });
+    }
+    
+    // Infinite scroll listener
+    window.addEventListener('scroll', () => {
+        // Check if we're near the bottom of the page (within 300px)
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight;
+        
+        if (scrollPosition >= pageHeight - 300 && !isLoading) {
+            loadMorePosts();
+        }
+    });
 }
 
 
@@ -617,31 +775,8 @@ function setupLightbox() {
 }
 
 function openLightbox(postIndex, mediaIndex) {
-    
-    let filtered = allAnnouncements.filter(item => {
-        if (currentFilters.category !== 'all' && item.category !== currentFilters.category) return false;
-        return true;
-    });
-    
-    const { year, month, day } = currentFilters.dateFilter;
-    if (year || month || day) {
-        filtered = filtered.filter(item => {
-            const itemDate = new Date(item.createdAt || item.date);
-            if (year && itemDate.getFullYear() !== parseInt(year)) return false;
-            if (month && itemDate.getMonth() + 1 !== parseInt(month)) return false;
-            if (day && itemDate.getDate() !== parseInt(day)) return false;
-            return true;
-        });
-    }
-    
-    filtered.sort((a, b) => {
-        const dateA = new Date(a.createdAt || a.date);
-        const dateB = new Date(b.createdAt || b.date);
-        return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
-    });
-    
-    
-    const post = filtered[postIndex];
+    // Use the same filtered list that's displayed on the page
+    const post = filteredAnnouncements[postIndex];
     if (!post) return;
     
     currentLightboxImages = getMediaForPost(post);

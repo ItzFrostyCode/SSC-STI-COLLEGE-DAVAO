@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; media-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; media-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>Announcements - SSC STI College Davao</title>
@@ -177,6 +177,28 @@
                 </div>
             </div>
         </header>
+        
+        <!-- Search Bar -->
+        <div class="announcement-search-wrapper" style="margin: 0 0 1.5rem 0;">
+            <div class="announcement-search-bar" style="position: relative; max-width: 600px;">
+                <input 
+                    type="text" 
+                    id="announcement-search-input" 
+                    placeholder="Search announcements by title, content, or category..." 
+                    style="width: 100%; padding: 0.75rem 2.5rem 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.95rem; background: var(--card-bg); color: var(--text-primary);"
+                />
+                <button 
+                    id="clear-search-btn" 
+                    style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 0.5rem; display: none;"
+                    aria-label="Clear search"
+                >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
           
         <div class="announcement-board">
             
@@ -266,6 +288,9 @@
 
 
 
+    <!-- Fuse.js for search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    
     <script type="module" src="src/main.js?v=20260203_cleanup"></script>
 
     <script src="assets/js/search.js?v=20260203_cleanup"></script>

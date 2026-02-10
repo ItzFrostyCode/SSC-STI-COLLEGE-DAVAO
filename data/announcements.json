@@ -1254,5 +1254,23 @@
     "status": "published",
     "image": "assets/images/annoucements/ClassSuspended_1.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
+  },
+  {
+    "id": "ANN-2026-021",
+    "title": "ValentaSTIc - Where Hearts Meet Naturally",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "date": "2026-02-10",
+    "category": "Event",
+    "content": "An organic encounter awaits this ValentaSTIc February 13✨\nA story where hearts meet naturally, smiles come effortlessly, and simple moments turn into unforgettable memories.\nCelebrate a day of genuine connections, sweet surprises, and love that grows in the most organic way — all captured beautifully through this special film. 🌿💗\n🎬 Starring:\nReasylee Abella\nPrincess Rhian Tadem\nSamantha Kate Pabuaya\nNajem Diaregun\nGinalyn Mongo\nYhanzee Payot\nMariel Quimpan\n📹 Videographer and Edited by: Cherry Jane Villasencio\n#valentastic #organicencounter #valentinesevent #campuslove",
+    "author": "Cherry Jane Villasencio",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-02-10T04:27:00Z",
+    "displayDate": "Tuesday, February 10, 2026 at 12:27 PM",
+    "lastEditedBy": null,
+    "lastEditedAt": null,
+    "status": "published",
+    "image": "assets/images/annoucements/ValentaSTIc_whereHeartsmeet.mp4",
+    "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   }
 ]
