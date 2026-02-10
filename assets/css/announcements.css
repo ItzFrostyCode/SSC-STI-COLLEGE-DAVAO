@@ -11,7 +11,7 @@
 .announcements-container {
     width: 100%;
     padding-top: calc(var(--header-height) + 2.5rem);
-    min-height: 100vh;
+    min-height: calc(100vh + 50vh);  /* Keep footer below until scrolling past all posts */
     padding-bottom: 4rem;
 }
 
