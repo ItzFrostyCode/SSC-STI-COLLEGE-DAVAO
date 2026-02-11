@@ -20,6 +20,12 @@ let isLoading = false;
 let searchQuery = '';
 let fuseInstance = null;
 
+// Pull to refresh state (mobile)
+let pullStartY = 0;
+let pullMoveY = 0;
+let isPulling = false;
+let pullThreshold = 80;
+
 
 const PINNED_ANNOUNCEMENT_ID = "ANN-2026-002";
 
@@ -55,9 +61,12 @@ function setupUI() {
     initializeDatePicker();
     renderCategories();
     renderPinned();
+    showSkeletonLoaders(); // Show loaders initially
     renderFeed();
     setupListeners();
+    setupPullToRefresh(); // Mobile pull-to-refresh
 }
+
 
 
 function initializeDatePicker() {
@@ -216,16 +225,24 @@ function renderFeed() {
     if (paginationContainer) paginationContainer.innerHTML = '';
 
     if (filtered.length === 0) {
-        const emptyMessage = searchQuery 
-            ? `<div class="empty-state"><h3>No results found</h3><p>Try a different search term.</p></div>`
-            : '<div class="empty-state"><h3>No announcements found</h3><p>Try changing your filters.</p></div>';
-        feed.innerHTML = emptyMessage;
+        feed.innerHTML = '';
+        const emptyType = searchQuery || currentFilters.category !== 'all' || year || month || day ? 'no-results' : 'no-announcements';
+        feed.appendChild(createEmptyState(emptyType));
+        // Show footer when no results
+        toggleFooter(true);
+        updateActiveFilterIndicators();
         return;
     }
 
     // Store filtered announcements and reset display counter
     filteredAnnouncements = filtered;
     currentlyDisplayed = 0;
+    
+    // Hide footer initially if there are posts to load
+    toggleFooter(false);
+    
+    // Update active filter indicators
+    updateActiveFilterIndicators();
     
     // Clear feed and load initial posts
     feed.innerHTML = '';
@@ -241,6 +258,8 @@ function loadMorePosts() {
     
     // Check if there are more posts to load
     if (currentlyDisplayed >= filteredAnnouncements.length) {
+        // All posts loaded, show footer
+        toggleFooter(true);
         return;
     }
     
@@ -264,6 +283,11 @@ function loadMorePosts() {
         currentlyDisplayed = endIndex;
         isLoading = false;
         
+        // Check if all posts are now loaded
+        if (currentlyDisplayed >= filteredAnnouncements.length) {
+            toggleFooter(true);
+        }
+        
         // Setup interactions for newly added posts
         setupToggleButtons();
         setupLightbox();
@@ -278,11 +302,23 @@ function loadMorePosts() {
         currentlyDisplayed = endIndex;
         isLoading = false;
         
+        // Check if all posts are now loaded
+        if (currentlyDisplayed >= filteredAnnouncements.length) {
+            toggleFooter(true);
+        }
+        
         setupToggleButtons();
         setupLightbox();
     });
 }
 
+// Toggle footer visibility
+function toggleFooter(show) {
+    const footer = document.getElementById('footer');
+    if (footer) {
+        footer.style.display = show ? 'block' : 'none';
+    }
+}
 
 function preloadPostMedia(post) {
     return new Promise((resolve) => {
@@ -870,3 +906,299 @@ function handleLightboxKeyboard(e) {
         closeLightbox();
     }
 }
+
+// ========================================
+// SKELETON LOADERS
+// ========================================
+
+function showSkeletonLoaders(count = 3) {
+    const feed = document.getElementById('announcements-feed');
+    if (!feed) return;
+    
+    feed.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+        feed.appendChild(createSkeletonCard());
+    }
+}
+
+function createSkeletonCard() {
+    const skeleton = document.createElement('div');
+    skeleton.className = 'skeleton-card';
+    skeleton.innerHTML = `
+        <div class="skeleton-header">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text">
+                <div class="skeleton-line title"></div>
+                <div class="skeleton-line subtitle"></div>
+            </div>
+        </div>
+        <div class="skeleton-line content"></div>
+        <div class="skeleton-line content"></div>
+        <div class="skeleton-line content"></div>
+        <div class="skeleton-image"></div>
+    `;
+    return skeleton;
+}
+
+
+
+
+// ========================================
+// PULL TO REFRESH (Mobile)
+// ========================================
+
+function setupPullToRefresh() {
+    if (!isMobileDevice()) return;
+    
+    const announcementsContainer = document.querySelector('.announcements-container');
+    if (!announcementsContainer) return;
+    
+    // Create indicator
+    const indicator = document.createElement('div');
+    indicator.className = 'pull-to-refresh-indicator';
+    indicator.innerHTML = `
+        <svg class="pull-to-refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+        </svg>
+    `;
+    document.body.appendChild(indicator);
+    
+    announcementsContainer.addEventListener('touchstart', (e) => {
+        if (window.scrollY === 0) {
+            pullStartY = e.touches[0].clientY;
+            isPulling = true;
+        }
+    });
+    
+    announcementsContainer.addEventListener('touchmove', (e) => {
+        if (!isPulling || window.scrollY > 0) return;
+        
+        pullMoveY = e.touches[0].clientY - pullStartY;
+        
+        if (pullMoveY > 0 && pullMoveY < pullThreshold * 1.5) {
+            indicator.style.transform = `translateX(-50%) scale(${pullMoveY / pullThreshold})`;
+            const rotation = (pullMoveY / pullThreshold) * 360;
+            indicator.querySelector('.pull-to-refresh-icon').style.transform = `rotate(${rotation}deg)`;
+        }
+    });
+    
+    announcementsContainer.addEventListener('touchend', async () => {
+        if (!isPulling) return;
+        
+        if (pullMoveY > pullThreshold) {
+            indicator.classList.add('visible', 'loading');
+            
+            // Refresh data
+            await init();
+            
+            setTimeout(() => {
+                indicator.classList.remove('visible', 'loading');
+                indicator.style.transform = 'translateX(-50%) scale(0)';
+            }, 500);
+        } else {
+            indicator.style.transform = 'translateX(-50%) scale(0)';
+        }
+        
+        isPulling = false;
+        pullStartY = 0;
+        pullMoveY = 0;
+    });
+}
+
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+        || window.innerWidth <= 768;
+}
+
+
+// ========================================
+// ACTIVE FILTER INDICATORS
+// ========================================
+
+function updateActiveFilterIndicators() {
+    const dateFilterTrigger = document.getElementById('date-filter-trigger');
+    if (!dateFilterTrigger) return;
+    
+    // Remove existing badge
+    const existingBadge = dateFilterTrigger.querySelector('.filter-badge');
+    if (existingBadge) existingBadge.remove();
+    
+    // Count active filters
+    let activeCount = 0;
+    const { year, month, day } = currentFilters.dateFilter;
+    if (year) activeCount++;
+    if (month) activeCount++;
+    if (day) activeCount++;
+    if (currentFilters.category !== 'all') activeCount++;
+    if (searchQuery) activeCount++;
+    
+    // Add badge if there are active filters
+    if (activeCount > 0) {
+        const badge = document.createElement('span');
+        badge.className = 'filter-badge';
+        badge.textContent = activeCount;
+        dateFilterTrigger.appendChild(badge);
+    }
+    
+    // Show active filters summary
+    showActiveFiltersSummary();
+}
+
+function showActiveFiltersSummary() {
+    const searchWrapper = document.querySelector('.announcement-search-wrapper');
+    if (!searchWrapper) return;
+    
+    // Remove existing summary
+    const existingSummary = document.querySelector('.active-filters-summary');
+    if (existingSummary) existingSummary.remove();
+    
+    const filters = [];
+    
+    if (currentFilters.category !== 'all') {
+        filters.push({ type: 'category', label: currentFilters.category });
+    }
+    
+    const { year, month, day } = currentFilters.dateFilter;
+    if (year || month || day) {
+        const dateParts = [];
+        if (day) dateParts.push(day);
+        if (month) {
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            dateParts.push(monthNames[parseInt(month) - 1]);
+        }
+        if (year) dateParts.push(year);
+        filters.push({ type: 'date', label: dateParts.join(' ') });
+    }
+    
+    if (searchQuery) {
+        filters.push({ type: 'search', label: `"${searchQuery}"` });
+    }
+    
+    if (filters.length === 0) return;
+    
+    const summary = document.createElement('div');
+    summary.className = 'active-filters-summary';
+    
+    filters.forEach(filter => {
+        const chip = document.createElement('div');
+        chip.className = 'filter-chip';
+        chip.innerHTML = `
+            <span>${escapeHtml(filter.label)}</span>
+            <span class="filter-chip-remove" data-filter-type="${filter.type}">✕</span>
+        `;
+        summary.appendChild(chip);
+    });
+    
+    searchWrapper.parentElement.insertBefore(summary, searchWrapper.nextSibling);
+    
+    // Add click handlers for removal
+    summary.querySelectorAll('.filter-chip-remove').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const filterType = e.target.dataset.filterType;
+            removeFilter(filterType);
+        });
+    });
+}
+
+function removeFilter(filterType) {
+    if (filterType === 'category') {
+        currentFilters.category = 'all';
+        renderCategories();
+    } else if (filterType === 'date') {
+        currentFilters.dateFilter = { year: '', month: '', day: '' };
+        document.getElementById('year-select').value = '';
+        document.getElementById('month-select').value = '';
+        document.getElementById('day-select').value = '';
+        document.getElementById('date-filter-label').textContent = 'Select Date';
+    } else if (filterType === 'search') {
+        searchQuery = '';
+        const searchInput = document.getElementById('announcement-search-input');
+        if (searchInput) searchInput.value = '';
+        const clearBtn = document.getElementById('clear-search-btn');
+        if (clearBtn) clearBtn.style.display = 'none';
+    }
+    
+    renderFeed();
+    updateActiveFilterIndicators();
+}
+
+
+// ========================================
+// IMPROVED EMPTY STATES
+// ========================================
+
+function createEmptyState(type = 'no-results') {
+    const emptyState = document.createElement('div');
+    emptyState.className = 'empty-state';
+    
+    const emptyStateConfigs = {
+        'no-results': {
+            icon: `
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                    <path d="m11 8-2 2 2 2"></path>
+                </svg>
+            `,
+            title: 'No Results Found',
+            message: 'We couldn\'t find any announcements matching your search. Try adjusting your filters or search terms.',
+            actions: [
+                { label: 'Clear Filters', action: 'clearFilters', primary: true },
+                { label: 'View All', action: 'viewAll', primary: false }
+            ]
+        },
+        'no-announcements': {
+            icon: `
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+            `,
+            title: 'No Announcements Yet',
+            message: 'There are currently no announcements available. Check back soon for updates!',
+            actions: []
+        }
+    };
+    
+    const config = emptyStateConfigs[type] || emptyStateConfigs['no-results'];
+    
+    let actionsHtml = '';
+    if (config.actions.length > 0) {
+        actionsHtml = '<div class="empty-state-actions">';
+        config.actions.forEach(action => {
+            const btnClass = action.primary ? 'primary' : 'secondary';
+            actionsHtml += `<button class="empty-state-btn ${btnClass}" data-action="${action.action}">${escapeHtml(action.label)}</button>`;
+        });
+        actionsHtml += '</div>';
+    }
+    
+    emptyState.innerHTML = `
+        <div class="empty-state-icon">${config.icon}</div>
+        <h3>${escapeHtml(config.title)}</h3>
+        <p>${escapeHtml(config.message)}</p>
+        ${actionsHtml}
+    `;
+    
+    // Add event listeners for action buttons
+    emptyState.querySelectorAll('[data-action]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const action = e.target.dataset.action;
+            if (action === 'clearFilters') {
+                currentFilters = { category: 'all', dateFilter: { year: '', month: '', day: '' } };
+                searchQuery = '';
+                const searchInput = document.getElementById('announcement-search-input');
+                if (searchInput) searchInput.value = '';
+                renderCategories();
+                renderFeed();
+            } else if (action === 'viewAll') {
+                currentFilters = { category: 'all', dateFilter: { year: '', month: '', day: '' } };
+                searchQuery = '';
+                renderCategories();
+                renderFeed();
+            }
+        });
+    });
+    
+    return emptyState;
+}
+
