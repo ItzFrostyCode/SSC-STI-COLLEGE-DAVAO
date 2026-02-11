@@ -765,6 +765,9 @@
 
 .pinned-header {
     margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .pinned-header h2 {
@@ -773,6 +776,28 @@
     color: var(--text-main);
     text-transform: uppercase;
     letter-spacing: 0.08em;
+}
+
+.pinned-close-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pinned-close-btn:hover {
+    color: var(--text-main);
+}
+
+.announcement-pinned.hidden {
+    display: none;
 }
 
 .pinned-content {
@@ -986,7 +1011,10 @@
         top: 60px; 
         z-index: 50;
         background: var(--bg-body);
+        border-top: none;
         border-bottom: 0.5px solid var(--border-light);
+        border-left: none;
+        border-right: none;
         
         
         width: 100%; 
@@ -994,8 +1022,10 @@
         margin-right: 0;
         left: 0; 
         
-        padding-left: 1.25rem; 
-        padding-right: 1.25rem;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0; 
+        padding-right: 0;
         
         display: flex;
         align-items: center;
@@ -1015,7 +1045,9 @@
     
     .category-menu {
         gap: 0.5rem; 
-        padding-bottom: 0.5rem;
+        padding-bottom: 0;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 
     .category-btn {
@@ -1143,6 +1175,24 @@
         border-radius: 0;
         margin-left: -1rem;
         margin-right: -1rem;
+    }
+    
+    
+    .announcement-categories {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .category-menu {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
     }
     
     

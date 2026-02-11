@@ -632,6 +632,13 @@ function setupListeners() {
         });
     }
 
+    const pinnedCloseBtn = document.getElementById('pinned-close-btn');
+    if (pinnedCloseBtn && pinnedSection) {
+        pinnedCloseBtn.addEventListener('click', () => {
+            pinnedSection.classList.add('hidden');
+        });
+    }
+
     
     const dateFilterTrigger = document.getElementById('date-filter-trigger');
     const dateFilterMenu = document.getElementById('date-filter-menu');
