@@ -10,17 +10,15 @@ let currentFilters = {
 };
 let sortOrder = 'desc';
 
-// Lazy loading state
+
 let postsPerLoad = 3;
 let currentlyDisplayed = 0;
 let filteredAnnouncements = [];
 let isLoading = false;
 
-// Search state
 let searchQuery = '';
 let fuseInstance = null;
 
-// Pull to refresh state (mobile)
 let pullStartY = 0;
 let pullMoveY = 0;
 let isPulling = false;
@@ -61,10 +59,10 @@ function setupUI() {
     initializeDatePicker();
     renderCategories();
     renderPinned();
-    showSkeletonLoaders(); // Show loaders initially
+    showSkeletonLoaders(); 
     renderFeed();
     setupListeners();
-    setupPullToRefresh(); // Mobile pull-to-refresh
+    setupPullToRefresh();
 }
 
 
