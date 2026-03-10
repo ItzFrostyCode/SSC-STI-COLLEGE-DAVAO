@@ -368,7 +368,7 @@ function createFacebookCard(post, postIndex) {
     
     
     if (title) {
-        descriptionHtml += `<h3 class="card-title">${escapeHtml(title)}</h3>`;
+        // descriptionHtml += `<h3 class="card-title">${escapeHtml(title)}</h3>`;
     }
     
     

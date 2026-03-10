@@ -76,7 +76,6 @@ async function loadAnnouncements() {
                         <span class="card-dot">•</span>
                         <span class="card-date">${new Date(item.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                     </div>
-                    <h3 class="card-title">${escapeHtml(item.title)}</h3>
                     <p class="card-excerpt">${escapeHtml(item.content.substring(0, 120))}...</p>
 
                     <div class="card-footer">
@@ -367,7 +366,6 @@ async function loadWelcomeAnnouncement() {
                 : escapeHtml(latest.content);
             
             container.innerHTML = `
-                <h4>${escapeHtml(latest.title)}</h4>
                 <p>${contentPreview}</p>
                 <div class="welcome-preview-meta">
                     <span class="welcome-preview-category">${escapeHtml(latest.category || 'General')}</span>
