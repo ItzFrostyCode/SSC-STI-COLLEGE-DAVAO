@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ssc-sti-college-davao.vercel.app/</loc>
+    <loc>https://sscsticollegedavao.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ssc-sti-college-davao.vercel.app/announcements.html</loc>
+    <loc>https://sscsticollegedavao.vercel.app/announcements.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ssc-sti-college-davao.vercel.app/events.html</loc>
+    <loc>https://sscsticollegedavao.vercel.app/events.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ssc-sti-college-davao.vercel.app/intramural.html</loc>
+    <loc>https://sscsticollegedavao.vercel.app/intramural.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ssc-sti-college-davao.vercel.app/officers.html</loc>
+    <loc>https://sscsticollegedavao.vercel.app/officers.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

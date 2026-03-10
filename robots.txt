@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ssc-sti-college-davao.vercel.app/sitemap.xml
+Sitemap: https://sscsticollegedavao.vercel.app/sitemap.xml
