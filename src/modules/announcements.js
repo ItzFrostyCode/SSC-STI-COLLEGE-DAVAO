@@ -41,12 +41,16 @@ export async function init() {
             allAnnouncements = data;
             
             // Initialize Fuse.js for search
-            fuseInstance = new Fuse(allAnnouncements, {
-                keys: ['title', 'content', 'category', 'author'],
-                threshold: 0.3,  // 0 = exact match, 1 = very fuzzy
-                includeScore: true,
-                minMatchCharLength: 2
-            });
+            if (typeof Fuse !== 'undefined') {
+                fuseInstance = new Fuse(allAnnouncements, {
+                    keys: ['title', 'content', 'category', 'author'],
+                    threshold: 0.3,  // 0 = exact match, 1 = very fuzzy
+                    includeScore: true,
+                    minMatchCharLength: 2
+                });
+            } else {
+                console.warn('Fuse.js not loaded, search will fall back to basic matching');
+            }
             
             setupUI();
         }
@@ -59,7 +63,6 @@ function setupUI() {
     initializeDatePicker();
     renderCategories();
     renderPinned();
-    showSkeletonLoaders(); 
     renderFeed();
     setupListeners();
     setupPullToRefresh();
@@ -189,6 +192,14 @@ function renderFeed() {
         // Use Fuse.js search
         const searchResults = fuseInstance.search(searchQuery);
         filtered = searchResults.map(result => result.item);
+    } else if (searchQuery) {
+        // Fallback basic search
+        const q = searchQuery.toLowerCase();
+        filtered = allAnnouncements.filter(item => 
+            (item.title && item.title.toLowerCase().includes(q)) ||
+            (item.content && item.content.toLowerCase().includes(q)) ||
+            (item.category && item.category.toLowerCase().includes(q))
+        );
     } else {
         filtered = allAnnouncements;
     }
@@ -267,10 +278,21 @@ function loadMorePosts() {
     const endIndex = Math.min(currentlyDisplayed + postsPerLoad, filteredAnnouncements.length);
     const postsToLoad = filteredAnnouncements.slice(currentlyDisplayed, endIndex);
     
+    // Show skeletons while loading
+    const skeletons = [];
+    for (let i = 0; i < postsToLoad.length; i++) {
+        const skeleton = createSkeletonCard();
+        feed.appendChild(skeleton);
+        skeletons.push(skeleton);
+    }
+    
     // Preload all media for posts before displaying them
     const preloadPromises = postsToLoad.map(post => preloadPostMedia(post));
     
     Promise.all(preloadPromises).then(() => {
+        // Remove skeletons
+        skeletons.forEach(s => s.remove());
+        
         // All media loaded, now render the posts
         postsToLoad.forEach((item, batchIndex) => {
             const overallIndex = currentlyDisplayed + batchIndex;
@@ -290,6 +312,9 @@ function loadMorePosts() {
         setupToggleButtons();
         setupLightbox();
     }).catch(() => {
+        // Remove skeletons
+        skeletons.forEach(s => s.remove());
+        
         // Even if some media fails to load, still show the posts
         postsToLoad.forEach((item, batchIndex) => {
             const overallIndex = currentlyDisplayed + batchIndex;

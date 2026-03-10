@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sscsticollegedavao.vercel.app/sitemap.xml
