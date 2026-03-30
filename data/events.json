@@ -1,5 +1,38 @@
 [
   {
+    "id": "EVT-2026-011",
+    "title": "89th Araw ng Dabaw: Parada Dabawenyo Participation",
+    "semester": "2nd",
+    "academicYear": "2025-2026",
+    "startDate": "2026-03-28",
+    "endDate": "2026-03-28",
+    "category": "Event",
+    "location": "Davao City Streets",
+    "organizer": "Cherry Jane Villasencio - PIO",
+    "description": "𝐃𝐫𝐢𝐯𝐞𝐧 𝐛𝐲 𝐩𝐚𝐬𝐬𝐢𝐨𝐧, 𝐩𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐞𝐱𝐜𝐞𝐥𝐥𝐞𝐧𝐜𝐞.\n\nSTI College Davao joins the vibrant Parada Dabawenyo in celebration of the 89th Araw ng Dabaw, led by its skilled and innovative students.\n\nWith strong foundations in Tourism, Hospitality, Computer Engineering, and IT, STI prepares learners for real-world success.\n\nEvery step reflects dedication, discipline, and growth.\n\nProudly representing Davao on the global stage.\n\n📸 : Cherry Jane Villasencio",
+    "images": [
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-1.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-2.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-3.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-4.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-5.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-6.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-7.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-8.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-9.jpg",
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-10.jpg",
+      "assets/images/annoucements/ParadaDabawenyo-1.jpg",
+      "assets/images/annoucements/ParadaDabawenyo-2.jpg",
+      "assets/images/annoucements/ParadaDabawenyo-3.jpg",
+      "assets/images/annoucements/ParadaDabawenyo-4.jpg",
+      "assets/images/annoucements/ParadaDabawenyo-5.jpg"
+    ],
+    "author": "Cherry Jane Villasencio - PIO",
+    "createdBy": "SSC Admin",
+    "createdAt": "2026-03-29T16:05:00Z",
+    "status": "published"
+  },
+  {
     "id": "EVT-2026-010",
     "title": "Tagisan ng Talino 2025–2026 Winners",
     "semester": "2nd",
@@ -279,7 +312,7 @@
     "status": "published"
   },
   {
-    "id": "EVT-2026-002",
+    "id": "EVT-2026-003",
     "title": "SpookTacular Halloween Party",
     "semester": "1st",
     "academicYear": "2025-2026",

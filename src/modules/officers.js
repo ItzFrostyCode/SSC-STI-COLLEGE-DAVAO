@@ -9,7 +9,7 @@ const LAYOUT_CONFIG = [
     { type: 'row', names: ['Reinamie Dayrit'] },
     { type: 'divider', label: 'SAO' },
     { type: 'row', names: ['Diether Kenz Cabrestante Vallejo'] },
-    { type: 'divider', label: 'Executive Officers' },
+    { type: 'divider', label: 'Officers' },
     { type: 'row', names: ['Chester Paul Villasencio'] },
     { type: 'row', names: ['Chesilyn Dianne Tabigue', 'Cj Love Marie Astudillo'] },
     { type: 'row', names: ['Jandoe Garay', 'John Romar Pardo', 'Joshua Arabejo', 'Cherry Jane Villasencio'] },
