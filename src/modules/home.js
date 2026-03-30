@@ -34,7 +34,7 @@ async function loadStats() {
         const eventCount = events ? events.length : 3;
 
         const stats = [
-            { label: 'Total Students', value: '800+' },
+            { label: 'Total Students', value: '938' },
             { label: 'SSC Officers', value: officerCount },
             { label: 'Events This Year', value: eventCount },
             { label: 'Departments', value: '3' }
