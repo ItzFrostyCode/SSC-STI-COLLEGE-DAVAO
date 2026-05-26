@@ -457,7 +457,7 @@ function createFacebookCard(post, postIndex) {
 
   let gridHtml = "";
   if (mediaCount > 0) {
-    gridHtml = createMediaGrid(media, postIndex);
+    gridHtml = createMediaGrid(media, postIndex, false);
   }
 
   let hashtagsHtml = "";
@@ -521,7 +521,7 @@ function createSharedPostEmbed(sharedPost, postIndex) {
   let spMediaHtml = "";
   const spMedia = getMediaForSharedPost(sp);
   if (spMedia.length > 0) {
-    spMediaHtml = createMediaGrid(spMedia, postIndex);
+    spMediaHtml = createMediaGrid(spMedia, postIndex, true);
   }
 
   let spHashtagsHtml = "";
@@ -626,7 +626,7 @@ function isVideo(mediaItem) {
   return mediaItem.type === "video";
 }
 
-function createMediaGrid(mediaItems, postIndex) {
+function createMediaGrid(mediaItems, postIndex, isShared = false) {
   const count = mediaItems.length;
   let gridClass = "";
   let visible = count >= 5 ? 5 : count;
@@ -667,7 +667,7 @@ function createMediaGrid(mediaItems, postIndex) {
       }
 
       return `
-            <div class="img-item ${isVideoItem ? "video-item" : ""}" data-post-index="${postIndex}" data-media-index="${idx}">
+            <div class="img-item ${isVideoItem ? "video-item" : ""}" data-post-index="${postIndex}" data-media-index="${idx}" data-is-shared="${isShared}">
                 ${moreOverlay}
                 ${mediaElement}
             </div>
@@ -689,16 +689,18 @@ function setupToggleButtons() {
   const feed = document.getElementById("announcements-feed");
   if (!feed) return;
 
-  const newFeed = feed.cloneNode(true);
-  feed.parentNode.replaceChild(newFeed, feed);
+  // Remove the cloneNode hack to avoid removing other listeners
+  // Use a flag to ensure the click listener is only attached once
+  if (feed.dataset.toggleListenerAdded) return;
+  feed.dataset.toggleListenerAdded = "true";
 
-  newFeed.addEventListener("click", (e) => {
+  feed.addEventListener("click", (e) => {
     if (e.target.classList.contains("see-more-btn")) {
       const toggleId = e.target.dataset.toggleId;
       if (!toggleId) return;
 
-      const dots = newFeed.querySelector(`.dots-${toggleId}`);
-      const more = newFeed.querySelector(`.more-${toggleId}`);
+      const dots = feed.querySelector(`.dots-${toggleId}`);
+      const more = feed.querySelector(`.more-${toggleId}`);
       const btn = e.target;
 
       if (!dots || !more) return;
@@ -892,47 +894,49 @@ function setupLightbox() {
   const mediaItems = document.querySelectorAll(".img-item");
 
   mediaItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      const postIndex = parseInt(this.dataset.postIndex);
-      const mediaIndex = parseInt(this.dataset.mediaIndex);
-      openLightbox(postIndex, mediaIndex);
-    });
+    if (!item.dataset.lightboxListenerAdded) {
+      item.addEventListener("click", function () {
+        const postIndex = parseInt(this.dataset.postIndex);
+        const mediaIndex = parseInt(this.dataset.mediaIndex);
+        const isShared = this.dataset.isShared === "true";
+        openLightbox(postIndex, mediaIndex, isShared);
+      });
+      item.dataset.lightboxListenerAdded = "true";
+    }
   });
 
   const lightbox = document.getElementById("announcement-lightbox");
-  const closeBtn = document.querySelector(".lightbox-close-btn");
-  const prevBtn = document.querySelector(".lightbox-prev");
-  const nextBtn = document.querySelector(".lightbox-next");
+  if (lightbox && !lightbox.dataset.listenersAdded) {
+    const closeBtn = document.querySelector(".lightbox-close-btn");
+    const prevBtn = document.querySelector(".lightbox-prev");
+    const nextBtn = document.querySelector(".lightbox-next");
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeLightbox);
-  }
+    if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+    if (prevBtn) prevBtn.addEventListener("click", () => changeImage(-1));
+    if (nextBtn) nextBtn.addEventListener("click", () => changeImage(1));
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => changeImage(-1));
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => changeImage(1));
-  }
-
-  if (lightbox) {
     lightbox.addEventListener("click", (e) => {
       if (e.target.id === "announcement-lightbox") {
         closeLightbox();
       }
     });
-  }
 
-  document.addEventListener("keydown", handleLightboxKeyboard);
+    document.addEventListener("keydown", handleLightboxKeyboard);
+    lightbox.dataset.listenersAdded = "true";
+  }
 }
 
-function openLightbox(postIndex, mediaIndex) {
+function openLightbox(postIndex, mediaIndex, isShared = false) {
   // Use the same filtered list that's displayed on the page
   const post = filteredAnnouncements[postIndex];
   if (!post) return;
 
-  currentLightboxImages = getMediaForPost(post);
+  if (isShared && post.sharedPost) {
+    currentLightboxImages = getMediaForSharedPost(post.sharedPost);
+  } else {
+    currentLightboxImages = getMediaForPost(post);
+  }
+  
   currentLightboxIndex = mediaIndex;
 
   if (currentLightboxImages.length === 0) return;
