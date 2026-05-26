@@ -393,9 +393,8 @@
     text-align: left;
 }
 
-
 .card-header {
-    padding: 12px 16px;
+    padding: 12px 16px 4px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -433,7 +432,7 @@
 
 
 .card-body {
-    padding: 4px 16px 16px;
+    padding: 6px 16px 14px;
 }
 
 .card-title {
@@ -596,6 +595,94 @@
     font-size: 0.95rem;
     color: var(--accent-blue);
     font-weight: 600;
+}
+
+
+/* ========================================
+   SHARED POST EMBED (Facebook-style)
+   ======================================== */
+
+/* When card-body is followed by a shared post embed, reduce bottom gap */
+.card-body.card-body--has-shared {
+    padding-bottom: 6px;
+}
+
+.shared-post-embed {
+    margin: 0 12px 10px;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bg-body);
+    transition: border-color 0.2s;
+}
+
+.shared-post-embed:hover {
+    border-color: color-mix(in srgb, var(--accent-blue) 60%, transparent);
+}
+
+.sp-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px 4px;
+}
+
+.sp-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+}
+
+.sp-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex: 1;
+}
+
+.sp-author {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.sp-time {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.sp-body {
+    padding: 2px 10px 6px;
+}
+
+.sp-excerpt {
+    font-size: 13px;
+    color: var(--text-main);
+    line-height: 1.45;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+.sp-hashtags {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    padding: 0 10px 6px;
+}
+
+.shared-post-embed .image-grid {
+    margin-top: 2px;
+    border-radius: 0;
 }
 
 

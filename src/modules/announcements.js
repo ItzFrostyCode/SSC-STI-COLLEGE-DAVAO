@@ -144,17 +144,23 @@ function renderPinned() {
         return;
     }
 
+    // Derive a display title: use title field if present, otherwise first line of content
+    const rawContent = pinnedItem.content || '';
+    const derivedTitle = pinnedItem.title 
+        || rawContent.split('\n')[0].substring(0, 60) 
+        || pinnedItem.category 
+        || 'Announcement';
+
     container.innerHTML = `
         <article class="pinned-card">
-            <h3 class="pinned-title">${escapeHtml(pinnedItem.title)}</h3>
+            <h3 class="pinned-title">${escapeHtml(derivedTitle)}</h3>
             <p class="pinned-date">${pinnedItem.displayDate || formatDate(pinnedItem.date)}</p>
             <p class="pinned-excerpt" style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
-                ${escapeHtml(pinnedItem.content.substring(0, 80))}...
+                ${escapeHtml(rawContent.substring(0, 80))}...
             </p>
             <a href="#" class="btn-text view-post-btn" data-post-id="${pinnedItem.id}" style="font-size: 0.85rem; margin-top: 0.5rem; display: inline-block;">View Post &rarr;</a>
         </article>
     `;
-    
     
     const viewPostBtn = container.querySelector('.view-post-btn');
     if (viewPostBtn) {
@@ -167,17 +173,42 @@ function renderPinned() {
 
 
 function scrollToPost(postId) {
-    const postCard = document.querySelector(`[data-announcement-id="${postId}"]`);
-    if (postCard) {
-        postCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        
-        postCard.style.transition = 'all 0.3s ease';
-        postCard.style.boxShadow = '0 0 0 3px var(--accent-blue)';
-        setTimeout(() => {
-            postCard.style.boxShadow = '';
-        }, 2000);
+    // If the card already exists in the DOM, scroll immediately
+    const existingCard = document.querySelector(`[data-announcement-id="${postId}"]`);
+    if (existingCard) {
+        _highlightAndScroll(existingCard);
+        return;
     }
+
+    // Card not rendered yet — load ALL remaining posts first, then scroll
+    const feed = document.getElementById('announcements-feed');
+    if (!feed) return;
+
+    // Load all remaining posts by repeatedly calling loadMorePosts
+    function loadAllThenScroll() {
+        if (currentlyDisplayed >= filteredAnnouncements.length) {
+            // All loaded — now try to find the card
+            const card = document.querySelector(`[data-announcement-id="${postId}"]`);
+            if (card) {
+                _highlightAndScroll(card);
+            }
+            return;
+        }
+        // Still more to load — load next batch and retry after a short delay
+        loadMorePosts();
+        setTimeout(loadAllThenScroll, 400);
+    }
+
+    loadAllThenScroll();
+}
+
+function _highlightAndScroll(card) {
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.style.transition = 'box-shadow 0.3s ease';
+    card.style.boxShadow = '0 0 0 3px var(--accent-blue)';
+    setTimeout(() => {
+        card.style.boxShadow = '';
+    }, 2000);
 }
 
 
@@ -347,12 +378,16 @@ function preloadPostMedia(post) {
     return new Promise((resolve) => {
         const mediaItems = getMediaForPost(post);
         
-        if (mediaItems.length === 0) {
+        // Also get sharedPost media
+        const sharedMediaItems = post.sharedPost ? getMediaForSharedPost(post.sharedPost) : [];
+        const allMedia = [...mediaItems, ...sharedMediaItems];
+        
+        if (allMedia.length === 0) {
             resolve();
             return;
         }
         
-        const loadPromises = mediaItems.map(media => {
+        const loadPromises = allMedia.map(media => {
             return new Promise((mediaResolve) => {
                 if (media.type === 'video') {
                     // For videos, just resolve immediately (they'll load when played)
@@ -397,7 +432,7 @@ function createFacebookCard(post, postIndex) {
     }
     
     
-    const shouldUseLargeText = mediaCount === 0 && content.length < 80;
+    const shouldUseLargeText = mediaCount === 0 && !post.sharedPost && content.length < 80;
     
     if (shouldUseLargeText) {
         descriptionHtml += `<p class="card-excerpt large-text">${formatContent(content)}</p>`;
@@ -407,12 +442,7 @@ function createFacebookCard(post, postIndex) {
         const visibleText = content.substring(0, charLimit);
         const hiddenText = content.substring(charLimit);
         
-        descriptionHtml += `
-            <p class="card-excerpt">
-                <span>${formatContent(visibleText)}</span><span class="dots-${toggleId}">...</span><span class="more-${toggleId}" style="display:none;">${formatContent(hiddenText)}</span>
-                <span class="see-more-btn" data-toggle-id="${toggleId}">See more</span>
-            </p>
-        `;
+        descriptionHtml += `<p class="card-excerpt"><span>${formatContent(visibleText)}</span><span class="dots-${toggleId}">...</span><span class="more-${toggleId}" style="display:none;">${formatContent(hiddenText)}</span> <span class="see-more-btn" data-toggle-id="${toggleId}">See more</span></p>`;
     } else if (content) {
         descriptionHtml += `<p class="card-excerpt">${formatContent(content)}</p>`;
     }
@@ -433,6 +463,12 @@ function createFacebookCard(post, postIndex) {
         `;
     }
     
+    // Shared post embed
+    let sharedPostHtml = '';
+    if (post.sharedPost) {
+        sharedPostHtml = createSharedPostEmbed(post.sharedPost, postIndex);
+    }
+    
     
     card.innerHTML = `
         <div class="card-header">
@@ -442,14 +478,69 @@ function createFacebookCard(post, postIndex) {
                 <span class="card-time">${post.displayDate || formatDate(post.date)}</span>
             </div>
         </div>
-        <div class="card-body">
+        ${(descriptionHtml || hashtagsHtml) ? `
+        <div class="card-body ${post.sharedPost ? 'card-body--has-shared' : ''}">
             ${descriptionHtml}
             ${hashtagsHtml}
-        </div>
+        </div>` : ''}
+        ${sharedPostHtml}
         ${gridHtml}
     `;
     
     return card;
+}
+
+
+function createSharedPostEmbed(sharedPost, postIndex) {
+    if (!sharedPost) return '';
+    
+    const sp = sharedPost;
+    const spContent = sp.content || '';
+    const charLimit = 200;
+    
+    // Build the shared post's content with see-more
+    const toggleId = `toggle-sp-${postIndex}-${Date.now()}`;
+    let spContentHtml = '';
+    if (spContent.length > charLimit) {
+        const visibleText = spContent.substring(0, charLimit);
+        const hiddenText = spContent.substring(charLimit);
+        spContentHtml = `<p class="sp-excerpt"><span>${formatContent(visibleText)}</span><span class="dots-${toggleId}">...</span><span class="more-${toggleId}" style="display:none;">${formatContent(hiddenText)}</span> <span class="see-more-btn" data-toggle-id="${toggleId}">See more</span></p>`;
+    } else if (spContent) {
+        spContentHtml = `<p class="sp-excerpt">${formatContent(spContent)}</p>`;
+    }
+    
+    // Build the shared post's media
+    let spMediaHtml = '';
+    const spMedia = getMediaForSharedPost(sp);
+    if (spMedia.length > 0) {
+        spMediaHtml = createMediaGrid(spMedia, postIndex);
+    }
+    
+    let spHashtagsHtml = '';
+    if (sp.hashtags && sp.hashtags.length > 0) {
+        spHashtagsHtml = `
+            <div class="sp-hashtags">
+                ${sp.hashtags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
+            </div>
+        `;
+    }
+    
+    return `
+        <div class="shared-post-embed">
+            <div class="sp-header">
+                <img src="${sp.authorAvatar || 'assets/images/homepage/ssc-logo-opt.webp'}" 
+                     alt="${escapeHtml(sp.author || '')}" 
+                     class="sp-avatar">
+                <div class="sp-meta">
+                    <span class="sp-author">${escapeHtml(sp.author || '')}</span>
+                    <span class="sp-time">${escapeHtml(sp.displayDate || '')}</span>
+                </div>
+            </div>
+            ${spContentHtml ? `<div class="sp-body">${spContentHtml}</div>` : ''}
+            ${spHashtagsHtml}
+            ${spMediaHtml}
+        </div>
+    `;
 }
 
 
@@ -496,6 +587,28 @@ function getMediaForPost(post) {
             return { type: detectMediaType(item), url: item };
         }
         return item;
+    });
+}
+
+
+function getMediaForSharedPost(sharedPost) {
+    if (!sharedPost) return [];
+    let mediaItems = [];
+    
+    if (sharedPost.gallery && Array.isArray(sharedPost.gallery)) {
+        mediaItems = sharedPost.gallery.map(item => {
+            if (typeof item === 'string') {
+                return { type: detectMediaType(item), url: item };
+            }
+            return item;
+        });
+    } else if (sharedPost.image && sharedPost.image !== '#') {
+        mediaItems = [{ type: detectMediaType(sharedPost.image), url: sharedPost.image }];
+    }
+    
+    return mediaItems.filter(item => {
+        const url = typeof item === 'string' ? item : item.url;
+        return url && url.length > 2 && url !== '#';
     });
 }
 
