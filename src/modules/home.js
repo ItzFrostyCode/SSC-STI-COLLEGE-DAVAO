@@ -1,80 +1,88 @@
-
-import { fetchJSON } from '../lib/dataLoader.js';
-import { normalizeAnnouncements, normalizeEvents, normalizeOfficers } from '../lib/normalize.js';
-import { escapeHtml } from '../lib/utils.js';
+import { fetchJSON } from "../lib/dataLoader.js";
+import {
+  normalizeAnnouncements,
+  normalizeEvents,
+  normalizeOfficers,
+} from "../lib/normalize.js";
+import { escapeHtml } from "../lib/utils.js";
 
 export async function init() {
-    console.log('Initializing Home Module');
-    
-    
-    await Promise.all([
-        loadStats(),
-        loadAnnouncements(),
-        loadEvents(),
-        loadOfficers(),
-        loadTigiAySection()
-    ]);
+  console.log("Initializing Home Module");
 
-    
-    initWelcomeModal();
+  await Promise.all([
+    loadStats(),
+    loadAnnouncements(),
+    loadEvents(),
+    loadOfficers(),
+    loadTigiAySection(),
+  ]);
+
+  initWelcomeModal();
 }
 
 async function loadStats() {
-    const container = document.querySelector('.homepage-stats-grid');
-    if (!container) return;
+  const container = document.querySelector(".homepage-stats-grid");
+  if (!container) return;
 
-    try {
-        const [officers, events] = await Promise.all([
-            fetchJSON('data/officers.json', { cache: true, ttl: 3600 }),
-            fetchJSON('data/events.json', { cache: true, ttl: 3600 })
-        ]);
+  try {
+    const [officers, events] = await Promise.all([
+      fetchJSON("data/officers.json", { cache: true, ttl: 3600 }),
+      fetchJSON("data/events.json", { cache: true, ttl: 3600 }),
+    ]);
 
-        const studentOfficers = officers ? officers.filter(o => o.position !== 'Adviser' && o.position !== 'SAO Representative') : [];
-        const officerCount = studentOfficers.length || 20;
-        const eventCount = events ? events.length : 3;
+    const studentOfficers = officers
+      ? officers.filter(
+          (o) =>
+            o.position !== "Adviser" && o.position !== "SAO Representative",
+        )
+      : [];
+    const officerCount = studentOfficers.length || 20;
+    const eventCount = events ? events.length : 3;
 
-        const stats = [
-            { label: 'Total Students', value: '938' },
-            { label: 'SSC Officers', value: officerCount },
-            { label: 'Events This Year', value: eventCount },
-            { label: 'Departments', value: '3' }
-        ];
+    const stats = [
+      { label: "Total Students", value: "938" },
+      { label: "SSC Officers", value: officerCount },
+      { label: "Events This Year", value: eventCount },
+      { label: "Departments", value: "3" },
+    ];
 
-        
-        container.innerHTML = stats.map(stat => `
+    container.innerHTML = stats
+      .map(
+        (stat) => `
             <div class="stat-card fade-in">
                 <h3>${stat.value}</h3>
                 <p>${stat.label}</p>
             </div>
-        `).join('');
-    } catch (e) {
-        console.error('Stats load failed', e);
-        
-    }
+        `,
+      )
+      .join("");
+  } catch (e) {
+    console.error("Stats load failed", e);
+  }
 }
 
 async function loadAnnouncements() {
-    const grid = document.querySelector('#announcements-grid');
-    if (!grid) return;
+  const grid = document.querySelector("#announcements-grid");
+  if (!grid) return;
 
-    try {
-        const data = await fetchJSON('data/announcements.json', { 
-            cache: true, 
-            ttl: 300, 
-            adapter: normalizeAnnouncements 
-        });
+  try {
+    const data = await fetchJSON("data/announcements.json", {
+      cache: true,
+      ttl: 300,
+      adapter: normalizeAnnouncements,
+    });
 
-        
-        const latest = data.slice(0, 3);
-        
-        
-        grid.innerHTML = latest.map(item => `
+    const latest = data.slice(0, 3);
+
+    grid.innerHTML = latest
+      .map(
+        (item) => `
             <article class="card announcement-card fade-in">
                 <div class="card-content">
                     <div class="card-meta">
                         <span class="card-category text-accent-yellow">${escapeHtml(item.category)}</span>
                         <span class="card-dot">•</span>
-                        <span class="card-date">${new Date(item.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        <span class="card-date">${new Date(item.date).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}</span>
                     </div>
                     <p class="card-excerpt">${escapeHtml(item.content.substring(0, 120))}...</p>
 
@@ -89,56 +97,63 @@ async function loadAnnouncements() {
                     </div>
                 </div>
             </article>
-        `).join('');
-    } catch(e) { 
-        console.error('Announcements load failed', e);
-        
-        grid.innerHTML = '<p>Failed to load announcements. Please refresh the page.</p>';
-    }
+        `,
+      )
+      .join("");
+  } catch (e) {
+    console.error("Announcements load failed", e);
+
+    grid.innerHTML =
+      "<p>Failed to load announcements. Please refresh the page.</p>";
+  }
 }
 
 async function loadEvents() {
-    const grid = document.querySelector('#events-grid');
-    if (!grid) return;
+  const grid = document.querySelector("#events-grid");
+  if (!grid) return;
 
-    
-    grid.innerHTML = Array(3).fill(0).map(() => `
+  grid.innerHTML = Array(3)
+    .fill(0)
+    .map(
+      () => `
         <div class="event-poster-card skeleton-card">
             <div class="skeleton-image"></div>
         </div>
-    `).join('');
+    `,
+    )
+    .join("");
 
-    try {
-        const data = await fetchJSON('data/events.json', {
-            cache: true,
-            ttl: 3600,
-            adapter: normalizeEvents
+  try {
+    const data = await fetchJSON("data/events.json", {
+      cache: true,
+      ttl: 3600,
+      adapter: normalizeEvents,
+    });
+
+    const latest = data.slice(0, 3);
+
+    const promises = latest.map(async (item) => {
+      const dateObj = new Date(item.startDate);
+      const month = dateObj.toLocaleDateString(undefined, { month: "short" });
+      const day = dateObj.toLocaleDateString(undefined, { day: "numeric" });
+
+      let imageSrc =
+        item.images && item.images.length > 0
+          ? item.images[0]
+          : item.image || "assets/images/homepage/ssc-logo.webp";
+
+      try {
+        await new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = imageSrc;
+          img.onload = resolve;
+          img.onerror = reject;
         });
+      } catch (err) {
+        imageSrc = "assets/images/homepage/ssc-logo.webp";
+      }
 
-        const latest = data.slice(0, 3);
-
-        
-        const promises = latest.map(async (item) => {
-            const dateObj = new Date(item.startDate);
-            const month = dateObj.toLocaleDateString(undefined, { month: 'short' });
-            const day = dateObj.toLocaleDateString(undefined, { day: 'numeric' });
-            
-            
-            let imageSrc = (item.images && item.images.length > 0) ? item.images[0] : (item.image || 'assets/images/homepage/ssc-logo.webp');
-            
-            
-            try {
-                await new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.src = imageSrc;
-                    img.onload = resolve;
-                    img.onerror = reject;
-                });
-            } catch (err) {
-                imageSrc = 'assets/images/homepage/ssc-logo.webp'; 
-            }
-
-            return `
+      return `
             <a href="events.html" class="event-poster-card fade-in" title="${escapeHtml(item.title)} - Click to view details">
                 <img src="${imageSrc}" alt="${escapeHtml(item.title)}" class="poster-image">
                 
@@ -148,23 +163,24 @@ async function loadEvents() {
                 </div>
             </a>
             `;
-        });
+    });
 
-        const renderedItems = await Promise.all(promises);
-        grid.innerHTML = renderedItems.join('');
-
-    } catch(e) { 
-        console.error('Events load failed', e);
-        grid.innerHTML = '<p class="error-msg">Failed to load events.</p>';
-    }
+    const renderedItems = await Promise.all(promises);
+    grid.innerHTML = renderedItems.join("");
+  } catch (e) {
+    console.error("Events load failed", e);
+    grid.innerHTML = '<p class="error-msg">Failed to load events.</p>';
+  }
 }
 
 async function loadOfficers() {
-    const grid = document.querySelector('#officers-grid');
-    if (!grid) return;
+  const grid = document.querySelector("#officers-grid");
+  if (!grid) return;
 
-    
-    grid.innerHTML = Array(4).fill(0).map(() => `
+  grid.innerHTML = Array(4)
+    .fill(0)
+    .map(
+      () => `
         <div class="officer-card skeleton-card">
             <div class="skeleton-image" style="height: 280px;"></div>
             <div class="officer-info">
@@ -172,32 +188,29 @@ async function loadOfficers() {
                 <div class="skeleton-text" style="width: 50%;"></div>
             </div>
         </div>
-    `).join('');
+    `,
+    )
+    .join("");
 
-    try {
-        const data = await fetchJSON('data/officers.json', {
-            cache: true,
-            ttl: 86400,
-            adapter: normalizeOfficers
-        });
+  try {
+    const data = await fetchJSON("data/officers.json", {
+      cache: true,
+      ttl: 86400,
+      adapter: normalizeOfficers,
+    });
 
-        const studentOfficers = data
-            .filter(o => o.position !== 'Adviser' && o.position !== 'SAO Representative')
-            .sort((a, b) => a.order - b.order);
+    const studentOfficers = data
+      .filter(
+        (o) => o.position !== "Adviser" && o.position !== "SAO Representative",
+      )
+      .sort((a, b) => a.order - b.order);
 
-        
-        
-        
-        
-        
-        
-
-        
-        
-        grid.innerHTML = studentOfficers.map(item => `
+    grid.innerHTML = studentOfficers
+      .map(
+        (item) => `
             <div class="officer-card fade-in">
                 <div class="officer-image-container skeleton">
-                    <img src="${item.image ? 'assets/images/officers/' + item.image : 'assets/images/default-avatar.svg'}" 
+                    <img src="${item.image ? "assets/images/officers/" + item.image : "assets/images/default-avatar.svg"}" 
                          alt="${item.name}" 
                          class="officer-image"
                          loading="lazy">
@@ -208,182 +221,189 @@ async function loadOfficers() {
                     <p class="officer-dept">${escapeHtml(item.department)}</p>
                 </div>
             </div>
-        `).join('');
+        `,
+      )
+      .join("");
 
-        
-        const images = grid.querySelectorAll('.officer-image');
-        images.forEach(img => {
-            const handleLoad = () => {
-                img.parentElement.classList.remove('skeleton');
-            };
-            const handleError = () => {
-                img.src = 'assets/images/default-avatar.svg';
-                img.parentElement.classList.remove('skeleton');
-            };
+    const images = grid.querySelectorAll(".officer-image");
+    images.forEach((img) => {
+      const handleLoad = () => {
+        img.parentElement.classList.remove("skeleton");
+      };
+      const handleError = () => {
+        img.src = "assets/images/default-avatar.svg";
+        img.parentElement.classList.remove("skeleton");
+      };
 
-            if (img.complete) {
-                if (img.naturalWidth > 0) {
-                    handleLoad();
-                } else {
-                    
-                    
-                    
-                    handleLoad(); 
-                }
-            } else {
-                img.onload = handleLoad;
-                img.onerror = handleError;
-            }
-        });
-        
-    } catch(e) { console.error('Officers load failed', e); }
+      if (img.complete) {
+        if (img.naturalWidth > 0) {
+          handleLoad();
+        } else {
+          handleLoad();
+        }
+      } else {
+        img.onload = handleLoad;
+        img.onerror = handleError;
+      }
+    });
+  } catch (e) {
+    console.error("Officers load failed", e);
+  }
 }
 
 async function loadTigiAySection() {
-    const container = document.querySelector('#tigi-ay-container');
-    if (!container) return;
-    
-    
-    const observer = new IntersectionObserver(async (entries) => {
-        if (entries[0].isIntersecting) {
-            observer.disconnect();
-            console.log('Intramurals section visible - Lazy loading logic...');
-            try {
-                
-                
-                
-                
-                
-                
-                
-                
-                const data = await fetchJSON('data/tigi-ay-2025.json', { cache: true, ttl: 3600 });
-                if(!data) return;
+  const container = document.querySelector("#tigi-ay-container");
+  if (!container) return;
 
-                
-                
-                
-                
-                
-                
-                 container.innerHTML = `
-                    <div class="tigi-ay-banner">
-                        <div class="tigi-ay-content">
-                            <span class="highlight-badge">Intramurals 2025</span>
-                            <h2 class="hero-title-council" style="font-family: var(--font-heading) !important;">${data.event_name}</h2>
-                            <p class="section-desc">Experience the thrill of competition. Join us as <strong>${data.teams ? data.teams.length : 3} majestic teams</strong> battle for supremacy.</p>
+  const observer = new IntersectionObserver(
+    async (entries) => {
+      if (entries[0].isIntersecting) {
+        observer.disconnect();
+        console.log("Intramurals section visible - Lazy loading logic...");
+        try {
+          const data = await fetchJSON("data/tigi-ay-2025.json", {
+            cache: true,
+            ttl: 3600,
+          });
+          if (!data) return;
+
+          container.innerHTML = `
+                    <div class="intramurals-feature-card">
+                        <div class="feature-content">
+                            <span class="feature-badge">🏆 Intramurals 2025</span>
+                            <h2 class="feature-title">${data.event_name}</h2>
+                            <p class="feature-subtitle">THE SPIRIT UNLEASHED!</p>
+                            <p class="feature-description">
+                                Experience the thrill of competition as <strong>${data.teams ? data.teams.length : 3} majestic teams</strong> battle for supremacy across 
+                                <strong>17 exciting events</strong>. Witness the ultimate showdown of skill, strategy, and team spirit!
+                            </p>
                             
-                            <div class="tigi-ay-actions">
-                                <a href="intramural.html" class="btn-primary">View Schedule</a>
-                                <a href="intramural.html#teams-grid" class="btn-outline">Meet the Teams</a>
+                            <div class="feature-actions">
+                                <a href="intramural.html" class="btn-feature-primary">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                    </svg>
+                                    View Results
+                                </a>
+                                <a href="intramural.html#teams-grid" class="btn-feature-secondary">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    Meet Teams
+                                </a>
                             </div>
                         </div>
-                        <div class="tigi-ay-visual">
-                               <div class="logo-container">
-                                   <img src="assets/images/homepage/tigi-ay-logo-opt.webp" alt="Tigi-Ay Logo" class="tigi-ay-logo" loading="lazy">
-                               </div>
-                               <div class="glow-circle"></div>
+                        
+                        <div class="feature-visual">
+                            <div class="logo-glow"></div>
+                            <img src="assets/images/homepage/tigi-ay-logo-opt.webp" alt="TIGI-AY 2025 Logo" class="feature-logo">
                         </div>
                     </div>
                 `;
-            } catch (e) { console.error('Tigi-Ay load failed', e); }
+        } catch (e) {
+          console.error("Tigi-Ay load failed", e);
         }
-    }, { rootMargin: '200px' });
-    
-    observer.observe(container);
+      }
+    },
+    { rootMargin: "200px" },
+  );
+
+  observer.observe(container);
 }
 
-
 function initWelcomeModal() {
-    const modal = document.getElementById('welcome-modal');
-    const openBtn = document.getElementById('get-started-btn');
-    const closeBtn = document.getElementById('welcome-modal-close');
-    const continueBtn = document.getElementById('welcome-continue');
-    const overlay = modal?.querySelector('.modal-overlay');
+  const modal = document.getElementById("welcome-modal");
+  const openBtn = document.getElementById("get-started-btn");
+  const closeBtn = document.getElementById("welcome-modal-close");
+  const continueBtn = document.getElementById("welcome-continue");
+  const overlay = modal?.querySelector(".modal-overlay");
 
-    if (!modal || !openBtn) return;
+  if (!modal || !openBtn) return;
 
-    
-    loadWelcomeAnnouncement();
+  loadWelcomeAnnouncement();
 
-    
-    openBtn.addEventListener('click', () => {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
 
-    
-    const closeModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        
-        
-        setTimeout(() => {
-            const announcementsSection = document.getElementById('announcements-container');
-            if (announcementsSection) {
-                announcementsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 300);
-    };
+  const closeModal = () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
 
-    
-    closeBtn?.addEventListener('click', closeModal);
+    setTimeout(() => {
+      const announcementsSection = document.getElementById(
+        "announcements-container",
+      );
+      if (announcementsSection) {
+        announcementsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 300);
+  };
 
-    
-    continueBtn?.addEventListener('click', closeModal);
+  closeBtn?.addEventListener("click", closeModal);
 
-    
-    overlay?.addEventListener('click', closeModal);
+  continueBtn?.addEventListener("click", closeModal);
 
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
+  overlay?.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
 }
 
 async function loadWelcomeAnnouncement() {
-    const container = document.getElementById('welcome-latest-announcement');
-    if (!container) return;
+  const container = document.getElementById("welcome-latest-announcement");
+  if (!container) return;
 
-    container.classList.add('loading');
+  container.classList.add("loading");
 
-    try {
-        const data = await fetchJSON('data/announcements.json', { 
-            cache: true, 
-            ttl: 300, 
-            adapter: normalizeAnnouncements 
-        });
+  try {
+    const data = await fetchJSON("data/announcements.json", {
+      cache: true,
+      ttl: 300,
+      adapter: normalizeAnnouncements,
+    });
 
-        if (data && data.length > 0) {
-            const latest = data[0];
-            container.classList.remove('loading');
-            
-            
-            const contentPreview = latest.content.length > 400 
-                ? `${escapeHtml(latest.content.substring(0, 400))}...` 
-                : escapeHtml(latest.content);
-            
-            container.innerHTML = `
+    if (data && data.length > 0) {
+      const latest = data[0];
+      container.classList.remove("loading");
+
+      const contentPreview =
+        latest.content.length > 400
+          ? `${escapeHtml(latest.content.substring(0, 400))}...`
+          : escapeHtml(latest.content);
+
+      container.innerHTML = `
                 <p>${contentPreview}</p>
                 <div class="welcome-preview-meta">
-                    <span class="welcome-preview-category">${escapeHtml(latest.category || 'General')}</span>
+                    <span class="welcome-preview-category">${escapeHtml(latest.category || "General")}</span>
                     <span>•</span>
-                    <span>${new Date(latest.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                    <span>${new Date(latest.date).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}</span>
                 </div>
             `;
 
-            
-            const eventsData = await fetchJSON('data/events.json', { cache: true, ttl: 3600 });
-            const eventsCountEl = document.getElementById('welcome-events-count');
-            if (eventsData && eventsCountEl) {
-                eventsCountEl.textContent = eventsData.length;
-            }
-        }
-    } catch (e) {
-        console.error('Failed to load welcome announcement', e);
-        container.classList.remove('loading');
-        container.innerHTML = '<p>Stay tuned for the latest updates!</p>';
+      const eventsData = await fetchJSON("data/events.json", {
+        cache: true,
+        ttl: 3600,
+      });
+      const eventsCountEl = document.getElementById("welcome-events-count");
+      if (eventsData && eventsCountEl) {
+        eventsCountEl.textContent = eventsData.length;
+      }
     }
+  } catch (e) {
+    console.error("Failed to load welcome announcement", e);
+    container.classList.remove("loading");
+    container.innerHTML = "<p>Stay tuned for the latest updates!</p>";
+  }
 }

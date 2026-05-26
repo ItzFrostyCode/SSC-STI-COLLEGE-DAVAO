@@ -82,35 +82,18 @@
             "PRINCIPE, NAOMI"
           ],
           "badminton": {
-            "women_single": [
-              "Rhian Tadem"
-            ],
-            "men_single": [
-              "Rolly Bulan Jr."
-            ],
-            "mixed_doubles": [
-              "Jenwell Francis Basalo",
-              "Rianee Saren"
-            ]
+            "women_single": ["Rhian Tadem"],
+            "men_single": ["Rolly Bulan Jr."],
+            "mixed_doubles": ["Jenwell Francis Basalo", "Rianee Saren"]
           },
           "table_tennis": {
-            "women": [
-              "JULIA Q. BERONGOY"
-            ],
-            "men": [
-              "ORAL",
-              "MICKO ANGELO"
-            ],
-            "mixed_doubles": [
-              "Keizha Mates",
-              "Micko Angelo Oral"
-            ]
+            "women": ["JULIA Q. BERONGOY"],
+            "men": ["ORAL", "MICKO ANGELO"],
+            "mixed_doubles": ["Keizha Mates", "Micko Angelo Oral"]
           },
           "bowling": {
             "men": [],
-            "women": [
-              "Patrick Matugas"
-            ]
+            "women": ["Patrick Matugas"]
           },
           "e_sports": {
             "mobile_legends": [
@@ -143,60 +126,27 @@
               "HANDUGAN, RIEMANN ANDREI",
               "CABIGAS, CHRIS JULIEN D."
             ],
-            "dancesports": [
-              "DANIELA KATE  BATOON",
-              "NAJEM DIAREGUN"
-            ],
-            "queen_of_sti": [
-              "RICHARD  RESNERA JR.",
-              "MICHEAL REY ONIN"
-            ]
+            "dancesports": ["DANIELA KATE  BATOON", "NAJEM DIAREGUN"],
+            "queen_of_sti": ["RICHARD  RESNERA JR.", "MICHEAL REY ONIN"]
           }
         },
         "minor_activities": {
           "chess": {
-            "male": [
-              "Eli John Zulueta"
-            ],
-            "female": [
-              "Andrhea Joanna B. Dayon"
-            ]
+            "male": ["Eli John Zulueta"],
+            "female": ["Andrhea Joanna B. Dayon"]
           },
-          "scrabble": [
-            "Rizalene Mato",
-            "Czamyehl Achilles Varquez"
-          ],
-          "word_factory": [
-            "Lorainne Agbas",
-            "Niño Anthony Zamora"
-          ],
-          "tetris": [
-            "MJ Formilleza",
-            "Zac Angelo Mesias"
-          ],
+          "scrabble": ["Rizalene Mato", "Czamyehl Achilles Varquez"],
+          "word_factory": ["Lorainne Agbas", "Niño Anthony Zamora"],
+          "tetris": ["MJ Formilleza", "Zac Angelo Mesias"],
           "darts": {
-            "male": [
-              "Zandrie Jhon Chaves"
-            ],
-            "female": [
-              "Ayumi Togonon"
-            ],
-            "mixed": [
-              "Ayumi Togonon",
-              "Zandrie Jhon Chaves"
-            ]
+            "male": ["Zandrie Jhon Chaves"],
+            "female": ["Ayumi Togonon"],
+            "mixed": ["Ayumi Togonon", "Zandrie Jhon Chaves"]
           },
           "cultural_literary": {
-            "spoken_poetry": [
-              "Rowen Gonzales"
-            ],
-            "t_shirt_design": [
-              "Richard Resnera Jr.",
-              "Michael Rey Onin"
-            ],
-            "book_character": [
-              "Ashley Canete"
-            ],
+            "spoken_poetry": ["Rowen Gonzales"],
+            "t_shirt_design": ["Richard Resnera Jr.", "Michael Rey Onin"],
+            "book_character": ["Ashley Canete"],
             "bookmark_making": [
               "Shekinnah Kate P. Daluz",
               "Heart Rizalent M. Bobilles"
@@ -210,10 +160,7 @@
             "Precious Tagra",
             "Angel Dela Cerna"
           ],
-          "chinese_garter": [
-            "Ashlee Galis",
-            "Shekinnah Kate Daluz"
-          ],
+          "chinese_garter": ["Ashlee Galis", "Shekinnah Kate Daluz"],
           "sack_race": [],
           "limbo_rock": []
         }
@@ -226,15 +173,82 @@
       "theme_color": "#C70000",
       "participants": {
         "major_activities": {
-          "basketball_men": ["Las Marias, Shawn O.","Anicker, Denver G.","Abequibel, Cicily Jay","Laurico, Lawrence","Gasal, Aj","Pugahan, Kristian","Piamonte, Christian Y.","Canale, Jean Mikhail M.","Yu, Josef Ed Zachary","Galleto, Justin Blake","Maduyag, Joshua D.","Montero, Ulysses Micolob Jr.","Perez, Glyndale P.","Polancos, Kurt"],
-          "basketball_women": ["Manigos, Kimberly B.","Arcenas, Abigail R.","Geldore, Jinn Karylle","Gesulga, Edessa L.","Sison, Jeraldine P.","Jule, Jocelle Mae O.","Pabilona, Aira Mae","Mongo, Ginalyn C.","Pabalate, Angelica B.","Pame, Angeline B.","Castillo, Chessa"],
-          "volleyball_men": ["Palma, Mel Dave","Albores, Julian","Suela, Carl Jhoeren E.","Sarucam, Christian","Sampulna, Rockman","Solis, Andrei Gimo","Verana, Wilson","Espinosa, Jacris","Lusat, Jhon Dave M,","Payot, Yhanzee Manuel E."],
-          "volleyball_women": ["Paña, Emma","Monsale, Mariel G.","Bermudez, Kheycie C.","Gelbolingo, Shamyll","DUMA-AN, Gwen Steffany B.","Montelijao, April","Morante, Riezl Mae R.","Alimes, Aleyah Marie","Ordonio, Shirla Mae R.","Rivera, Christhia","Robles, Ivy M.","Tabigue, Chesilyn Mae"],
-          "hip_hop_dance": ["Sayman, Jhasaf Jean","Bueno, Dianne Rexelle A.","Albores, Julian","Bacor, Aljhon","Sumaliling, Chie","Flores, Kaira","Sobiaco, Loricka","Abear, Jhaera Jane","Diesto, Ella Louise","Tañara, Katherine","Briones, Janna Mae","Panibon, Arjay M.","Espino, Trixie","Asoy, Grace","Figueroa, Sheena"],
+          "basketball_men": [
+            "Las Marias, Shawn O.",
+            "Anicker, Denver G.",
+            "Abequibel, Cicily Jay",
+            "Laurico, Lawrence",
+            "Gasal, Aj",
+            "Pugahan, Kristian",
+            "Piamonte, Christian Y.",
+            "Canale, Jean Mikhail M.",
+            "Yu, Josef Ed Zachary",
+            "Galleto, Justin Blake",
+            "Maduyag, Joshua D.",
+            "Montero, Ulysses Micolob Jr.",
+            "Perez, Glyndale P.",
+            "Polancos, Kurt"
+          ],
+          "basketball_women": [
+            "Manigos, Kimberly B.",
+            "Arcenas, Abigail R.",
+            "Geldore, Jinn Karylle",
+            "Gesulga, Edessa L.",
+            "Sison, Jeraldine P.",
+            "Jule, Jocelle Mae O.",
+            "Pabilona, Aira Mae",
+            "Mongo, Ginalyn C.",
+            "Pabalate, Angelica B.",
+            "Pame, Angeline B.",
+            "Castillo, Chessa"
+          ],
+          "volleyball_men": [
+            "Palma, Mel Dave",
+            "Albores, Julian",
+            "Suela, Carl Jhoeren E.",
+            "Sarucam, Christian",
+            "Sampulna, Rockman",
+            "Solis, Andrei Gimo",
+            "Verana, Wilson",
+            "Espinosa, Jacris",
+            "Lusat, Jhon Dave M,",
+            "Payot, Yhanzee Manuel E."
+          ],
+          "volleyball_women": [
+            "Paña, Emma",
+            "Monsale, Mariel G.",
+            "Bermudez, Kheycie C.",
+            "Gelbolingo, Shamyll",
+            "DUMA-AN, Gwen Steffany B.",
+            "Montelijao, April",
+            "Morante, Riezl Mae R.",
+            "Alimes, Aleyah Marie",
+            "Ordonio, Shirla Mae R.",
+            "Rivera, Christhia",
+            "Robles, Ivy M.",
+            "Tabigue, Chesilyn Mae"
+          ],
+          "hip_hop_dance": [
+            "Sayman, Jhasaf Jean",
+            "Bueno, Dianne Rexelle A.",
+            "Albores, Julian",
+            "Bacor, Aljhon",
+            "Sumaliling, Chie",
+            "Flores, Kaira",
+            "Sobiaco, Loricka",
+            "Abear, Jhaera Jane",
+            "Diesto, Ella Louise",
+            "Tañara, Katherine",
+            "Briones, Janna Mae",
+            "Panibon, Arjay M.",
+            "Espino, Trixie",
+            "Asoy, Grace",
+            "Figueroa, Sheena"
+          ],
           "badminton": {
             "women_single": ["Pame, Angeline B."],
             "men_single": ["Coquilla, John Ryan "],
-            "mixed_doubles": ["Pabilona, Aira Mae","Arrojado, Vincent Coby "]
+            "mixed_doubles": ["Pabilona, Aira Mae", "Arrojado, Vincent Coby "]
           },
           "table_tennis": {
             "women": ["Astudillo, Cj Love Marie R. "],
@@ -246,12 +260,32 @@
             "women": ["Mendez, Rizza Joy M."]
           },
           "e_sports": {
-            "mobile_legends": ["Macangin, Essa","Zeinaldin, Yousef Abdulrahman A.","Alegado, Juan Pablo B.","Peñera, Prince James S.","Malik,AbdulBasit U."],
-            "call_of_duty": ["Quiles, Alexa Shane","Alimes, Aleyah Marie","Infante, Shandy Ehlize","Salaysay, Vianca Jaen","Bagotsay, Katrise"]
+            "mobile_legends": [
+              "Macangin, Essa",
+              "Zeinaldin, Yousef Abdulrahman A.",
+              "Alegado, Juan Pablo B.",
+              "Peñera, Prince James S.",
+              "Malik,AbdulBasit U."
+            ],
+            "call_of_duty": [
+              "Quiles, Alexa Shane",
+              "Alimes, Aleyah Marie",
+              "Infante, Shandy Ehlize",
+              "Salaysay, Vianca Jaen",
+              "Bagotsay, Katrise"
+            ]
           },
           "special_events": {
-            "mtv_spoof": ["Macasling, Jev D.","Lastimosa, Lance C.","Sevilla, Lynard S.","Sevilla, Lynard S.","Echavez, Kirk G.","Baybayanon, Roy M.","Tolin, Ashly M.  "],
-            "dancesports": ["Bernados, Marc Jeremy A. ","Lunay, Honey"],
+            "mtv_spoof": [
+              "Macasling, Jev D.",
+              "Lastimosa, Lance C.",
+              "Sevilla, Lynard S.",
+              "Sevilla, Lynard S.",
+              "Echavez, Kirk G.",
+              "Baybayanon, Roy M.",
+              "Tolin, Ashly M.  "
+            ],
+            "dancesports": ["Bernados, Marc Jeremy A. ", "Lunay, Honey"],
             "queen_of_sti": ["Panibon, Valerie M. ", "Paclibar, Jastine M. "]
           }
         },
@@ -260,39 +294,61 @@
             "male": ["Suela, Carl Jhoeren"],
             "female": ["Mercado, Janna Gabrielle N."]
           },
-          "scrabble": ["Amarillento, Dannah","Atuel, Chris "],
-          "word_factory": ["Tabigue, Chesilyn Dianne","Solis, Andrei Gizmo A."],
+          "scrabble": ["Amarillento, Dannah", "Atuel, Chris "],
+          "word_factory": [
+            "Tabigue, Chesilyn Dianne",
+            "Solis, Andrei Gizmo A."
+          ],
           "tetris": ["-"],
           "darts": {
             "male": ["Lastimosa, Lance C."],
             "female": ["Jule, Jocelle Mae O."],
-            "mixed": ["Amoncio, John Joseph A.","Alfeche, Mekhaella B. "]
+            "mixed": ["Amoncio, John Joseph A.", "Alfeche, Mekhaella B. "]
           },
           "cultural_literary": {
             "spoken_poetry": ["-"],
-            "t_shirt_design": ["Panibon, Valerie M. ","Paclibar, Jastine M. "],
+            "t_shirt_design": ["Panibon, Valerie M. ", "Paclibar, Jastine M. "],
             "book_character": [],
-            "bookmark_making": ["Firmeza, Andrianne June L.", "Alfeche, Mekhaella B. "]
+            "bookmark_making": [
+              "Firmeza, Andrianne June L.",
+              "Alfeche, Mekhaella B. "
+            ]
           }
         },
         "larong_pinoy": {
-          "tug_of_war": ["Anicker, Denver John Donald G.","Piamonte, Christian Y.","Pugahan, Kristian Jayfol","Lastimosa, Lance C.","Cortez, Christian C.","Sison, Jeraldine","Diaz, Reena Elaizah","Yu, Josef Ed Zachary","Dalhog, Ryzalyn","Payot, Yhanzee Emmanuel E."],
-          "chinese_garter": ["Macasling, Jev D.",
-"Juanich, Angelie Mae",
-"Caballida, Anne Mae",
-"Dicon, Jenelyn",
-"Iroy, Dweigne Nicole"
-],
-          "sack_race": ["Alamida, Cindy Jean",
-"Corpuz, Sheryn Mae F.",
-"Aranches, Aleczandra",
-"Vega, Fibie-an B.",
-"Maduyag, Joshua D."],
-          "limbo_rock": ["Paclibar, Jastine M.",
-"Sayman, Jhasafjean L.",
-"Bacoor, Aljhon Khim",
-"Abequibel, Cicily Jay",
-"Asoy, Grace Dhel B."]
+          "tug_of_war": [
+            "Anicker, Denver John Donald G.",
+            "Piamonte, Christian Y.",
+            "Pugahan, Kristian Jayfol",
+            "Lastimosa, Lance C.",
+            "Cortez, Christian C.",
+            "Sison, Jeraldine",
+            "Diaz, Reena Elaizah",
+            "Yu, Josef Ed Zachary",
+            "Dalhog, Ryzalyn",
+            "Payot, Yhanzee Emmanuel E."
+          ],
+          "chinese_garter": [
+            "Macasling, Jev D.",
+            "Juanich, Angelie Mae",
+            "Caballida, Anne Mae",
+            "Dicon, Jenelyn",
+            "Iroy, Dweigne Nicole"
+          ],
+          "sack_race": [
+            "Alamida, Cindy Jean",
+            "Corpuz, Sheryn Mae F.",
+            "Aranches, Aleczandra",
+            "Vega, Fibie-an B.",
+            "Maduyag, Joshua D."
+          ],
+          "limbo_rock": [
+            "Paclibar, Jastine M.",
+            "Sayman, Jhasafjean L.",
+            "Bacoor, Aljhon Khim",
+            "Abequibel, Cicily Jay",
+            "Asoy, Grace Dhel B."
+          ]
         }
       }
     },
@@ -303,10 +359,43 @@
       "theme_color": "#9028ed",
       "participants": {
         "major_activities": {
-          "basketball_men": ["Noel Shin S. Nuyles","Benjamin S. Cabrera II","Excel Mac Serrano","Kenlhoyd D. Laojare","Zerk Clyde S Camporedondo","Raniel Josh S. Larrobis","Alexander Turingan","Yance Oliver M. Ermac","Edrianne james E. Bucog","John Carlo M. Miral","Julio Pajota","Angelo Coronado","Ram llanes","Vince Canale","Glymar Perez"],
-          "basketball_women": ["MARINELLE KLYNE DEQUIÑA","Aubrey Amante","Carol Balista","Gwyn Barba","ARLALEJO EMELYN","Jill Seban"
+          "basketball_men": [
+            "Noel Shin S. Nuyles",
+            "Benjamin S. Cabrera II",
+            "Excel Mac Serrano",
+            "Kenlhoyd D. Laojare",
+            "Zerk Clyde S Camporedondo",
+            "Raniel Josh S. Larrobis",
+            "Alexander Turingan",
+            "Yance Oliver M. Ermac",
+            "Edrianne james E. Bucog",
+            "John Carlo M. Miral",
+            "Julio Pajota",
+            "Angelo Coronado",
+            "Ram llanes",
+            "Vince Canale",
+            "Glymar Perez"
           ],
-          "volleyball_men": [ "Anthony Francis Abe","Henric Caasi","Kenji Isuga","Marlouie Pasaporte","Julius Oro","Sean Dave Ragas","John Romar Pardo","Andrei Nagba","Lieurd Zechariah Jamillarin","Francis Solomon"],
+          "basketball_women": [
+            "MARINELLE KLYNE DEQUIÑA",
+            "Aubrey Amante",
+            "Carol Balista",
+            "Gwyn Barba",
+            "ARLALEJO EMELYN",
+            "Jill Seban"
+          ],
+          "volleyball_men": [
+            "Anthony Francis Abe",
+            "Henric Caasi",
+            "Kenji Isuga",
+            "Marlouie Pasaporte",
+            "Julius Oro",
+            "Sean Dave Ragas",
+            "John Romar Pardo",
+            "Andrei Nagba",
+            "Lieurd Zechariah Jamillarin",
+            "Francis Solomon"
+          ],
           "volleyball_women": [
             "Princess Fernando",
             "Honey Flor Magno",
@@ -340,36 +429,18 @@
             "Nicollete Libunao"
           ],
           "badminton": {
-            "women_single": [
-              "Trisha Gabrielle Bolivar"
-            ],
-            "men_single": [
-              "Karem Mamale"
-            ],
-            "mixed_doubles": [
-              "Regine Aguilon",
-              "James Carter Catahum"
-            ]
+            "women_single": ["Trisha Gabrielle Bolivar"],
+            "men_single": ["Karem Mamale"],
+            "mixed_doubles": ["Regine Aguilon", "James Carter Catahum"]
           },
           "table_tennis": {
-            "women": [
-              "Anika Shane Enero"
-            ],
-            "men": [
-              "John Liegh Gasmen"
-            ],
-            "mixed_doubles": [
-              "Alfred Firmeza",
-              "Wilfred Agustin"
-            ]
+            "women": ["Anika Shane Enero"],
+            "men": ["John Liegh Gasmen"],
+            "mixed_doubles": ["Alfred Firmeza", "Wilfred Agustin"]
           },
           "bowling": {
-            "men": [
-              "James De Castro"
-            ],
-            "women": [
-              "Ivy Hope Alba"
-            ]
+            "men": ["James De Castro"],
+            "women": ["Ivy Hope Alba"]
           },
           "e_sports": {
             "mobile_legends": [
@@ -398,63 +469,31 @@
               "Matt Rivero",
               "Danila Jayar"
             ],
-            "dancesports": [
-              "Bryan Kylle Escala",
-              "Mariz Esparago"
-            ],
-            "queen_of_sti": [
-              "Chester Ace Gumahad"
-            ]
+            "dancesports": ["Bryan Kylle Escala", "Mariz Esparago"],
+            "queen_of_sti": ["Chester Ace Gumahad"]
           }
         },
         "minor_activities": {
           "chess": {
-            "male": [
-              "Joshua Arabejo"
-            ],
-            "female": [
-              "Aira Casuga Enderes"
-            ]
+            "male": ["Joshua Arabejo"],
+            "female": ["Aira Casuga Enderes"]
           },
           "scrabble": [
             "Trasha Gutierrez Ondez (Female)",
             "Robin Rafael Ragas (Male)"
           ],
-          "word_factory": [
-            "Rochelle Castro (Female)",
-            "Jame Bucog (Male)"
-          ],
-          "tetris": [
-            "James De Castro (Male)",
-            "Nicole Berou (Female)"
-          ],
+          "word_factory": ["Rochelle Castro (Female)", "Jame Bucog (Male)"],
+          "tetris": ["James De Castro (Male)", "Nicole Berou (Female)"],
           "darts": {
-            "male": [
-              "Faustino Madagmit"
-            ],
-            "female": [
-              "CALIPAYAN STEPHANIE"
-            ],
-            "mixed": [
-              "Rudy John Belec",
-              "Larr Antoine Baldecanas"
-            ]
+            "male": ["Faustino Madagmit"],
+            "female": ["CALIPAYAN STEPHANIE"],
+            "mixed": ["Rudy John Belec", "Larr Antoine Baldecanas"]
           },
           "cultural_literary": {
-            "spoken_poetry": [
-              "Anika Shane Enero"
-            ],
-            "t_shirt_design": [
-              "Zedrick Dullano",
-              "Yance Oliver Ermac"
-            ],
-            "book_character": [
-              "James Carter Catahum"
-            ],
-            "bookmark_making": [
-              "SIRILAN",
-              "CRYSTAL AMOR BALIOS"
-            ]
+            "spoken_poetry": ["Anika Shane Enero"],
+            "t_shirt_design": ["Zedrick Dullano", "Yance Oliver Ermac"],
+            "book_character": ["James Carter Catahum"],
+            "bookmark_making": ["SIRILAN", "CRYSTAL AMOR BALIOS"]
           }
         },
         "larong_pinoy": {
@@ -489,10 +528,7 @@
             "TANDO",
             "AMEER JAD T."
           ],
-          "limbo_rock": [
-            "Daniela Muaña",
-            "Anika Shane Enero"
-          ]
+          "limbo_rock": ["Daniela Muaña", "Anika Shane Enero"]
         }
       }
     }
@@ -746,12 +782,7 @@
           "time": "8:00 AM - 12:00 PM",
           "activity": "Volleyball (Women & Men)",
           "venue": "Brokenshire Hotel-Resort & Convention Center (BHRCC)",
-          "matches": [
-            "Game 1",
-            "Game 2",
-            "Game 3",
-            "Fighting for 3rd"
-          ],
+          "matches": ["Game 1", "Game 2", "Game 3", "Fighting for 3rd"],
           "officer_in_charge": "Women [G1: Abella & Sam, G2: Tadem & Najem, G3: Cherry & Yhanzee, 3rd: Tryx-c & Grace] / Men [G1: Abella & Sam, G2: Cherry & Kim, G3: Cherry & Mariel, 3rd: Tryx-c & Grace]",
           "period": "AM"
         },
@@ -760,12 +791,7 @@
           "activity": "Basketball (Women 3x3 & Men)",
           "venue": "Brokenshire Hotel-Resort & Convention Center (BHRCC)",
           "details": "Women's category is 3x3",
-          "matches": [
-            "Game 1",
-            "Game 2",
-            "Game 3",
-            "Fighting for 3rd"
-          ],
+          "matches": ["Game 1", "Game 2", "Game 3", "Fighting for 3rd"],
           "officer_in_charge": "Mariel, Carol, Arnold",
           "period": "PM"
         },

@@ -35,8 +35,12 @@ export async function fetchJSON(url, { cache = true, ttl = 3600, adapter = null 
     
     try {
         
-        const cacheBuster = `?v=${Date.now()}`;
-        const fetchUrl = url.includes('?') ? `${url}&v=${Date.now()}` : `${url}${cacheBuster}`;
+        let fetchUrl = url;
+        if (typeof window !== 'undefined' && window.location.protocol !== 'file:') {
+            const cacheBuster = `?v=${Date.now()}`;
+            fetchUrl = url.includes('?') ? `${url}&v=${Date.now()}` : `${url}${cacheBuster}`;
+        }
+        
         const response = await fetch(fetchUrl);
         if (!response.ok) throw new Error(`Failed to load ${url}: ${response.status}`);
         const rawData = await response.json();

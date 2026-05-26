@@ -1,5 +1,3 @@
-
-
 :root {
     --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
     --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FDB931 50%, #FFD700 100%);
@@ -38,7 +36,7 @@
 }
 
 .officers-hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem); 
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1rem;
     background: var(--gradient-blue);
@@ -105,19 +103,19 @@
 
 
 .officer-card {
-  text-align: center;
-  background: var(--bg-surface);
-  border-radius: var(--radius-lg);
-  padding: 0;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 280px; 
-  max-width: 100%;
+    text-align: center;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    max-width: 100%;
 }
 
 .officer-card:hover {
@@ -128,10 +126,10 @@
 
 
 .officer-card.premium-card {
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     border-color: #60a5fa;
     box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .officer-card.premium-card:hover {
@@ -145,11 +143,10 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-    
-}
+@media (prefers-color-scheme: dark) {}
+
 html.dark .officer-card.premium-card .officer-image-container {
-    background: linear-gradient(135deg, #1e3a8a 0%, #18181b 100%); 
+    background: linear-gradient(135deg, #1e3a8a 0%, #18181b 100%);
 }
 
 .officer-card.premium-card .officer-image {
@@ -158,9 +155,10 @@ html.dark .officer-card.premium-card .officer-image-container {
 }
 
 .officer-card.premium-card h3 {
-    color: #1d4ed8; 
+    color: #1d4ed8;
     font-weight: 800;
 }
+
 html.dark .officer-card.premium-card h3 {
     color: #60a5fa;
 }
@@ -184,14 +182,14 @@ html.dark .officer-card.premium-card h3 {
 }
 
 .officer-image {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--bg-surface);
-  box-shadow: var(--shadow-md);
-  display: block;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-surface);
+    box-shadow: var(--shadow-md);
+    display: block;
 }
 
 .officer-socials {
@@ -248,12 +246,12 @@ html.dark .officer-card.premium-card h3 {
 }
 
 .officer-role {
-  color: var(--accent-yellow);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+    color: var(--accent-yellow);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
 }
 
 .officer-dept {
@@ -264,9 +262,7 @@ html.dark .officer-card.premium-card h3 {
 
 
 
-@media (min-width: 1200px) {
-    
-}
+@media (min-width: 1200px) {}
 
 
 @media (max-width: 1024px) {
@@ -279,23 +275,24 @@ html.dark .officer-card.premium-card h3 {
 
 @media (max-width: 767px) {
     .officers-main {
-        padding-top: calc(var(--header-height) + 1rem); 
+        padding-top: calc(var(--header-height) + 1rem);
     }
 
     .officers-row {
-        gap: 2rem; 
+        gap: 2rem;
     }
 
-    
+
     .officer-card {
-        width: 100%; 
-        max-width: 280px; 
+        width: 100%;
+        max-width: 280px;
     }
-    
-    
+
+
     .officer-card.premium-card {
         transform: none;
     }
+
     .officer-card.premium-card:hover {
         transform: translateY(-5px);
     }
@@ -306,13 +303,13 @@ html.dark .officer-card.premium-card h3 {
     .section-divider {
         margin: 2rem 0 1rem;
     }
-    
+
     .section-divider::before {
         left: 1rem;
         right: 1rem;
     }
 
-    
+
     .officers-wrapper {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -321,22 +318,23 @@ html.dark .officer-card.premium-card h3 {
 
     .officer-card {
         width: 100%;
-        max-width: 100%; 
-        border-radius: var(--radius-md); 
+        max-width: 100%;
+        border-radius: var(--radius-md);
     }
 
     .officer-image-container {
         padding: 2rem 1rem 1rem;
     }
+
     .officer-image {
         width: 120px;
         height: 120px;
     }
-    
+
     .officer-info {
         padding: 1.5rem 1rem;
     }
-    
+
     .officer-card h3 {
         font-size: 1.1rem;
     }
@@ -348,15 +346,16 @@ html.dark .officer-card.premium-card h3 {
         width: 100px;
         height: 100px;
     }
-    
+
     .officer-card h3 {
         font-size: 1rem;
     }
-    
-    .officer-role, .officer-dept {
+
+    .officer-role,
+    .officer-dept {
         font-size: 0.8rem;
     }
-    
+
     .officers-hero h1 {
         font-size: 1.75rem;
     }

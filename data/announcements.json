@@ -33,11 +33,7 @@
       "assets/images/annoucements/NEWSSC_19.webp",
       "assets/images/annoucements/NEWSSC_20.webp"
     ],
-    "hashtags": [
-      "#SSCHalalan2026",
-      "#STICOMELEC",
-      "#StudentLeadership"
-    ],
+    "hashtags": ["#SSCHalalan2026", "#STICOMELEC", "#StudentLeadership"],
     "authorAvatar": "assets/images/annoucements/STI College Davao - SSC Commission on Elections l Comelec.webp"
   },
   {
@@ -52,11 +48,7 @@
     "createdAt": "2026-05-20T15:20:00Z",
     "displayDate": "Wednesday, May 20, 2026 at 11:20 PM",
     "status": "published",
-    "hashtags": [
-      "#SSCHalalan2026",
-      "#STICOMELEC",
-      "#StudentDemocracy"
-    ],
+    "hashtags": ["#SSCHalalan2026", "#STICOMELEC", "#StudentDemocracy"],
     "authorAvatar": "assets/images/annoucements/STI College Davao - SSC Commission on Elections l Comelec.webp"
   },
   {
@@ -227,11 +219,7 @@
     "displayDate": "Thursday, April 23, 2026 at 11:45 PM",
     "status": "published",
     "image": "assets/images/annoucements/Princess Rhian Tadem SHS Senator.webp",
-    "hashtags": [
-      "#Chapter18",
-      "#SSCFam",
-      "#StudentLeader"
-    ],
+    "hashtags": ["#Chapter18", "#SSCFam", "#StudentLeader"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -291,7 +279,7 @@
     "createdAt": "2026-03-29T16:05:00Z",
     "displayDate": "Sunday, March 29, 2026 at 4:05 PM",
     "status": "published",
-   
+
     "gallery": [
       "assets/images/annoucements/STIDAVAO-DVOPARADE-1.jpg",
       "assets/images/annoucements/STIDAVAO-DVOPARADE-2.jpg",
@@ -330,7 +318,7 @@
       "assets/images/annoucements/STIDAVAO-DVOPARADE-35.jpg",
       "assets/images/annoucements/STIDAVAO-DVOPARADE-36.jpg",
       "assets/images/annoucements/STIDAVAO-DVOPARADE-37.jpg",
-      "assets/images/annoucements/STIDAVAO-DVOPARADE-38.jpg"     
+      "assets/images/annoucements/STIDAVAO-DVOPARADE-38.jpg"
     ],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
@@ -468,11 +456,7 @@
     "displayDate": "Monday, March 16, 2026 at 11:35 PM",
     "status": "published",
     "image": "assets/images/annoucements/Reasylee-Abella.webp",
-    "hashtags": [
-      "#birthdaygreetings",
-      "#StudentLeaders",
-      "#SSCFam"
-    ],
+    "hashtags": ["#birthdaygreetings", "#StudentLeaders", "#SSCFam"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -489,7 +473,6 @@
     "status": "published",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
     "gallery": [
-      
       "assets/images/annoucements/Awareness & Empowerment_1.webp",
       "assets/images/annoucements/Awareness & Empowerment_2.webp",
       "assets/images/annoucements/Awareness & Empowerment_3.webp",
@@ -648,11 +631,7 @@
     "displayDate": "Saturday, March 14, 2026 at 10:37 PM",
     "status": "published",
     "image": "assets/images/annoucements/HBDAuditor.webp",
-    "hashtags": [
-      "#BelatedBirthdayGreetings",
-      "#StudentLeaders",
-      "#SSCFam"
-    ],
+    "hashtags": ["#BelatedBirthdayGreetings", "#StudentLeaders", "#SSCFam"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -736,11 +715,7 @@
       "assets/images/annoucements/First Ever Club Day_8.webp",
       "assets/images/annoucements/First Ever Club Day_9.webp"
     ],
-    "hashtags": [
-      "#clubday",
-      "#StudentLeadership",
-      "#celebratingclubs"
-    ],
+    "hashtags": ["#clubday", "#StudentLeadership", "#celebratingclubs"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -998,11 +973,7 @@
     "displayDate": "Friday, February 13, 2026 at 6:49 AM",
     "status": "published",
     "image": "assets/images/annoucements/Happy ValentaSTIc Day!.webp",
-    "hashtags": [
-      "#ValentaSTIcDay",
-      "#STICampusLife",
-      "#STICelebratesLove"
-    ],
+    "hashtags": ["#ValentaSTIcDay", "#STICampusLife", "#STICelebratesLove"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -1018,11 +989,7 @@
     "displayDate": "Wednesday, February 11, 2026 at 7:29 AM",
     "status": "published",
     "image": "assets/images/annoucements/ValentaSTIc Day_Edited byMatthew Albenio.mp4",
-    "hashtags": [
-      "#ValentaSTIc",
-      "#STILoveOnCampus",
-      "#CampusFun"
-    ],
+    "hashtags": ["#ValentaSTIc", "#STILoveOnCampus", "#CampusFun"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -1052,11 +1019,7 @@
       "assets/images/annoucements/ValentaSTIc Day_WearYourStatus_11.webp",
       "assets/images/annoucements/ValentaSTIc Day_WearYourStatus_12.webp"
     ],
-    "hashtags": [
-      "#ValentaSTIc",
-      "#ColorCoded",
-      "#STICampusVibes"
-    ],
+    "hashtags": ["#ValentaSTIc", "#ColorCoded", "#STICampusVibes"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -1502,11 +1465,7 @@
     "displayDate": "Friday, November 21, 2025 at 12:03 PM",
     "status": "published",
     "image": "assets/images/annoucements/Congratulations Maria Ahtisa Manalo - Miss Universe 3rd Runner-Up! _1.webp",
-    "hashtags": [
-      "#CongratsAhtisa",
-      "#OneSTI",
-      "#STISSC"
-    ],
+    "hashtags": ["#CongratsAhtisa", "#OneSTI", "#STISSC"],
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp"
   },
   {
@@ -1840,11 +1799,7 @@
     "status": "published",
     "image": "assets/images/annoucements/Happy 22nd Birthday to our SSC Senator!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#STISSC",
-      "#Happy22nd",
-      "#SSCFamily"
-    ]
+    "hashtags": ["#STISSC", "#Happy22nd", "#SSCFamily"]
   },
   {
     "id": "ANN-2025-040",
@@ -1860,11 +1815,7 @@
     "status": "published",
     "image": "assets/images/annoucements/Happy Birthday SSC Senate President!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#STISSC",
-      "#SenatePresident",
-      "#SSCFamily"
-    ]
+    "hashtags": ["#STISSC", "#SenatePresident", "#SSCFamily"]
   },
   {
     "id": "ANN-2026-001",
@@ -1953,11 +1904,7 @@
     "status": "published",
     "image": "assets/images/annoucements/Happy Birthday SSC Secretary!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#STISSC",
-      "#SSCSecretary",
-      "#SSCFamily"
-    ]
+    "hashtags": ["#STISSC", "#SSCSecretary", "#SSCFamily"]
   },
   {
     "id": "ANN-2026-005",
@@ -2039,11 +1986,7 @@
     "status": "published",
     "image": "assets/images/annoucements/1 Day Left! - Back to School Tomorrow.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#BackToSchool",
-      "#NewSemester",
-      "#SeeYouSTIers"
-    ]
+    "hashtags": ["#BackToSchool", "#NewSemester", "#SeeYouSTIers"]
   },
   {
     "id": "ANN-2026-010",
@@ -2059,11 +2002,7 @@
     "status": "published",
     "image": "assets/images/annoucements/Back to School - Freebies & Games.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#Back2School",
-      "#STIFreebies",
-      "#SweetStart"
-    ]
+    "hashtags": ["#Back2School", "#STIFreebies", "#SweetStart"]
   },
   {
     "id": "ANN-2026-011",
@@ -2100,12 +2039,7 @@
     "status": "published",
     "image": "assets/images/annoucements/Happy 18th Birthday to our SSC PIO!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#STISSC",
-      "#SSCPIO",
-      "#DebutAt18",
-      "#SSCFamily"
-    ]
+    "hashtags": ["#STISSC", "#SSCPIO", "#DebutAt18", "#SSCFamily"]
   },
   {
     "id": "ANN-2026-017",
@@ -2121,11 +2055,7 @@
     "status": "published",
     "image": "assets/images/annoucements/Happy Birthday, Sir Kenz!.webp",
     "authorAvatar": "assets/images/officers/cherry-jane-villasencio.webp",
-    "hashtags": [
-      "#SSC",
-      "#SSCFamily",
-      "#SSCSAO"
-    ]
+    "hashtags": ["#SSC", "#SSCFamily", "#SSCSAO"]
   },
   {
     "id": "ANN-2026-014",
@@ -2187,12 +2117,7 @@
       "assets/images/annoucements/ValentaSTIc Cinema Booth_3.webp",
       "assets/images/annoucements/ValentaSTIc Cinema Booth_4.webp"
     ],
-    "hashtags": [
-      "#ValentasticDay",
-      "#STIers",
-      "#CinemaBooth",
-      "#STICampusLife"
-    ]
+    "hashtags": ["#ValentasticDay", "#STIers", "#CinemaBooth", "#STICampusLife"]
   },
   {
     "id": "ANN-2026-020",
