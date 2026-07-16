@@ -485,9 +485,19 @@
 .img-item {
     position: relative;
     overflow: hidden;
-    background-color: var(--bg-body);
     width: 100%;
     height: 100%;
+    background: linear-gradient(90deg,
+            var(--bg-body) 0%,
+            var(--border-light) 50%,
+            var(--bg-body) 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+.img-item:has(img.img-loaded) {
+    animation: none;
+    background: var(--bg-body);
 }
 
 .img-item img {
@@ -495,10 +505,15 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 0.2s;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.img-item:hover img {
+.img-item img.img-loaded {
+    opacity: 1;
+}
+
+.img-item:hover img.img-loaded {
     opacity: 0.96;
 }
 
@@ -506,6 +521,7 @@
 .grid-1 {
     display: block;
     height: auto;
+    min-height: 240px;
     max-height: 650px;
 }
 
@@ -1456,10 +1472,6 @@
 }
 
 
-/* ========================================
-   SKELETON LOADERS
-   ======================================== */
-
 @keyframes shimmer {
     0% {
         background-position: -1000px 0;
@@ -1469,85 +1481,6 @@
         background-position: 1000px 0;
     }
 }
-
-.skeleton-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 20px;
-}
-
-.skeleton-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.skeleton-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(90deg,
-            var(--bg-body) 0%,
-            var(--border-light) 50%,
-            var(--bg-body) 100%);
-    background-size: 1000px 100%;
-    animation: shimmer 2s infinite;
-}
-
-.skeleton-text {
-    flex: 1;
-}
-
-.skeleton-line {
-    height: 12px;
-    background: linear-gradient(90deg,
-            var(--bg-body) 0%,
-            var(--border-light) 50%,
-            var(--bg-body) 100%);
-    background-size: 1000px 100%;
-    animation: shimmer 2s infinite;
-    border-radius: 4px;
-    margin-bottom: 8px;
-}
-
-.skeleton-line.title {
-    height: 16px;
-    width: 60%;
-}
-
-.skeleton-line.subtitle {
-    height: 10px;
-    width: 40%;
-}
-
-.skeleton-line.content {
-    width: 100%;
-}
-
-.skeleton-line.content:nth-child(2) {
-    width: 90%;
-}
-
-.skeleton-line.content:last-child {
-    width: 70%;
-}
-
-.skeleton-image {
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(90deg,
-            var(--bg-body) 0%,
-            var(--border-light) 50%,
-            var(--bg-body) 100%);
-    background-size: 1000px 100%;
-    animation: shimmer 2s infinite;
-    border-radius: 8px;
-    margin-top: 12px;
-}
-
 
 /* ========================================
    PULL TO REFRESH (Mobile)

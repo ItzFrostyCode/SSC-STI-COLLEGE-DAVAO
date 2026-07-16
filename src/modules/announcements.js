@@ -320,63 +320,27 @@ function loadMorePosts() {
   );
   const postsToLoad = filteredAnnouncements.slice(currentlyDisplayed, endIndex);
 
-  // Show skeletons while loading
-  const skeletons = [];
-  for (let i = 0; i < postsToLoad.length; i++) {
-    const skeleton = createSkeletonCard();
-    feed.appendChild(skeleton);
-    skeletons.push(skeleton);
+  // Render immediately — text and layout show at once, like a real feed.
+  // Images fade in on their own as they finish loading; nothing here waits
+  // on a network round-trip.
+  postsToLoad.forEach((item, batchIndex) => {
+    const overallIndex = currentlyDisplayed + batchIndex;
+    const card = createFacebookCard(item, overallIndex);
+    feed.appendChild(card);
+    attachImageFadeIn(card);
+  });
+
+  currentlyDisplayed = endIndex;
+  isLoading = false;
+
+  // Check if all posts are now loaded
+  if (currentlyDisplayed >= filteredAnnouncements.length) {
+    toggleFooter(true);
   }
 
-  // Preload all media for posts before displaying them
-  const preloadPromises = postsToLoad.map((post) => preloadPostMedia(post));
-
-  Promise.all(preloadPromises)
-    .then(() => {
-      // Remove skeletons
-      skeletons.forEach((s) => s.remove());
-
-      // All media loaded, now render the posts
-      postsToLoad.forEach((item, batchIndex) => {
-        const overallIndex = currentlyDisplayed + batchIndex;
-        const card = createFacebookCard(item, overallIndex);
-        feed.appendChild(card);
-      });
-
-      currentlyDisplayed = endIndex;
-      isLoading = false;
-
-      // Check if all posts are now loaded
-      if (currentlyDisplayed >= filteredAnnouncements.length) {
-        toggleFooter(true);
-      }
-
-      // Setup interactions for newly added posts
-      setupToggleButtons();
-      setupLightbox();
-    })
-    .catch(() => {
-      // Remove skeletons
-      skeletons.forEach((s) => s.remove());
-
-      // Even if some media fails to load, still show the posts
-      postsToLoad.forEach((item, batchIndex) => {
-        const overallIndex = currentlyDisplayed + batchIndex;
-        const card = createFacebookCard(item, overallIndex);
-        feed.appendChild(card);
-      });
-
-      currentlyDisplayed = endIndex;
-      isLoading = false;
-
-      // Check if all posts are now loaded
-      if (currentlyDisplayed >= filteredAnnouncements.length) {
-        toggleFooter(true);
-      }
-
-      setupToggleButtons();
-      setupLightbox();
-    });
+  // Setup interactions for newly added posts
+  setupToggleButtons();
+  setupLightbox();
 }
 
 // Toggle footer visibility
@@ -385,41 +349,6 @@ function toggleFooter(show) {
   if (footer) {
     footer.style.display = show ? "block" : "none";
   }
-}
-
-function preloadPostMedia(post) {
-  return new Promise((resolve) => {
-    const mediaItems = getMediaForPost(post);
-
-    // Also get sharedPost media
-    const sharedMediaItems = post.sharedPost
-      ? getMediaForSharedPost(post.sharedPost)
-      : [];
-    const allMedia = [...mediaItems, ...sharedMediaItems];
-
-    if (allMedia.length === 0) {
-      resolve();
-      return;
-    }
-
-    const loadPromises = allMedia.map((media) => {
-      return new Promise((mediaResolve) => {
-        if (media.type === "video") {
-          // For videos, just resolve immediately (they'll load when played)
-          mediaResolve();
-        } else {
-          // For images, preload them
-          const img = new Image();
-          img.onload = () => mediaResolve();
-          img.onerror = () => mediaResolve(); // Resolve even on error
-          img.src = media.url;
-        }
-      });
-    });
-
-    // Wait for all media in this post to load
-    Promise.all(loadPromises).then(resolve);
-  });
 }
 
 function createFacebookCard(post, postIndex) {
@@ -676,6 +605,22 @@ function createMediaGrid(mediaItems, postIndex, isShared = false) {
     .join("");
 
   return `<div class="image-grid ${gridClass}">${items}</div>`;
+}
+
+// Fades each thumbnail in once it actually finishes loading, instead of
+// blocking the whole card on the network. Must be attached with
+// addEventListener (not an inline onload=) since the page's CSP disallows
+// inline script/event-handler execution.
+function attachImageFadeIn(container) {
+  container.querySelectorAll(".img-item img").forEach((img) => {
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add("img-loaded");
+    } else {
+      img.addEventListener("load", () => img.classList.add("img-loaded"), {
+        once: true,
+      });
+    }
+  });
 }
 
 function getVideoType(url) {
@@ -1019,39 +964,6 @@ function handleLightboxKeyboard(e) {
   } else if (e.key === "Escape") {
     closeLightbox();
   }
-}
-
-// ========================================
-// SKELETON LOADERS
-// ========================================
-
-function showSkeletonLoaders(count = 3) {
-  const feed = document.getElementById("announcements-feed");
-  if (!feed) return;
-
-  feed.innerHTML = "";
-  for (let i = 0; i < count; i++) {
-    feed.appendChild(createSkeletonCard());
-  }
-}
-
-function createSkeletonCard() {
-  const skeleton = document.createElement("div");
-  skeleton.className = "skeleton-card";
-  skeleton.innerHTML = `
-        <div class="skeleton-header">
-            <div class="skeleton-avatar"></div>
-            <div class="skeleton-text">
-                <div class="skeleton-line title"></div>
-                <div class="skeleton-line subtitle"></div>
-            </div>
-        </div>
-        <div class="skeleton-line content"></div>
-        <div class="skeleton-line content"></div>
-        <div class="skeleton-line content"></div>
-        <div class="skeleton-image"></div>
-    `;
-  return skeleton;
 }
 
 // ========================================
