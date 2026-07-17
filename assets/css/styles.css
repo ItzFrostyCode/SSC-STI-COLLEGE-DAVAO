@@ -1460,14 +1460,14 @@ html.dark .search-result-item:hover {
 .main-footer {
   background: var(--bg-surface);
   border-top: 1px solid var(--border-light);
-  padding: 4rem 1.5rem 2rem;
-  margin-top: 5rem;
+  padding: 2.5rem 1.5rem 1.5rem;
+  margin-top: 3rem;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
+  gap: 2.5rem;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -1494,8 +1494,8 @@ html.dark .search-result-item:hover {
 
 .footer-bottom {
   border-top: 1px solid var(--border-light);
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
   text-align: center;
   color: var(--text-muted);
   font-size: 0.85rem;

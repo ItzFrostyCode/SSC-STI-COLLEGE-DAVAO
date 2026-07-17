@@ -748,38 +748,82 @@
 }
 
 .archive-content-card {
-    max-width: 800px;
+    max-width: 760px;
     width: 100%;
     padding: 4rem;
-    border-radius: 24px;
+    border-radius: 16px;
     text-align: center;
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-lg);
     background: var(--bg-surface);
     position: relative;
-    overflow: hidden;
+    outline: 1px solid var(--border-light);
+    outline-offset: -14px;
 }
 
-.archive-content-card::before {
-    content: '';
+html.dark .archive-content-card {
+    background: var(--bg-glass);
+    border-color: rgba(255, 255, 255, 0.08);
+    outline-color: rgba(255, 255, 255, 0.08);
+}
+
+.archive-corner {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-light), var(--primary), var(--secondary));
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--accent-blue);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.corner-tl {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-tr {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-bl {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-br {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
 }
 
 .archive-header {
     margin-bottom: 2.5rem;
 }
 
+.archive-icon-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--accent-blue);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), transparent);
+}
+
 .archive-icon {
-    color: var(--primary);
-    margin-bottom: 1rem;
-    width: 48px;
-    height: 48px;
-    opacity: 0.9;
+    color: var(--accent-blue);
+    width: 28px;
+    height: 28px;
 }
 
 .archive-header h2 {
@@ -789,6 +833,34 @@
     font-family: 'Cinzel', serif;
     letter-spacing: 0.5px;
     line-height: 1.3;
+}
+
+.archive-ornament,
+.signature-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.signature-ornament {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.archive-ornament .ornament-line,
+.signature-ornament .ornament-line {
+    width: 48px;
+    height: 1px;
+    background: var(--border-light);
+}
+
+.archive-ornament .ornament-dot,
+.signature-ornament .ornament-dot {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .archive-body {
@@ -806,22 +878,39 @@
 }
 
 .highlight-text {
+    position: relative;
+    font-family: 'Cinzel', serif;
     font-weight: 600;
-    color: var(--primary) !important;
+    color: var(--text-main) !important;
     font-size: 1.15rem !important;
-    padding: 1rem 0;
+    line-height: 1.6;
+    padding: 0.5rem 2.25rem !important;
+}
+
+.highlight-text::before,
+.highlight-text::after {
+    position: absolute;
+    font-family: Georgia, serif;
+    font-size: 2.75rem;
+    line-height: 1;
+    color: var(--accent-blue);
+    opacity: 0.35;
+}
+
+.highlight-text::before {
+    content: '\201C';
+    top: 0.25rem;
+    left: 0;
+}
+
+.highlight-text::after {
+    content: '\201D';
+    bottom: -0.5rem;
+    right: 0;
 }
 
 .archive-signature {
     margin-top: 3rem;
-}
-
-.archive-signature .divider {
-    width: 60px;
-    height: 2px;
-    background: var(--primary);
-    margin: 0 auto 1.5rem auto;
-    opacity: 0.5;
 }
 
 .archive-signature h4 {
@@ -838,17 +927,12 @@
 }
 
 .archive-signature .dev-role {
-    color: var(--primary-light);
+    color: var(--accent-blue);
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin: 0;
-}
-
-html.dark .archive-content-card {
-    background: var(--bg-glass);
-    border-color: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -857,7 +941,33 @@ html.dark .archive-content-card {
     }
 
     .archive-content-card {
-        padding: 2.5rem 1.5rem;
+        padding: 2.75rem 1.5rem;
+        outline-offset: -10px;
+    }
+
+    .archive-corner {
+        width: 20px;
+        height: 20px;
+    }
+
+    .corner-tl,
+    .corner-tr {
+        top: 12px;
+    }
+
+    .corner-bl,
+    .corner-br {
+        bottom: 12px;
+    }
+
+    .corner-tl,
+    .corner-bl {
+        left: 12px;
+    }
+
+    .corner-tr,
+    .corner-br {
+        right: 12px;
     }
 
     .archive-header h2 {
@@ -866,5 +976,14 @@ html.dark .archive-content-card {
 
     .archive-body p {
         font-size: 1rem;
+    }
+
+    .highlight-text {
+        padding: 0.5rem 1.75rem !important;
+    }
+
+    .highlight-text::before,
+    .highlight-text::after {
+        font-size: 2.25rem;
     }
 }
